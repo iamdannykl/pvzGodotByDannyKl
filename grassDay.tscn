@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dix60aj2qp6g"]
+
+[ext_resource type="Script" path="res://scene.cs" id="1_aknu5"]
+[ext_resource type="PackedScene" uid="uid://44f4nb8ct43x" path="res://anim/backGround/grass.tscn" id="2_hbed3"]
+[ext_resource type="Script" path="res://code/danli.cs" id="3_vxw12"]
+[ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_3g11x"]
+[ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="5_g4o7x"]
+[ext_resource type="Script" path="res://code/reciever.cs" id="6_2ftst"]
+
+[node name="grassDay" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_aknu5")
+
+[node name="reciever" type="Label" parent="."]
+z_index = 1
+offset_left = -143.0
+offset_top = -36.0
+offset_right = -103.0
+offset_bottom = -13.0
+script = ExtResource("6_2ftst")
+
+[node name="grass" parent="." instance=ExtResource("2_hbed3")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-57, 0)
+zoom = Vector2(3.465, 3.465)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -1)
+script = ExtResource("3_vxw12")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 1
+offset_left = 115.0
+offset_top = -68.0
+offset_right = 178.0
+offset_bottom = 86.0
+
+[node name="CardUI" parent="." instance=ExtResource("4_3g11x")]
+z_index = 1
+offset_left = -214.0
+offset_top = -85.0
+offset_right = -214.0
+offset_bottom = -85.0
+scale = Vector2(1.39279, 1.39279)
+
+[node name="start" parent="." instance=ExtResource("5_g4o7x")]
+visible = false
+z_index = 2
+offset_left = -58.0
+offset_right = -58.0
