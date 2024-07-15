@@ -5,6 +5,7 @@ public partial class clickButton : TextureButton
 {
     public PackedScene plantPrefab;
     public baseCard plantInstan;
+    public baseCard shadow;
     bool isplanted = false;
     private bool wantPlace;
     public GridS grid;
@@ -17,6 +18,11 @@ public partial class clickButton : TextureButton
             if (wantPlace)
             {
                 plantInstan = plantPrefab.Instantiate() as baseCard;
+                shadow = plantPrefab.Instantiate() as baseCard;
+                shadow.Modulate = new Color(1, 1, 1, 0.55f);
+                shadow.GlobalPosition = new Vector2(0, 0);
+                shadow.Visible = false;
+                GetTree().Root.AddChild(shadow);
                 Vector2 pos = GlobalPosition;
                 plantInstan.GlobalPosition = pos;
                 GetTree().Root.AddChild(plantInstan);
@@ -49,6 +55,7 @@ public partial class clickButton : TextureButton
             //GD.Print(gridS.Plant);
             if (!grid.Plant)
             {
+                shadow.QueueFree();
                 grid.Plant = true;
                 isplanted = true;
                 plant.GlobalPosition = grid.Position;
@@ -74,8 +81,13 @@ public partial class clickButton : TextureButton
             grid = GridSys.Instance.GetGridByMouse();
             if (grid != null && !grid.Plant)
             {
-                //GD.Print(grid.Point);
+                shadow.Visible = true;
+                shadow.GlobalPosition = grid.Position;
                 PlantIt(plantInstan);
+            }
+            else
+            {
+                shadow.Visible = false;
             }
         }
     }

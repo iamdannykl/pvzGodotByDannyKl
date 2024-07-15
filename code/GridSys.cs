@@ -26,7 +26,7 @@ public partial class GridSys : Node2D
 	{
 		Instance = this;
 		packedScene = GD.Load<PackedScene>("res://Prefabs/GDlogo.tscn");
-		reciever = GetTree().Root.GetNode<reciever>("grassDay/reciever");
+		reciever = GetTree().Root.GetNode<reciever>("GameScene/reciever");
 		thisMapIndex = reciever.RcmapIndex;
 		hangShu = reciever.RcHangShu;
 		XjianGe = (youshang.GlobalPosition.X - zuoxia.GlobalPosition.X) / 8f;

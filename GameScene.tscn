@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://dix60aj2qp6g"]
+
+[ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
+[ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
+[ext_resource type="Script" path="res://code/danli.cs" id="3_sstho"]
+[ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
+[ext_resource type="PackedScene" uid="uid://c1dcqwowyv2qv" path="res://Scene/title.tscn" id="4_x5rg2"]
+
+[node name="GameScene" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_d6ikj")
+
+[node name="reciever" type="Label" parent="."]
+z_index = 1
+offset_left = -143.0
+offset_top = -36.0
+offset_right = -103.0
+offset_bottom = -13.0
+script = ExtResource("2_8n5vd")
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel")]
+position = Vector2(0, -1)
+script = ExtResource("3_sstho")
+backToMenu = NodePath("../Camera2D/Panel/menu")
+backToGame = NodePath("../Camera2D/Panel/back")
+ESC = NodePath("../Camera2D/esc")
+startMenu = ExtResource("4_x5rg2")
+panel = NodePath("../Camera2D/Panel")
+
+[node name="zomZone" type="Panel" parent="."]
+z_index = 1
+offset_left = 115.0
+offset_top = -68.0
+offset_right = 178.0
+offset_bottom = 86.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-57, 0)
+zoom = Vector2(3.465, 3.465)
+
+[node name="esc" type="Button" parent="Camera2D"]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -92.0
+offset_right = 165.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ESC"
+
+[node name="Panel" type="Panel" parent="Camera2D"]
+visible = false
+z_index = 2
+offset_left = -82.0
+offset_top = -55.0
+offset_right = 103.0
+offset_bottom = 58.0
+
+[node name="shengYin" type="Label" parent="Camera2D/Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 55.0
+offset_bottom = 33.0
+text = "声音："
+
+[node name="sound" type="HSlider" parent="Camera2D/Panel/shengYin"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 166.0
+offset_bottom = 21.0
+
+[node name="yinXiao" type="Label" parent="Camera2D/Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 31.0
+offset_right = 55.0
+offset_bottom = 54.0
+text = "音效："
+
+[node name="soundEffect" type="HSlider" parent="Camera2D/Panel/yinXiao"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 166.0
+offset_bottom = 20.0
+
+[node name="menu" type="Button" parent="Camera2D/Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 66.0
+offset_right = 60.0
+offset_bottom = 94.0
+text = "菜单"
+
+[node name="back" type="Button" parent="Camera2D/Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 66.0
+offset_right = 165.0
+offset_bottom = 94.0
+text = "返回"
+
+[node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]
+visible = false
+z_index = 1
+offset_left = -159.0
+offset_top = -89.0
+offset_right = -159.0
+offset_bottom = -89.0
+scale = Vector2(1.39279, 1.39279)

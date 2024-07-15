@@ -21,7 +21,7 @@ public partial class Finish : Button
     public override void _Ready()
     {
         // 加载目标场景
-        _nextScene = (PackedScene)ResourceLoader.Load("res://grassDay.tscn");
+        _nextScene = (PackedScene)ResourceLoader.Load("res://GameScene.tscn");
         Connect("button_up", new Callable(this, nameof(SwitchScene)));
         mapType.Connect("item_selected", new Callable(this, nameof(getMapIndex)));
         modeType.Connect("item_selected", new Callable(this, nameof(getModeIndex)));
@@ -37,7 +37,7 @@ public partial class Finish : Button
 
     public void SwitchScene(/* string parameter */)
     {
-        if (!(mapTypeIndex > -1 && Regex.IsMatch(sunOriginal.Text, @"\d") && !(Regex.Matches(sunOriginal.Text, "[a-zA-Z]").Count > 0))) return;
+        if (!(mapTypeIndex > -1 && Regex.IsMatch(sunOriginal.Text, @"^\d+$"))) return;
         // 实例化目标场景
         Node nextSceneInstance = _nextScene.Instantiate();
 
@@ -49,15 +49,16 @@ public partial class Finish : Button
 
         // 将新场景添加到当前场景树并移除当前场景
         GetTree().CurrentScene.QueueFree();
-        addDatasToMap(sunOriginal.Text);//给新场景传输数据
-        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex);
         GetTree().Root.AddChild(nextSceneInstance);
         //nextSceneInstance.GetNode<Label>("Label").Text = "asd";
         GetTree().CurrentScene = nextSceneInstance;
+        addDatasToMap(sunOriginal.Text);//给新场景传输数据
+        nextSceneInstance.GetNode<Control>("Camera2D/CardUI").Visible = true;
+        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex, nextSceneInstance);
     }
     public void addDatasToMap(string sunStr)
     {
-        if (mapTypeIndex > -1 && Regex.IsMatch(sunStr, @"\d") && !(Regex.Matches(sunStr, "[a-zA-Z]").Count > 0))
+        if (mapTypeIndex > -1 && Regex.IsMatch(sunStr, @"^\d+$"))
         {
             switch (mapTypeIndex)
             {

@@ -1,6 +1,7 @@
-res://grassDay.tscn
+res://GameScene.tscn
 res://anim/plant/rePeater/rePeater.tres
 res://anim/backGround/grass.tscn
+res://Scene/pool_day.tscn
 res://UI.tscn
 res://player.tscn
 res://Prefabs/GDlogo.tscn
