@@ -29,6 +29,14 @@ project/assembly_name="Godot Projects"
 
 movie_writer/movie_file="D:/Datas/GdVideo/01.avi"
 
+[file_customization]
+
+folder_colors={
+"res://Scene/": "red",
+"res://anim/": "yellow",
+"res://code/": "green"
+}
+
 [input]
 
 move_right={

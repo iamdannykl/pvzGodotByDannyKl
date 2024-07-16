@@ -47,10 +47,10 @@ vertical_alignment = 1
 
 [node name="Type" type="Label" parent="Panel"]
 layout_mode = 1
-offset_left = 10.0
-offset_top = 35.0
-offset_right = 46.0
-offset_bottom = 52.0
+offset_left = 8.0
+offset_top = 23.0
+offset_right = 59.0
+offset_bottom = 47.0
 theme_override_font_sizes/font_size = 17
 text = "地图："
 vertical_alignment = 1
@@ -107,10 +107,10 @@ button_group = SubResource("ButtonGroup_xc0sj")
 
 [node name="sunOriginal" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 70.0
-offset_right = 70.0
-offset_bottom = 87.0
+offset_left = 8.0
+offset_top = 58.0
+offset_right = 93.0
+offset_bottom = 82.0
 theme_override_font_sizes/font_size = 17
 text = "初始阳光："
 vertical_alignment = 1
@@ -124,10 +124,10 @@ theme_override_font_sizes/font_size = 16
 
 [node name="playMode" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 107.0
-offset_right = 46.0
-offset_bottom = 124.0
+offset_left = 8.0
+offset_top = 95.0
+offset_right = 59.0
+offset_bottom = 119.0
 theme_override_font_sizes/font_size = 17
 text = "模式："
 vertical_alignment = 1
@@ -139,7 +139,7 @@ offset_top = 2.0
 offset_right = 125.0
 offset_bottom = 22.0
 
-[node name="Finish" type="Button" parent="Panel" node_paths=PackedStringArray("mapType", "sunOriginal", "modeType")]
+[node name="Finish" type="Button" parent="Panel" node_paths=PackedStringArray("mapType", "sunOriginal", "modeType", "guanQiaName")]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -154,6 +154,7 @@ script = ExtResource("9_cp701")
 mapType = NodePath("../Type/mapType")
 sunOriginal = NodePath("../sunOriginal/LineEdit")
 modeType = NodePath("../playMode/Mode")
+guanQiaName = NodePath("../GuanQiaName/LineEdit")
 
 [node name="Back" type="Button" parent="Panel" node_paths=PackedStringArray("start")]
 layout_mode = 1
@@ -167,3 +168,19 @@ theme_override_font_sizes/font_size = 16
 text = "返回"
 script = ExtResource("8_pr1ak")
 start = NodePath("../..")
+
+[node name="GuanQiaName" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 124.0
+offset_right = 88.0
+offset_bottom = 147.0
+text = "关卡名称："
+
+[node name="LineEdit" type="LineEdit" parent="Panel/GuanQiaName"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = -4.0
+offset_right = 246.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 14

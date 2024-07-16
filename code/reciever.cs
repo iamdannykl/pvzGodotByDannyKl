@@ -1,19 +1,31 @@
 using Godot;
 using System;
 
+public enum playMode
+{
+    player,
+    edit,
+    noneMode
+}
 public partial class reciever : Label
 {
     public guanQiaType thisGuanQiaType;
+    public playMode playMode;
     public int sunNum;
     public int RcHangShu;
     public int RcmapIndex;
     public PackedScene mapScene;
+    public string GQname;
     public Node2D map2d;
-    public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, Node nextScene)
+    //recieve and init
+    public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, string gqName)
     {
+        playMode = playMode.edit;
+        GD.Print("RC:" + playMode);
         thisGuanQiaType = guanQiaType;
         sunNum = sunOriginalNum;
         RcmapIndex = mapIndex;
+        GQname = gqName;
         if (RcmapIndex == 0 || RcmapIndex == 1 || RcmapIndex == 4)
         {
             RcHangShu = 5;
@@ -48,6 +60,9 @@ public partial class reciever : Label
         //nextScene.AddChild(map2d);
         GetTree().Root.AddChild(map2d);
         GD.Print(map2d.GlobalPosition);
+
+        //SetTheNameOfCurrentQuanQia;
+        GetTree().Root.GetNode<Label>("GameScene/Camera2D/guanQiaName").Text = GQname;
     }
 }
 

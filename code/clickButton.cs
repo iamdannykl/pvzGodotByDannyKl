@@ -29,9 +29,20 @@ public partial class clickButton : TextureButton
             }
             else
             {
-
+                isplanted = false;
+                GD.Print("plant:");
+                GD.Print(plantInstan != null);
+                if (plantInstan != null)
+                {
+                    plantInstan.QueueFree();
+                    plantInstan = null;
+                }
             }
         }
+    }
+    public void initIt()
+    {
+        WantPlace = false;
     }
     public override void _Ready()
     {
@@ -42,7 +53,8 @@ public partial class clickButton : TextureButton
         if (!WantPlace)
         {
             GD.Print("button pressed!" + danli.Instance.tst(danli.Instance.abc));
-            //生成一个plant
+            danli.Instance.PlantCard = this;
+            GD.Print("danliFns");            //生成一个plant
             WantPlace = true;
         }
     }
@@ -55,15 +67,18 @@ public partial class clickButton : TextureButton
             //GD.Print(gridS.Plant);
             if (!grid.Plant)
             {
-                shadow.QueueFree();
+                //shadow.QueueFree();
+                plant.QueueFree();
+                plantInstan = null;
                 grid.Plant = true;
                 isplanted = true;
-                plant.GlobalPosition = grid.Position;
+                shadow.Modulate = new Color(1, 1, 1, 1);
+                shadow.GlobalPosition = grid.Position;
                 //plant.GetNode<baseCard>("baseCard").placed();
-                plant.placed();
-                GD.Print(grid.Position);
+                shadow.placed();
+                /* GD.Print(grid.Position);
                 GD.Print(grid.Point);
-                GD.Print(GetGlobalMousePosition());
+                GD.Print(GetGlobalMousePosition()); */
                 WantPlace = false;
             }
         }

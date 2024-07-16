@@ -115,6 +115,14 @@ texture_normal = SubResource("AtlasTexture_tef2i")
 texture_pressed = SubResource("AtlasTexture_p5bdp")
 texture_click_mask = ExtResource("8_o1a1v")
 
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = -122.0
+offset_top = -76.0
+offset_right = -2.0
+offset_bottom = -54.0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_5pgbk")
+
 [node name="start" parent="." instance=ExtResource("2_iuca8")]
 visible = false
 offset_left = 11.0
@@ -128,14 +136,6 @@ offset_left = -129.0
 offset_top = -86.0
 offset_right = -129.0
 offset_bottom = -86.0
-
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_left = -122.0
-offset_top = -76.0
-offset_right = -2.0
-offset_bottom = -54.0
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_5pgbk")
 
 [node name="QQ" type="TextureButton" parent="."]
 z_index = 1

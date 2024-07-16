@@ -1,10 +1,114 @@
-[gd_scene load_steps=6 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=18 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
 [ext_resource type="Script" path="res://code/danli.cs" id="3_sstho"]
 [ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
 [ext_resource type="PackedScene" uid="uid://c1dcqwowyv2qv" path="res://Scene/title.tscn" id="4_x5rg2"]
+[ext_resource type="Script" path="res://code/Camera2D.cs" id="5_uefq8"]
+[ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="7_1lpte"]
+[ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
+[ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
+
+[sub_resource type="Animation" id="Animation_cmmug"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-57, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_16mf5"]
+resource_name = "leftMove"
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(85, -0.25, 0, 0.25, 0, -57, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_j8jev"]
+resource_name = "rightMove"
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-57, -0.25, 0, 0.25, 35.5, 85, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sl500"]
+_data = {
+"RESET": SubResource("Animation_cmmug"),
+"leftMove": SubResource("Animation_16mf5"),
+"rightMove": SubResource("Animation_j8jev")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81lut"]
+atlas = ExtResource("7_x4ab5")
+region = Rect2(223, 7, 24, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubm6f"]
+atlas = ExtResource("7_x4ab5")
+region = Rect2(248, 7, 24, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5strt"]
+atlas = ExtResource("8_62omw")
+region = Rect2(236, 5, 24, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhcuv"]
+atlas = ExtResource("8_62omw")
+region = Rect2(261, 5, 24, 22)
 
 [node name="GameScene" type="Node2D"]
 y_sort_enabled = true
@@ -18,7 +122,7 @@ offset_right = -103.0
 offset_bottom = -13.0
 script = ExtResource("2_8n5vd")
 
-[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel")]
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee")]
 position = Vector2(0, -1)
 script = ExtResource("3_sstho")
 backToMenu = NodePath("../Camera2D/Panel/menu")
@@ -26,6 +130,7 @@ backToGame = NodePath("../Camera2D/Panel/back")
 ESC = NodePath("../Camera2D/esc")
 startMenu = ExtResource("4_x5rg2")
 panel = NodePath("../Camera2D/Panel")
+leftSee = NodePath("../Camera2D/seeLeft")
 
 [node name="zomZone" type="Panel" parent="."]
 z_index = 1
@@ -34,9 +139,11 @@ offset_top = -68.0
 offset_right = 178.0
 offset_bottom = 86.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("animationPlayer")]
 position = Vector2(-57, 0)
 zoom = Vector2(3.465, 3.465)
+script = ExtResource("5_uefq8")
+animationPlayer = NodePath("AnimationPlayer")
 
 [node name="esc" type="Button" parent="Camera2D"]
 z_index = 1
@@ -108,10 +215,61 @@ offset_bottom = 94.0
 text = "返回"
 
 [node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]
-visible = false
 z_index = 1
 offset_left = -159.0
 offset_top = -89.0
 offset_right = -159.0
 offset_bottom = -89.0
 scale = Vector2(1.39279, 1.39279)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_sl500")
+}
+
+[node name="seeLeft" type="Button" parent="Camera2D"]
+z_index = 1
+offset_left = 100.0
+offset_top = -92.0
+offset_right = 127.0
+offset_bottom = -61.0
+text = "<="
+
+[node name="guanQiaName" type="Label" parent="Camera2D"]
+z_index = 1
+offset_left = -74.0
+offset_top = -98.0
+offset_right = 76.0
+offset_bottom = -75.0
+
+[node name="zomCardLeft" type="ScrollContainer" parent="Camera2D"]
+visible = false
+z_index = 1
+offset_left = -161.0
+offset_top = -89.0
+offset_right = -124.0
+offset_bottom = 90.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/zomCardLeft"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="zombie" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_81lut")
+texture_pressed = SubResource("AtlasTexture_ubm6f")
+
+[node name="luZhang" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_5strt")
+texture_pressed = SubResource("AtlasTexture_nhcuv")
+
+[node name="TextureButton3" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton4" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+layout_mode = 2
+
+[node name="zombieBase" parent="." instance=ExtResource("7_1lpte")]
+z_index = 1
+position = Vector2(85, 0)

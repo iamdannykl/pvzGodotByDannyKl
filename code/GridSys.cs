@@ -32,10 +32,10 @@ public partial class GridSys : Node2D
 		XjianGe = (youshang.GlobalPosition.X - zuoxia.GlobalPosition.X) / 8f;
 		YjianGe = -(youshang.GlobalPosition.Y - zuoxia.GlobalPosition.Y) / (hangShu - 1);
 		CreateGridBaseGrid();
-		GD.Print(zuoxia.GlobalPosition);
+		/* GD.Print(zuoxia.GlobalPosition);
 		GD.Print(youshang.GlobalPosition);
 		GD.Print(GlobalPosition);
-		GD.Print(XjianGe + "," + YjianGe);
+		GD.Print(XjianGe + "," + YjianGe); */
 		realZX = zuoxia.GlobalPosition - new Vector2(XjianGe / 2, -YjianGe / 2);
 		/* Node2D zxnd = packedScene.Instantiate() as Node2D;
 		Node2D ysnd = packedScene.Instantiate() as Node2D;
@@ -120,8 +120,8 @@ public partial class GridSys : Node2D
 		Vector2 clickPos = GetPosByMouse();
 		distance = clickPos - realZX;
 		gridPoint = new Vector2((int)(distance.X / XjianGe), (int)(-distance.Y / YjianGe));
-		GD.Print("-distance.Y:" + -distance.Y); GD.Print("YjianGe" + YjianGe);
-		GD.Print("gridPoint:" + gridPoint);
+		/* GD.Print("-distance.Y:" + -distance.Y); GD.Print("YjianGe" + YjianGe);
+		GD.Print("gridPoint:" + gridPoint); */
 		//GD.Print(gridPoint, gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > 4 || gridPoint.Y < 0);
 		if (gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > (hangShu - 1) || gridPoint.Y < 0)
 		{

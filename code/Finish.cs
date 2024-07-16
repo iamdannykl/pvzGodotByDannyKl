@@ -15,6 +15,7 @@ public partial class Finish : Button
     [Export] public OptionButton mapType;
     [Export] public LineEdit sunOriginal;
     [Export] public OptionButton modeType;
+    [Export] public LineEdit guanQiaName;
     public guanQiaType guanQiaType;
     public int mapTypeIndex = -1;
     public int modeTypeIndex = -1;
@@ -37,7 +38,7 @@ public partial class Finish : Button
 
     public void SwitchScene(/* string parameter */)
     {
-        if (!(mapTypeIndex > -1 && Regex.IsMatch(sunOriginal.Text, @"^\d+$"))) return;
+        if (!(mapTypeIndex > -1 && Regex.IsMatch(sunOriginal.Text, @"^\d+$") && !string.IsNullOrWhiteSpace(guanQiaName.Text))) return;
         // 实例化目标场景
         Node nextSceneInstance = _nextScene.Instantiate();
 
@@ -53,8 +54,9 @@ public partial class Finish : Button
         //nextSceneInstance.GetNode<Label>("Label").Text = "asd";
         GetTree().CurrentScene = nextSceneInstance;
         addDatasToMap(sunOriginal.Text);//给新场景传输数据
-        nextSceneInstance.GetNode<Control>("Camera2D/CardUI").Visible = true;
-        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex, nextSceneInstance);
+        nextSceneInstance.GetNode<Control>("Camera2D/CardUI").Visible = true;//cardUI
+        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex, guanQiaName.Text);
+        //nextSceneInstance.GetNode<Camera2D>("Camera2D").rightYi();
     }
     public void addDatasToMap(string sunStr)
     {
