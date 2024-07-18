@@ -352,6 +352,15 @@ offset_bottom = 31.0
 scale = Vector2(0.65044, 0.65044)
 text = "finish"
 
+[node name="Button" type="Button" parent="Camera2D/zomCardUI"]
+z_index = 1
+layout_mode = 0
+offset_left = 69.0
+offset_top = 63.0
+offset_right = 107.0
+offset_bottom = 94.0
+text = "test"
+
 [node name="ZR1" type="Node2D" parent="Camera2D"]
 z_index = 1
 
@@ -363,3 +372,4 @@ z_index = 1
 
 [connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]
 [connection signal="item_selected" from="Camera2D/zomCardUI/Panel/zhenRong" to="Camera2D/zomCardUI" method="setZRnum"]
+[connection signal="button_up" from="Camera2D/zomCardUI/Button" to="Camera2D/zomCardUI" method="deSerializeJsonToObject"]

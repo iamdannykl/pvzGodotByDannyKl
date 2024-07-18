@@ -37,6 +37,8 @@ public partial class GuanQiaSaver : Control
             TypeNameHandling = TypeNameHandling.All,
             ObjectCreationHandling = ObjectCreationHandling.Replace
         };
+        GD.Print("zrsshu:" + save.waves[0].zrs.Count);
+        GD.Print("num:" + save.waves[0].zrs[0].zomInfos.Count);
         jsonString = JsonConvert.SerializeObject(save, setting);
         GD.Print(jsonString);
         if (File.Exists("D:\\fileSave\\gq.json"))
@@ -47,6 +49,36 @@ public partial class GuanQiaSaver : Control
         StreamWriter sw = new StreamWriter("D:\\fileSave\\gq.json");
         sw.Write(jsonString);
         sw.Close();
+    }
+    public void deSerializeJsonToObject()
+    {
+        StreamReader sr = new StreamReader("D:\\fileSave\\gq.json");
+        string jsonString = sr.ReadToEnd();
+        sr.Close();
+        GD.Print(jsonString);
+        JsonSerializerSettings setting = new JsonSerializerSettings
+        {
+            PreserveReferencesHandling = PreserveReferencesHandling.All,
+            ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
+            NullValueHandling = NullValueHandling.Ignore,
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+            //Formatting = Formatting.Indented,
+            TypeNameHandling = TypeNameHandling.All,
+            ObjectCreationHandling = ObjectCreationHandling.Replace
+        };
+        saveContent gqContent = JsonConvert.DeserializeObject<saveContent>(jsonString, setting);
+        GD.Print(gqContent.waves[0].zrs[0].zomInfos[0].pos);
+        int i = 1;
+        int j = 0;
+        foreach (var WAVE in gqContent.waves)
+        {
+            j++;
+            foreach (zr ZRSHU in WAVE.zrs)
+            {
+                GD.Print("zrs:" + i++);
+            }
+        }
+        GD.Print("wave:" + j);
     }
     void clickNextButton()
     {
