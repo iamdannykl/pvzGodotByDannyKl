@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmlfjne8ramlg"]
+[gd_scene load_steps=12 format=3 uid="uid://cmlfjne8ramlg"]
 
 [ext_resource type="Texture2D" uid="uid://blujqye77knm" path="res://anim/backGround/116729.png" id="1_2gy6i"]
 [ext_resource type="Script" path="res://MyOptionButton.cs" id="1_kt81u"]
@@ -7,15 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://co38ss68yj1jv" path="res://anim/backGround/155613.png" id="3_dlwaa"]
 [ext_resource type="Texture2D" uid="uid://msvvoo5hngwe" path="res://anim/backGround/155614.png" id="4_0jfe4"]
 [ext_resource type="Texture2D" uid="uid://bxxqxo3xteqyp" path="res://anim/backGround/155192.png" id="5_oxqt1"]
-[ext_resource type="Script" path="res://MenuButton.cs" id="7_av72g"]
 [ext_resource type="Script" path="res://Back.cs" id="8_pr1ak"]
 [ext_resource type="Script" path="res://code/Finish.cs" id="9_cp701"]
+[ext_resource type="Script" path="res://code/DaoRu.cs" id="10_u7y2k"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_vjdiu"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_l8u2j"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_xc0sj"]
 
 [node name="start" type="Control"]
 layout_mode = 3
@@ -81,29 +77,6 @@ popup/item_4/text = "roof"
 popup/item_4/icon = ExtResource("5_oxqt1")
 popup/item_4/id = 4
 script = ExtResource("1_kt81u")
-
-[node name="MenuButton" type="MenuButton" parent="Panel"]
-layout_mode = 0
-offset_left = 175.0
-offset_top = 73.0
-offset_right = 228.0
-offset_bottom = 104.0
-button_group = SubResource("ButtonGroup_l8u2j")
-text = "menu"
-item_count = 2
-popup/item_0/text = "aa"
-popup/item_0/id = 0
-popup/item_1/text = "bb"
-popup/item_1/id = 1
-script = ExtResource("7_av72g")
-
-[node name="CheckButton" type="CheckButton" parent="Panel"]
-layout_mode = 0
-offset_left = 174.0
-offset_top = 33.0
-offset_right = 218.0
-offset_bottom = 64.0
-button_group = SubResource("ButtonGroup_xc0sj")
 
 [node name="sunOriginal" type="Label" parent="Panel"]
 layout_mode = 0
@@ -184,3 +157,26 @@ offset_top = -4.0
 offset_right = 246.0
 offset_bottom = 24.0
 theme_override_font_sizes/font_size = 14
+
+[node name="DaoRu" type="Button" parent="Panel" node_paths=PackedStringArray("fileDialog")]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 58.0
+offset_right = 249.0
+offset_bottom = 89.0
+text = "从外部导入"
+script = ExtResource("10_u7y2k")
+fileDialog = NodePath("FileDialog")
+
+[node name="FileDialog" type="FileDialog" parent="Panel/DaoRu"]
+title = "Open a File"
+initial_position = 2
+ok_button_text = "打开"
+dialog_hide_on_ok = true
+file_mode = 0
+access = 2
+filters = PackedStringArray(".json;关卡json")
+show_hidden_files = true
+use_native_dialog = true
+
+[connection signal="file_selected" from="Panel/DaoRu/FileDialog" to="Panel/DaoRu" method="_on_file_dialog_file_selected"]

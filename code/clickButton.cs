@@ -6,6 +6,7 @@ public partial class clickButton : TextureButton
     public PackedScene plantPrefab;
     public baseCard plantInstan;
     public baseCard shadow;
+    [Export] public PlantType plantType;
     bool isplanted = false;
     private bool wantPlace;
     public GridS grid;
@@ -17,6 +18,7 @@ public partial class clickButton : TextureButton
             wantPlace = value;
             if (wantPlace)
             {
+                plantPrefab = resPlantAndZom.Instance.matchPlant(plantType);
                 plantInstan = plantPrefab.Instantiate() as baseCard;
                 shadow = plantPrefab.Instantiate() as baseCard;
                 shadow.Modulate = new Color(1, 1, 1, 0.55f);
@@ -46,7 +48,8 @@ public partial class clickButton : TextureButton
     }
     public override void _Ready()
     {
-        plantPrefab = GD.Load<PackedScene>("res://Prefabs/repeater.tscn");
+
+        /* GD.Load<PackedScene>("res://Prefabs/repeater.tscn"); */
     }
     void _on_button_up()
     {
@@ -56,6 +59,10 @@ public partial class clickButton : TextureButton
             danli.Instance.PlantCard = this;
             GD.Print("danliFns");            //生成一个plant
             WantPlace = true;
+        }
+        else
+        {
+            WantPlace = false;
         }
     }
     public void PlantIt(baseCard plant)
@@ -92,7 +99,7 @@ public partial class clickButton : TextureButton
         }*/
         if (WantPlace && plantInstan != null)
         {
-            plantInstan.GlobalPosition = GetGlobalMousePosition();
+            plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置
             grid = GridSys.Instance.GetGridByMouse();
             if (grid != null && !grid.Plant)
             {

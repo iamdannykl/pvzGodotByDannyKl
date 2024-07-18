@@ -1,14 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=22 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
 [ext_resource type="Script" path="res://code/danli.cs" id="3_sstho"]
+[ext_resource type="Script" path="res://code/resPlantAndZom.cs" id="3_v1isw"]
+[ext_resource type="PackedScene" uid="uid://31q3j34r4go0" path="res://Prefabs/repeater.tscn" id="4_c3t61"]
 [ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
 [ext_resource type="PackedScene" uid="uid://c1dcqwowyv2qv" path="res://Scene/title.tscn" id="4_x5rg2"]
+[ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="5_74kye"]
 [ext_resource type="Script" path="res://code/Camera2D.cs" id="5_uefq8"]
-[ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="7_1lpte"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
+[ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
+[ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
 
 [sub_resource type="Animation" id="Animation_cmmug"]
 length = 0.001
@@ -122,6 +126,13 @@ offset_right = -103.0
 offset_bottom = -13.0
 script = ExtResource("2_8n5vd")
 
+[node name="matchCard" type="Node2D" parent="."]
+position = Vector2(-216, -89)
+scale = Vector2(1.39279, 1.39279)
+script = ExtResource("3_v1isw")
+rePeater = ExtResource("4_c3t61")
+zombie = ExtResource("5_74kye")
+
 [node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee")]
 position = Vector2(0, -1)
 script = ExtResource("3_sstho")
@@ -134,9 +145,9 @@ leftSee = NodePath("../Camera2D/seeLeft")
 
 [node name="zomZone" type="Panel" parent="."]
 z_index = 1
-offset_left = 115.0
+offset_left = 128.0
 offset_top = -68.0
-offset_right = 178.0
+offset_right = 191.0
 offset_bottom = 86.0
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("animationPlayer")]
@@ -215,6 +226,7 @@ offset_bottom = 94.0
 text = "返回"
 
 [node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]
+visible = false
 z_index = 1
 offset_left = -159.0
 offset_top = -89.0
@@ -229,47 +241,125 @@ libraries = {
 
 [node name="seeLeft" type="Button" parent="Camera2D"]
 z_index = 1
-offset_left = 100.0
-offset_top = -92.0
-offset_right = 127.0
-offset_bottom = -61.0
+offset_left = 97.0
+offset_top = -93.0
+offset_right = 134.0
+offset_bottom = -55.0
+scale = Vector2(0.789998, 0.789998)
+theme_override_font_sizes/font_size = 21
 text = "<="
 
 [node name="guanQiaName" type="Label" parent="Camera2D"]
 z_index = 1
-offset_left = -74.0
-offset_top = -98.0
-offset_right = 76.0
-offset_bottom = -75.0
+offset_left = -165.0
+offset_top = 73.0
+offset_right = -15.0
+offset_bottom = 96.0
 
-[node name="zomCardLeft" type="ScrollContainer" parent="Camera2D"]
+[node name="zomCardUI" type="Control" parent="Camera2D" node_paths=PackedStringArray("waveNum", "nextButton", "finishButton", "zr1", "zr2", "zr3")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 57.0
+offset_right = 97.0
+offset_bottom = 40.0
+script = ExtResource("10_edh3m")
+waveNum = NodePath("Panel/waveNum")
+nextButton = NodePath("Panel/nextWave")
+finishButton = NodePath("Panel/finishEdit")
+zr1 = NodePath("../ZR1")
+zr2 = NodePath("../ZR2")
+zr3 = NodePath("../ZR3")
+
+[node name="zomCardLeft" type="ScrollContainer" parent="Camera2D/zomCardUI"]
 visible = false
 z_index = 1
-offset_left = -161.0
+layout_mode = 0
+offset_left = -218.0
 offset_top = -89.0
-offset_right = -124.0
+offset_right = -181.0
 offset_bottom = 90.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/zomCardLeft"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/zomCardUI/zomCardLeft"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="zombie" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+[node name="zombie" type="TextureButton" parent="Camera2D/zomCardUI/zomCardLeft/VBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_81lut")
 texture_pressed = SubResource("AtlasTexture_ubm6f")
+script = ExtResource("11_qnxan")
 
-[node name="luZhang" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+[node name="luZhang" type="TextureButton" parent="Camera2D/zomCardUI/zomCardLeft/VBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_5strt")
 texture_pressed = SubResource("AtlasTexture_nhcuv")
 
-[node name="TextureButton3" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="Camera2D/zomCardUI/zomCardLeft/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton4" type="TextureButton" parent="Camera2D/zomCardLeft/VBoxContainer"]
+[node name="TextureButton4" type="TextureButton" parent="Camera2D/zomCardUI/zomCardLeft/VBoxContainer"]
 layout_mode = 2
 
-[node name="zombieBase" parent="." instance=ExtResource("7_1lpte")]
+[node name="Panel" type="Panel" parent="Camera2D/zomCardUI"]
 z_index = 1
-position = Vector2(85, 0)
+layout_mode = 0
+offset_left = -194.0
+offset_top = -93.0
+offset_right = 27.0
+offset_bottom = -71.0
+
+[node name="nextWave" type="Button" parent="Camera2D/zomCardUI/Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 72.0
+offset_right = 179.0
+offset_bottom = 36.0
+scale = Vector2(0.526201, 0.526201)
+theme_override_font_sizes/font_size = 20
+text = "next wave"
+
+[node name="waveNum" type="Label" parent="Camera2D/zomCardUI/Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 58.0
+offset_bottom = 22.0
+text = "第     波"
+
+[node name="zhenRong" type="OptionButton" parent="Camera2D/zomCardUI/Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 132.0
+offset_right = 229.0
+offset_bottom = 36.0
+scale = Vector2(0.529304, 0.529304)
+theme_override_font_sizes/font_size = 20
+item_count = 3
+popup/item_0/text = "阵容1"
+popup/item_0/id = 0
+popup/item_1/text = "阵容2"
+popup/item_1/id = 1
+popup/item_2/text = "阵容3"
+popup/item_2/id = 2
+
+[node name="finishEdit" type="Button" parent="Camera2D/zomCardUI/Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 185.0
+offset_right = 236.0
+offset_bottom = 31.0
+scale = Vector2(0.65044, 0.65044)
+text = "finish"
+
+[node name="ZR1" type="Node2D" parent="Camera2D"]
+z_index = 1
+
+[node name="ZR2" type="Node2D" parent="Camera2D"]
+z_index = 1
+
+[node name="ZR3" type="Node2D" parent="Camera2D"]
+z_index = 1
+
+[connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]
+[connection signal="item_selected" from="Camera2D/zomCardUI/Panel/zhenRong" to="Camera2D/zomCardUI" method="setZRnum"]

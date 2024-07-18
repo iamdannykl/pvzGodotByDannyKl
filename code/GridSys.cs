@@ -7,6 +7,8 @@ public partial class GridSys : Node2D
 {
 	public static GridSys Instance;
 	public int hangShu;
+	public List<hang> hangList = new List<hang>();
+	public List<HangType> hangTypes = new List<HangType>();
 	public int thisMapIndex;
 	public reciever reciever;
 	[Export]
@@ -31,6 +33,8 @@ public partial class GridSys : Node2D
 		hangShu = reciever.RcHangShu;
 		XjianGe = (youshang.GlobalPosition.X - zuoxia.GlobalPosition.X) / 8f;
 		YjianGe = -(youshang.GlobalPosition.Y - zuoxia.GlobalPosition.Y) / (hangShu - 1);
+		initHang();
+		createHang();
 		CreateGridBaseGrid();
 		/* GD.Print(zuoxia.GlobalPosition);
 		GD.Print(youshang.GlobalPosition);
@@ -43,6 +47,64 @@ public partial class GridSys : Node2D
 		ysnd.GlobalPosition = youshang.GlobalPosition;
 		AddChild(zxnd);
 		AddChild(ysnd); */
+	}
+	void initHang()
+	{
+		if (reciever.thisGuanQiaType == guanQiaType.grassDay || reciever.thisGuanQiaType == guanQiaType.grassNight)
+		{
+			for (int i = 0; i < hangShu; i++)
+			{
+				hangTypes.Add(HangType.grass);
+			}
+		}
+		if (reciever.thisGuanQiaType == guanQiaType.poolDay || reciever.thisGuanQiaType == guanQiaType.poolNight)
+		{
+			hangTypes.Add(HangType.grass);
+			hangTypes.Add(HangType.grass);
+			hangTypes.Add(HangType.water);
+			hangTypes.Add(HangType.water);
+			hangTypes.Add(HangType.grass);
+			hangTypes.Add(HangType.grass);
+		}
+		if (reciever.thisGuanQiaType == guanQiaType.roof)
+		{
+			for (int i = 0; i < hangShu; i++)
+			{
+				hangTypes.Add(HangType.roof);
+			}
+		}
+	}
+	void createHang()
+	{
+		for (int i = 0; i < hangShu; i++)
+		{
+			hangList.Add(new hang(hangShu, new Vector2(zuoxia.GlobalPosition.X - XjianGe / 2, zuoxia.GlobalPosition.Y - i * YjianGe), hangTypes[i]));
+		}
+	}
+	public hang GetHangByMouse()//通过鼠标获取行
+	{
+		Vector2 clickPos = GetPosByMouse();
+		distance = clickPos - realZX;
+		gridPoint = new Vector2((int)(distance.X / XjianGe), (int)(-distance.Y / YjianGe));
+		//GD.Print(gridPoint);
+		if (gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > (hangShu - 1) || gridPoint.Y < 0)
+		{
+			isOut = true;
+			gridPoint = new Vector2(-1, -1);
+			return null;
+		}
+		else
+		{
+			isOut = false;
+		}
+		if (gridPoint == new Vector2(-1, -1)) return null;
+		else
+		{
+			/* GD.Print("hangList:" + hangList.Count);
+			GD.Print("sy:" + (int)gridPoint.Y); */
+			//return null;
+			return hangList[(int)gridPoint.Y];
+		}
 	}
 
 	private void CreateGridBaseGrid()

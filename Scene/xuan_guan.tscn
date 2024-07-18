@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbtwfc6mkqx6x"]
+[gd_scene load_steps=11 format=3 uid="uid://bbtwfc6mkqx6x"]
 
+[ext_resource type="Script" path="res://code/xuan_guan.cs" id="1_tehl0"]
 [ext_resource type="StyleBox" uid="uid://bf2kv7y8mak8s" path="res://theme/start.tres" id="1_u5e4r"]
 [ext_resource type="Texture2D" uid="uid://blujqye77knm" path="res://anim/backGround/116729.png" id="2_i8a1a"]
 [ext_resource type="Texture2D" uid="uid://cgkvaktpee1d2" path="res://anim/backGround/121700.png" id="3_v808h"]
@@ -10,7 +11,7 @@
 [ext_resource type="Script" path="res://code/ADD.cs" id="8_hobg6"]
 [ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="9_55cdr"]
 
-[node name="xuanGuan" type="Control"]
+[node name="xuanGuan" type="Control" node_paths=PackedStringArray("gqList")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,8 @@ offset_right = -1024.0
 offset_bottom = -554.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tehl0")
+gqList = NodePath("Panel/ItemList")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

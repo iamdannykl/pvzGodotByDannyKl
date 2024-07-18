@@ -1,9 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://c1dcqwowyv2qv"]
+[gd_scene load_steps=26 format=3 uid="uid://c1dcqwowyv2qv"]
 
 [ext_resource type="Texture2D" uid="uid://bva8h2eyvka15" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png" id="1_etkse"]
 [ext_resource type="Script" path="res://Scene/title.cs" id="1_j25ri"]
 [ext_resource type="Texture2D" uid="uid://bxxmma6syym7c" path="res://black.png" id="2_csxh8"]
-[ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="2_iuca8"]
 [ext_resource type="Script" path="res://Scene/Edit.cs" id="3_hocyy"]
 [ext_resource type="Script" path="res://code/quit.cs" id="4_c4o8n"]
 [ext_resource type="PackedScene" uid="uid://bbtwfc6mkqx6x" path="res://Scene/xuan_guan.tscn" id="5_lit06"]
@@ -122,13 +121,6 @@ offset_right = -2.0
 offset_bottom = -54.0
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_5pgbk")
-
-[node name="start" parent="." instance=ExtResource("2_iuca8")]
-visible = false
-offset_left = 11.0
-offset_top = 12.0
-offset_right = 11.0
-offset_bottom = 12.0
 
 [node name="xuanGuan" parent="." instance=ExtResource("5_lit06")]
 visible = false

@@ -32,3 +32,4 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\refint\Godot
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.pdb
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Newtonsoft.Json.dll

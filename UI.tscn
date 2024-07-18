@@ -27,6 +27,7 @@ offset_bottom = 24.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="rePeater2" type="TextureButton" parent="zuoKaCao"]
@@ -37,6 +38,7 @@ offset_bottom = 45.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="rePeater3" type="TextureButton" parent="zuoKaCao"]
@@ -47,6 +49,7 @@ offset_bottom = 68.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="rePeater4" type="TextureButton" parent="zuoKaCao"]
@@ -57,6 +60,7 @@ offset_bottom = 90.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="rePeater5" type="TextureButton" parent="zuoKaCao"]
@@ -67,6 +71,7 @@ offset_bottom = 110.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="rePeater6" type="TextureButton" parent="zuoKaCao"]
@@ -77,6 +82,7 @@ offset_bottom = 131.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
+plantType = 1
 metadata/_edit_group_ = true
 
 [node name="xuanKaCao" type="Panel" parent="."]

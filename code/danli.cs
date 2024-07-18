@@ -11,8 +11,21 @@ public partial class danli : Node2D
 	[Export] public Panel panel;
 	[Export] public Button leftSee;
 	private clickButton plantCard;
+	private zomCard zombieCard;
 	public Node2D titleMenu;
 	public int abc = 8;
+	public zomCard ZombieCard
+	{
+		get => zombieCard;
+		set
+		{
+			if (zombieCard != null)
+			{
+				zombieCard.WantPlace = false;
+			}
+			zombieCard = value;
+		}
+	}
 	public clickButton PlantCard
 	{
 		get => plantCard;
