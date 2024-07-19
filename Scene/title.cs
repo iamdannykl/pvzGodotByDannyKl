@@ -7,11 +7,6 @@ public partial class title : Node2D
     public ConfigFile configFile = new ConfigFile();
     public override void _Ready()
     {
-        /* Directory.CreateDirectory("user://grassDay");
-        Directory.CreateDirectory("user://grassNight");
-        Directory.CreateDirectory("user://poolDay");
-        Directory.CreateDirectory("user://poolNight");
-        Directory.CreateDirectory("user://roof"); */
         string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
         string folderPath = Path.Combine(userDir, "PVZgd");
         if (!Directory.Exists(folderPath))

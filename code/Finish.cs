@@ -22,7 +22,7 @@ public partial class Finish : Button
     public override void _Ready()
     {
         // 加载目标场景
-        _nextScene = (PackedScene)ResourceLoader.Load("res://GameScene.tscn");
+        _nextScene = GD.Load<PackedScene>("res://GameScene.tscn");
         Connect("button_up", new Callable(this, nameof(SwitchScene)));
         mapType.Connect("item_selected", new Callable(this, nameof(getMapIndex)));
         modeType.Connect("item_selected", new Callable(this, nameof(getModeIndex)));
@@ -39,7 +39,7 @@ public partial class Finish : Button
     public void SwitchScene(/* string parameter */)
     {
         if (!(mapTypeIndex > -1 && Regex.IsMatch(sunOriginal.Text, @"^\d+$") && !string.IsNullOrWhiteSpace(guanQiaName.Text))) return;
-        GetTree().Root.GetNode<xuan_guan>("Title/xuanGuan").gqList.AddItem("sss");
+        //GetTree().Root.GetNode<xuan_guan>("Title/xuanGuan").gqList.AddItem("sss");
         Node nextSceneInstance = _nextScene.Instantiate();
 
         // 传递参数给目标场景的根节点或其他特定节点

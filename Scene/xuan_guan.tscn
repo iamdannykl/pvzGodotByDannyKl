@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://code/ADD.cs" id="8_hobg6"]
 [ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="9_55cdr"]
 
-[node name="xuanGuan" type="Control" node_paths=PackedStringArray("gqList")]
+[node name="xuanGuan" type="Control" node_paths=PackedStringArray("gqList", "whichGtype")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tehl0")
 gqList = NodePath("Panel/ItemList")
+whichGtype = NodePath("Panel/Label/OptionButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -79,6 +80,7 @@ offset_left = 4.0
 offset_top = 77.0
 offset_right = 255.0
 offset_bottom = 179.0
+max_columns = 8
 
 [node name="MODE" type="Label" parent="Panel"]
 layout_mode = 0
@@ -104,3 +106,6 @@ offset_left = 140.0
 offset_top = 92.0
 offset_right = 140.0
 offset_bottom = 92.0
+
+[connection signal="item_selected" from="Panel/Label/OptionButton" to="." method="selectType"]
+[connection signal="item_selected" from="Panel/ItemList" to="." method="selectGuanQia"]

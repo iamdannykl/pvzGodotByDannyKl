@@ -7,7 +7,7 @@ public partial class danli : Node2D
 	[Export] public Button backToMenu;
 	[Export] public Button backToGame;
 	[Export] public Button ESC;
-	[Export] public PackedScene startMenu;
+	public PackedScene startMenu;
 	[Export] public Panel panel;
 	[Export] public Button leftSee;
 	private clickButton plantCard;
@@ -98,6 +98,7 @@ public partial class danli : Node2D
 	}
 	void backToStart()
 	{
+		startMenu = GD.Load<PackedScene>("res://Scene/title.tscn");
 		titleMenu = startMenu.Instantiate() as Node2D;
 		GetTree().CurrentScene.QueueFree();
 		GetTree().Root.AddChild(titleMenu);

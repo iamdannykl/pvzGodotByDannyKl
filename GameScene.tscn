@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=21 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://code/resPlantAndZom.cs" id="3_v1isw"]
 [ext_resource type="PackedScene" uid="uid://31q3j34r4go0" path="res://Prefabs/repeater.tscn" id="4_c3t61"]
 [ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
-[ext_resource type="PackedScene" uid="uid://c1dcqwowyv2qv" path="res://Scene/title.tscn" id="4_x5rg2"]
 [ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="5_74kye"]
 [ext_resource type="Script" path="res://code/Camera2D.cs" id="5_uefq8"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
@@ -139,7 +138,6 @@ script = ExtResource("3_sstho")
 backToMenu = NodePath("../Camera2D/Panel/menu")
 backToGame = NodePath("../Camera2D/Panel/back")
 ESC = NodePath("../Camera2D/esc")
-startMenu = ExtResource("4_x5rg2")
 panel = NodePath("../Camera2D/Panel")
 leftSee = NodePath("../Camera2D/seeLeft")
 
