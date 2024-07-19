@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.IO;
 
 public partial class DaoRu : Button
 {
@@ -19,5 +20,9 @@ public partial class DaoRu : Button
     void _on_file_dialog_file_selected(string path)
     {
         GD.Print(path);
+        StreamReader reader = new StreamReader(path);
+        string conStr = reader.ReadToEnd();
+        reader.Close();
+        GD.Print(conStr);
     }
 }

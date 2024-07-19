@@ -6,9 +6,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using System.Reflection.Metadata;
 public partial class GuanQiaSaver : Control
 {
     public int ZRnum = -1;
+    [Export] public reciever dataRec;
     [Export] public Label waveNum;
     [Export] public Button nextButton;
     [Export] public Button finishButton;
@@ -24,7 +26,7 @@ public partial class GuanQiaSaver : Control
     }
     void FinishSave()
     {
-        saveContent save = new saveContent(waves);
+        saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
         GD.Print(save.waves.Count);
         string jsonString;
         JsonSerializerSettings setting = new JsonSerializerSettings
@@ -37,22 +39,49 @@ public partial class GuanQiaSaver : Control
             TypeNameHandling = TypeNameHandling.All,
             ObjectCreationHandling = ObjectCreationHandling.Replace
         };
-        GD.Print("zrsshu:" + save.waves[0].zrs.Count);
-        GD.Print("num:" + save.waves[0].zrs[0].zomInfos.Count);
         jsonString = JsonConvert.SerializeObject(save, setting);
-        GD.Print(jsonString);
-        if (File.Exists("D:\\fileSave\\gq.json"))
+        danli.Instance.addGq(dataRec.thisGuanQiaType, 1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
+        string path;
+        string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        string folderPath = Path.Combine(userDir, "PVZgd");
+        switch (dataRec.thisGuanQiaType)
         {
-            File.Delete("D:\\fileSave\\gq.json");
+            case guanQiaType.grassDay:
+                path = Path.Combine(folderPath, "grassDay");
+                path = Path.Combine(path, "grassDay" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                break;
+            case guanQiaType.grassNight:
+                path = Path.Combine(folderPath, "grassNight");
+                path = Path.Combine(path, "grassNight" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                break;
+            case guanQiaType.poolDay:
+                path = Path.Combine(folderPath, "poolDay");
+                path = Path.Combine(path, "poolDay" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                break;
+            case guanQiaType.poolNight:
+                path = Path.Combine(folderPath, "poolNight");
+                path = Path.Combine(path, "poolNight" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                break;
+            case guanQiaType.roof:
+                path = Path.Combine(folderPath, "roof");
+                path = Path.Combine(path, "roof" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                break;
+            default:
+                path = "sss";
+                break;
         }
-        //FileStream fileStream = new FileStream("D:\\fileSave\\gq.json", FileMode.Create);
-        StreamWriter sw = new StreamWriter("D:\\fileSave\\gq.json");
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        //FileStream fileStream = new FileStream(path, FileMode.Create);
+        StreamWriter sw = new StreamWriter(path);
         sw.Write(jsonString);
         sw.Close();
     }
     public void deSerializeJsonToObject()
     {
-        StreamReader sr = new StreamReader("D:\\fileSave\\gq.json");
+        StreamReader sr = new StreamReader("user://");
         string jsonString = sr.ReadToEnd();
         sr.Close();
         GD.Print(jsonString);

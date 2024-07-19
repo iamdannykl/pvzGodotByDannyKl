@@ -256,13 +256,14 @@ offset_top = 73.0
 offset_right = -15.0
 offset_bottom = 96.0
 
-[node name="zomCardUI" type="Control" parent="Camera2D" node_paths=PackedStringArray("waveNum", "nextButton", "finishButton", "zr1", "zr2", "zr3")]
+[node name="zomCardUI" type="Control" parent="Camera2D" node_paths=PackedStringArray("dataRec", "waveNum", "nextButton", "finishButton", "zr1", "zr2", "zr3")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 57.0
 offset_right = 97.0
 offset_bottom = 40.0
 script = ExtResource("10_edh3m")
+dataRec = NodePath("../../reciever")
 waveNum = NodePath("Panel/waveNum")
 nextButton = NodePath("Panel/nextWave")
 finishButton = NodePath("Panel/finishEdit")

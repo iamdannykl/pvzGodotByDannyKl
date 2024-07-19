@@ -175,7 +175,6 @@ ok_button_text = "打开"
 dialog_hide_on_ok = true
 file_mode = 0
 access = 2
-filters = PackedStringArray(".json;关卡json")
 show_hidden_files = true
 use_native_dialog = true
 

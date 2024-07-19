@@ -13,6 +13,7 @@ public partial class danli : Node2D
 	private clickButton plantCard;
 	private zomCard zombieCard;
 	public Node2D titleMenu;
+	public ConfigFile configFile = new ConfigFile();
 	public int abc = 8;
 	public zomCard ZombieCard
 	{
@@ -51,6 +52,49 @@ public partial class danli : Node2D
 		backToGame.Connect("button_up", new Callable(this, nameof(backToGameScene)));
 		ESC.Connect("button_up", new Callable(this, nameof(pausePanel)));
 		leftSee.Connect("button_up", new Callable(this, nameof(seeLeft)));
+
+		string configPath = "user://config.cfg"; // 使用"user://"前缀以在用户目录中创建配置文件
+		configFile.Load(configPath);
+	}
+	public void addGq(guanQiaType gtp, int gqs)
+	{
+		switch (gtp)
+		{
+			case guanQiaType.grassDay:
+				configFile.SetValue("grassDay", "num", gqs);
+				break;
+			case guanQiaType.grassNight:
+				configFile.SetValue("grassNight", "num", gqs);
+				break;
+			case guanQiaType.poolDay:
+				configFile.SetValue("poolDay", "num", gqs);
+				break;
+			case guanQiaType.poolNight:
+				configFile.SetValue("poolNight", "num", gqs);
+				break;
+			case guanQiaType.roof:
+				configFile.SetValue("roof", "num", gqs);
+				break;
+		}
+		configFile.Save("user://config.cfg");
+	}
+	public int getGq(guanQiaType gtp)
+	{
+		switch (gtp)
+		{
+			case guanQiaType.grassDay:
+				return (int)configFile.GetValue("grassDay", "num", "0");
+			case guanQiaType.grassNight:
+				return (int)configFile.GetValue("grassNight", "num", "0");
+			case guanQiaType.poolDay:
+				return (int)configFile.GetValue("poolDay", "num", "0");
+			case guanQiaType.poolNight:
+				return (int)configFile.GetValue("poolNight", "num", "0");
+			case guanQiaType.roof:
+				return (int)configFile.GetValue("roof", "num", "0");
+			default:
+				return -1;
+		}
 	}
 	void backToStart()
 	{

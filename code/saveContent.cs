@@ -3,8 +3,10 @@ using System.Collections.Generic;
 public class saveContent
 {
     public List<wave> waves = new List<wave>();
-    public saveContent(List<wave> inWaves)
+    public guanQiaType Gtp;
+    public saveContent(List<wave> inWaves, guanQiaType gtp)
     {
         waves = inWaves;
+        Gtp = gtp;
     }
 }
