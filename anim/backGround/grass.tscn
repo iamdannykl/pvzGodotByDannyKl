@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://44f4nb8ct43x"]
+[gd_scene load_steps=4 format=3 uid="uid://44f4nb8ct43x"]
 
 [ext_resource type="Texture2D" uid="uid://dugs7l2qhfv6n" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png" id="1_gp5p2"]
+[ext_resource type="Script" path="res://code/createZom.cs" id="2_lklrp"]
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_ydaw8"]
 
 [node name="bkgrd" type="Sprite2D"]
 texture = ExtResource("1_gp5p2")
 region_enabled = true
 region_rect = Rect2(1.67463, 1.97253, 447.183, 191.999)
+script = ExtResource("2_lklrp")
 
 [node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
 script = ExtResource("2_ydaw8")
@@ -24,3 +26,9 @@ position = Vector2(-24, 7)
 texture = ExtResource("1_gp5p2")
 region_enabled = true
 region_rect = Rect2(248, 242, 246, 169)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

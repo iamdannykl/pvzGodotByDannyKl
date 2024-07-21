@@ -11,7 +11,7 @@ public partial class xuan_guan : Control
     public guanQiaType gtp;
     public int currentSelectedType = -1;
     //public ConfigFile configFile = new ConfigFile();
-    public void selectGuanQia(int index)
+    public void selectGuanQia(int index)//点击第几关
     {
         //GD.Print("index:" + index);
         saveContent readFromFile;
@@ -75,10 +75,14 @@ public partial class xuan_guan : Control
                 sr.Close();
                 readFromFile = JsonConvert.DeserializeObject<saveContent>(jsonString, setting);
                 break;
+            default:
+                readFromFile = null;
+                break;
         }
         dataRec.recieveData(gtp, 50, currentSelectedType, "name");
+        dataRec.recvData(readFromFile);//传入关卡信息至接收器
     }
-    public void selectType(int index)
+    public void selectType(int index)//选择关卡地图类型
     {
         GD.Print(index);
         currentSelectedType = index;

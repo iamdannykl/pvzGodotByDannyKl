@@ -17,6 +17,7 @@ public partial class reciever : Label
     public PackedScene mapScene;
     public string GQname;
     public Node2D map2d;
+    public saveContent gqData;
     //recieve and init
     public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, string gqName)
     {
@@ -64,6 +65,10 @@ public partial class reciever : Label
 
         //SetTheNameOfCurrentQuanQia;
         GetTree().Root.GetNode<Label>("GameScene/Camera2D/guanQiaName").Text = GQname;
+    }
+    public void recvData(saveContent data)
+    {
+        gqData = data;
     }
 }
 

@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://o2ownn0dtepd"]
+[gd_scene load_steps=4 format=3 uid="uid://o2ownn0dtepd"]
 
 [ext_resource type="Texture2D" uid="uid://3k7wqfwfl7d" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Pool.png" id="1_6bbtf"]
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_u2lko"]
+[ext_resource type="Script" path="res://code/createZom.cs" id="2_w5sd1"]
 
 [node name="poolDay" type="Sprite2D"]
 texture = ExtResource("1_6bbtf")
 region_enabled = true
 region_rect = Rect2(11, 47, 447, 192)
+script = ExtResource("2_w5sd1")
 
 [node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
 script = ExtResource("2_u2lko")
@@ -18,3 +20,9 @@ position = Vector2(-127, 85)
 
 [node name="youshang" type="Node2D" parent="."]
 position = Vector2(77, -54)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
