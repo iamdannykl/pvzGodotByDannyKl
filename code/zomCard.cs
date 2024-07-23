@@ -90,9 +90,10 @@ public partial class zomCard : TextureButton
         {
             zomInsta.QueueFree();
             zomInsta = null;
-            zomShadow.weiZhi = zomShadow.GlobalPosition - GridSys.Instance.hangList[0].hangTou;
+            /* - GridSys.Instance.hangList[0].hangTou */
             zomShadow.Modulate = new Color(1, 1, 1, 1);
             zomShadow.GlobalPosition = new Vector2(GetGlobalMousePosition().X, hang.hangTou.Y);
+            zomShadow.weiZhi = zomShadow.GlobalPosition;
             zomShadow.placed();
             WantPlace = false;
         }

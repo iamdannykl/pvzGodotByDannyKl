@@ -24,10 +24,10 @@ public partial class clickButton : TextureButton
                 shadow.Modulate = new Color(1, 1, 1, 0.55f);
                 shadow.GlobalPosition = new Vector2(0, 0);
                 shadow.Visible = false;
-                GetTree().Root.AddChild(shadow);
+                GetTree().CurrentScene.AddChild(shadow);
                 Vector2 pos = GlobalPosition;
                 plantInstan.GlobalPosition = pos;
-                GetTree().Root.AddChild(plantInstan);
+                GetTree().CurrentScene.AddChild(plantInstan);
             }
             else
             {

@@ -4,11 +4,12 @@
 [ext_resource type="Script" path="res://code/createZom.cs" id="2_lklrp"]
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_ydaw8"]
 
-[node name="bkgrd" type="Sprite2D"]
+[node name="bkgrd" type="Sprite2D" node_paths=PackedStringArray("waveTimer")]
 texture = ExtResource("1_gp5p2")
 region_enabled = true
 region_rect = Rect2(1.67463, 1.97253, 447.183, 191.999)
 script = ExtResource("2_lklrp")
+waveTimer = NodePath("waveTimer")
 
 [node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
 script = ExtResource("2_ydaw8")
@@ -31,4 +32,9 @@ region_rect = Rect2(248, 242, 246, 169)
 one_shot = true
 autostart = true
 
+[node name="waveTimer" type="Timer" parent="."]
+wait_time = 50.0
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="waveTimer" to="." method="jiShiJieShu"]

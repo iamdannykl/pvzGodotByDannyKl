@@ -4,11 +4,12 @@
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_u2lko"]
 [ext_resource type="Script" path="res://code/createZom.cs" id="2_w5sd1"]
 
-[node name="poolDay" type="Sprite2D"]
+[node name="poolDay" type="Sprite2D" node_paths=PackedStringArray("waveTimer")]
 texture = ExtResource("1_6bbtf")
 region_enabled = true
 region_rect = Rect2(11, 47, 447, 192)
 script = ExtResource("2_w5sd1")
+waveTimer = NodePath("waveTimer")
 
 [node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
 script = ExtResource("2_u2lko")
@@ -16,13 +17,18 @@ zuoxia = NodePath("../zuoxia")
 youshang = NodePath("../youshang")
 
 [node name="zuoxia" type="Node2D" parent="."]
-position = Vector2(-127, 85)
+position = Vector2(-127, 82)
 
 [node name="youshang" type="Node2D" parent="."]
-position = Vector2(77, -54)
+position = Vector2(77, -57)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
+[node name="waveTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="waveTimer" to="." method="jiShiJieShu"]

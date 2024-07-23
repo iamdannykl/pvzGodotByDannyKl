@@ -9,6 +9,7 @@ public enum playMode
 }
 public partial class reciever : Label
 {
+    public static reciever Instance;
     public guanQiaType thisGuanQiaType;
     public playMode playMode;
     public int sunNum;
@@ -18,10 +19,15 @@ public partial class reciever : Label
     public string GQname;
     public Node2D map2d;
     public saveContent gqData;
-    //recieve and init
-    public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, string gqName)
+    public override void _Ready()
     {
-        playMode = playMode.edit;
+        Instance = this;
+    }
+    //recieve and init
+    public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, string gqName, playMode modeInGame)
+    {
+        scene.Instance.xianShiUI(modeInGame);
+        playMode = modeInGame;
         GD.Print("RC:" + playMode);
         thisGuanQiaType = guanQiaType;
         sunNum = sunOriginalNum;

@@ -54,9 +54,9 @@ public partial class Finish : Button
         //nextSceneInstance.GetNode<Label>("Label").Text = "asd";
         GetTree().CurrentScene = nextSceneInstance;
         addDatasToMap(sunOriginal.Text);//给新场景传输数据
-        nextSceneInstance.GetNode<Control>("Camera2D/CardUI").Visible = false;//cardUI
-        nextSceneInstance.GetNode<ScrollContainer>("Camera2D/zomCardUI/zomCardLeft").Visible = true;
-        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex, guanQiaName.Text);
+        /* nextSceneInstance.GetNode<Control>("Camera2D/CardUI").Visible = false;//cardUI
+        nextSceneInstance.GetNode<ScrollContainer>("Camera2D/zomCardUI/zomCardLeft").Visible = true; */
+        nextSceneInstance.GetNode<reciever>("reciever").recieveData(guanQiaType, sunOriginal.Text.ToInt(), mapTypeIndex, guanQiaName.Text, playMode.edit);
         //nextSceneInstance.GetNode<Camera2D>("Camera2D").rightYi();
     }
     public void addDatasToMap(string sunStr)

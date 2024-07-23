@@ -40,31 +40,90 @@ public partial class GuanQiaSaver : Control
             ObjectCreationHandling = ObjectCreationHandling.Replace
         };
         jsonString = JsonConvert.SerializeObject(save, setting);
-        danli.Instance.addGq(dataRec.thisGuanQiaType, 1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
+        GD.Print(1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
+        //danli.Instance.addGq(dataRec.thisGuanQiaType, 1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
         string path;
         string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
         string folderPath = Path.Combine(userDir, "PVZgd");
+        int gqs = 0;
+        DirectoryInfo d;
+        FileSystemInfo[] fsinfos;
         switch (dataRec.thisGuanQiaType)
         {
             case guanQiaType.grassDay:
+                d = new DirectoryInfo(Path.Combine(folderPath, "grassDay"));
+                fsinfos = d.GetFileSystemInfos();
+                if (fsinfos != null && fsinfos.Length > 0)
+                    foreach (FileSystemInfo fsinfo in fsinfos)
+                    {
+                        if (!(fsinfo is DirectoryInfo) && (fsinfo != null))     //判断是否为文件夹
+                        {
+                            GD.Print("1 file found!" + fsinfo.FullName);
+                            gqs++;
+                        }
+                    }
                 path = Path.Combine(folderPath, "grassDay");
-                path = Path.Combine(path, "grassDay" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                path = Path.Combine(path, "grassDay" + (gqs + 1) + ".json");
                 break;
             case guanQiaType.grassNight:
+                d = new DirectoryInfo(Path.Combine(folderPath, "grassNight"));
+                fsinfos = d.GetFileSystemInfos();
+                if (fsinfos != null && fsinfos.Length > 0)
+                    foreach (FileSystemInfo fsinfo in fsinfos)
+                    {
+                        if (!(fsinfo is DirectoryInfo) && (fsinfo != null))     //判断是否为文件夹
+                        {
+                            GD.Print("1 file found!" + fsinfo.FullName);
+                            gqs++;
+                        }
+                    }
                 path = Path.Combine(folderPath, "grassNight");
-                path = Path.Combine(path, "grassNight" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                path = Path.Combine(path, "grassNight" + (gqs + 1) + ".json");
                 break;
             case guanQiaType.poolDay:
+                d = new DirectoryInfo(Path.Combine(folderPath, "poolDay"));
+                fsinfos = d.GetFileSystemInfos();
+                if (fsinfos != null && fsinfos.Length > 0)
+                    foreach (FileSystemInfo fsinfo in fsinfos)
+                    {
+                        if (!(fsinfo is DirectoryInfo) && (fsinfo != null))     //判断是否为文件夹
+                        {
+                            GD.Print("1 file found!" + fsinfo.FullName);
+                            gqs++;
+                        }
+                    }
                 path = Path.Combine(folderPath, "poolDay");
-                path = Path.Combine(path, "poolDay" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                path = Path.Combine(path, "poolDay" + (gqs + 1) + ".json");
                 break;
             case guanQiaType.poolNight:
+                d = new DirectoryInfo(Path.Combine(folderPath, "poolNight"));
+                fsinfos = d.GetFileSystemInfos();
+                if (fsinfos != null && fsinfos.Length > 0)
+                    foreach (FileSystemInfo fsinfo in fsinfos)
+                    {
+                        if (!(fsinfo is DirectoryInfo) && (fsinfo != null))     //判断是否为文件夹
+                        {
+                            GD.Print("1 file found!" + fsinfo.FullName);
+                            gqs++;
+                        }
+                    }
                 path = Path.Combine(folderPath, "poolNight");
-                path = Path.Combine(path, "poolNight" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                path = Path.Combine(path, "poolNight" + (gqs + 1) + ".json");
                 break;
             case guanQiaType.roof:
+                d = new DirectoryInfo(Path.Combine(folderPath, "roof"));
+                fsinfos = d.GetFileSystemInfos();
+                if (fsinfos != null && fsinfos.Length > 0)
+                    foreach (FileSystemInfo fsinfo in fsinfos)
+                    {
+                        if (!(fsinfo is DirectoryInfo) && (fsinfo != null))     //判断是否为文件夹
+                        {
+                            GD.Print("1 file found!" + fsinfo.FullName);
+                            gqs++;
+                        }
+                    }
                 path = Path.Combine(folderPath, "roof");
-                path = Path.Combine(path, "roof" + danli.Instance.getGq(dataRec.thisGuanQiaType) + ".json");
+                path = Path.Combine(path, "roof" + (gqs + 1) + ".json");
                 break;
             default:
                 path = "sss";

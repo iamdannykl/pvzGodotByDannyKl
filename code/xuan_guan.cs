@@ -30,7 +30,7 @@ public partial class xuan_guan : Control
         StreamReader sr;
         string jsonString;
         _nextScene = GD.Load<PackedScene>("res://GameScene.tscn");
-        Node nextSceneInstance = _nextScene.Instantiate();
+        Node2D nextSceneInstance = _nextScene.Instantiate<Node2D>();
         GetTree().CurrentScene.QueueFree();
         GetTree().Root.AddChild(nextSceneInstance);
         GetTree().CurrentScene = nextSceneInstance;
@@ -79,7 +79,7 @@ public partial class xuan_guan : Control
                 readFromFile = null;
                 break;
         }
-        dataRec.recieveData(gtp, 50, currentSelectedType, "name");
+        dataRec.recieveData(gtp, 50, currentSelectedType, "name", playMode.player);
         dataRec.recvData(readFromFile);//传入关卡信息至接收器
     }
     public void selectType(int index)//选择关卡地图类型
@@ -90,6 +90,7 @@ public partial class xuan_guan : Control
         string folderPath = Path.Combine(userDir, "PVZgd");
         DirectoryInfo d;
         FileSystemInfo[] fsinfos;
+        int gqs = 0;
         switch (index)
         {
             case 0:
@@ -102,8 +103,10 @@ public partial class xuan_guan : Control
                     {
                         //Console.WriteLine(fsinfo.Name);
                         gqList.AddItem(fsinfo.Name);
+                        gqs++;
                     }
                 }
+                title.Instance.addGq(guanQiaType.grassDay, gqs);
                 break;
             case 1:
                 gqList.Clear();
@@ -115,8 +118,10 @@ public partial class xuan_guan : Control
                     {
                         //Console.WriteLine(fsinfo.Name);
                         gqList.AddItem(fsinfo.Name);
+                        gqs++;
                     }
                 }
+                title.Instance.addGq(guanQiaType.grassNight, gqs);
                 break;
             case 2:
                 gqList.Clear();
@@ -129,8 +134,10 @@ public partial class xuan_guan : Control
                     {
                         //Console.WriteLine(fsinfo.Name);
                         gqList.AddItem(fsinfo.Name);
+                        gqs++;
                     }
                 }
+                title.Instance.addGq(guanQiaType.poolDay, gqs);
                 break;
             case 3:
                 gqList.Clear();
@@ -142,8 +149,10 @@ public partial class xuan_guan : Control
                     {
                         //Console.WriteLine(fsinfo.Name);
                         gqList.AddItem(fsinfo.Name);
+                        gqs++;
                     }
                 }
+                title.Instance.addGq(guanQiaType.poolNight, gqs);
                 break;
             case 4:
                 gqList.Clear();
@@ -155,8 +164,10 @@ public partial class xuan_guan : Control
                     {
                         //Console.WriteLine(fsinfo.Name);
                         gqList.AddItem(fsinfo.Name);
+                        gqs++;
                     }
                 }
+                title.Instance.addGq(guanQiaType.roof, gqs);
                 break;
         }
     }
