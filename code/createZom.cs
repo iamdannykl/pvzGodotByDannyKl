@@ -88,7 +88,7 @@ public partial class createZom : Sprite2D
                 GD.Print("zr1" + geShu);
                 Znum = loadData.waves[waveNow].zrs[0].zomInfos.Count;
 
-                CRTzombies(Znum, 1);
+                CRTzombies(Znum, 0);
 
                 break;
             case 2:
@@ -97,7 +97,7 @@ public partial class createZom : Sprite2D
 
                 Znum = loadData.waves[waveNow].zrs[1].zomInfos.Count;
 
-                CRTzombies(Znum, 2);
+                CRTzombies(Znum, 1);
 
                 break;
             case 3:
@@ -106,7 +106,7 @@ public partial class createZom : Sprite2D
 
                 Znum = loadData.waves[waveNow].zrs[2].zomInfos.Count;
 
-                CRTzombies(Znum, 3);
+                CRTzombies(Znum, 2);
 
                 break;
             default:
