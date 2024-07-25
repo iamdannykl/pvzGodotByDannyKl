@@ -16,7 +16,6 @@ public partial class createZom : Sprite2D
     }
     public void _on_timer_timeout()
     {
-
         if (reciever.Instance.playMode == playMode.player)
         {
             isUPDT = true;

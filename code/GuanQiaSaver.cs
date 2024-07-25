@@ -24,8 +24,33 @@ public partial class GuanQiaSaver : Control
         finishButton.Connect("button_up", new Callable(this, nameof(FinishSave)));
         waves.Add(new wave());
     }
+    void saveCurrentBo()
+    {
+        //waves.Add(new wave());
+        if (ZRnum != -1)
+        {
+            waveNum.Text = "第" + (boShu) + "波";
+        }
+        foreach (zombie_base node in zr1.GetChildren())
+        {
+            waves[boShu - 1].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            //GD.Print(waves[boShu -1].zrs[0].zomInfos.Count());
+            node.QueueFree();
+        }
+        foreach (zombie_base node in zr2.GetChildren())
+        {
+            waves[boShu - 1].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            node.QueueFree();
+        }
+        foreach (zombie_base node in zr3.GetChildren())
+        {
+            waves[boShu - 1].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            node.QueueFree();
+        }
+    }
     void FinishSave()
     {
+        saveCurrentBo();
         saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
         GD.Print(save.waves.Count);
         string jsonString;

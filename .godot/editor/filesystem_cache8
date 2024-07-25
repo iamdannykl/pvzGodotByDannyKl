@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1721835137
+::res://::1721896027
 anLogo.png::CompressedTexture2D::5870470706198812375::1720883769::1720883774::1::::<><>::
 AnTitle Screen.png::CompressedTexture2D::79955480836869556::1720867518::1720867522::1::::<><>::
 Back.cs::CSharpScript::-1::1720857372::0::1::::<>Button<>::
@@ -7,7 +7,7 @@ baiMore.png::BitMap::7165433918213423437::1720868434::1720868450::1::::<><>::
 black.png::CompressedTexture2D::4048994857891081906::1720882703::1720882705::1::::<><>::
 DS DSi - Plants vs Zombies - Title Screen.png::CompressedTexture2D::2628402260645693054::1720866549::1720866550::1::::<><>::
 export_presets.cfg::TextFile::-1::1721222941::0::1::::<><>::
-GameScene.tscn::PackedScene::228534716920656560::1721812337::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs
+GameScene.tscn::PackedScene::228534716920656560::1721836694::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs
 icon.svg::CompressedTexture2D::6598339049764445739::1708521360::1708521372::1::::<><>::
 logo.png::CompressedTexture2D::4791528546478154083::1720882599::1720882844::1::::<><>::
 MenuButton.cs::CSharpScript::-1::1720847903::0::1::::<>MenuButton<>::
@@ -48,6 +48,8 @@ rePeater.tres::AtlasTexture::1317494628221387530::1721835137::0::1::::<><>::uid:
 reperter.cs::CSharpScript::-1::1719828489::0::1::::<>Area2D<>::
 ::res://anim/zombie/::1711608262
 DS DSi - Plants vs Zombies - Zombie.png::CompressedTexture2D::2282864393219225626::1711608262::1711608262::1::::<><>::
+::res://beiWangLu/::1721836694
+animatedsprite2dEvents.md::TextFile::-1::1721836694::0::1::::<><>::
 ::res://code/::1721656794
 ADD.cs::CSharpScript::-1::1720879891::0::1::::<>Button<>::
 baseCard.cs::CSharpScript::-1::1720939164::0::1::::<>Area2D<>::
