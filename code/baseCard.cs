@@ -9,20 +9,27 @@ public partial class baseCard : Area2D
     {
         base._Ready();
         anim.SpeedScale = 0;
-        //anim.Connect("frame_changed", new Callable(this, "_on_FrameChanged"));
+        anim.Connect("frame_changed", new Callable(this, nameof(FrameChanged)));
     }
     public void placed()
     {
         anim.SpeedScale = 1;
     }
-    void _on_FrameChanged(int index)
+    public virtual void FrameChanged()
     {
         if (anim.Animation == "attack")
         {
-            if (index == 2)
+            /* if (anim.Frame == 2)
             {
-
-            }
+                GD.Print(anim.Frame);
+            } */
+        }
+        if (anim.Animation == "idle")
+        {
+            /* if (anim.Frame == 3)
+            {
+                GD.Print(anim.Frame);
+            } */
         }
     }
 }
