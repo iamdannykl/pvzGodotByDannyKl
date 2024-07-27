@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=22 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
 [ext_resource type="Script" path="res://code/danli.cs" id="3_sstho"]
 [ext_resource type="Script" path="res://code/resPlantAndZom.cs" id="3_v1isw"]
+[ext_resource type="PackedScene" uid="uid://v47t65bdl51o" path="res://anim/plant/peaShooter/pea_shooter.tscn" id="4_0xac8"]
 [ext_resource type="PackedScene" uid="uid://31q3j34r4go0" path="res://Prefabs/repeater.tscn" id="4_c3t61"]
 [ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
 [ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="5_74kye"]
@@ -129,6 +130,7 @@ script = ExtResource("2_8n5vd")
 position = Vector2(-216, -89)
 scale = Vector2(1.39279, 1.39279)
 script = ExtResource("3_v1isw")
+peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 zombie = ExtResource("5_74kye")
 

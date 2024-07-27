@@ -3,6 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bye78b2275w5y" path="res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png" id="1_fcx4e"]
 [ext_resource type="Script" path="res://anim/plant/rePeater/reperter.cs" id="1_hujjw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi78g"]
+atlas = ExtResource("1_fcx4e")
+region = Rect2(0, 35, 35, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbrhn"]
+atlas = ExtResource("1_fcx4e")
+region = Rect2(35, 35, 35, 35)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlpfh"]
 atlas = ExtResource("1_fcx4e")
 region = Rect2(35, 0, 35, 35)
@@ -19,16 +27,19 @@ region = Rect2(0, 0, 35, 35)
 atlas = ExtResource("1_fcx4e")
 region = Rect2(105, 0, 35, 35)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qi78g"]
-atlas = ExtResource("1_fcx4e")
-region = Rect2(0, 35, 35, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbrhn"]
-atlas = ExtResource("1_fcx4e")
-region = Rect2(35, 35, 35, 35)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrexk"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi78g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbrhn")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vlpfh")
@@ -51,17 +62,6 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qi78g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cbrhn")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 3.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_11drb"]
@@ -72,9 +72,11 @@ script = ExtResource("1_hujjw")
 anim = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 13)
 sprite_frames = SubResource("SpriteFrames_jrexk")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
+offset = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_11drb")

@@ -9,9 +9,20 @@ public partial class baseCard : Area2D
     {
         base._Ready();
         anim.SpeedScale = 0;
+        //anim.Connect("frame_changed", new Callable(this, "_on_FrameChanged"));
     }
     public void placed()
     {
         anim.SpeedScale = 1;
+    }
+    void _on_FrameChanged(int index)
+    {
+        if (anim.Animation == "attack")
+        {
+            if (index == 2)
+            {
+
+            }
+        }
     }
 }

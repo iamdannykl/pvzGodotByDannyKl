@@ -15,7 +15,7 @@ public partial class resPlantAndZom : Node2D
     public static resPlantAndZom Instance;
     [Export] public PackedScene peaShooter;
     [Export] public PackedScene rePeater;
-
+    //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
     public override void _Ready()

@@ -1,120 +1,76 @@
-[gd_scene load_steps=8 format=3 uid="uid://v47t65bdl51o"]
+[gd_scene load_steps=15 format=3 uid="uid://v47t65bdl51o"]
 
-[ext_resource type="Texture2D" uid="uid://bake12nd24fsn" path="res://anim/plant/peaShooter/DS DSi - Plants vs Zombies - Peashooter.png" id="1_5v3wr"]
+[ext_resource type="Texture2D" uid="uid://c5giiu0iu2p0k" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres" id="1_hdeam"]
+[ext_resource type="Script" path="res://code/pea_shooter.cs" id="1_mla4w"]
+[ext_resource type="Texture2D" uid="uid://6v246k8vvyiv" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_9.tres" id="2_5ka5l"]
+[ext_resource type="Texture2D" uid="uid://bli1iiwf1lssl" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_10.tres" id="3_rsdvt"]
+[ext_resource type="Texture2D" uid="uid://cy3hkpfmkpcmu" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_0.tres" id="4_r8yjd"]
+[ext_resource type="Texture2D" uid="uid://brcfndahn7j3y" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_1.tres" id="5_lq2tm"]
+[ext_resource type="Texture2D" uid="uid://cp1oiub36rl7y" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_2.tres" id="6_swk4h"]
+[ext_resource type="Texture2D" uid="uid://c5re2gqryab64" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_3.tres" id="7_i6d28"]
+[ext_resource type="Texture2D" uid="uid://ctlvqmwm8uta2" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_4.tres" id="8_boofq"]
+[ext_resource type="Texture2D" uid="uid://c4qec75bjfb47" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres" id="9_ox8d6"]
+[ext_resource type="Texture2D" uid="uid://06wd0yrbw8q5" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres" id="10_11xx6"]
+[ext_resource type="Texture2D" uid="uid://dygd562hfp353" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres" id="11_dor8j"]
 
-[sub_resource type="Animation" id="Animation_kki1f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [8]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_vu8wv"]
-resource_name = "idle"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:region_enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_h3uga"]
-_data = {
-"RESET": SubResource("Animation_kki1f"),
-"idle": SubResource("Animation_vu8wv")
-}
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ed1jb"]
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2grsd"]
-graph_offset = Vector2(-276.011, 60.7336)
-nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_ed1jb")
-nodes/StateMachine/position = Vector2(60, 140)
-node_connections = [&"output", 0, &"StateMachine"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fh5ig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hdeam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5ka5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rsdvt")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r8yjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lq2tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_swk4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i6d28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_boofq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ox8d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_11xx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dor8j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ntap"]
 size = Vector2(20, 21)
 
-[node name="peaShooter" type="Area2D"]
+[node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim")]
+z_index = 1
+script = ExtResource("1_mla4w")
+anim = NodePath("AnimatedSprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5v3wr")
-hframes = 8
-region_enabled = true
-region_rect = Rect2(0, 2, 215, 29)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_h3uga")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeBlendTree_2grsd")
-anim_player = NodePath("../AnimationPlayer")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fh5ig")
+animation = &"attack"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)

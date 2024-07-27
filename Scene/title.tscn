@@ -149,7 +149,7 @@ offset_bottom = 52.0
 texture_normal = SubResource("AtlasTexture_5lut6")
 texture_pressed = SubResource("AtlasTexture_4v2q6")
 script = ExtResource("14_1ywau")
-url = "https://discord.gg/PXJxXvab"
+url = "https://discord.gg/wHbmrDaVKj"
 
 [node name="Bilibili" type="TextureButton" parent="."]
 z_index = 1
