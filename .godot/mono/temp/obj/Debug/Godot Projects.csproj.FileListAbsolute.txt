@@ -26,10 +26,10 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projec
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfoInputs.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfo.cs
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CoreCompileInputs.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CopyComplete
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\refint\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.pdb
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Newtonsoft.Json.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CopyComplete

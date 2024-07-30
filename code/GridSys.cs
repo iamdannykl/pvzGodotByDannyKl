@@ -33,6 +33,7 @@ public partial class GridSys : Node2D
 		hangShu = reciever.RcHangShu;
 		XjianGe = (youshang.GlobalPosition.X - zuoxia.GlobalPosition.X) / 8f;
 		YjianGe = -(youshang.GlobalPosition.Y - zuoxia.GlobalPosition.Y) / (hangShu - 1);
+		GD.Print("XJG:" + XjianGe * 9);
 		initHang();
 		createHang();
 		CreateGridBaseGrid();

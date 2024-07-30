@@ -10,6 +10,10 @@ public enum ZomType
     zombie,
     luZhang
 }
+public enum BulletType
+{
+    pea
+}
 public partial class resPlantAndZom : Node2D
 {
     public static resPlantAndZom Instance;
@@ -18,6 +22,8 @@ public partial class resPlantAndZom : Node2D
     //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
+    //Bullets===============================================================
+    [Export] public PackedScene pea;
     public override void _Ready()
     {
         Instance = this;
@@ -43,6 +49,16 @@ public partial class resPlantAndZom : Node2D
                 return zombie;
             case ZomType.luZhang:
                 return luZhang;
+            default:
+                return null;
+        }
+    }
+    public PackedScene matchBullet(BulletType bulletType)
+    {
+        switch (bulletType)
+        {
+            case BulletType.pea:
+                return pea;
             default:
                 return null;
         }

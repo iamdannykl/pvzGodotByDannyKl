@@ -24,10 +24,34 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_rsdvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_swk4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_swk4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_swk4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i6d28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_boofq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ox8d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_11xx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dor8j")
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -62,16 +86,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ntap"]
 size = Vector2(20, 21)
 
-[node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim")]
+[node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D")]
 z_index = 1
 script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
+attackFrame = 1
+rayCast2D = NodePath("RayCast2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -5.5)
 sprite_frames = SubResource("SpriteFrames_fh5ig")
 animation = &"attack"
 autoplay = "idle"
+frame = 7
+frame_progress = 0.65987
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2.5)
+position = Vector2(0.5, -3)
 shape = SubResource("RectangleShape2D_7ntap")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0.5, -5.5)
+target_position = Vector2(232, 0)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="pos" type="Node2D" parent="."]
+position = Vector2(8.5, -12.5)

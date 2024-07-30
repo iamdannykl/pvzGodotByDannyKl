@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=23 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dh24crdlarfj" path="res://UI.tscn" id="4_n6eau"]
 [ext_resource type="PackedScene" uid="uid://bhcd8iig22uni" path="res://Prefabs/zombie_base.tscn" id="5_74kye"]
 [ext_resource type="Script" path="res://code/Camera2D.cs" id="5_uefq8"]
+[ext_resource type="PackedScene" uid="uid://dnuargw8dhh3c" path="res://anim/plant/peaShooter/pea_bullet.tscn" id="7_ng5db"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
@@ -133,6 +134,7 @@ script = ExtResource("3_v1isw")
 peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 zombie = ExtResource("5_74kye")
+pea = ExtResource("7_ng5db")
 
 [node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee")]
 position = Vector2(0, -1)
