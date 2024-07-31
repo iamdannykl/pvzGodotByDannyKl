@@ -2,11 +2,8 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using System.Reflection.Metadata;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 public partial class GuanQiaSaver : Control
 {
     public int ZRnum = -1;
@@ -53,18 +50,17 @@ public partial class GuanQiaSaver : Control
         saveCurrentBo();
         saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
         GD.Print(save.waves.Count);
-        string jsonString;
-        JsonSerializerSettings setting = new JsonSerializerSettings
-        {
-            PreserveReferencesHandling = PreserveReferencesHandling.All,
-            ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
-            NullValueHandling = NullValueHandling.Ignore,
-            DefaultValueHandling = DefaultValueHandling.Ignore,
-            //Formatting = Formatting.Indented,
-            TypeNameHandling = TypeNameHandling.All,
-            ObjectCreationHandling = ObjectCreationHandling.Replace
-        };
-        jsonString = JsonConvert.SerializeObject(save, setting);
+
+
+        /* jsonString = JsonConvert.SerializeObject(save, settings); */
+
+
+        // 使用 MessagePack 序列化
+        //byte[] msgPackBytes = MessagePackSerializer.Serialize(save);
+        /* YourObject deserializedObject = MessagePackSerializer.Deserialize<YourObject>(msgPackBytes);
+ */
+        var serializer = new SerializerBuilder().Build();
+        string msgPackBytes = serializer.Serialize(save);
         GD.Print(1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
         //danli.Instance.addGq(dataRec.thisGuanQiaType, 1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
         string path;
@@ -88,7 +84,7 @@ public partial class GuanQiaSaver : Control
                         }
                     }
                 path = Path.Combine(folderPath, "grassDay");
-                path = Path.Combine(path, "grassDay" + (gqs + 1) + ".json");
+                path = Path.Combine(path, "grassDay" + (gqs + 1) + ".yaml");
                 break;
             case guanQiaType.grassNight:
                 d = new DirectoryInfo(Path.Combine(folderPath, "grassNight"));
@@ -103,7 +99,7 @@ public partial class GuanQiaSaver : Control
                         }
                     }
                 path = Path.Combine(folderPath, "grassNight");
-                path = Path.Combine(path, "grassNight" + (gqs + 1) + ".json");
+                path = Path.Combine(path, "grassNight" + (gqs + 1) + ".yaml");
                 break;
             case guanQiaType.poolDay:
                 d = new DirectoryInfo(Path.Combine(folderPath, "poolDay"));
@@ -118,7 +114,7 @@ public partial class GuanQiaSaver : Control
                         }
                     }
                 path = Path.Combine(folderPath, "poolDay");
-                path = Path.Combine(path, "poolDay" + (gqs + 1) + ".json");
+                path = Path.Combine(path, "poolDay" + (gqs + 1) + ".yaml");
                 break;
             case guanQiaType.poolNight:
                 d = new DirectoryInfo(Path.Combine(folderPath, "poolNight"));
@@ -133,7 +129,7 @@ public partial class GuanQiaSaver : Control
                         }
                     }
                 path = Path.Combine(folderPath, "poolNight");
-                path = Path.Combine(path, "poolNight" + (gqs + 1) + ".json");
+                path = Path.Combine(path, "poolNight" + (gqs + 1) + ".yaml");
                 break;
             case guanQiaType.roof:
                 d = new DirectoryInfo(Path.Combine(folderPath, "roof"));
@@ -148,7 +144,7 @@ public partial class GuanQiaSaver : Control
                         }
                     }
                 path = Path.Combine(folderPath, "roof");
-                path = Path.Combine(path, "roof" + (gqs + 1) + ".json");
+                path = Path.Combine(path, "roof" + (gqs + 1) + ".yaml");
                 break;
             default:
                 path = "sss";
@@ -160,10 +156,11 @@ public partial class GuanQiaSaver : Control
         }
         //FileStream fileStream = new FileStream(path, FileMode.Create);
         StreamWriter sw = new StreamWriter(path);
-        sw.Write(jsonString);
+        //sw.Write(jsonString);
+        sw.Write(msgPackBytes);
         sw.Close();
     }
-    public void deSerializeJsonToObject()
+    /* public void deSerializeJsonToObject()
     {
         StreamReader sr = new StreamReader("user://");
         string jsonString = sr.ReadToEnd();
@@ -192,7 +189,7 @@ public partial class GuanQiaSaver : Control
             }
         }
         GD.Print("wave:" + j);
-    }
+    } */
     void clickNextButton()
     {
         /* foreach(var node in waves[boShu-1].zrs){

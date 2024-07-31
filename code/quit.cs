@@ -9,6 +9,7 @@ public partial class quit : Button
     }
     void quitGame()
     {
+        GetNode<AudioStreamPlayer>("AudioStreamPlayer").Play();
         GetTree().Quit();
     }
 }

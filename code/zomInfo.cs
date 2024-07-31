@@ -9,5 +9,10 @@ public class zomInfo
     {
         pos = wz;
         zomType = ztp;
+        GD.Print("i am :" + ztp + zomType);
+    }
+    public zomInfo()
+    {
+
     }
 }

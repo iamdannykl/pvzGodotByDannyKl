@@ -32,4 +32,12 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projec
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Newtonsoft.Json.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CopyComplete
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.sourcelink.json
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Pr.43AD30E5.Up2Date
+D:\DATAS\GODOTPROJECTS\PVZGODOTBYDANNYKL\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\DATAS\GODOTPROJECTS\PVZGODOTBYDANNYKL\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\System.Text.Encodings.Web.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\System.Text.Json.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\MessagePack.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\YamlDotNet.dll

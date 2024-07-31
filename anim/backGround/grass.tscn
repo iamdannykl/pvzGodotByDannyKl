@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://44f4nb8ct43x"]
+[gd_scene load_steps=5 format=3 uid="uid://44f4nb8ct43x"]
 
 [ext_resource type="Texture2D" uid="uid://dugs7l2qhfv6n" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png" id="1_gp5p2"]
 [ext_resource type="Script" path="res://code/createZom.cs" id="2_lklrp"]
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_ydaw8"]
+[ext_resource type="AudioStream" uid="uid://cqlrhgn0i5053" path="res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3" id="4_0oftd"]
 
 [node name="bkgrd" type="Sprite2D" node_paths=PackedStringArray("waveTimer")]
 texture = ExtResource("1_gp5p2")
@@ -35,6 +36,10 @@ autostart = true
 [node name="waveTimer" type="Timer" parent="."]
 wait_time = 50.0
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0oftd")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="waveTimer" to="." method="jiShiJieShu"]

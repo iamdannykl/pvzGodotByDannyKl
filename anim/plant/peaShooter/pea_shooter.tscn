@@ -90,7 +90,7 @@ size = Vector2(20, 21)
 z_index = 1
 script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
-attackFrame = 1
+attackFrame = 2
 rayCast2D = NodePath("RayCast2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -112,4 +112,4 @@ collision_mask = 2
 collide_with_areas = true
 
 [node name="pos" type="Node2D" parent="."]
-position = Vector2(8.5, -12.5)
+position = Vector2(10, -13)

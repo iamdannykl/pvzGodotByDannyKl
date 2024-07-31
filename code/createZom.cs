@@ -54,8 +54,10 @@ public partial class createZom : Sprite2D
         for (int i = 0; i < num; i++)
         {
             GD.Print("dangQian:wave zr zom" + waveNow + "/" + zrNum + "/" + i);
-            zombie_base zom = resPlantAndZom.Instance.matchZom(loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType).Instantiate<zombie_base>();
-            zom.GlobalPosition = loadData.waves[waveNow].zrs[zrNum].zomInfos[i].pos;
+            GD.Print("zomtypeInt:" + loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType);
+            zombie_base zom = resPlantAndZom.Instance.matchZom((ZomType)loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType).Instantiate<zombie_base>();
+            zom.GlobalPosition = loadData.waves[waveNow].zrs[zrNum].zomInfos[i].pos + new Vector2(GridSys.Instance.XjianGe * 10, 0);
+            zom.crtIt();
             GetTree().CurrentScene.AddChild(zom);
             allCrtZom += 1;
         }

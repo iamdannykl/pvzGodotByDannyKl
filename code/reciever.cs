@@ -65,7 +65,7 @@ public partial class reciever : Label
         GD.Print(map2d.GlobalPosition);
         //map2d.GlobalPosition = new Vector2(0, -5f);
         //nextScene.AddChild(map2d);
-        GetTree().Root.AddChild(map2d);
+        GetTree().CurrentScene.AddChild(map2d);
         map2d.GlobalPosition = new Vector2(0, -2.5f);
         GD.Print(map2d.GlobalPosition);
 

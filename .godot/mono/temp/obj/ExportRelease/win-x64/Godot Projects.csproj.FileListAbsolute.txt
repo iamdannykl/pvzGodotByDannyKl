@@ -236,3 +236,4 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.pdb
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\ref\Godot Projects.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\Newtonsoft.Json.dll

@@ -9,4 +9,8 @@ public class saveContent
         waves = inWaves;
         Gtp = gtp;
     }
+    public saveContent()
+    {
+
+    }
 }

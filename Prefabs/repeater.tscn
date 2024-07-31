@@ -70,7 +70,7 @@ animations = [{
 z_index = 1
 script = ExtResource("1_hujjw")
 anim = NodePath("AnimatedSprite2D")
-attackFrame = 2
+attackFrame = 1
 rayCast2D = NodePath("RayCast2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

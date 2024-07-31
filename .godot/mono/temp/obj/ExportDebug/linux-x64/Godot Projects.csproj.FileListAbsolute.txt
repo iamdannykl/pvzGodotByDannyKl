@@ -188,9 +188,12 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.AssemblyInfoInputs.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.AssemblyInfo.cs
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.csproj.CoreCompileInputs.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.csproj.CopyComplete
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\refint\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.pdb
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\ref\Godot Projects.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\linux-x64\Microsoft.Extensions.DependencyInjection.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\linux-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Projects.sourcelink.json
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\linux-x64\Godot Pr.43AD30E5.Up2Date

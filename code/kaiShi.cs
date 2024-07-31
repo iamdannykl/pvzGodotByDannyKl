@@ -10,6 +10,7 @@ public partial class kaiShi : TextureButton
     }
     void openCreateWindow()
     {
+        GetNode<AudioStreamPlayer>("AudioStreamPlayer").Play();
         start.GetNode<Button>("Panel/ADD").Visible = false;
         start.GetNode<Label>("Panel/MODE").Text = "PlayMode";
         start.Visible = true;

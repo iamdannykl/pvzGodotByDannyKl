@@ -10,6 +10,7 @@ public partial class Edit : Button
     }
     void openCreateWindow()
     {
+        GetNode<AudioStreamPlayer>("AudioStreamPlayer").Play();
         start.GetNode<Button>("Panel/ADD").Visible = true;
         start.GetNode<Label>("Panel/MODE").Text = "EditMode";
         start.Visible = true;
