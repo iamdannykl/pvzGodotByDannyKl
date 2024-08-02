@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh24crdlarfj"]
+[gd_scene load_steps=5 format=3 uid="uid://dh24crdlarfj"]
 
 [ext_resource type="Texture2D" uid="uid://s1g7dkqso0l7" path="res://anim/plant/rePeater/rePeater.tres" id="1_3iqv4"]
 [ext_resource type="Texture2D" uid="uid://dj4ljl5b6sm8j" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres" id="1_wtxdx"]
 [ext_resource type="Script" path="res://code/clickButton.cs" id="2_dyc3i"]
+[ext_resource type="Texture2D" uid="uid://ywwxl64arufl" path="res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sunflower_3.PNG" id="4_xbc76"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,7 +21,7 @@ offset_top = 1.0
 offset_right = 21.0
 offset_bottom = 131.0
 
-[node name="rePeater" type="TextureButton" parent="zuoKaCao"]
+[node name="peaShooter" type="TextureButton" parent="zuoKaCao"]
 layout_mode = 1
 offset_top = 1.0
 offset_right = 26.0
@@ -30,7 +31,7 @@ texture_normal = ExtResource("1_wtxdx")
 script = ExtResource("2_dyc3i")
 metadata/_edit_group_ = true
 
-[node name="rePeater2" type="TextureButton" parent="zuoKaCao"]
+[node name="rePeater" type="TextureButton" parent="zuoKaCao"]
 layout_mode = 1
 offset_top = 22.0
 offset_right = 26.0
@@ -41,15 +42,15 @@ script = ExtResource("2_dyc3i")
 plantType = 1
 metadata/_edit_group_ = true
 
-[node name="rePeater3" type="TextureButton" parent="zuoKaCao"]
+[node name="sunFlower" type="TextureButton" parent="zuoKaCao"]
 layout_mode = 1
-offset_top = 45.0
+offset_top = 44.0
 offset_right = 26.0
 offset_bottom = 68.0
 scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("1_3iqv4")
+texture_normal = ExtResource("4_xbc76")
 script = ExtResource("2_dyc3i")
-plantType = 1
+plantType = 2
 metadata/_edit_group_ = true
 
 [node name="rePeater4" type="TextureButton" parent="zuoKaCao"]
@@ -110,9 +111,9 @@ item_3/icon = ExtResource("1_3iqv4")
 item_4/text = ""
 item_4/icon = ExtResource("1_3iqv4")
 
+[connection signal="button_up" from="zuoKaCao/peaShooter" to="zuoKaCao/peaShooter" method="_on_button_up"]
 [connection signal="button_up" from="zuoKaCao/rePeater" to="zuoKaCao/rePeater" method="_on_button_up"]
-[connection signal="button_up" from="zuoKaCao/rePeater2" to="zuoKaCao/rePeater2" method="_on_button_up"]
-[connection signal="button_up" from="zuoKaCao/rePeater3" to="zuoKaCao/rePeater3" method="_on_button_up"]
+[connection signal="button_up" from="zuoKaCao/sunFlower" to="zuoKaCao/sunFlower" method="_on_button_up"]
 [connection signal="button_up" from="zuoKaCao/rePeater4" to="zuoKaCao/rePeater4" method="_on_button_up"]
 [connection signal="button_up" from="zuoKaCao/rePeater5" to="zuoKaCao/rePeater5" method="_on_button_up"]
 [connection signal="button_up" from="zuoKaCao/rePeater6" to="zuoKaCao/rePeater6" method="_on_button_up"]

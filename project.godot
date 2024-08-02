@@ -73,6 +73,7 @@ clickIt={
 2d_physics/layer_1="plant"
 2d_physics/layer_2="zombie"
 2d_physics/layer_3="bullet"
+2d_physics/layer_4="sunAndCoin"
 
 [rendering]
 

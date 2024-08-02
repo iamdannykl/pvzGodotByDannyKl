@@ -15,6 +15,7 @@ public partial class danli : Node2D
 	public Node2D titleMenu;
 	public ConfigFile configFile = new ConfigFile();
 	public int abc = 8;
+	public bool isAnXia;
 	public zomCard ZombieCard
 	{
 		get => zombieCard;
@@ -131,6 +132,17 @@ public partial class danli : Node2D
 	{
 		return a + 2;
 	}
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Input(InputEvent @event)
+	{
+		base._Input(@event);
+		if (@event.IsActionPressed("clickIt"))
+		{
+			isAnXia = true;
+		}
+		if (@event.IsActionReleased("clickIt"))
+		{
+			isAnXia = false;
+		}
+	}
 
 }

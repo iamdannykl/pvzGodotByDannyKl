@@ -1,17 +1,17 @@
-res://anim/backGround/grass.tscn::26adcae5e78c63bf3bf5544dc7b7b49b::1722437887::res://.godot/exported/133200997/export-3505aea408ff5da0b5b39d375bd88941-grass.scn
-res://anim/plant/rePeater/rePeater.tres::090b22ad0a17e01c0ef61e1aeee90fe2::1722420982::res://.godot/exported/133200997/export-10356e97f2b94b39d310513133b461f5-rePeater.res
-res://Prefabs/GDlogo.tscn::4ff61d7717de20957d98e449e2b235f8::1722437887::res://.godot/exported/133200997/export-45a2c048aed93798736de84093e18502-GDlogo.scn
-res://Prefabs/repeater.tscn::63a2cacc4da8902adbe660a9bd17c476::1722437887::res://.godot/exported/133200997/export-59eec9b58beb2b9452bb6e4f95aff641-repeater.scn
-res://player.tscn::6e44ce000d7def8047f3d565c32328e9::1722437887::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
-res://UI.tscn::32ac95b827de67d8dbb338427df7787f::1722437887::res://.godot/exported/133200997/export-c3b50503a0477dc727cd659891fdb3c7-UI.scn
-res://Scene/title.tscn::1766eb1bafe25ed82ddfc86e96389ff7::1722437887::res://.godot/exported/133200997/export-e54c793d4abcaa4ebe34a4d2f84987f2-title.scn
-res://Scene/xuan_guan.tscn::68b6885518c5afaffc65d714303b6684::1722437887::res://.godot/exported/133200997/export-d90bafd3f3966b870c87e6f8f3b8e6d0-xuan_guan.scn
+res://anim/backGround/grass.tscn::26adcae5e78c63bf3bf5544dc7b7b49b::1722438503::res://.godot/exported/133200997/export-3505aea408ff5da0b5b39d375bd88941-grass.scn
+res://anim/plant/rePeater/rePeater.tres::090b22ad0a17e01c0ef61e1aeee90fe2::1722438503::res://.godot/exported/133200997/export-10356e97f2b94b39d310513133b461f5-rePeater.res
+res://Prefabs/GDlogo.tscn::4ff61d7717de20957d98e449e2b235f8::1722438503::res://.godot/exported/133200997/export-45a2c048aed93798736de84093e18502-GDlogo.scn
+res://Prefabs/repeater.tscn::63a2cacc4da8902adbe660a9bd17c476::1722438503::res://.godot/exported/133200997/export-59eec9b58beb2b9452bb6e4f95aff641-repeater.scn
+res://player.tscn::6e44ce000d7def8047f3d565c32328e9::1722438503::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://UI.tscn::32ac95b827de67d8dbb338427df7787f::1722438503::res://.godot/exported/133200997/export-c3b50503a0477dc727cd659891fdb3c7-UI.scn
+res://Scene/title.tscn::1766eb1bafe25ed82ddfc86e96389ff7::1722438503::res://.godot/exported/133200997/export-e54c793d4abcaa4ebe34a4d2f84987f2-title.scn
+res://Scene/xuan_guan.tscn::68b6885518c5afaffc65d714303b6684::1722438503::res://.godot/exported/133200997/export-d90bafd3f3966b870c87e6f8f3b8e6d0-xuan_guan.scn
 res://theme/start.tres::a3bf9e08db7fd97115f891f8ca0640a1::1720858473::res://.godot/exported/133200997/export-6713d582070e63e677d6dd811d6281b6-start.res
-res://start.tscn::625e217bf979665d53e3ac7503a10b1c::1722437887::res://.godot/exported/133200997/export-f6e8b96a6111f62e406d12d8b3ddab90-start.scn
-res://Scene/pool_day.tscn::95ba1de7843e600127d9492478311f5d::1722437887::res://.godot/exported/133200997/export-124e110f033ec63582ea4a5bec7fd2f5-pool_day.scn
-res://GameScene.tscn::2a94104150d86d8877a4728fea776006::1722437887::res://.godot/exported/133200997/export-e2c04f88cc384ae305072b7c73076002-GameScene.scn
-res://Scene/suibian.tscn::1ba0fcf193d5020d07b8fc01adc452b0::1722437887::res://.godot/exported/133200997/export-f7be2191119618bc859a08815fa9a908-suibian.scn
-res://anim/plant/peaShooter/pea_shooter.tscn::604bdadb4ab893a501ca84abbcee53c2::1722437887::res://.godot/exported/133200997/export-a1ffa0e3dd7442dec07f56fdbea87781-pea_shooter.scn
+res://start.tscn::625e217bf979665d53e3ac7503a10b1c::1722438503::res://.godot/exported/133200997/export-f6e8b96a6111f62e406d12d8b3ddab90-start.scn
+res://Scene/pool_day.tscn::95ba1de7843e600127d9492478311f5d::1722438503::res://.godot/exported/133200997/export-124e110f033ec63582ea4a5bec7fd2f5-pool_day.scn
+res://GameScene.tscn::2a94104150d86d8877a4728fea776006::1722438503::res://.godot/exported/133200997/export-e2c04f88cc384ae305072b7c73076002-GameScene.scn
+res://Scene/suibian.tscn::1ba0fcf193d5020d07b8fc01adc452b0::1722438503::res://.godot/exported/133200997/export-f7be2191119618bc859a08815fa9a908-suibian.scn
+res://anim/plant/peaShooter/pea_shooter.tscn::604bdadb4ab893a501ca84abbcee53c2::1722438503::res://.godot/exported/133200997/export-a1ffa0e3dd7442dec07f56fdbea87781-pea_shooter.scn
 res://addons/AsepriteWizard/config/config_dialog.tscn::3edb88e5cd66fb9fd417cde9cce75da3::1719580856::res://.godot/exported/133200997/export-a0f27e14ae530993ecc493e2339c0c90-config_dialog.scn
 res://addons/AsepriteWizard/interface/docks/animated_sprite/animated_sprite_inspector_dock.tscn::044a500a454ade42407401994ceaa952::1719580856::res://.godot/exported/133200997/export-41a774a42caea9ec408b57603766502b-animated_sprite_inspector_dock.scn
 res://addons/AsepriteWizard/interface/docks/sprite/sprite_inspector_dock.tscn::d08a5d6eb155947b5fb1ca49895e55c2::1719580856::res://.godot/exported/133200997/export-97898afaa711e4885c5f65bd9cd6e4c7-sprite_inspector_dock.scn
@@ -59,7 +59,7 @@ res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zom
 res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_17.tres::e8e3e7045bbb63a7b3e716dc7e5464b7::1722081337::res://.godot/exported/133200997/export-1e790d43578fd0b1e9a5c7cd1c24add5-DS DSi - Plants vs Zombies - Peashooter_17.res
 res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_18.tres::4bac2e417fde928855546422de93a119::1722081337::res://.godot/exported/133200997/export-2cee3647638ef4b28b8c9309687e2a5e-DS DSi - Plants vs Zombies - Peashooter_18.res
 res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_19.tres::dd09bda98f30468cc4069de01d975824::1722081337::res://.godot/exported/133200997/export-8fdf1e8a1a05019af466c8cb4194d733-DS DSi - Plants vs Zombies - Peashooter_19.res
-res://anim/plant/peaShooter/pea_bullet.tscn::6e56857e7680d7a419ff3d0ecb62f2ba::1722437887::res://.godot/exported/133200997/export-883fdfe50c28939aab67f07913bd9477-pea_bullet.scn
+res://anim/plant/peaShooter/pea_bullet.tscn::6e56857e7680d7a419ff3d0ecb62f2ba::1722438503::res://.godot/exported/133200997/export-883fdfe50c28939aab67f07913bd9477-pea_bullet.scn
 res://anim/zombie/zomTexture/texture.sprites/DS DSi - Plants vs Zombies - Zombie_0.tres::d9337d8c5d4b465bb7a89d48dd4b648b::1722324988::res://.godot/exported/133200997/export-ba74e6f08d380844786b1504d2cd1ad4-DS DSi - Plants vs Zombies - Zombie_0.res
 res://anim/zombie/zomTexture/texture.sprites/DS DSi - Plants vs Zombies - Zombie_1.tres::8fac1e3013da72f1f64b74bd0df8f708::1722324988::res://.godot/exported/133200997/export-ca913b021ce92289158cc115df3af984-DS DSi - Plants vs Zombies - Zombie_1.res
 res://anim/zombie/zomTexture/texture.sprites/DS DSi - Plants vs Zombies - Zombie_2.tres::16f01b97bcc3f658f30b63e494c6ddc2::1722324988::res://.godot/exported/133200997/export-3f4a834ed1959e0209f751e986be002d-DS DSi - Plants vs Zombies - Zombie_2.res

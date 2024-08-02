@@ -76,8 +76,9 @@ rayCast2D = NodePath("RayCast2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.5, 8.5)
 sprite_frames = SubResource("SpriteFrames_jrexk")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.0411623
 offset = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

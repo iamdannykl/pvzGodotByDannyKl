@@ -8,6 +8,8 @@ public partial class baseCard : Area2D
     [Export] public int attackFrame;
     [Export] public BulletType bulletType;
     [Export] public RayCast2D rayCast2D;
+    [Export] public bool noAtkPlant;
+    public bool isplanted;
     public override void _Ready()
     {
         base._Ready();
@@ -17,19 +19,22 @@ public partial class baseCard : Area2D
     }
     public override void _Process(double delta)
     {
-        base._Process(delta);
-        if (rayCast2D.IsColliding())
+        if (!noAtkPlant)
         {
-            anim.Play("attack");
-        }
-        else
-        {
-            anim.Play("idle");
+            if (rayCast2D.IsColliding())
+            {
+                anim.Play("attack");
+            }
+            else
+            {
+                anim.Play("idle");
+            }
         }
     }
-    public void placed()
+    public virtual void placed()
     {
         anim.SpeedScale = 1;
+        isplanted = true;
     }
     public virtual void FrameChanged()
     {

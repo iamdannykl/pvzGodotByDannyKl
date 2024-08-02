@@ -3,7 +3,8 @@ using Godot;
 public enum PlantType
 {
     peaShooter,
-    rePeater
+    rePeater,
+    sunFlower
 }
 public enum ZomType
 {
@@ -19,6 +20,7 @@ public partial class resPlantAndZom : Node2D
     public static resPlantAndZom Instance;
     [Export] public PackedScene peaShooter;
     [Export] public PackedScene rePeater;
+    [Export] public PackedScene sunFlower;
     //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
@@ -36,6 +38,8 @@ public partial class resPlantAndZom : Node2D
                 return peaShooter;
             case PlantType.rePeater:
                 return rePeater;
+            case PlantType.sunFlower:
+                return sunFlower;
             default:
                 return null;
         }

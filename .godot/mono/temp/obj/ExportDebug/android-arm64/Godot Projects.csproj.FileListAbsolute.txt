@@ -197,3 +197,7 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\androi
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\android-arm64\Newtonsoft.Json.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\android-arm64\Godot Projects.sourcelink.json
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportDebug\android-arm64\Godot Pr.43AD30E5.Up2Date
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\android-arm64\MessagePack.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\android-arm64\Microsoft.Extensions.DependencyInjection.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\android-arm64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\android-arm64\YamlDotNet.dll

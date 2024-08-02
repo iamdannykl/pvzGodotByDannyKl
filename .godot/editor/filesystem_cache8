@@ -1,23 +1,23 @@
 036ed0dc6731e46c9f92a47160ae4a9b
-::res://::1722423384
+::res://::1722597012
 anLogo.png::CompressedTexture2D::5870470706198812375::1720883769::1720883774::1::::<><>::
 AnTitle Screen.png::CompressedTexture2D::79955480836869556::1720867518::1720867522::1::::<><>::
 Back.cs::CSharpScript::-1::1720857372::0::1::::<>Button<>::
 baiMore.png::BitMap::7165433918213423437::1720868434::1720868450::1::::<><>::
 black.png::CompressedTexture2D::4048994857891081906::1720882703::1720882705::1::::<><>::
 DS DSi - Plants vs Zombies - Title Screen.png::CompressedTexture2D::2628402260645693054::1720866549::1720866550::1::::<><>::
-export_presets.cfg::TextFile::-1::1722420736::0::1::::<><>::
-GameScene.tscn::PackedScene::228534716920656560::1722423241::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://v47t65bdl51o::::res://anim/plant/peaShooter/pea_shooter.tscn<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://dnuargw8dhh3c::::res://anim/plant/peaShooter/pea_bullet.tscn<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs
+export_presets.cfg::TextFile::-1::1722438844::0::1::::<><>::
+GameScene.tscn::PackedScene::228534716920656560::1722595912::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://v47t65bdl51o::::res://anim/plant/peaShooter/pea_shooter.tscn<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://bwekahjdpv1k4::::res://anim/plant/sunFlower/sun_flower.tscn<>uid://dn58pij1x2882::::res://Prefabs/zombie1.tscn<>uid://dnuargw8dhh3c::::res://anim/plant/peaShooter/pea_bullet.tscn<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs<>uid://b25au6edd6a86::::res://anim/icon/sunClct.png<>uid://du757iyvawt04::::res://anim/icon/font.tres<>res://code/SunClct.cs
 icon.svg::CompressedTexture2D::6598339049764445739::1708521360::1708521372::1::::<><>::
 logo.png::CompressedTexture2D::4791528546478154083::1720882599::1720882844::1::::<><>::
 MenuButton.cs::CSharpScript::-1::1720847903::0::1::::<>MenuButton<>::
 MyOptionButton.cs::CSharpScript::-1::1720880248::0::1::::<>OptionButton<>::
-player.tscn::PackedScene::4344203523676416275::1722423241::0::1::::<><>::res://code/Player.cs<>uid://c1ajxehpet6bv::::res://icon.svg
+player.tscn::PackedScene::4344203523676416275::1722595912::0::1::::<><>::res://code/Player.cs<>uid://c1ajxehpet6bv::::res://icon.svg
 pvzICON.png::CompressedTexture2D::105075855636590485::1721656762::1721656795::1::::<><>::
 README.md::TextFile::-1::1708681325::0::1::::<><>::
 scene.cs::CSharpScript::-1::1721657654::0::1::::<>Node2D<>::
-start.tscn::PackedScene::5638135993951095132::1722423241::0::1::::<><>::uid://blujqye77knm::::res://anim/backGround/116729.png<>res://MyOptionButton.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/Finish.cs<>res://code/DaoRu.cs
-UI.tscn::PackedScene::226708453479853255::1722423241::0::1::::<><>::uid://s1g7dkqso0l7::::res://anim/plant/rePeater/rePeater.tres<>uid://dj4ljl5b6sm8j::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres<>res://code/clickButton.cs
+start.tscn::PackedScene::5638135993951095132::1722595912::0::1::::<><>::uid://blujqye77knm::::res://anim/backGround/116729.png<>res://MyOptionButton.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/Finish.cs<>res://code/DaoRu.cs
+UI.tscn::PackedScene::226708453479853255::1722595912::0::1::::<><>::uid://s1g7dkqso0l7::::res://anim/plant/rePeater/rePeater.tres<>uid://dj4ljl5b6sm8j::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres<>res://code/clickButton.cs<>uid://ywwxl64arufl::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sunflower_3.PNG
 white.png::BitMap::6797957560891993716::1720868019::1720868100::1::::<><>::
 ::res://addons/::1722327912
 ::res://addons/AsepriteWizard/::1722327912
@@ -118,8 +118,8 @@ tree_selection_confirmation_warning.tscn::PackedScene::1136156742705764826::1719
 codeandweb.texturepacker_importer.gd::GDScript::-1::1722071210::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1722071211::0::1::::<><>::
 texturepacker_import_spritesheet.gd::GDScript::-1::1722071211::0::1::::<>EditorImportPlugin<>::
-::res://anim/::1711608207
-::res://anim/backGround/::1722423241
+::res://anim/::1722527489
+::res://anim/backGround/::1722595912
 0_oa0XcvM99Y5clDsj.png::CompressedTexture2D::3800782020009897739::1720956521::1720956534::1::::<><>::
 116729.png::CompressedTexture2D::94128288607845742::1720847454::1720847495::1::::<><>::
 121700.png::CompressedTexture2D::5215893818874939369::1720847467::1720847495::1::::<><>::
@@ -128,7 +128,7 @@ texturepacker_import_spritesheet.gd::GDScript::-1::1722071211::0::1::::<>EditorI
 155614.png::CompressedTexture2D::880738240076662688::1720847475::1720847495::1::::<><>::
 169586.png::CompressedTexture2D::360942244737464571::1720847483::1720847495::1::::<><>::
 184047.png::CompressedTexture2D::4496991876758108171::1720847489::1720847495::1::::<><>::
-grass.tscn::PackedScene::2095699479208926171::1722423241::0::1::::<><>::uid://dugs7l2qhfv6n::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png<>res://code/createZom.cs<>res://code/GridSys.cs<>uid://cqlrhgn0i5053::::res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3
+grass.tscn::PackedScene::2095699479208926171::1722595912::0::1::::<><>::uid://dugs7l2qhfv6n::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png<>res://code/createZom.cs<>res://code/GridSys.cs<>uid://cqlrhgn0i5053::::res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3
 ::res://anim/backGround/bgRes/::1720855405
 DS DSi - Plants vs Zombies - Fog.png::CompressedTexture2D::1524338689713927641::1708610340::1708611217::1::::<><>::
 DS DSi - Plants vs Zombies - Front Yard Night.png::CompressedTexture2D::3420672321087385551::1708610340::1708611217::1::::<><>::
@@ -137,11 +137,14 @@ DS DSi - Plants vs Zombies - Pool.png::CompressedTexture2D::58468072933655703::1
 DS DSi - Plants vs Zombies - Roof.png::CompressedTexture2D::7732557459068592105::1708610340::1708611217::1::::<><>::
 DS DSi - Plants vs Zombies - Title Screen.png::CompressedTexture2D::3862403986838987442::1720855404::1720855405::1::::<><>::
 DS DSi - Plants vs Zombies - Zen Normal Night Water & Toolbar Sprites.png::CompressedTexture2D::2783776863865969111::1708610340::1708611217::1::::<><>::
-::res://anim/plant/::1714129900
-::res://anim/plant/peaShooter/::1722423241
+::res://anim/icon/::1722527889
+font.tres::FontFile::8630978125374952843::1722527889::0::1::::<><>::
+sunClct.png::CompressedTexture2D::4343488144964473609::1722527498::1722527498::1::::<><>::
+::res://anim/plant/::1722517033
+::res://anim/plant/peaShooter/::1722595912
 DS DSi - Plants vs Zombies - Peashooter.png::CompressedTexture2D::2407355198232736829::1708610302::1708610303::1::::<><>::
-pea_bullet.tscn::PackedScene::8113035282580763102::1722423241::0::1::::<><>::res://code/pea_bullet.cs<>uid://lkkthgyeeax8::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_12.tres<>uid://d31h11wma2p6l::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_13.tres<>uid://b4yoo217a62mw::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_11.tres
-pea_shooter.tscn::PackedScene::1535811219737032738::1722423241::0::1::::<><>::uid://c5giiu0iu2p0k::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres<>res://code/pea_shooter.cs<>uid://6v246k8vvyiv::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_9.tres<>uid://bli1iiwf1lssl::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_10.tres<>uid://cy3hkpfmkpcmu::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_0.tres<>uid://brcfndahn7j3y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_1.tres<>uid://cp1oiub36rl7y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_2.tres<>uid://c5re2gqryab64::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_3.tres<>uid://ctlvqmwm8uta2::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_4.tres<>uid://c4qec75bjfb47::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres<>uid://06wd0yrbw8q5::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres<>uid://dygd562hfp353::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres
+pea_bullet.tscn::PackedScene::8113035282580763102::1722595912::0::1::::<><>::res://code/pea_bullet.cs<>uid://lkkthgyeeax8::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_12.tres<>uid://d31h11wma2p6l::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_13.tres<>uid://b4yoo217a62mw::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_11.tres
+pea_shooter.tscn::PackedScene::1535811219737032738::1722595912::0::1::::<><>::uid://c5giiu0iu2p0k::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres<>res://code/pea_shooter.cs<>uid://6v246k8vvyiv::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_9.tres<>uid://bli1iiwf1lssl::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_10.tres<>uid://cy3hkpfmkpcmu::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_0.tres<>uid://brcfndahn7j3y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_1.tres<>uid://cp1oiub36rl7y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_2.tres<>uid://c5re2gqryab64::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_3.tres<>uid://ctlvqmwm8uta2::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_4.tres<>uid://c4qec75bjfb47::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres<>uid://06wd0yrbw8q5::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres<>uid://dygd562hfp353::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres
 ::res://anim/plant/peaShooter/frame/::1722070246
 DS DSi - Plants vs Zombies - Peashooter_0.PNG::CompressedTexture2D::7681626552440574121::1722070246::1722070246::1::::<><>::
 DS DSi - Plants vs Zombies - Peashooter_1.PNG::CompressedTexture2D::3578801409300775557::1722070246::1722070246::1::::<><>::
@@ -201,10 +204,18 @@ DS DSi - Plants vs Zombies - Peashooter_16.tres::AtlasTexture::79888079471157963
 DS DSi - Plants vs Zombies - Peashooter_17.tres::AtlasTexture::8952741936103785573::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_18.tres::AtlasTexture::1122133151480810093::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_19.tres::AtlasTexture::761031904618942615::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
-::res://anim/plant/rePeater/::1722420982
+::res://anim/plant/rePeater/::1722594746
 DS DSi - Plants vs Zombies - Repeater.png::CompressedTexture2D::4081212412493299964::1714129907::1714130931::1::::<><>::
-rePeater.tres::AtlasTexture::1317494628221387530::1722420982::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png
+rePeater.tres::AtlasTexture::1317494628221387530::1722594746::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png
 reperter.cs::CSharpScript::-1::1722084873::0::1::::<>Area2D<>::
+::res://anim/plant/sunFlower/::1722595912
+DS DSi - Plants vs Zombies - Sun.png::CompressedTexture2D::8570292997884645170::1722519844::1722519845::1::::<><>::
+DS DSi - Plants vs Zombies - Sunflower_3.PNG::CompressedTexture2D::1731326031966874349::1722525601::1722525602::1::::<><>::
+DS DSi - Plants vs Zombies - Sun_0.PNG::CompressedTexture2D::8576485250906704468::1722519984::1722519985::1::::<><>::
+DS DSi - Plants vs Zombies - Sun_1.PNG::CompressedTexture2D::985547748745357223::1722519984::1722519985::1::::<><>::
+sunFlower.aseprite::PackedDataContainer::2350475649890777195::1722517786::1722517787::1::::<><>::
+sunFlower.png::CompressedTexture2D::7206882344924677897::1722517855::1722517856::1::::<><>::
+sun_flower.tscn::PackedScene::3939440306397615121::1722595912::0::1::::<><>::res://code/sun_flower.cs<>uid://daxckf78uvehd::::res://anim/plant/sunFlower/sunFlower.png<>uid://epron77jpbfb::::res://Scene/sun_creator.tscn
 ::res://anim/zombie/::1722267111
 DS DSi - Plants vs Zombies - Zombie.png::CompressedTexture2D::2282864393219225626::1711608262::1711608262::1::::<><>::
 ::res://anim/zombie/zomTexture/::1722326910
@@ -311,7 +322,7 @@ ZombieOnYourLawn.mp3::AudioStreamMP3::5103813079915062865::1722346408::172234646
 植物大战僵尸-音乐全收录_P2_白天.mp3::AudioStreamMP3::5919616046694085580::1722346408::1722346463::1::::<><>::
 泳池.mp3::AudioStreamMP3::5796262133565253373::1722346408::1722346463::1::::<><>::
 迷雾.mp3::AudioStreamMP3::8260002426751656786::1722346408::1722346463::1::::<><>::
-::res://audio/effects/::1722346506
+::res://audio/effects/::1722597040
 ballooninflate.ogg::AudioStreamOggVorbis::4124615970060445211::1722346503::1722346506::1::::<><>::
 basketball.ogg::AudioStreamOggVorbis::6697094399766506904::1722346503::1722346506::1::::<><>::
 bigchomp.ogg::AudioStreamOggVorbis::7788375790318314491::1722346503::1722346506::1::::<><>::
@@ -338,7 +349,6 @@ chomp.ogg::AudioStreamOggVorbis::5209882689582077802::1722346503::1722346506::1:
 chompsoft.ogg::AudioStreamOggVorbis::7444932591607985669::1722346503::1722346506::1::::<><>::
 coblaunch.ogg::AudioStreamOggVorbis::8497728195140097291::1722346503::1722346506::1::::<><>::
 coffee.ogg::AudioStreamOggVorbis::7864121810879348573::1722346503::1722346506::1::::<><>::
-coin.ogg::AudioStreamOggVorbis::1384498467467825851::1722346503::1722346506::1::::<><>::
 crazydavecrazy.ogg::AudioStreamOggVorbis::7919284755315362193::1722346503::1722346506::1::::<><>::
 crazydaveextralong1.ogg::AudioStreamOggVorbis::5907061326808790723::1722346503::1722346506::1::::<><>::
 crazydaveextralong2.ogg::AudioStreamOggVorbis::4717578324010955379::1722346503::1722346506::1::::<><>::
@@ -364,11 +374,9 @@ finalfanfare.ogg::AudioStreamOggVorbis::9057643051382023426::1722346504::1722346
 finalwave.ogg::AudioStreamOggVorbis::7964012250175356572::1722346504::1722346506::1::::<><>::
 firepea.ogg::AudioStreamOggVorbis::1409826139480325264::1722346504::1722346506::1::::<><>::
 floop.ogg::AudioStreamOggVorbis::8035452317936074956::1722346504::1722346506::1::::<><>::
-frozen.ogg::AudioStreamOggVorbis::658667808617019840::1722346504::1722346506::1::::<><>::
 fume.ogg::AudioStreamOggVorbis::1367349032306361724::1722346504::1722346506::1::::<><>::
 gargantuar_thump.ogg::AudioStreamOggVorbis::1017819011769138849::1722346504::1722346506::1::::<><>::
 grassstep.ogg::AudioStreamOggVorbis::99000394766834724::1722346504::1722346506::1::::<><>::
-gravebusterchomp.ogg::AudioStreamOggVorbis::5667585214450684134::1722346504::1722346506::1::::<><>::
 gravebutton.ogg::AudioStreamOggVorbis::2024655213985382722::1722346504::1722346506::1::::<><>::
 gravestone_rumble.ogg::AudioStreamOggVorbis::4375773451856736557::1722346504::1722346506::1::::<><>::
 groan2.ogg::AudioStreamOggVorbis::1978923704005398708::1722346504::1722346506::1::::<><>::
@@ -377,7 +385,6 @@ groan4.ogg::AudioStreamOggVorbis::1809613879138836374::1722346504::1722346506::1
 groan5.ogg::AudioStreamOggVorbis::4209622750891992023::1722346504::1722346506::1::::<><>::
 groan6.ogg::AudioStreamOggVorbis::7490311914923579981::1722346504::1722346506::1::::<><>::
 groan.ogg::AudioStreamOggVorbis::8946682087702055786::1722346504::1722346506::1::::<><>::
-gulp.ogg::AudioStreamOggVorbis::2978269266221813126::1722346504::1722346506::1::::<><>::
 hatchback_close.ogg::AudioStreamOggVorbis::9017624756118109407::1722346504::1722346506::1::::<><>::
 hatchback_open.ogg::AudioStreamOggVorbis::3741195429698302063::1722346504::1722346506::1::::<><>::
 hugewave.ogg::AudioStreamOggVorbis::4138220424558710877::1722346504::1722346506::1::::<><>::
@@ -394,7 +401,6 @@ jalapeno.ogg::AudioStreamOggVorbis::2887167690799164777::1722346504::1722346506:
 juicy.ogg::AudioStreamOggVorbis::6504306417452462453::1722346504::1722346506::1::::<><>::
 kernelpult2.ogg::AudioStreamOggVorbis::7731327316345141357::1722346504::1722346506::1::::<><>::
 kernelpult.ogg::AudioStreamOggVorbis::2148974442552791996::1722346504::1722346506::1::::<><>::
-ladder_zombie.ogg::AudioStreamOggVorbis::2544592510299239590::1722346504::1722346506::1::::<><>::
 lawnmower.ogg::AudioStreamOggVorbis::2212605860311114675::1722346504::1722346505::1::::<><>::
 lightfill.ogg::AudioStreamOggVorbis::203905349349356220::1722346504::1722346505::1::::<><>::
 limbs_pop.ogg::AudioStreamOggVorbis::5078941294478930285::1722346504::1722346505::1::::<><>::
@@ -408,8 +414,8 @@ moneyfalls.ogg::AudioStreamOggVorbis::8809896990645849352::1722346504::172234650
 newspaper_rarrgh2.ogg::AudioStreamOggVorbis::8558994085651632026::1722346504::1722346505::1::::<><>::
 newspaper_rarrgh.ogg::AudioStreamOggVorbis::7431836041411568204::1722346504::1722346505::1::::<><>::
 newspaper_rip.ogg::AudioStreamOggVorbis::8637731232159139800::1722346504::1722346505::1::::<><>::
+NO！！.ogg::AudioStreamOggVorbis::3514317167863934625::1722346504::1722596702::1::::<><>::
 paper.ogg::AudioStreamOggVorbis::6547712254459777967::1722346504::1722346505::1::::<><>::
-pause.ogg::AudioStreamOggVorbis::7681485067423800238::1722346504::1722346505::1::::<><>::
 phonograph.ogg::AudioStreamOggVorbis::4931458669482609511::1722346504::1722346505::1::::<><>::
 plant2.ogg::AudioStreamOggVorbis::6376949733701726642::1722346504::1722346505::1::::<><>::
 plant.ogg::AudioStreamOggVorbis::8476304105028489656::1722346504::1722346505::1::::<><>::
@@ -419,27 +425,16 @@ plant_water.ogg::AudioStreamOggVorbis::7031750816340913183::1722346504::17223465
 plastichit2.ogg::AudioStreamOggVorbis::4404413312328676429::1722346504::1722346505::1::::<><>::
 plastichit.ogg::AudioStreamOggVorbis::1124762540919287144::1722346504::1722346505::1::::<><>::
 pogo_zombie.ogg::AudioStreamOggVorbis::6870301373935318298::1722346504::1722346505::1::::<><>::
-points.ogg::AudioStreamOggVorbis::7410828356998608370::1722346504::1722346505::1::::<><>::
 pool_cleaner.ogg::AudioStreamOggVorbis::5903629425638822038::1722346504::1722346505::1::::<><>::
 portal.ogg::AudioStreamOggVorbis::664697781176109637::1722346504::1722346505::1::::<><>::
 prize.ogg::AudioStreamOggVorbis::1877317292817272275::1722346504::1722346505::1::::<><>::
-rain.ogg::AudioStreamOggVorbis::9122757865092200780::1722346504::1722346505::1::::<><>::
 readysetplant.ogg::AudioStreamOggVorbis::2402754044772179493::1722346504::1722346505::1::::<><>::
 reverse_explosion.ogg::AudioStreamOggVorbis::8170689315383992817::1722346504::1722346505::1::::<><>::
 roll_in.ogg::AudioStreamOggVorbis::930613018889797433::1722346504::1722346505::1::::<><>::
 RVthrow.ogg::AudioStreamOggVorbis::2622248784017688419::1722346504::1722346505::1::::<><>::
-scream.ogg::AudioStreamOggVorbis::3514317167863934625::1722346504::1722346505::1::::<><>::
 seedlift.ogg::AudioStreamOggVorbis::3023149999202212937::1722346504::1722346505::1::::<><>::
 shoop.ogg::AudioStreamOggVorbis::6422772914969837313::1722346504::1722346505::1::::<><>::
-shovel.ogg::AudioStreamOggVorbis::5839729876684263151::1722346504::1722346505::1::::<><>::
-siren.ogg::AudioStreamOggVorbis::462485523793288546::1722346504::1722346505::1::::<><>::
 slotmachine.ogg::AudioStreamOggVorbis::5819578620677739669::1722346504::1722346505::1::::<><>::
-slurp.ogg::AudioStreamOggVorbis::6568132990439928751::1722346504::1722346505::1::::<><>::
-snow_pea_sparkles.ogg::AudioStreamOggVorbis::2906099003865550861::1722346504::1722346505::1::::<><>::
-splat2.ogg::AudioStreamOggVorbis::3016557301488538905::1722346504::1722346506::1::::<><>::
-splat3.ogg::AudioStreamOggVorbis::2990554180856314631::1722346504::1722346506::1::::<><>::
-splat.ogg::AudioStreamOggVorbis::6094398509699708041::1722346504::1722346506::1::::<><>::
-squash_hmm.ogg::AudioStreamOggVorbis::1325913430025902354::1722346504::1722346506::1::::<><>::
 sukhbir2.ogg::AudioStreamOggVorbis::6104722365218436966::1722346504::1722346506::1::::<><>::
 sukhbir3.ogg::AudioStreamOggVorbis::3133944844393171155::1722346504::1722346506::1::::<><>::
 sukhbir4.ogg::AudioStreamOggVorbis::4713156854489569231::1722346504::1722346506::1::::<><>::
@@ -451,8 +446,6 @@ tap2.ogg::AudioStreamOggVorbis::4226439595194635452::1722346504::1722346506::1::
 tap.ogg::AudioStreamOggVorbis::7696154856677603497::1722346504::1722346506::1::::<><>::
 throw2.ogg::AudioStreamOggVorbis::4581134037362216477::1722346504::1722346506::1::::<><>::
 throw.ogg::AudioStreamOggVorbis::4496817774444961461::1722346504::1722346506::1::::<><>::
-thunder.ogg::AudioStreamOggVorbis::6807734384348960498::1722346504::1722346506::1::::<><>::
-vase_breaking.ogg::AudioStreamOggVorbis::430775957186443618::1722346504::1722346506::1::::<><>::
 wakeup.ogg::AudioStreamOggVorbis::6912368897060043911::1722346504::1722346506::1::::<><>::
 watering.ogg::AudioStreamOggVorbis::6814819658633332570::1722346504::1722346506::1::::<><>::
 winmusic.ogg::AudioStreamOggVorbis::266731106571540661::1722346504::1722346506::1::::<><>::
@@ -466,33 +459,52 @@ zombie_falling_1.ogg::AudioStreamOggVorbis::4474404820145255487::1722346504::172
 zombie_falling_2.ogg::AudioStreamOggVorbis::2036043013265848207::1722346504::1722346505::1::::<><>::
 僵尸coming.ogg::AudioStreamOggVorbis::7456551259684776421::1722346504::1722346505::1::::<><>::
 僵尸进水里音效.ogg::AudioStreamOggVorbis::2667831237767364053::1722346503::1722346505::1::::<><>::
+冻结吧.ogg::AudioStreamOggVorbis::658667808617019840::1722346504::1722596964::1::::<><>::
+吃脑子.ogg::AudioStreamOggVorbis::6568132990439928751::1722346504::1722596436::1::::<><>::
+吞咽.ogg::AudioStreamOggVorbis::2978269266221813126::1722346504::1722596868::1::::<><>::
 吹.ogg::AudioStreamOggVorbis::5510784585742934693::1722346504::1722346505::1::::<><>::
+啪2.ogg::AudioStreamOggVorbis::3016557301488538905::1722346504::1722596512::1::::<><>::
+啪3.ogg::AudioStreamOggVorbis::2990554180856314631::1722346504::1722596525::1::::<><>::
+啪.ogg::AudioStreamOggVorbis::6094398509699708041::1722346504::1722596497::1::::<><>::
 土豆雷爆炸.ogg::AudioStreamOggVorbis::634955357543153993::1722346503::1722346505::1::::<><>::
+墓碑吞噬者.ogg::AudioStreamOggVorbis::5667585214450684134::1722346504::1722596996::1::::<><>::
 女大学生.ogg::AudioStreamOggVorbis::8114236615838764508::1722346503::1722346505::1::::<><>::
 小丑盒子弹音效.ogg::AudioStreamOggVorbis::8178301186495461723::1722346503::1722346505::1::::<><>::
 小喷菇子弹.ogg::AudioStreamOggVorbis::8760364086000379098::1722346503::1722346505::1::::<><>::
 巨人.ogg::AudioStreamOggVorbis::4479179579875213374::1722346503::1722346505::1::::<><>::
+得分.ogg::AudioStreamOggVorbis::7410828356998608370::1722346504::1722596754::1::::<><>::
 扎破气球.ogg::AudioStreamOggVorbis::7613271313097023276::1722346503::1722346505::1::::<><>::
+打碎花瓶.ogg::AudioStreamOggVorbis::430775957186443618::1722346504::1722596579::1::::<><>::
+暂停.ogg::AudioStreamOggVorbis::7681485067423800238::1722346504::1722596911::1::::<><>::
+梯子僵尸.ogg::AudioStreamOggVorbis::2544592510299239590::1722346504::1722596740::1::::<><>::
+硬币.ogg::AudioStreamOggVorbis::1384498467467825851::1722346503::1722597013::1::::<><>::
+窝瓜嗯.ogg::AudioStreamOggVorbis::1325913430025902354::1722346504::1722596558::1::::<><>::
 窝瓜察觉嗯声.ogg::AudioStreamOggVorbis::624457583497666355::1722346503::1722346506::1::::<><>::
 西瓜打击1.ogg::AudioStreamOggVorbis::6794716247910078784::1722346503::1722346506::1::::<><>::
 西瓜打击2.ogg::AudioStreamOggVorbis::2884319975006992881::1722346503::1722346506::1::::<><>::
+警报.ogg::AudioStreamOggVorbis::462485523793288546::1722346504::1722596662::1::::<><>::
 金属打击1.ogg::AudioStreamOggVorbis::7364176523070701694::1722346503::1722346506::1::::<><>::
 金属打击2.ogg::AudioStreamOggVorbis::4595713418365296631::1722346503::1722346506::1::::<><>::
+铲子.ogg::AudioStreamOggVorbis::5839729876684263151::1722346504::1722596645::1::::<><>::
+阳光收取.MP3::AudioStreamMP3::1291905135224398752::1722597040::1722597042::1::::<><>::
+雨声.ogg::AudioStreamOggVorbis::9122757865092200780::1722346504::1722596929::1::::<><>::
+雪豌豆闪闪.ogg::AudioStreamOggVorbis::2906099003865550861::1722346504::1722596625::1::::<><>::
+雷声.ogg::AudioStreamOggVorbis::6807734384348960498::1722346504::1722596590::1::::<><>::
 ::res://beiWangLu/::1721836694
 animatedsprite2dEvents.md::TextFile::-1::1721836694::0::1::::<><>::
-::res://code/::1722422674
+::res://code/::1722595108
 ADD.cs::CSharpScript::-1::1720879891::0::1::::<>Button<>::
-baseCard.cs::CSharpScript::-1::1722181359::0::1::::<>Area2D<>::
+baseCard.cs::CSharpScript::-1::1722526648::0::1::::<>Area2D<>::
 bulletBase.cs::CSharpScript::-1::1722415454::0::1::::<>Area2D<>::
 Camera2D.cs::CSharpScript::-1::1721036893::0::1::::<>Camera2D<>::
 clickButton.cs::CSharpScript::-1::1721749816::0::1::::<>TextureButton<>::
-createZom.cs::CSharpScript::-1::1722423236::0::1::::<>Sprite2D<>::
-danli.cs::CSharpScript::-1::1721720452::0::1::::<>Node2D<>::
+createZom.cs::CSharpScript::-1::1722437174::0::1::::<>Sprite2D<>::
+danli.cs::CSharpScript::-1::1722526202::0::1::::<>Node2D<>::
 DaoRu.cs::CSharpScript::-1::1721317982::0::1::::<>Button<>::
 Finish.cs::CSharpScript::-1::1721657697::0::1::::<>Button<>::
 GridS.cs::CSharpScript::-1::1708654041::0::1::::<><>::
 GridSys.cs::CSharpScript::-1::1722175525::0::1::::<>Node2D<>::
-GuanQiaSaver.cs::CSharpScript::-1::1722420057::0::1::::<>Control<>::
+GuanQiaSaver.cs::CSharpScript::-1::1722437849::0::1::::<>Control<>::
 hang.cs::CSharpScript::-1::1721196579::0::1::::<><>::
 hangSys.cs::CSharpScript::-1::1721196724::0::1::::<>Node2D<>::
 kaiShi.cs::CSharpScript::-1::1722346778::0::1::::<>TextureButton<>::
@@ -501,31 +513,37 @@ pea_bullet.cs::CSharpScript::-1::1722176628::0::1::::<>Area2D<>::
 pea_shooter.cs::CSharpScript::-1::1722084876::0::1::::<>Area2D<>::
 Player.cs::CSharpScript::-1::1713842575::0::1::::<>Area2D<>::
 quit.cs::CSharpScript::-1::1722346755::0::1::::<>Button<>::
-reciever.cs::CSharpScript::-1::1722347891::0::1::::<>Label<>::
-resPlantAndZom.cs::CSharpScript::-1::1722422991::0::1::::<>Node2D<>::
-saveContent.cs::CSharpScript::-1::1721359338::0::1::::<><>::
+reciever.cs::CSharpScript::-1::1722432680::0::1::::<>Label<>::
+resPlantAndZom.cs::CSharpScript::-1::1722525337::0::1::::<>Node2D<>::
+saveContent.cs::CSharpScript::-1::1722437641::0::1::::<><>::
 stateMC.cs::CSharpScript::-1::1722343079::0::1::::<>AnimationTree<>::
-wave.cs::CSharpScript::-1::1721230601::0::1::::<><>::
-xuan_guan.cs::CSharpScript::-1::1721721670::0::1::::<>Control<>::
+sun.cs::CSharpScript::-1::1722595874::0::1::::<>Area2D<>::
+SunClct.cs::CSharpScript::-1::1722596109::0::1::::<>Sprite2D<>::
+sunCreator.cs::CSharpScript::-1::1722526869::0::1::::<>Node2D<>::
+sun_flower.cs::CSharpScript::-1::1722526856::0::1::::<>Area2D<>::
+wave.cs::CSharpScript::-1::1722437672::0::1::::<><>::
+xuan_guan.cs::CSharpScript::-1::1722437878::0::1::::<>Control<>::
 zombie_base.cs::CSharpScript::-1::1722353293::0::1::::<>CharacterBody2D<>::
 zomCard.cs::CSharpScript::-1::1721718181::0::1::::<>TextureButton<>::
-zomInfo.cs::CSharpScript::-1::1721231882::0::1::::<><>::
-zr.cs::CSharpScript::-1::1721231519::0::1::::<><>::
-::res://Prefabs/::1722423241
-GDlogo.tscn::PackedScene::258974699525575468::1722423241::0::1::::<><>::uid://c1ajxehpet6bv::::res://icon.svg
-repeater.tscn::PackedScene::2019983434890228645::1722423241::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png<>res://anim/plant/rePeater/reperter.cs
-zombie1.tscn::PackedScene::8135679233968582345::1722423692::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
+zomInfo.cs::CSharpScript::-1::1722437703::0::1::::<><>::
+zr.cs::CSharpScript::-1::1722437684::0::1::::<><>::
+::res://Prefabs/::1722595912
+GDlogo.tscn::PackedScene::258974699525575468::1722595912::0::1::::<><>::uid://c1ajxehpet6bv::::res://icon.svg
+repeater.tscn::PackedScene::2019983434890228645::1722595912::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png<>res://anim/plant/rePeater/reperter.cs
+zombie1.tscn::PackedScene::8135679233968582345::1722595912::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
 zombieASE.png::CompressedTexture2D::7295134853407316061::1722343753::1722343754::1::::<><>::
-zombie_base.tscn::PackedScene::2882112859699623130::1722423241::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
+zombie_base.tscn::PackedScene::2882112859699623130::1722595912::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
 ::res://Prefabs/zom/::1721056939
 DS DSi - Plants vs Zombies - Conehead Zombie.png::CompressedTexture2D::5244866533420008891::1721056939::1721056939::1::::<><>::
 DS DSi - Plants vs Zombies - Zombie.png::CompressedTexture2D::348194751188892010::1721056723::1721056723::1::::<><>::
-::res://Scene/::1722423241
+::res://Scene/::1722596755
 Edit.cs::CSharpScript::-1::1722346771::0::1::::<>Button<>::
-pool_day.tscn::PackedScene::1039272039683361337::1722423241::0::1::::<><>::uid://3k7wqfwfl7d::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Pool.png<>res://code/GridSys.cs<>res://code/createZom.cs<>uid://cot0ucu3fn0r6::::res://audio/bgm/泳池.mp3
-suibian.tscn::PackedScene::8584977966180267655::1722423241::0::1::::<><>::
+pool_day.tscn::PackedScene::1039272039683361337::1722595912::0::1::::<><>::uid://3k7wqfwfl7d::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Pool.png<>res://code/GridSys.cs<>res://code/createZom.cs<>uid://cot0ucu3fn0r6::::res://audio/bgm/泳池.mp3
+suibian.tscn::PackedScene::8584977966180267655::1722595912::0::1::::<><>::
+sun.tscn::PackedScene::6582940512612143420::1722596755::0::1::::<><>::uid://dugrpuwgxs6ay::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_0.PNG<>uid://obn3ermrnlyt::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_1.PNG<>res://code/sun.cs
+sun_creator.tscn::PackedScene::312778964558569271::1722595912::0::1::::<><>::res://code/sunCreator.cs<>uid://c013cle4w52oe::::res://Scene/sun.tscn
 title.cs::CSharpScript::-1::1721720401::0::1::::<>Node2D<>::
-title.tscn::PackedScene::6604095620098708233::1722423241::0::1::::<><>::uid://bva8h2eyvka15::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png<>res://Scene/title.cs<>uid://bxxmma6syym7c::::res://black.png<>res://Scene/Edit.cs<>res://code/quit.cs<>uid://bbtwfc6mkqx6x::::res://Scene/xuan_guan.tscn<>uid://dhwcstiviam38::::res://audio/effects/tap.ogg<>uid://bdphnv2qw1h07::::res://DS DSi - Plants vs Zombies - Title Screen.png<>uid://bey4cqmsc253::::res://AnTitle Screen.png<>uid://c338mrhlvp357::::res://white.png<>uid://dac8wdd1j0ev2::::res://baiMore.png<>res://code/kaiShi.cs<>uid://cajb1ma5u3yxv::::res://logo.png<>res://code/openPage.cs<>uid://cpvx2a3to8fdv::::res://anLogo.png<>uid://duwxudfs4481o::::res://audio/bgm/nor.mp3
-xuan_guan.tscn::PackedScene::2497177560963538033::1722423241::0::1::::<><>::res://code/xuan_guan.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://blujqye77knm::::res://anim/backGround/116729.png<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/ADD.cs<>uid://cmlfjne8ramlg::::res://start.tscn
+title.tscn::PackedScene::6604095620098708233::1722595912::0::1::::<><>::uid://bva8h2eyvka15::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png<>res://Scene/title.cs<>uid://bxxmma6syym7c::::res://black.png<>res://Scene/Edit.cs<>res://code/quit.cs<>uid://bbtwfc6mkqx6x::::res://Scene/xuan_guan.tscn<>uid://dhwcstiviam38::::res://audio/effects/tap.ogg<>uid://bdphnv2qw1h07::::res://DS DSi - Plants vs Zombies - Title Screen.png<>uid://bey4cqmsc253::::res://AnTitle Screen.png<>uid://c338mrhlvp357::::res://white.png<>uid://dac8wdd1j0ev2::::res://baiMore.png<>res://code/kaiShi.cs<>uid://cajb1ma5u3yxv::::res://logo.png<>res://code/openPage.cs<>uid://cpvx2a3to8fdv::::res://anLogo.png<>uid://duwxudfs4481o::::res://audio/bgm/nor.mp3
+xuan_guan.tscn::PackedScene::2497177560963538033::1722595912::0::1::::<><>::res://code/xuan_guan.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://blujqye77knm::::res://anim/backGround/116729.png<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/ADD.cs<>uid://cmlfjne8ramlg::::res://start.tscn
 ::res://theme/::1720858473
 start.tres::StyleBoxFlat::2793749492180472700::1720858473::0::1::::<><>::
