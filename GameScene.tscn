@@ -17,8 +17,8 @@
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
 [ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
 [ext_resource type="Texture2D" uid="uid://b25au6edd6a86" path="res://anim/icon/sunClct.png" id="13_p252q"]
-[ext_resource type="FontFile" uid="uid://du757iyvawt04" path="res://anim/icon/font.tres" id="14_davrj"]
 [ext_resource type="Script" path="res://code/SunClct.cs" id="14_wn85g"]
+[ext_resource type="FontFile" uid="uid://3v2gdvefbosf" path="res://font/num.tres" id="15_ek4tf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqb0x"]
 
@@ -195,15 +195,7 @@ position = Vector2(32.3093, 13.6417)
 scale = Vector2(1.25647, 1.25647)
 texture = ExtResource("13_p252q")
 script = ExtResource("14_wn85g")
-sunNum = 50
-
-[node name="Label" type="Label" parent="Camera2D/CardUI/SunClct"]
-offset_left = 9.14286
-offset_top = -10.2857
-offset_right = 51.1429
-offset_bottom = 9.71429
-theme_override_fonts/font = ExtResource("14_davrj")
-theme_override_font_sizes/font_size = 14
+sunNum = 100
 
 [node name="Area2D" type="Area2D" parent="Camera2D/CardUI/SunClct"]
 collision_layer = 0
@@ -212,12 +204,22 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/CardUI/SunClct/Area2D"]
 shape = SubResource("CircleShape2D_oqb0x")
 
+[node name="Label" type="Label" parent="Camera2D/CardUI/SunClct"]
+offset_left = 9.71426
+offset_top = -9.14288
+offset_right = 67.7143
+offset_bottom = 18.8571
+theme_override_fonts/font = ExtResource("15_ek4tf")
+theme_override_font_sizes/font_size = 18
+text = "100"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
 libraries = {
 "": SubResource("AnimationLibrary_sl500")
 }
 
 [node name="seeLeft" type="Button" parent="Camera2D"]
+visible = false
 z_index = 1
 offset_left = 97.0
 offset_top = -93.0

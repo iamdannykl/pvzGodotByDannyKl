@@ -6,6 +6,22 @@ public partial class SunClct : Sprite2D
     public static SunClct Instance;
     [Export] public int sunNum;
     Label label;
+    public int SunNum
+    {
+        get => sunNum;
+        set
+        {
+            if (value > 99999)
+            {
+                sunNum = 99999;
+            }
+            else
+            {
+                sunNum = value;
+            }
+            label.Text = sunNum.ToString();
+        }
+    }
     public override void _Ready()
     {
         Instance = this;
@@ -14,8 +30,7 @@ public partial class SunClct : Sprite2D
     }
     void getSun(Area2D area2D)
     {
-        sunNum += (area2D as sun).sunValue;
-        label.Text = sunNum.ToString();
+        SunNum += (area2D as sun).sunValue;
         area2D.GetNode<Timer>("Timer").Start();
         area2D.Visible = false;
     }

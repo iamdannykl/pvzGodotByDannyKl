@@ -20,8 +20,14 @@ public partial class bulletBase : Area2D
     {
         if (anim.Animation == "explode")
         {
-            QueueFree();
+            Visible = false;
+            CollisionMask = 0;
+            GetNode<Timer>("Timer").Start();
         }
+    }
+    void realDes()
+    {
+        QueueFree();
     }
     public override void _PhysicsProcess(double delta)
     {

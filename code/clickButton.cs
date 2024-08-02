@@ -7,9 +7,36 @@ public partial class clickButton : TextureButton
     public baseCard plantInstan;
     public baseCard shadow;
     [Export] public PlantType plantType;
+    [Export] public int sunCost;
+    [Export] public float cd;
+    TextureProgressBar mask;
+    bool sunEnough;
+    bool coldEnough = true;
     bool isplanted = false;
+    int currentSun;
     private bool wantPlace;
+    private bool canPlace;
     public GridS grid;
+    float currentTimeInCD;
+    public int CurrentSun
+    {
+        get => currentSun;
+        set
+        {
+            if (currentSun == value) return;
+            currentSun = value;
+            if (currentSun >= sunCost)
+            {
+                sunEnough = true;
+                SelfModulate = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                sunEnough = false;
+                SelfModulate = new Color(0.65f, 0.65f, 0.65f, 1);
+            }
+        }
+    }
     public bool WantPlace
     {
         get => wantPlace;
@@ -48,22 +75,42 @@ public partial class clickButton : TextureButton
     }
     public override void _Ready()
     {
-
+        mask = GetNode<TextureProgressBar>("TextureProgressBar");
         /* GD.Load<PackedScene>("res://Prefabs/repeater.tscn"); */
     }
     void _on_button_up()
     {
         if (!WantPlace)
         {
-            GD.Print("button pressed!" + danli.Instance.tst(danli.Instance.abc));
-            danli.Instance.PlantCard = this;
-            GD.Print("danliFns");            //生成一个plant
-            WantPlace = true;
+            if (sunEnough && coldEnough)
+            {
+                GD.Print("button pressed!" + danli.Instance.tst(danli.Instance.abc));
+                danli.Instance.PlantCard = this;
+                GD.Print("danliFns");            //生成一个plant
+                WantPlace = true;
+            }
         }
         else
         {
             WantPlace = false;
         }
+    }
+    private void CDEnter()
+    {
+        mask.Value = 1;
+        CalCD();
+    }
+    async void CalCD()//携程计算冷却时间
+    {
+        float calCD = 1 / cd * 0.1f;
+        currentTimeInCD = cd;
+        while (currentTimeInCD >= 0)
+        {
+            await ToSignal(GetTree().CreateTimer(0.1f), "timeout");
+            mask.Value -= calCD;
+            currentTimeInCD -= 0.1f;
+        }
+        coldEnough = true;
     }
     public void PlantIt(baseCard plant)
     {
@@ -74,7 +121,8 @@ public partial class clickButton : TextureButton
             //GD.Print(gridS.Plant);
             if (!grid.Plant)
             {
-                //shadow.QueueFree();
+                coldEnough = false;
+                CDEnter();
                 plant.QueueFree();
                 plantInstan = null;
                 grid.Plant = true;
@@ -87,16 +135,13 @@ public partial class clickButton : TextureButton
                 GD.Print(grid.Point);
                 GD.Print(GetGlobalMousePosition()); */
                 WantPlace = false;
+                SunClct.Instance.SunNum -= sunCost;
             }
         }
     }
     public override void _Process(double delta)
     {
-        /*if (plantInstan != null)
-        {
-            plantInstan.GlobalPosition = GetGlobalMousePosition();
-            PlantIt(plantInstan);
-        }*/
+        CurrentSun = SunClct.Instance.SunNum;
         if (WantPlace && plantInstan != null)
         {
             plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置

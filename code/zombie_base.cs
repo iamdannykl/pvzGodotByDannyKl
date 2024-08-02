@@ -11,6 +11,32 @@ public partial class zombie_base : CharacterBody2D
     stateMC zhuangTaiJi;
     [Export] public ZomType zomType;
     private AnimationTree _animationTree;
+    [Export] public int hp;
+    public int Hp
+    {
+        get => hp;
+        set
+        {
+            hp = value;
+            if (hp <= 0)
+            {
+                zhuangTaiJi.isDead = true;
+                GetNode<Area2D>("Area2D").QueueFree();
+            }
+            if (hp <= 5)
+            {
+                zhuangTaiJi.isDb = true;
+            }
+        }
+    }
+    void stopMove()
+    {
+        isUpdt = false;
+    }
+    void desSelf()
+    {
+        QueueFree();
+    }
     //AnimationPlayer animationPlayer;
     public bool IsEat
     {
@@ -39,7 +65,7 @@ public partial class zombie_base : CharacterBody2D
                 Velocity = new Vector2(-spd, 0);
                 MoveAndSlide();
             }
-            if (rayCast.IsColliding())
+            if (!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead) && rayCast.IsColliding())
             {
                 baseCard plant = rayCast.GetCollider() as baseCard;
                 IsEat = true;
