@@ -191,8 +191,8 @@ offset_bottom = -98.0
 scale = Vector2(1.39279, 1.39279)
 
 [node name="SunClct" type="Sprite2D" parent="Camera2D/CardUI"]
-position = Vector2(32.3093, 13.6417)
-scale = Vector2(1.25647, 1.25647)
+position = Vector2(30.1553, 11.4877)
+scale = Vector2(0.987224, 0.987224)
 texture = ExtResource("13_p252q")
 script = ExtResource("14_wn85g")
 sunNum = 100

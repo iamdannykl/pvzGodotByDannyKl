@@ -47,10 +47,16 @@ public partial class clickButton : TextureButton
             {
                 plantPrefab = resPlantAndZom.Instance.matchPlant(plantType);
                 plantInstan = plantPrefab.Instantiate() as baseCard;
+                plantInstan.Monitorable = false;
+                plantInstan.Monitoring = false;
+                plantInstan.CollisionLayer = 0;
                 shadow = plantPrefab.Instantiate() as baseCard;
                 shadow.Modulate = new Color(1, 1, 1, 0.55f);
                 shadow.GlobalPosition = new Vector2(0, 0);
                 shadow.Visible = false;
+                /* shadow.Monitorable = false;
+                shadow.Monitoring = false; */
+                shadow.CollisionLayer = 0;
                 GetTree().CurrentScene.AddChild(shadow);
                 Vector2 pos = GlobalPosition;
                 plantInstan.GlobalPosition = pos;
@@ -76,7 +82,23 @@ public partial class clickButton : TextureButton
     public override void _Ready()
     {
         mask = GetNode<TextureProgressBar>("TextureProgressBar");
-        /* GD.Load<PackedScene>("res://Prefabs/repeater.tscn"); */
+        //Connect("button_down", new Callable(this, nameof(_on_button_down)));
+        Connect("button_up", new Callable(this, nameof(_on_button_up)));
+    }
+    void _on_button_down()
+    {
+        if (!WantPlace)
+        {
+            if (sunEnough && coldEnough)
+            {
+                danli.Instance.PlantCard = this;
+                WantPlace = true;
+            }
+        }
+        else
+        {
+            WantPlace = false;
+        }
     }
     void _on_button_up()
     {
@@ -84,9 +106,7 @@ public partial class clickButton : TextureButton
         {
             if (sunEnough && coldEnough)
             {
-                GD.Print("button pressed!" + danli.Instance.tst(danli.Instance.abc));
                 danli.Instance.PlantCard = this;
-                GD.Print("danliFns");            //生成一个plant
                 WantPlace = true;
             }
         }
@@ -106,7 +126,9 @@ public partial class clickButton : TextureButton
         currentTimeInCD = cd;
         while (currentTimeInCD >= 0)
         {
-            await ToSignal(GetTree().CreateTimer(0.1f), "timeout");
+            Timer timer = GetNode<Timer>("Timer");
+            timer.Start();
+            await ToSignal(timer, "timeout");
             mask.Value -= calCD;
             currentTimeInCD -= 0.1f;
         }
@@ -114,26 +136,22 @@ public partial class clickButton : TextureButton
     }
     public void PlantIt(baseCard plant)
     {
-        //GridSys.Instance.GetPointByMouse();
         if (Input.IsActionJustReleased("clickIt") && GridSys.Instance.isOut == false)//鼠标松开触发
         {
-            //GridS gridS = GridSys.Instance.GetGridByPoint(GridSys.Instance.nowPos);
-            //GD.Print(gridS.Plant);
             if (!grid.Plant)
             {
                 coldEnough = false;
                 CDEnter();
                 plant.QueueFree();
                 plantInstan = null;
+                shadow.Monitorable = true;
+                shadow.Monitoring = true;
+                shadow.CollisionLayer = 1;
                 grid.Plant = true;
                 isplanted = true;
                 shadow.Modulate = new Color(1, 1, 1, 1);
                 shadow.GlobalPosition = grid.Position;
-                //plant.GetNode<baseCard>("baseCard").placed();
                 shadow.placed();
-                /* GD.Print(grid.Position);
-                GD.Print(grid.Point);
-                GD.Print(GetGlobalMousePosition()); */
                 WantPlace = false;
                 SunClct.Instance.SunNum -= sunCost;
             }

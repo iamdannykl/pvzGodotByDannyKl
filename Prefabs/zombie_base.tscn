@@ -586,7 +586,6 @@ graph_offset = Vector2(14, 23)
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rn8wk"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nps31"]
-graph_offset = Vector2(-272, 139)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_hq40k")
 nodes/StateMachine/position = Vector2(-20, 160)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rn8wk")
@@ -606,7 +605,7 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 72
+frame = 1
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
@@ -652,4 +651,5 @@ script = ExtResource("3_m58w4")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
 target_position = Vector2(-13, 0)
+hit_from_inside = true
 collide_with_areas = true

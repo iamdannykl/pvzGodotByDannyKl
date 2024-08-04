@@ -1,5 +1,8 @@
 res://GameScene.tscn
 res://anim/plant/rePeater/rePeater.tres
+res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres
+res://font/num.tres
+res://shader/card.tres
 res://anim/backGround/grass.tscn
 res://Scene/pool_day.tscn
 res://UI.tscn
@@ -52,6 +55,3 @@ res://code/GuanQiaSaver.cs
 res://Scene/Edit.cs
 res://code/hangSys.cs
 res://code/sun.cs
-res://shader/card.tres
-res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres
-res://font/num.tres
