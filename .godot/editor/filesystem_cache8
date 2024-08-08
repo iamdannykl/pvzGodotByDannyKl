@@ -1,5 +1,5 @@
 036ed0dc6731e46c9f92a47160ae4a9b
-::res://::1722769675
+::res://::1723105893
 anLogo.png::CompressedTexture2D::5870470706198812375::1720883769::1720883774::1::::<><>::
 AnTitle Screen.png::CompressedTexture2D::79955480836869556::1720867518::1720867522::1::::<><>::
 Back.cs::CSharpScript::-1::1720857372::0::1::::<>Button<>::
@@ -7,18 +7,18 @@ baiMore.png::BitMap::7165433918213423437::1720868434::1720868450::1::::<><>::
 black.png::CompressedTexture2D::4048994857891081906::1720882703::1720882705::1::::<><>::
 DS DSi - Plants vs Zombies - Title Screen.png::CompressedTexture2D::2628402260645693054::1720866549::1720866550::1::::<><>::
 export_presets.cfg::TextFile::-1::1722438844::0::1::::<><>::
-GameScene.tscn::PackedScene::228534716920656560::1722691653::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://v47t65bdl51o::::res://anim/plant/peaShooter/pea_shooter.tscn<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://bwekahjdpv1k4::::res://anim/plant/sunFlower/sun_flower.tscn<>uid://dn58pij1x2882::::res://Prefabs/zombie1.tscn<>uid://dnuargw8dhh3c::::res://anim/plant/peaShooter/pea_bullet.tscn<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs<>uid://b25au6edd6a86::::res://anim/icon/sunClct.png<>res://code/SunClct.cs<>uid://3v2gdvefbosf::::res://font/num.tres
+GameScene.tscn::PackedScene::228534716920656560::1722782500::0::1::::<><>::res://scene.cs<>res://code/reciever.cs<>res://code/danli.cs<>res://code/resPlantAndZom.cs<>uid://v47t65bdl51o::::res://anim/plant/peaShooter/pea_shooter.tscn<>uid://31q3j34r4go0::::res://Prefabs/repeater.tscn<>uid://dh24crdlarfj::::res://UI.tscn<>uid://bhcd8iig22uni::::res://Prefabs/zombie_base.tscn<>res://code/Camera2D.cs<>uid://bwekahjdpv1k4::::res://anim/plant/sunFlower/sun_flower.tscn<>uid://dn58pij1x2882::::res://Prefabs/zombie1.tscn<>uid://dnuargw8dhh3c::::res://anim/plant/peaShooter/pea_bullet.tscn<>uid://e7wymqnsmj2q::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png<>uid://cgywgkpyf5gt4::::res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png<>res://code/GuanQiaSaver.cs<>res://code/zomCard.cs<>uid://b25au6edd6a86::::res://anim/icon/sunClct.png<>res://code/SunClct.cs<>uid://3v2gdvefbosf::::res://font/num.tres
 icon.png::CompressedTexture2D::1258025749466318879::1722609384::1722609386::1::::<><>::
 icon.svg::CompressedTexture2D::6598339049764445739::1708521360::1708521372::1::::<><>::
 logo.png::CompressedTexture2D::4791528546478154083::1720882599::1720882844::1::::<><>::
 MenuButton.cs::CSharpScript::-1::1720847903::0::1::::<>MenuButton<>::
 MyOptionButton.cs::CSharpScript::-1::1720880248::0::1::::<>OptionButton<>::
-player.tscn::PackedScene::4344203523676416275::1722691654::0::1::::<><>::res://code/Player.cs<>uid://c1ajxehpet6bv::::res://icon.svg
+player.tscn::PackedScene::4344203523676416275::1722782500::0::1::::<><>::res://code/Player.cs<>uid://c1ajxehpet6bv::::res://icon.svg
 pvzICON.png::CompressedTexture2D::105075855636590485::1721656762::1721656795::1::::<><>::
 README.md::TextFile::-1::1708681325::0::1::::<><>::
 scene.cs::CSharpScript::-1::1721657654::0::1::::<>Node2D<>::
-start.tscn::PackedScene::5638135993951095132::1722691654::0::1::::<><>::uid://blujqye77knm::::res://anim/backGround/116729.png<>res://MyOptionButton.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/Finish.cs<>res://code/DaoRu.cs
-UI.tscn::PackedScene::226708453479853255::1722691653::0::1::::<><>::uid://s1g7dkqso0l7::::res://anim/plant/rePeater/rePeater.tres<>uid://dj4ljl5b6sm8j::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres<>res://code/clickButton.cs<>uid://ywwxl64arufl::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sunflower_3.PNG
+start.tscn::PackedScene::5638135993951095132::1722782500::0::1::::<><>::uid://blujqye77knm::::res://anim/backGround/116729.png<>res://MyOptionButton.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/Finish.cs<>res://code/DaoRu.cs
+UI.tscn::PackedScene::226708453479853255::1722782500::0::1::::<><>::uid://s1g7dkqso0l7::::res://anim/plant/rePeater/rePeater.tres<>uid://dj4ljl5b6sm8j::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres<>res://code/clickButton.cs<>uid://ywwxl64arufl::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sunflower_3.PNG
 white.png::BitMap::6797957560891993716::1720868019::1720868100::1::::<><>::
 ::res://addons/::1722609378
 ::res://addons/AsepriteWizard/::1722327912
@@ -160,7 +160,7 @@ TextureView.gd::GDScript::-1::1722609380::0::1::::<>TextureRect<>::
 TextureViewer.gd::GDScript::-1::1722609380::0::1::::<>VBoxContainer<>::
 TextureViewer.tscn::PackedScene::5408721253708856011::1722609380::0::1::::<><>::uid://vxqsbmlofgoq::::res://addons/texture_fonts/Assets/Fonts/RobotoMono-Medium.ttf<>uid://yn34nyba10uy::::res://addons/texture_fonts/Assets/TransparentBG.png<>res://addons/texture_fonts/UI/Components/TextureViewer/TextureViewer.gd<>res://addons/texture_fonts/UI/Components/TextureViewer/TextureView.gd<>res://addons/texture_fonts/UI/Components/TextureViewer/TextureContainer.gd
 ::res://anim/::1722607482
-::res://anim/backGround/::1722691653
+::res://anim/backGround/::1722782500
 0_oa0XcvM99Y5clDsj.png::CompressedTexture2D::3800782020009897739::1720956521::1720956534::1::::<><>::
 116729.png::CompressedTexture2D::94128288607845742::1720847454::1720847495::1::::<><>::
 121700.png::CompressedTexture2D::5215893818874939369::1720847467::1720847495::1::::<><>::
@@ -169,7 +169,7 @@ TextureViewer.tscn::PackedScene::5408721253708856011::1722609380::0::1::::<><>::
 155614.png::CompressedTexture2D::880738240076662688::1720847475::1720847495::1::::<><>::
 169586.png::CompressedTexture2D::360942244737464571::1720847483::1720847495::1::::<><>::
 184047.png::CompressedTexture2D::4496991876758108171::1720847489::1720847495::1::::<><>::
-grass.tscn::PackedScene::2095699479208926171::1722691653::0::1::::<><>::uid://dugs7l2qhfv6n::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png<>res://code/createZom.cs<>res://code/GridSys.cs<>uid://cqlrhgn0i5053::::res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3
+grass.tscn::PackedScene::2095699479208926171::1722782500::0::1::::<><>::uid://dugs7l2qhfv6n::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Front Yard.png<>res://code/createZom.cs<>res://code/GridSys.cs<>uid://cqlrhgn0i5053::::res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3
 ::res://anim/backGround/bgRes/::1720855405
 DS DSi - Plants vs Zombies - Fog.png::CompressedTexture2D::1524338689713927641::1708610340::1708611217::1::::<><>::
 DS DSi - Plants vs Zombies - Front Yard Night.png::CompressedTexture2D::3420672321087385551::1708610340::1708611217::1::::<><>::
@@ -182,10 +182,10 @@ DS DSi - Plants vs Zombies - Zen Normal Night Water & Toolbar Sprites.png::Compr
 font.tres::FontFile::8630978125374952843::1722527889::0::1::::<><>::
 sunClct.png::CompressedTexture2D::4343488144964473609::1722527498::1722527498::1::::<><>::
 ::res://anim/plant/::1722517033
-::res://anim/plant/peaShooter/::1722691654
+::res://anim/plant/peaShooter/::1722782501
 DS DSi - Plants vs Zombies - Peashooter.png::CompressedTexture2D::2407355198232736829::1708610302::1708610303::1::::<><>::
-pea_bullet.tscn::PackedScene::8113035282580763102::1722691654::0::1::::<><>::res://code/pea_bullet.cs<>uid://lkkthgyeeax8::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_12.tres<>uid://d31h11wma2p6l::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_13.tres<>uid://b4yoo217a62mw::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_11.tres<>uid://cs3f4aemc17tt::::res://audio/effects/啪.ogg
-pea_shooter.tscn::PackedScene::1535811219737032738::1722691654::0::1::::<><>::uid://c5giiu0iu2p0k::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres<>res://code/pea_shooter.cs<>uid://6v246k8vvyiv::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_9.tres<>uid://bli1iiwf1lssl::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_10.tres<>uid://cy3hkpfmkpcmu::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_0.tres<>uid://brcfndahn7j3y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_1.tres<>uid://cp1oiub36rl7y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_2.tres<>uid://c5re2gqryab64::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_3.tres<>uid://ctlvqmwm8uta2::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_4.tres<>uid://c4qec75bjfb47::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres<>uid://06wd0yrbw8q5::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres<>uid://dygd562hfp353::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres
+pea_bullet.tscn::PackedScene::8113035282580763102::1722782501::0::1::::<><>::res://code/pea_bullet.cs<>uid://lkkthgyeeax8::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_12.tres<>uid://d31h11wma2p6l::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_13.tres<>uid://b4yoo217a62mw::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_11.tres<>uid://cs3f4aemc17tt::::res://audio/effects/啪.ogg
+pea_shooter.tscn::PackedScene::1535811219737032738::1722782500::0::1::::<><>::uid://c5giiu0iu2p0k::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres<>res://code/pea_shooter.cs<>uid://6v246k8vvyiv::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_9.tres<>uid://bli1iiwf1lssl::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_10.tres<>uid://cy3hkpfmkpcmu::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_0.tres<>uid://brcfndahn7j3y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_1.tres<>uid://cp1oiub36rl7y::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_2.tres<>uid://c5re2gqryab64::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_3.tres<>uid://ctlvqmwm8uta2::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_4.tres<>uid://c4qec75bjfb47::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres<>uid://06wd0yrbw8q5::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres<>uid://dygd562hfp353::::res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres
 ::res://anim/plant/peaShooter/frame/::1722070246
 DS DSi - Plants vs Zombies - Peashooter_0.PNG::CompressedTexture2D::7681626552440574121::1722070246::1722070246::1::::<><>::
 DS DSi - Plants vs Zombies - Peashooter_1.PNG::CompressedTexture2D::3578801409300775557::1722070246::1722070246::1::::<><>::
@@ -224,7 +224,7 @@ DS DSi - Plants vs Zombies - Peashooter_33.PNG::CompressedTexture2D::12721197825
 ::res://anim/plant/peaShooter/texturePacker/::1722081337
 texture.png::CompressedTexture2D::8083000672394828637::1722081336::1722081337::1::::<><>::
 texture.tpsheet::Resource::2029949150011735630::1722081336::1722081337::1::::<><>::
-::res://anim/plant/peaShooter/texturePacker/texture.sprites/::1722678312
+::res://anim/plant/peaShooter/texturePacker/texture.sprites/::1722779302
 DS DSi - Plants vs Zombies - Peashooter_0.tres::AtlasTexture::6515619864834522252::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_1.tres::AtlasTexture::3584086739239106980::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_2.tres::AtlasTexture::5880213221138319292::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
@@ -239,24 +239,24 @@ DS DSi - Plants vs Zombies - Peashooter_10.tres::AtlasTexture::31766063683419766
 DS DSi - Plants vs Zombies - Peashooter_11.tres::AtlasTexture::4472318714057426194::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_12.tres::AtlasTexture::793362535599042703::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_13.tres::AtlasTexture::9178696344279762237::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
-DS DSi - Plants vs Zombies - Peashooter_14.tres::AtlasTexture::7851513181943471675::1722678312::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
+DS DSi - Plants vs Zombies - Peashooter_14.tres::AtlasTexture::7851513181943471675::1722779302::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_15.tres::AtlasTexture::7935512644067920197::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_16.tres::AtlasTexture::7988807947115796329::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_17.tres::AtlasTexture::8952741936103785573::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_18.tres::AtlasTexture::1122133151480810093::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
 DS DSi - Plants vs Zombies - Peashooter_19.tres::AtlasTexture::761031904618942615::1722081337::0::1::::<><>::uid://dnfp3tgugtqqf::::res://anim/plant/peaShooter/texturePacker/texture.png
-::res://anim/plant/rePeater/::1722678312
+::res://anim/plant/rePeater/::1722779302
 DS DSi - Plants vs Zombies - Repeater.png::CompressedTexture2D::4081212412493299964::1714129907::1714130931::1::::<><>::
-rePeater.tres::AtlasTexture::1317494628221387530::1722678312::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png
+rePeater.tres::AtlasTexture::1317494628221387530::1722779302::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png
 reperter.cs::CSharpScript::-1::1722084873::0::1::::<>Area2D<>::
-::res://anim/plant/sunFlower/::1722691654
+::res://anim/plant/sunFlower/::1722782501
 DS DSi - Plants vs Zombies - Sun.png::CompressedTexture2D::8570292997884645170::1722519844::1722519845::1::::<><>::
 DS DSi - Plants vs Zombies - Sunflower_3.PNG::CompressedTexture2D::1731326031966874349::1722525601::1722525602::1::::<><>::
 DS DSi - Plants vs Zombies - Sun_0.PNG::CompressedTexture2D::8576485250906704468::1722519984::1722519985::1::::<><>::
 DS DSi - Plants vs Zombies - Sun_1.PNG::CompressedTexture2D::985547748745357223::1722519984::1722519985::1::::<><>::
 sunFlower.aseprite::PackedDataContainer::2350475649890777195::1722517786::1722517787::1::::<><>::
 sunFlower.png::CompressedTexture2D::7206882344924677897::1722517855::1722517856::1::::<><>::
-sun_flower.tscn::PackedScene::3939440306397615121::1722691654::0::1::::<><>::res://code/sun_flower.cs<>uid://daxckf78uvehd::::res://anim/plant/sunFlower/sunFlower.png<>uid://epron77jpbfb::::res://Scene/sun_creator.tscn
+sun_flower.tscn::PackedScene::3939440306397615121::1722782501::0::1::::<><>::res://code/sun_flower.cs<>uid://daxckf78uvehd::::res://anim/plant/sunFlower/sunFlower.png<>uid://epron77jpbfb::::res://Scene/sun_creator.tscn
 ::res://anim/zombie/::1722267111
 DS DSi - Plants vs Zombies - Zombie.png::CompressedTexture2D::2282864393219225626::1711608262::1711608262::1::::<><>::
 ::res://anim/zombie/zomTexture/::1722326910
@@ -538,7 +538,7 @@ ADD.cs::CSharpScript::-1::1720879891::0::1::::<>Button<>::
 baseCard.cs::CSharpScript::-1::1722526648::0::1::::<>Area2D<>::
 bulletBase.cs::CSharpScript::-1::1722611556::0::1::::<>Area2D<>::
 Camera2D.cs::CSharpScript::-1::1721036893::0::1::::<>Camera2D<>::
-clickButton.cs::CSharpScript::-1::1722680290::0::1::::<>TextureButton<>::
+clickButton.cs::CSharpScript::-1::1722782155::0::1::::<>TextureButton<>::
 createZom.cs::CSharpScript::-1::1722437174::0::1::::<>Sprite2D<>::
 danli.cs::CSharpScript::-1::1722526202::0::1::::<>Node2D<>::
 DaoRu.cs::CSharpScript::-1::1721317982::0::1::::<>Button<>::
@@ -595,29 +595,29 @@ Numbers.tscn::PackedScene::8484441430456772153::1722609384::0::1::::<><>::uid://
 Submitted1.tscn::PackedScene::9063099738187808516::1722609384::0::1::::<><>::uid://xsd7ihclv6lp::::res://examples/submitted_1/TestFont.tres
 TestFont.tres::FontFile/FontFile::1651741930737941081::1722609384::0::1::::<><>::res://addons/texture_fonts/Classes/TextureFontSettings.gd<>res://addons/texture_fonts/Classes/TextureFont.gd<>res://addons/texture_fonts/Classes/TextureFontMapping.gd<>uid://pa3hx74j677t::::res://examples/submitted_1/text1.png
 text1.png::CompressedTexture2D::1054546489726986491::1722609384::1722609386::1::::<><>::
-::res://font/::1722678312
+::res://font/::1722779302
 DS DSi - Plants vs Zombies - HUD and Fonts.png::CompressedTexture2D::3934732633969180397::1722609655::1722609656::1::::<><>::
-num.tres::FontFile/TextureFont::2010289818467708601::1722678312::0::1::::<><>::res://addons/texture_fonts/Classes/TextureFontSettings.gd<>res://addons/texture_fonts/Classes/TextureFont.gd<>res://addons/texture_fonts/Classes/TextureFontMapping.gd<>uid://buh11y8nyosqx::::res://font/numFont.png
+num.tres::FontFile/TextureFont::2010289818467708601::1722779302::0::1::::<><>::res://addons/texture_fonts/Classes/TextureFontSettings.gd<>res://addons/texture_fonts/Classes/TextureFont.gd<>res://addons/texture_fonts/Classes/TextureFontMapping.gd<>uid://buh11y8nyosqx::::res://font/numFont.png
 numFont.png::CompressedTexture2D::3806274585347875919::1722610035::1722610036::1::::<><>::
-::res://Prefabs/::1722691654
-GDlogo.tscn::PackedScene::258974699525575468::1722691654::0::1::::<><>::uid://c1ajxehpet6bv::::res://icon.svg
-repeater.tscn::PackedScene::2019983434890228645::1722691654::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png<>res://anim/plant/rePeater/reperter.cs
-zombie1.tscn::PackedScene::8135679233968582345::1722691654::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
+::res://Prefabs/::1722782501
+GDlogo.tscn::PackedScene::258974699525575468::1722782500::0::1::::<><>::uid://c1ajxehpet6bv::::res://icon.svg
+repeater.tscn::PackedScene::2019983434890228645::1722782500::0::1::::<><>::uid://bye78b2275w5y::::res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png<>res://anim/plant/rePeater/reperter.cs
+zombie1.tscn::PackedScene::8135679233968582345::1722782501::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
 zombieASE.png::CompressedTexture2D::7295134853407316061::1722343753::1722343754::1::::<><>::
-zombie_base.tscn::PackedScene::2882112859699623130::1722691654::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
+zombie_base.tscn::PackedScene::2882112859699623130::1722782501::0::1::::<><>::res://code/zombie_base.cs<>uid://db622m2x4h6jh::::res://Prefabs/zombieASE.png<>res://code/stateMC.cs
 ::res://Prefabs/zom/::1721056939
 DS DSi - Plants vs Zombies - Conehead Zombie.png::CompressedTexture2D::5244866533420008891::1721056939::1721056939::1::::<><>::
 DS DSi - Plants vs Zombies - Zombie.png::CompressedTexture2D::348194751188892010::1721056723::1721056723::1::::<><>::
-::res://Scene/::1722691654
+::res://Scene/::1722782501
 Edit.cs::CSharpScript::-1::1722346771::0::1::::<>Button<>::
-pool_day.tscn::PackedScene::1039272039683361337::1722691653::0::1::::<><>::uid://3k7wqfwfl7d::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Pool.png<>res://code/GridSys.cs<>res://code/createZom.cs<>uid://cot0ucu3fn0r6::::res://audio/bgm/泳池.mp3
-suibian.tscn::PackedScene::8584977966180267655::1722691654::0::1::::<><>::
-sun.tscn::PackedScene::6582940512612143420::1722691654::0::1::::<><>::uid://dugrpuwgxs6ay::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_0.PNG<>uid://obn3ermrnlyt::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_1.PNG<>res://code/sun.cs<>uid://sn2qvc4yfhb1::::res://audio/effects/阳光收取.MP3
-sun_creator.tscn::PackedScene::312778964558569271::1722691654::0::1::::<><>::res://code/sunCreator.cs<>uid://c013cle4w52oe::::res://Scene/sun.tscn
+pool_day.tscn::PackedScene::1039272039683361337::1722782500::0::1::::<><>::uid://3k7wqfwfl7d::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Pool.png<>res://code/GridSys.cs<>res://code/createZom.cs<>uid://cot0ucu3fn0r6::::res://audio/bgm/泳池.mp3
+suibian.tscn::PackedScene::8584977966180267655::1722782501::0::1::::<><>::
+sun.tscn::PackedScene::6582940512612143420::1722782501::0::1::::<><>::uid://dugrpuwgxs6ay::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_0.PNG<>uid://obn3ermrnlyt::::res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sun_1.PNG<>res://code/sun.cs<>uid://sn2qvc4yfhb1::::res://audio/effects/阳光收取.MP3
+sun_creator.tscn::PackedScene::312778964558569271::1722782501::0::1::::<><>::res://code/sunCreator.cs<>uid://c013cle4w52oe::::res://Scene/sun.tscn
 title.cs::CSharpScript::-1::1721720401::0::1::::<>Node2D<>::
-title.tscn::PackedScene::6604095620098708233::1722691654::0::1::::<><>::uid://bva8h2eyvka15::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png<>res://Scene/title.cs<>uid://bxxmma6syym7c::::res://black.png<>res://Scene/Edit.cs<>res://code/quit.cs<>uid://bbtwfc6mkqx6x::::res://Scene/xuan_guan.tscn<>uid://dhwcstiviam38::::res://audio/effects/tap.ogg<>uid://bdphnv2qw1h07::::res://DS DSi - Plants vs Zombies - Title Screen.png<>uid://bey4cqmsc253::::res://AnTitle Screen.png<>uid://c338mrhlvp357::::res://white.png<>uid://dac8wdd1j0ev2::::res://baiMore.png<>res://code/kaiShi.cs<>uid://cajb1ma5u3yxv::::res://logo.png<>res://code/openPage.cs<>uid://cpvx2a3to8fdv::::res://anLogo.png<>uid://duwxudfs4481o::::res://audio/bgm/nor.mp3
-xuan_guan.tscn::PackedScene::2497177560963538033::1722691654::0::1::::<><>::res://code/xuan_guan.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://blujqye77knm::::res://anim/backGround/116729.png<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/ADD.cs<>uid://cmlfjne8ramlg::::res://start.tscn
-::res://shader/::1722691654
-card.tres::Shader::8597882391674997261::1722691654::0::1::::<><>::
+title.tscn::PackedScene::6604095620098708233::1722782501::0::1::::<><>::uid://bva8h2eyvka15::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png<>res://Scene/title.cs<>uid://bxxmma6syym7c::::res://black.png<>res://Scene/Edit.cs<>res://code/quit.cs<>uid://bbtwfc6mkqx6x::::res://Scene/xuan_guan.tscn<>uid://dhwcstiviam38::::res://audio/effects/tap.ogg<>uid://bdphnv2qw1h07::::res://DS DSi - Plants vs Zombies - Title Screen.png<>uid://bey4cqmsc253::::res://AnTitle Screen.png<>uid://c338mrhlvp357::::res://white.png<>uid://dac8wdd1j0ev2::::res://baiMore.png<>res://code/kaiShi.cs<>uid://cajb1ma5u3yxv::::res://logo.png<>res://code/openPage.cs<>uid://cpvx2a3to8fdv::::res://anLogo.png<>uid://duwxudfs4481o::::res://audio/bgm/nor.mp3
+xuan_guan.tscn::PackedScene::2497177560963538033::1722782501::0::1::::<><>::res://code/xuan_guan.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://blujqye77knm::::res://anim/backGround/116729.png<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/ADD.cs<>uid://cmlfjne8ramlg::::res://start.tscn
+::res://shader/::1722786951
+card.tres::Shader::8597882391674997261::1722786951::0::1::::<><>::
 ::res://theme/::1720858473
 start.tres::StyleBoxFlat::2793749492180472700::1720858473::0::1::::<><>::
