@@ -174,12 +174,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 129.0
-offset_top = -92.0
-offset_right = 165.0
-offset_bottom = -61.0
+offset_left = 147.0
+offset_top = -94.0
+offset_right = 187.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.481379, 0.481379)
+theme_override_font_sizes/font_size = 18
 text = "ESC"
 
 [node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]

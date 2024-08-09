@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://addons/texture_fonts/Classes/TextureFontMapping.gd" id="3_bgaej"]
 [ext_resource type="Texture2D" uid="uid://buh11y8nyosqx" path="res://font/numFont.png" id="4_tcypw"]
 
-[sub_resource type="Image" id="Image_ebc4p"]
+[sub_resource type="Image" id="Image_4n3pg"]
 data = {
 "data": PackedByteArray(151, 151, 151),
 "format": "RGB8",
@@ -44,7 +44,7 @@ cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/textures/0/offsets = PackedInt32Array()
-cache/0/16/0/textures/0/image = SubResource("Image_ebc4p")
+cache/0/16/0/textures/0/image = SubResource("Image_4n3pg")
 cache/0/16/0/glyphs/49/advance = Vector2(6, 0)
 cache/0/16/0/glyphs/49/offset = Vector2(0, 0)
 cache/0/16/0/glyphs/49/size = Vector2(4, 16)

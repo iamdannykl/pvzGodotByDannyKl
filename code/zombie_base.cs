@@ -8,30 +8,29 @@ public partial class zombie_base : CharacterBody2D
     public Vector2 weiZhi;
     RayCast2D rayCast;
     public bool isEat;
+    public int hangNum;
     stateMC zhuangTaiJi;
     [Export] public ZomType zomType;
     private AnimationTree _animationTree;
     [Export] public int hp;
+    HpJianCe hpJianCe;
     public int Hp
     {
         get => hp;
         set
         {
             hp = value;
-            if (hp <= 0)
-            {
-                zhuangTaiJi.isDead = true;
-                GetNode<Area2D>("Area2D").QueueFree();
-            }
-            if (hp <= 5)
-            {
-                zhuangTaiJi.isDb = true;
-            }
+            zhuangTaiJi.nowJieDuan = hpJianCe.JieDuanJianCe(value);
+            hpJianCe.NowJieDuan = zhuangTaiJi.nowJieDuan;
         }
     }
     void stopMove()
     {
         isUpdt = false;
+    }
+    void deleteCollier()
+    {
+        GetNode<Area2D>("Area2D").CollisionLayer = 0;
     }
     void desSelf()
     {
@@ -49,11 +48,7 @@ public partial class zombie_base : CharacterBody2D
     }
     public override void _Ready()
     {
-        //_animationTree = GetNode<AnimationTree>("AnimationTree");
-
-        //animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
-        //animationPlayer.SpeedScale = 0.35f;
-        //_animationTree.Set("parameters/StateMachine/conditions/isBegin", true);
+        hpJianCe = GetNode<HpJianCe>("HpJianCe");
     }
 
     public override void _Process(double delta)
@@ -76,9 +71,10 @@ public partial class zombie_base : CharacterBody2D
             }
         }
     }
-    public void placed()
+    public void placed(int hang)
     {
         isUpdt = false;
+        hangNum = hang;
     }
     public void crtIt()
     {

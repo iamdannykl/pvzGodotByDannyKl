@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class createZom : Sprite2D
 {
@@ -10,9 +11,11 @@ public partial class createZom : Sprite2D
     public int waveNow = -1;
     public float timePerWave;
     private float nowTime;
+    GridSys gridSys;
     public override void _Ready()
     {
         base._Ready();
+        gridSys = GetNode<GridSys>("GridSys");
     }
     public void _on_timer_timeout()
     {
@@ -55,12 +58,20 @@ public partial class createZom : Sprite2D
         {
             GD.Print("dangQian:wave zr zom" + waveNow + "/" + zrNum + "/" + i);
             GD.Print("zomtypeInt:" + loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType);
-            zombie_base zom = resPlantAndZom.Instance.matchZom((ZomType)loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType).Instantiate<zombie_base>();
+            zomInfo zif = loadData.waves[waveNow].zrs[zrNum].zomInfos[i];
+            GD.Print(gridSys);
+            GD.Print(gridSys.hangList);
+            GD.Print(gridSys.hangList.Count);
+            GD.Print("zif:" + (zif.hangShu - 1));
+            GD.Print(gridSys.hangList[zif.hangShu - 1].zomInfos);
+            gridSys.hangList[zif.hangShu - 1].zomInfos.Add(zif);
+            /* zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<zombie_base>();
             zom.GlobalPosition = loadData.waves[waveNow].zrs[zrNum].zomInfos[i].pos + new Vector2(GridSys.Instance.XjianGe * 10, 0);
             zom.crtIt();
-            GetTree().CurrentScene.AddChild(zom);
+            GetTree().CurrentScene.AddChild(zom); */
             allCrtZom += 1;
         }
+        gridSys.LuanXuHang();
     }
     void ifChaoShi()
     {
@@ -71,6 +82,35 @@ public partial class createZom : Sprite2D
         nextBo();
         allCrtZom += shangBoCrtLeft;
     }
+    void nextZr(int zrnum, int jishu)
+    {
+        int Znum = loadData.waves[waveNow].zrs[zrnum].zomInfos.Count;
+        int jis = jishu;
+        if (Znum > 0)
+        {
+            CRTzombies(Znum, zrnum);
+        }
+        else
+        {
+            if (zrnum < 2)
+            {
+                zrnum++;
+            }
+            else
+            {
+                zrnum = 0;
+            }
+            jis++;
+            if (jis < 3)
+            {
+                nextZr(zrnum, jis);
+            }
+            else
+            {
+                GD.Print("ERROR EACH ZR IS NULL!");
+            }
+        }
+    }
     public void nextBo()
     {
         GD.Print("nextBo");
@@ -80,40 +120,7 @@ public partial class createZom : Sprite2D
         RandomNumberGenerator random = new RandomNumberGenerator();
         random.Randomize();
         int suiJi = random.RandiRange(1, 3);
-        int geShu = 0;
-        int Znum = 0;
-        switch (suiJi)
-        {
-            case 1:
-                geShu = loadData.waves[waveNow].zrs[0].zomInfos.Count;
-                GD.Print("zr1" + geShu);
-                Znum = loadData.waves[waveNow].zrs[0].zomInfos.Count;
-
-                CRTzombies(Znum, 0);
-
-                break;
-            case 2:
-                geShu = loadData.waves[waveNow].zrs[1].zomInfos.Count;
-                GD.Print("zr2" + geShu);
-
-                Znum = loadData.waves[waveNow].zrs[1].zomInfos.Count;
-
-                CRTzombies(Znum, 1);
-
-                break;
-            case 3:
-                geShu = loadData.waves[waveNow].zrs[2].zomInfos.Count;
-                GD.Print("zr3" + geShu);
-
-                Znum = loadData.waves[waveNow].zrs[2].zomInfos.Count;
-
-                CRTzombies(Znum, 2);
-
-                break;
-            default:
-                Znum = -1;
-                geShu = -1;
-                break;
-        }
+        int jiShu = 0;
+        nextZr(suiJi - 1, jiShu);
     }
 }

@@ -24,30 +24,38 @@ public partial class GuanQiaSaver : Control
     void saveCurrentBo()
     {
         //waves.Add(new wave());
+        if (zr1.GetChildren().Count == 0 && zr2.GetChildren().Count == 0 && zr3.GetChildren().Count == 0)
+        {
+            return;
+        }
         if (ZRnum != -1)
         {
             waveNum.Text = "第" + (boShu) + "波";
         }
         foreach (zombie_base node in zr1.GetChildren())
         {
-            waves[boShu - 1].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 1].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             //GD.Print(waves[boShu -1].zrs[0].zomInfos.Count());
             node.QueueFree();
         }
         foreach (zombie_base node in zr2.GetChildren())
         {
-            waves[boShu - 1].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 1].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
         foreach (zombie_base node in zr3.GetChildren())
         {
-            waves[boShu - 1].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 1].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
     }
     void FinishSave()
     {
         saveCurrentBo();
+        if (zr1.GetChildren().Count == 0 && zr2.GetChildren().Count == 0 && zr3.GetChildren().Count == 0)
+        {
+            return;
+        }
         saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
         GD.Print(save.waves.Count);
 
@@ -192,9 +200,10 @@ public partial class GuanQiaSaver : Control
     } */
     void clickNextButton()
     {
-        /* foreach(var node in waves[boShu-1].zrs){
-            
-        } */
+        if (zr1.GetChildren().Count == 0 && zr2.GetChildren().Count == 0 && zr3.GetChildren().Count == 0)
+        {
+            return;
+        }
         waves.Add(new wave());
         if (ZRnum != -1)
         {
@@ -202,18 +211,18 @@ public partial class GuanQiaSaver : Control
         }
         foreach (zombie_base node in zr1.GetChildren())
         {
-            waves[boShu - 2].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 2].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             //GD.Print(waves[boShu - 2].zrs[0].zomInfos.Count());
             node.QueueFree();
         }
         foreach (zombie_base node in zr2.GetChildren())
         {
-            waves[boShu - 2].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 2].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
         foreach (zombie_base node in zr3.GetChildren())
         {
-            waves[boShu - 2].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType));
+            waves[boShu - 2].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
     }

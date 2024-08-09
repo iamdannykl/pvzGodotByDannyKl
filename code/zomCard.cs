@@ -24,24 +24,24 @@ public partial class zomCard : TextureButton
                 zomShadow.Visible = false;
                 if (ZRnum == 0)
                 {
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR1").AddChild(zomShadow);
+                    GetTree().CurrentScene.AddChild(zomShadow);
                     Vector2 pos = GlobalPosition;
                     zomInsta.GlobalPosition = pos;
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR1").AddChild(zomInsta);
+                    GetTree().CurrentScene.AddChild(zomInsta);
                 }
                 else if (ZRnum == 1)
                 {
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR2").AddChild(zomShadow);
+                    GetTree().CurrentScene.AddChild(zomShadow);
                     Vector2 pos = GlobalPosition;
                     zomInsta.GlobalPosition = pos;
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR2").AddChild(zomInsta);
+                    GetTree().CurrentScene.AddChild(zomInsta);
                 }
                 else if (ZRnum == 2)
                 {
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR3").AddChild(zomShadow);
+                    GetTree().CurrentScene.AddChild(zomShadow);
                     Vector2 pos = GlobalPosition;
                     zomInsta.GlobalPosition = pos;
-                    GetTree().Root.GetNode<Node2D>("GameScene/Camera2D/ZR3").AddChild(zomInsta);
+                    GetTree().CurrentScene.AddChild(zomInsta);
                 }
                 else
                 {
@@ -84,7 +84,7 @@ public partial class zomCard : TextureButton
             WantPlace = false;
         }
     }
-    void plantZom()
+    void plantZom(int hangNum)
     {
         if (Input.IsActionJustReleased("clickIt") && GridSys.Instance.isOut == false)//鼠标松开触发
         {
@@ -92,9 +92,12 @@ public partial class zomCard : TextureButton
             zomInsta = null;
             /* - GridSys.Instance.hangList[0].hangTou */
             zomShadow.Modulate = new Color(1, 1, 1, 1);
-            zomShadow.GlobalPosition = new Vector2(GetGlobalMousePosition().X, hang.hangTou.Y);
             zomShadow.weiZhi = zomShadow.GlobalPosition;
-            zomShadow.placed();
+            zomShadow.placed(hangNum);
+            string zrs = "Camera2D/ZR" + (ZRnum + 1);
+            GetTree().CurrentScene.RemoveChild(zomShadow);
+            GetTree().CurrentScene.GetNode<Node2D>(zrs).AddChild(zomShadow);
+            zomShadow.GlobalPosition = new Vector2(GetGlobalMousePosition().X, hang.hangTou.Y);
             WantPlace = false;
         }
     }
@@ -108,7 +111,7 @@ public partial class zomCard : TextureButton
             {
                 zomShadow.Visible = true;
                 zomShadow.GlobalPosition = new Vector2(GetGlobalMousePosition().X, hang.hangTou.Y);
-                plantZom();
+                plantZom(hang.hangShu);
             }
             else
             {

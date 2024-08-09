@@ -12,11 +12,6 @@ region_rect = Rect2(1.67463, 1.97253, 447.183, 191.999)
 script = ExtResource("2_lklrp")
 waveTimer = NodePath("waveTimer")
 
-[node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
-script = ExtResource("2_ydaw8")
-zuoxia = NodePath("../zuoxia")
-youshang = NodePath("../youshang")
-
 [node name="zuoxia" type="Node2D" parent="."]
 position = Vector2(-129, 71)
 
@@ -30,6 +25,7 @@ region_enabled = true
 region_rect = Rect2(248, 242, 246, 169)
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -40,6 +36,11 @@ one_shot = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_0oftd")
 autoplay = true
+
+[node name="GridSys" type="Node2D" parent="." node_paths=PackedStringArray("zuoxia", "youshang")]
+script = ExtResource("2_ydaw8")
+zuoxia = NodePath("../zuoxia")
+youshang = NodePath("../youshang")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="waveTimer" to="." method="jiShiJieShu"]

@@ -32,7 +32,7 @@ res://code/GridSys.cs
 res://anim/plant/rePeater/reperter.cs
 res://code/Camera2D.cs
 res://code/sun_flower.cs
-res://code/kaiShi.cs
+res://code/HpJianCe.cs
 res://code/xuan_guan.cs
 res://code/baseCard.cs
 res://code/clickButton.cs
@@ -45,13 +45,14 @@ res://code/quit.cs
 res://code/createZom.cs
 res://scene.cs
 res://code/zombie_base.cs
-res://code/openPage.cs
+res://code/kaiShi.cs
 res://code/reciever.cs
 res://code/bulletBase.cs
 res://code/zomCard.cs
-res://code/pea_bullet.cs
+res://code/openPage.cs
 res://code/DaoRu.cs
 res://code/GuanQiaSaver.cs
 res://Scene/Edit.cs
 res://code/hangSys.cs
 res://code/sun.cs
+res://code/pea_bullet.cs

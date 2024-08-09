@@ -8,6 +8,8 @@ public partial class GridSys : Node2D
 	public static GridSys Instance;
 	public int hangShu;
 	public List<hang> hangList = new List<hang>();
+	public List<int> selectedSY = new List<int>();
+	public List<int> daiXuan = new List<int>();
 	public List<HangType> hangTypes = new List<HangType>();
 	public int thisMapIndex;
 	public reciever reciever;
@@ -23,7 +25,67 @@ public partial class GridSys : Node2D
 	Vector2 gridPoint;
 	int countGD = 0;
 	public List<GridS> gridList = new List<GridS>();
-	// Called when the node enters the scene tree for the first time.
+	public void LuanXuHang()
+	{
+		Random random = new Random();
+		for (int i = 0; i < hangList.Count; i++)
+		{
+			for (int j = 0; j < hangList.Count; j++)
+			{
+				if (selectedSY.Contains(j))
+				{
+					continue;
+				}
+				else
+				{
+					daiXuan.Add(j);
+				}
+			}
+			GD.Print("random.Next(daiXuan.Count):" + random.Next(daiXuan.Count));
+			GD.Print("daiXuanCount:" + daiXuan.Count);
+			//GD.Print("zomIF:" + hangList[i].zomInfos.Count);
+			int index = daiXuan[random.Next(daiXuan.Count)];
+			//01234
+			//20143
+			daiXuan.Clear();
+			selectedSY.Add(index);
+		}
+		int m = 0;
+		for (int i = 0; i < selectedSY.Count; i++)
+		{
+			GD.Print("index:" + selectedSY[i]);
+			hangList[i].NewZomInfos = hangList[selectedSY[i]].zomInfos;
+			if (hangList[i].NewZomInfos.Count > 0)
+			{
+				GD.Print("wdnmd:" + i);
+				m = i;
+			}
+			//hangList[selectedSY[i]].zomInfos.Clear();
+		}
+		GD.Print("MZ:" + m + hangList[m].NewZomInfos.Count);
+		GD.Print("hangList:" + hangList.Count);
+		for (int i = 0; i < hangList.Count; i++)
+		{
+			GD.Print("newZ:" + i + hangList[i].NewZomInfos.Count);
+			foreach (zomInfo zif in hangList[i].NewZomInfos)
+			{
+				zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<zombie_base>();
+				zif.hangShu = i + 1;
+				zom.hangNum = zif.hangShu;
+				zom.GlobalPosition = posByHang(zif) + new Vector2(XjianGe * 10, 0);
+				zom.crtIt();
+				GetTree().CurrentScene.AddChild(zom);
+				GD.Print("zomPos:" + zom.GlobalPosition);
+			}
+		}
+		GD.Print("finishLX");
+		selectedSY.Clear();
+		daiXuan.Clear();
+	}
+	Vector2 posByHang(zomInfo zom)
+	{
+		return new Vector2(zom.pos.X, hangList[zom.hangShu - 1].hangTou.Y);
+	}
 	public override void _Ready()
 	{
 		Instance = this;
@@ -79,7 +141,7 @@ public partial class GridSys : Node2D
 	{
 		for (int i = 0; i < hangShu; i++)
 		{
-			hangList.Add(new hang(hangShu, new Vector2(zuoxia.GlobalPosition.X - XjianGe / 2, zuoxia.GlobalPosition.Y - i * YjianGe), hangTypes[i]));
+			hangList.Add(new hang(i + 1, new Vector2(zuoxia.GlobalPosition.X - XjianGe / 2, zuoxia.GlobalPosition.Y - i * YjianGe), hangTypes[i]));
 		}
 	}
 	public hang GetHangByMouse()//通过鼠标获取行
