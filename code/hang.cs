@@ -15,10 +15,6 @@ public partial class hang
     public HangType hangType;
     public List<zomInfo> zomInfos = new List<zomInfo>();
     public List<zomInfo> NewZomInfos = new List<zomInfo>();
-    public void CRTzombies()
-    {
-
-    }
 
     public hang(int hangNum, Vector2 hangLeftTou, HangType hangLeiXing)
     {

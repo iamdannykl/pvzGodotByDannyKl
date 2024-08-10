@@ -1,5 +1,5 @@
 036ed0dc6731e46c9f92a47160ae4a9b
-::res://::1723281334
+::res://::1723281408
 anLogo.png::CompressedTexture2D::5870470706198812375::1720883769::1720883774::1::::<><>::
 AnTitle Screen.png::CompressedTexture2D::79955480836869556::1720867518::1720867522::1::::<><>::
 Back.cs::CSharpScript::-1::1720857372::0::1::::<>Button<>::
@@ -618,7 +618,7 @@ sun_creator.tscn::PackedScene::312778964558569271::1723218813::0::1::::<><>::res
 title.cs::CSharpScript::-1::1721720401::0::1::::<>Node2D<>::
 title.tscn::PackedScene::6604095620098708233::1723218812::0::1::::<><>::uid://bva8h2eyvka15::::res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png<>res://Scene/title.cs<>uid://bxxmma6syym7c::::res://black.png<>res://Scene/Edit.cs<>res://code/quit.cs<>uid://bbtwfc6mkqx6x::::res://Scene/xuan_guan.tscn<>uid://dhwcstiviam38::::res://audio/effects/tap.ogg<>uid://bdphnv2qw1h07::::res://DS DSi - Plants vs Zombies - Title Screen.png<>uid://bey4cqmsc253::::res://AnTitle Screen.png<>uid://c338mrhlvp357::::res://white.png<>uid://dac8wdd1j0ev2::::res://baiMore.png<>res://code/kaiShi.cs<>uid://cajb1ma5u3yxv::::res://logo.png<>res://code/openPage.cs<>uid://cpvx2a3to8fdv::::res://anLogo.png<>uid://duwxudfs4481o::::res://audio/bgm/nor.mp3
 xuan_guan.tscn::PackedScene::2497177560963538033::1723218812::0::1::::<><>::res://code/xuan_guan.cs<>uid://bf2kv7y8mak8s::::res://theme/start.tres<>uid://blujqye77knm::::res://anim/backGround/116729.png<>uid://cgkvaktpee1d2::::res://anim/backGround/121700.png<>uid://co38ss68yj1jv::::res://anim/backGround/155613.png<>uid://msvvoo5hngwe::::res://anim/backGround/155614.png<>uid://bxxqxo3xteqyp::::res://anim/backGround/155192.png<>res://Back.cs<>res://code/ADD.cs<>uid://cmlfjne8ramlg::::res://start.tscn
-::res://shader/::1723218881
-card.tres::Shader::8597882391674997261::1723218881::0::1::::<><>::
+::res://shader/::1723281359
+card.tres::Shader::8597882391674997261::1723281359::0::1::::<><>::
 ::res://theme/::1720858473
 start.tres::StyleBoxFlat::2793749492180472700::1720858473::0::1::::<><>::

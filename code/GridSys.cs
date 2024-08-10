@@ -25,14 +25,24 @@ public partial class GridSys : Node2D
 	Vector2 gridPoint;
 	int countGD = 0;
 	public List<GridS> gridList = new List<GridS>();
+	public List<hang> grass = new List<hang>();
+	public List<hang> water = new List<hang>();
+	public List<hang> roof = new List<hang>();
+	void grassPaiXu()
+	{
+
+	}
 	public void LuanXuHang()
 	{
 		Random random = new Random();
+		HangType currentType, slctType;
 		for (int i = 0; i < hangList.Count; i++)
 		{
+			currentType = hangList[i].hangType;
 			for (int j = 0; j < hangList.Count; j++)
 			{
-				if (selectedSY.Contains(j))
+				slctType = hangList[j].hangType;
+				if (selectedSY.Contains(j) || currentType != slctType)//只有同类型的行才能被随机调换
 				{
 					continue;
 				}
@@ -50,23 +60,14 @@ public partial class GridSys : Node2D
 			daiXuan.Clear();
 			selectedSY.Add(index);
 		}
-		int m = 0;
-		for (int i = 0; i < selectedSY.Count; i++)
+		for (int i = 0; i < selectedSY.Count; i++)//随机后重新给每一行分配僵尸
 		{
 			GD.Print("index:" + selectedSY[i]);
-			hangList[i].NewZomInfos = hangList[selectedSY[i]].zomInfos;
-			if (hangList[i].NewZomInfos.Count > 0)
-			{
-				GD.Print("wdnmd:" + i);
-				m = i;
-			}
-			//hangList[selectedSY[i]].zomInfos.Clear();
+			hangList[i].NewZomInfos = new List<zomInfo>(hangList[selectedSY[i]].zomInfos);
+			hangList[selectedSY[i]].zomInfos.Clear();
 		}
-		GD.Print("MZ:" + m + hangList[m].NewZomInfos.Count);
-		GD.Print("hangList:" + hangList.Count);
 		for (int i = 0; i < hangList.Count; i++)
 		{
-			GD.Print("newZ:" + i + hangList[i].NewZomInfos.Count);
 			foreach (zomInfo zif in hangList[i].NewZomInfos)
 			{
 				zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<zombie_base>();
@@ -75,7 +76,6 @@ public partial class GridSys : Node2D
 				zom.GlobalPosition = posByHang(zif) + new Vector2(XjianGe * 10, 0);
 				zom.crtIt();
 				GetTree().CurrentScene.AddChild(zom);
-				GD.Print("zomPos:" + zom.GlobalPosition);
 			}
 		}
 		GD.Print("finishLX");
