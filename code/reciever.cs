@@ -19,9 +19,12 @@ public partial class reciever : Label
     public string GQname;
     public Node2D map2d;
     public saveContent gqData;
+    HBoxContainer hBoxContainer;
+    int currentFlagNum;
     public override void _Ready()
     {
         Instance = this;
+        hBoxContainer = GetTree().Root.GetNode<HBoxContainer>("GameScene/Camera2D/zomBar/HBoxContainer");
     }
     //recieve and init
     public void recieveData(guanQiaType guanQiaType, int sunOriginalNum, int mapIndex, string gqName, playMode modeInGame)
@@ -75,6 +78,18 @@ public partial class reciever : Label
     public void recvData(saveContent data)
     {
         gqData = data;
+        loadFlag();
+    }
+    void loadFlag()
+    {
+        foreach (wave wave in gqData.waves)
+        {
+            if (wave.isBigWave)
+            {
+                currentFlagNum++;
+                (hBoxContainer.GetChild(currentFlagNum - 1) as TextureRect).Visible = true;
+            }
+        }
     }
 }
 

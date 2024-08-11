@@ -12,26 +12,56 @@ public partial class GuanQiaSaver : Control
     [Export] public Button nextButton;
     [Export] public Button finishButton;
     [Export] public Node2D zr1, zr2, zr3;
+    CheckButton checkButton;
+    HBoxContainer hBoxContainer;
+    bool isBigWv;
+    bool isSetCheckButtonByCode;
     public int boShu = 1;
     public List<wave> waves = new List<wave>();
-
+    public int currentFlag;
+    void setIsBigWv(bool isb)
+    {
+        isBigWv = isb;
+        if (!isSetCheckButtonByCode)
+        {
+            GD.Print(isBigWv);
+            if (isBigWv)
+            {
+                currentFlag++;
+                (hBoxContainer.GetChild(currentFlag - 1) as TextureRect).Visible = true;
+            }
+            else
+            {
+                (hBoxContainer.GetChild(currentFlag - 1) as TextureRect).Visible = false;
+                currentFlag--;
+            }
+        }
+    }
     public override void _Ready()
     {
+        checkButton = GetNode<CheckButton>("Panel/isBigWaveButton");
+        hBoxContainer = GetTree().Root.GetNode<HBoxContainer>("GameScene/Camera2D/zomBar/HBoxContainer");
         waveNum.Text = "第" + boShu + "波";
         finishButton.Connect("button_up", new Callable(this, nameof(FinishSave)));
         waves.Add(new wave());
     }
+
     void saveCurrentBo()
     {
         //waves.Add(new wave());
+
         if (zr1.GetChildren().Count == 0 && zr2.GetChildren().Count == 0 && zr3.GetChildren().Count == 0)
         {
             return;
         }
         if (ZRnum != -1)
         {
-            waveNum.Text = "第" + (boShu) + "波";
+            waveNum.Text = "第" + boShu + "波";
         }
+        waves[boShu - 1].isBigWave = isBigWv;
+        isSetCheckButtonByCode = true;
+        checkButton.ButtonPressed = false;
+        isSetCheckButtonByCode = false;
         foreach (zombie_base node in zr1.GetChildren())
         {
             waves[boShu - 1].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
@@ -58,19 +88,9 @@ public partial class GuanQiaSaver : Control
         }
         saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
         GD.Print(save.waves.Count);
-
-
-        /* jsonString = JsonConvert.SerializeObject(save, settings); */
-
-
-        // 使用 MessagePack 序列化
-        //byte[] msgPackBytes = MessagePackSerializer.Serialize(save);
-        /* YourObject deserializedObject = MessagePackSerializer.Deserialize<YourObject>(msgPackBytes);
- */
         var serializer = new SerializerBuilder().Build();
         string msgPackBytes = serializer.Serialize(save);
         GD.Print(1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
-        //danli.Instance.addGq(dataRec.thisGuanQiaType, 1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
         string path;
         string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
         string folderPath = Path.Combine(userDir, "PVZgd");
@@ -168,36 +188,6 @@ public partial class GuanQiaSaver : Control
         sw.Write(msgPackBytes);
         sw.Close();
     }
-    /* public void deSerializeJsonToObject()
-    {
-        StreamReader sr = new StreamReader("user://");
-        string jsonString = sr.ReadToEnd();
-        sr.Close();
-        GD.Print(jsonString);
-        JsonSerializerSettings setting = new JsonSerializerSettings
-        {
-            PreserveReferencesHandling = PreserveReferencesHandling.All,
-            ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
-            NullValueHandling = NullValueHandling.Ignore,
-            DefaultValueHandling = DefaultValueHandling.Ignore,
-            //Formatting = Formatting.Indented,
-            TypeNameHandling = TypeNameHandling.All,
-            ObjectCreationHandling = ObjectCreationHandling.Replace
-        };
-        saveContent gqContent = JsonConvert.DeserializeObject<saveContent>(jsonString, setting);
-        GD.Print(gqContent.waves[0].zrs[0].zomInfos[0].pos);
-        int i = 1;
-        int j = 0;
-        foreach (var WAVE in gqContent.waves)
-        {
-            j++;
-            foreach (zr ZRSHU in WAVE.zrs)
-            {
-                GD.Print("zrs:" + i++);
-            }
-        }
-        GD.Print("wave:" + j);
-    } */
     void clickNextButton()
     {
         if (zr1.GetChildren().Count == 0 && zr2.GetChildren().Count == 0 && zr3.GetChildren().Count == 0)
@@ -209,6 +199,10 @@ public partial class GuanQiaSaver : Control
         {
             waveNum.Text = "第" + (++boShu) + "波";
         }
+        waves[boShu - 2].isBigWave = isBigWv;
+        isSetCheckButtonByCode = true;
+        checkButton.ButtonPressed = false;
+        isSetCheckButtonByCode = false;
         foreach (zombie_base node in zr1.GetChildren())
         {
             waves[boShu - 2].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));

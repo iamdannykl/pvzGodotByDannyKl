@@ -14,7 +14,6 @@ public partial class createZom : Sprite2D
     GridSys gridSys;
     public override void _Ready()
     {
-        base._Ready();
         gridSys = GetNode<GridSys>("GridSys");
     }
     public void _on_timer_timeout()
@@ -48,10 +47,7 @@ public partial class createZom : Sprite2D
             }
         }
     }
-    public override void _PhysicsProcess(double delta)
-    {
 
-    }
     void CRTzombies(int num, int zrNum)
     {
         for (int i = 0; i < num; i++)
