@@ -31,6 +31,7 @@ public partial class zombie_base : CharacterBody2D
     void deleteCollier()
     {
         GetNode<Area2D>("Area2D").CollisionLayer = 0;
+        createZom.Instance.AllZomNum++;
     }
     void desSelf()
     {

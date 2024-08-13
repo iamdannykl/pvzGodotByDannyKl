@@ -4,6 +4,7 @@ public class wave
 {
     public List<zr> zrs = new List<zr>();
     public bool isBigWave;
+    public float location;
     public wave()
     {
         zrs.Add(new zr());

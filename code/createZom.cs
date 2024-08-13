@@ -1,20 +1,147 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public partial class createZom : Sprite2D
 {
+    public static createZom Instance;
     public saveContent loadData;
     [Export] public Timer waveTimer;
+    [Export] public int eachBoJianGe;
+    public List<BigWave> bigWaves = new List<BigWave>();
+    List<wave> zanCunWave = new List<wave>();
     public bool isUPDT;
     public int allZomNum, allCrtZom;
     public int waveNow = -1;
     public float timePerWave;
     private float nowTime;
+    int bigWaveCount;
+    float currentTimeInCD;
     GridSys gridSys;
+    TextureProgressBar greenBar;
+    PathFollow2D pathFollow2D;
+    Timer timer;
+    Timer check;
+    bool isEnterNext;
+    bool tst;
+    float inlc;
+    Label bigWaveComing;
+    AnimationPlayer bigWaveAnim;
+    Label testLable, te2;
+    bool isOk;
+    int crtBo = 1;
+    int boshu = 0;
+    private static object locker = new object();
     public override void _Ready()
     {
+        Instance = this;
         gridSys = GetNode<GridSys>("GridSys");
+        timer = GetNode<Timer>("zomBarTimer");
+        bigWaveComing = GetTree().Root.GetNode<Label>("GameScene/Camera2D/BigWaveComing");
+        bigWaveAnim = bigWaveComing.GetNode<AnimationPlayer>("AnimationPlayer");
+        check = GetNode<Timer>("check");
+        te2 = GetTree().Root.GetNode<Label>("GameScene/Camera2D/Label2");
+        testLable = GetTree().Root.GetNode<Label>("GameScene/Camera2D/Label");
+        greenBar = GetTree().Root.GetNode<TextureProgressBar>("GameScene/Camera2D/zomBar/TextureProgressBar");
+        pathFollow2D = GetTree().Root.GetNode<PathFollow2D>("GameScene/Camera2D/zomBar/Path2D/PathFollow2D");
+
+    }
+    /* public override void _Process(double delta)
+    {
+        testLable.Text = crtBo.ToString();
+        te2.Text = boshu.ToString();
+    } */
+    void loadBigWaves()
+    {
+        bigWaveCount = 0;
+        foreach (wave currentWave in loadData.waves)
+        {
+            if (!currentWave.isBigWave)
+            {
+                zanCunWave.Add(currentWave);
+            }
+            else
+            {
+                BigWave bigWave = new BigWave(currentWave)
+                {
+                    miniWaves = new List<wave>(zanCunWave)
+                };
+                bigWaveCount++;
+                zanCunWave.Clear();
+                bigWave.bigWave = currentWave;
+                bigWaves.Add(bigWave);
+            }
+        }
+        for (int i = 0; i < bigWaves.Count; i++)
+        {
+            bigWaves[i].bigWave.location = 1.0f / bigWaveCount * (i + 1);
+            GD.Print("bigLoc:" + bigWaves[i].bigWave.location + bigWaveCount + (i + 1) + (1.0f / 1 * 1) + 1.0f / bigWaveCount * (i + 1));
+            for (int j = 0; j < bigWaves[i].miniWaves.Count; j++)
+            {
+                if (i > 0)
+                {
+                    bigWaves[i].miniWaves[j].location = (bigWaves[i].bigWave.location - bigWaves[i - 1].bigWave.location) / (bigWaves[i].miniWaves.Count + 1) * (j + 1) + bigWaves[i - 1].bigWave.location;
+                }
+                else
+                {
+                    if (j == 0)
+                    {
+                        bigWaves[i].miniWaves[j].location = 0f;
+                    }
+                    bigWaves[i].miniWaves[j].location = bigWaves[i].bigWave.location / bigWaves[i].miniWaves.Count * j;
+                }
+            }
+        }
+        foreach (wave wave in loadData.waves)
+        {
+            GD.Print("waveLocation:" + wave.location);
+        }
+    }
+    async void zomBarRun(float inLocation)//僵尸进度条缓慢前进
+    {
+        boshu++;
+        currentTimeInCD = (float)waveTimer.WaitTime;
+        GD.Print("curTimeCd:" + currentTimeInCD);
+        float calCD = inLocation / currentTimeInCD * 0.1f;
+        GD.Print("calcd:" + calCD);
+        double crtime = Time.GetUnixTimeFromSystem();
+        double crtBiLi = greenBar.Value;
+        GD.Print("!isEnterNext:" + !isEnterNext);
+        while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext)
+        {
+            //timer.Start();
+            /* await ToSignal(timer, "timeout"); */
+            await Task.Delay(100);
+            greenBar.Value += calCD;
+            pathFollow2D.ProgressRatio += calCD;
+            //mask.Value -= calCD;
+            currentTimeInCD -= 0.1f;
+        }
+        crtBo++;
+        double newChaZhi = greenBar.Value - crtBiLi;
+        float newCCD = ((float)newChaZhi) / (eachBoJianGe * 0.6f) * 0.1f;
+        while (/* currentTimeInCD >= 0 && */ greenBar.Value < crtBiLi + inLocation)
+        {
+            //timer.Start();
+            /* await ToSignal(timer, "timeout"); */
+            await Task.Delay(100);
+            if (greenBar.Value + newCCD < crtBiLi + inLocation)
+            {
+                greenBar.Value += newCCD;
+                pathFollow2D.ProgressRatio += newCCD;
+            }
+            //mask.Value -= calCD;
+            //currentTimeInCD -= 0.1f;
+        }
+        /* greenBar.Value = crtBiLi + inLocation;
+        pathFollow2D.ProgressRatio = (float)crtBiLi + inLocation; */
+        GD.Print("green:" + greenBar.Value);
+        GD.Print("crt:" + crtBiLi);
+        GD.Print("inLoc" + inLocation);
+        GD.Print("crtBiLi + inLocation:" + (crtBiLi + inLocation));
+        GD.Print("chixu:" + (Time.GetUnixTimeFromSystem() - crtime) + "s");
+        //coldEnough = true;
     }
     public void _on_timer_timeout()
     {
@@ -22,6 +149,7 @@ public partial class createZom : Sprite2D
         {
             isUPDT = true;
             loadData = reciever.Instance.gqData;
+            loadBigWaves();
             GD.Print("waveNow:" + waveNow);
             GD.Print("zong:" + loadData.waves.Count);
         }
@@ -37,6 +165,47 @@ public partial class createZom : Sprite2D
             }
         }
     }
+    async void nxtAsy()
+    {
+        await Task.Delay(1000 * eachBoJianGe);
+        nextWaveAfterWait();
+    }
+    public int AllZomNum
+    {
+        get => allZomNum;
+        set
+        {
+            allZomNum = value;
+            if (allZomNum >= allCrtZom)
+            {
+                if (isUPDT)
+                {
+                    if (waveNow < loadData.waves.Count - 1)
+                    {
+                        isEnterNext = true;
+                        waveTimer.Stop();
+                        nxtAsy();
+                        //CallDeferred("nextWaveAfterWait", 2f);
+                        /* var task_1 = Task.Run(async delegate
+                        {
+                            await Task.Delay(2000);
+                            nextWaveAfterWait();
+                            //Console.WriteLine("3秒后执行，方式一 输出语句...");
+                            //return "异步执行result"; //可以得到一个返回值(int,bool,string都试了)
+                        }); */
+                    }
+                    else
+                    {
+                        GD.Print("Succeeded!");
+                    }
+                }
+            }
+        }
+    }
+    public void nextWaveAfterWait()
+    {
+        ifChaoShi();
+    }
     public void jiShiJieShu()
     {
         if (isUPDT)
@@ -47,27 +216,45 @@ public partial class createZom : Sprite2D
             }
         }
     }
-
-    void CRTzombies(int num, int zrNum)
+    async void bigWaveLoad(int num, int zrNum)
+    {
+        bigWaveComing.Visible = true;
+        bigWaveAnim.Play("fangDa");
+        waveTimer.Paused = true;
+        await Task.Delay(3200);
+        waveTimer.Paused = false;
+        realCRT(num, zrNum);
+    }
+    void realCRT(int num, int zrNum)
     {
         for (int i = 0; i < num; i++)
         {
-            GD.Print("dangQian:wave zr zom" + waveNow + "/" + zrNum + "/" + i);
-            GD.Print("zomtypeInt:" + loadData.waves[waveNow].zrs[zrNum].zomInfos[i].zomType);
+            GD.Print("loadData.waves[waveNow].zrs[zrNum].zomInfos[i]:" + waveNow + zrNum + i);
             zomInfo zif = loadData.waves[waveNow].zrs[zrNum].zomInfos[i];
-            GD.Print(gridSys);
-            GD.Print(gridSys.hangList);
-            GD.Print(gridSys.hangList.Count);
-            GD.Print("zif:" + (zif.hangShu - 1));
-            GD.Print(gridSys.hangList[zif.hangShu - 1].zomInfos);
             gridSys.hangList[zif.hangShu - 1].zomInfos.Add(zif);
-            /* zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<zombie_base>();
-            zom.GlobalPosition = loadData.waves[waveNow].zrs[zrNum].zomInfos[i].pos + new Vector2(GridSys.Instance.XjianGe * 10, 0);
-            zom.crtIt();
-            GetTree().CurrentScene.AddChild(zom); */
             allCrtZom += 1;
         }
         gridSys.LuanXuHang();
+        isEnterNext = false;
+        if (waveNow < loadData.waves.Count - 1)
+        {
+            //await canIbegin();
+            tst = true;
+            zomBarRun(loadData.waves[waveNow + 1].location - loadData.waves[waveNow].location);
+            GD.Print("wave:" + waveNow);
+            GD.Print("loc:" + (loadData.waves[waveNow + 1].location - loadData.waves[waveNow].location));
+        }
+    }
+    void CRTzombies(int num, int zrNum)
+    {
+        if (loadData.waves[waveNow].isBigWave)
+        {
+            bigWaveLoad(num, zrNum);
+        }
+        else
+        {
+            realCRT(num, zrNum);
+        }
     }
     void ifChaoShi()
     {
@@ -75,6 +262,11 @@ public partial class createZom : Sprite2D
         allZomNum = 0;
         waveNow++;
         waveTimer.Start();
+        /* else
+        {
+            zomBarRun(loadData.waves[waveNow].location);
+            GD.Print("loc:" + loadData.waves[waveNow].location);
+        } */
         nextBo();
         allCrtZom += shangBoCrtLeft;
     }

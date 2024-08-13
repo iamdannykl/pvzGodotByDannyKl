@@ -1,4 +1,6 @@
+AnimationPlayer
 Label
+Timer
 CheckButton
 OptionButton
 TextureRect
@@ -9,7 +11,5 @@ TextureProgressBar
 PathFollow2D
 Path2D
 Node2D
-Timer
 AudioStreamPlayer
 Panel
-CollisionShape2D

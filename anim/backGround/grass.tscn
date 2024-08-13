@@ -11,6 +11,7 @@ region_enabled = true
 region_rect = Rect2(1.67463, 1.97253, 447.183, 191.999)
 script = ExtResource("2_lklrp")
 waveTimer = NodePath("waveTimer")
+eachBoJianGe = 4
 
 [node name="zuoxia" type="Node2D" parent="."]
 position = Vector2(-129, 71)
@@ -42,5 +43,16 @@ script = ExtResource("2_ydaw8")
 zuoxia = NodePath("../zuoxia")
 youshang = NodePath("../youshang")
 
+[node name="eachWaveTime" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="zomBarTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="check" type="Timer" parent="."]
+wait_time = 0.05
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="waveTimer" to="." method="jiShiJieShu"]
+[connection signal="timeout" from="eachWaveTime" to="." method="nextWaveAfterWait"]
