@@ -47,11 +47,11 @@ public partial class createZom : Sprite2D
         pathFollow2D = GetTree().Root.GetNode<PathFollow2D>("GameScene/Camera2D/zomBar/Path2D/PathFollow2D");
 
     }
-    /* public override void _Process(double delta)
+    public override void _Process(double delta)
     {
-        testLable.Text = crtBo.ToString();
-        te2.Text = boshu.ToString();
-    } */
+        testLable.Text = "allCrtZom" + allCrtZom.ToString();
+        te2.Text = "allZomNum" + allZomNum.ToString();
+    }
     void loadBigWaves()
     {
         bigWaveCount = 0;

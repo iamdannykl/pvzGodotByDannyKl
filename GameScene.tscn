@@ -136,6 +136,31 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Animation" id="Animation_7w311"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.732172, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.732172, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="Animation" id="Animation_0kifj"]
 resource_name = "fangDa"
 length = 3.0
@@ -174,31 +199,6 @@ tracks/2/keys = {
 "args": [],
 "method": &"fuWei"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_7w311"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.732172, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.732172, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m8vw8"]
@@ -616,20 +616,18 @@ texture = ExtResource("26_sl0mu")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Camera2D"]
-visible = false
 z_index = 1
-offset_left = -73.0825
-offset_top = -61.0689
-offset_right = -33.0825
-offset_bottom = -38.0689
+offset_left = -117.917
+offset_top = 18.6885
+offset_right = -77.9165
+offset_bottom = 41.6885
 
 [node name="Label2" type="Label" parent="Camera2D"]
-visible = false
 z_index = 1
-offset_left = -6.3405
-offset_top = -63.7386
-offset_right = 33.6595
-offset_bottom = -40.7386
+offset_left = 0.738541
+offset_top = 37.256
+offset_right = 40.7385
+offset_bottom = 60.256
 
 [node name="BigWaveComing" type="Label" parent="Camera2D"]
 visible = false

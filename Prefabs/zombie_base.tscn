@@ -162,6 +162,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [67, 68, 69, 70, 71]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deleteCollier"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_x7bga"]
 length = 0.7
