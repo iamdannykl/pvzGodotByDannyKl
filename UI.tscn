@@ -30,6 +30,7 @@ scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_wtxdx")
 script = ExtResource("2_dyc3i")
 sunCost = 100
+heYeOffSet = Vector2(0, -5)
 cd = 7.5
 metadata/_edit_group_ = true
 
@@ -82,6 +83,7 @@ texture_normal = ExtResource("4_xbc76")
 script = ExtResource("2_dyc3i")
 plantType = 2
 sunCost = 50
+heYeOffSet = Vector2(0, -10.5)
 cd = 7.5
 metadata/_edit_group_ = true
 
@@ -107,6 +109,7 @@ scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
 plantType = 3
+offset = Vector2(0, -8)
 cd = 7.5
 isShuiSheng = true
 metadata/_edit_group_ = true

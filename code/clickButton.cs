@@ -8,6 +8,8 @@ public partial class clickButton : TextureButton
     public baseCard shadow;
     [Export] public PlantType plantType;
     [Export] public int sunCost;
+    [Export] public Vector2 offset;
+    [Export] public Vector2 heYeOffSet;
     [Export] public float cd;
     [Export] public bool isShuiSheng;
     [Export] public bool isTaoLei;
@@ -150,8 +152,20 @@ public partial class clickButton : TextureButton
             shadow.CollisionLayer = 1;
             isplanted = true;
             shadow.Modulate = new Color(1, 1, 1, 1);
-            shadow.GlobalPosition = grid.Position;
+            if (grid.plantsOnThisGrid.Count == 0)
+            {
+                shadow.GlobalPosition = grid.Position - offset;
+            }
+            else
+            {
+                /* shadow.GlobalPosition = grid.plantsOnThisGrid[grid.plantsOnThisGrid.Count - 1].GlobalPosition; */
+                shadow.GetParent<scene>().RemoveChild(shadow);
+                grid.plantsOnThisGrid[grid.plantsOnThisGrid.Count - 1].GetNode<Sprite2D>("Sprite2D").AddChild(shadow);
+                shadow.Position = heYeOffSet;
+            }
             shadow.placed();
+            GD.Print("gd:" + grid);
+            GD.Print("gdp:" + grid.plantsOnThisGrid);
             grid.plantsOnThisGrid.Add(shadow);
             WantPlace = false;
             if (plantType == PlantType.heYe)
@@ -175,7 +189,7 @@ public partial class clickButton : TextureButton
             ))
             {
                 shadow.Visible = true;
-                shadow.GlobalPosition = grid.Position;
+                shadow.GlobalPosition = grid.Position - offset;
                 PlantIt(plantInstan);
             }
             else

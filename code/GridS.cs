@@ -15,7 +15,7 @@ public partial class GridS
     public Vector2 Position;
     //是否有植物
     //public bool Plant;
-    public List<baseCard> plantsOnThisGrid;
+    public List<baseCard> plantsOnThisGrid = new List<baseCard>();
     public bool isHeYe;
     public bool isPlantOnHeYe;
     public bool hasNanGuaTou;

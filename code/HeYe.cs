@@ -1,8 +1,8 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class HeYe : baseCard
 {
-	// Called when the node enters the scene tree for the first time.
 
 }
