@@ -98,7 +98,7 @@ tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
 [node name="Timer" type="Timer" parent="zuoKaCao/sunFlower"]
 wait_time = 0.1
 
-[node name="rePeater4" type="TextureButton" parent="zuoKaCao"]
+[node name="heYe" type="TextureButton" parent="zuoKaCao"]
 layout_mode = 1
 offset_top = 67.0
 offset_right = 26.0
@@ -106,12 +106,12 @@ offset_bottom = 90.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
-plantType = 1
-sunCost = 200
+plantType = 3
 cd = 7.5
+isShuiSheng = true
 metadata/_edit_group_ = true
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/rePeater4"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/heYe"]
 layout_mode = 0
 offset_right = 25.0
 offset_bottom = 24.0
@@ -121,7 +121,7 @@ fill_mode = 4
 texture_progress = ExtResource("1_3iqv4")
 tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
 
-[node name="Timer" type="Timer" parent="zuoKaCao/rePeater4"]
+[node name="Timer" type="Timer" parent="zuoKaCao/heYe"]
 wait_time = 0.1
 
 [node name="rePeater5" type="TextureButton" parent="zuoKaCao"]
@@ -190,13 +190,8 @@ offset_right = 130.0
 offset_bottom = 97.0
 item_count = 5
 max_columns = 4
-item_0/text = ""
 item_0/icon = ExtResource("1_3iqv4")
-item_1/text = ""
 item_1/icon = ExtResource("1_3iqv4")
-item_2/text = ""
 item_2/icon = ExtResource("1_3iqv4")
-item_3/text = ""
 item_3/icon = ExtResource("1_3iqv4")
-item_4/text = ""
 item_4/icon = ExtResource("1_3iqv4")

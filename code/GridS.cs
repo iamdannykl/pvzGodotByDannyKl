@@ -1,21 +1,34 @@
 using System;
+using System.Collections.Generic;
 using Godot;
-
+/* public enum gridType
+{
+    dirt,
+    grass,
+    water,
+    roof
+} */
 public partial class GridS
 {
     public Vector2 Point;
     //世界坐标
     public Vector2 Position;
     //是否有植物
-    public bool Plant;
+    //public bool Plant;
+    public List<baseCard> plantsOnThisGrid;
+    public bool isHeYe;
+    public bool isPlantOnHeYe;
+    public bool hasNanGuaTou;
+    public bool hasCoffeeBean;
+    public HangType gtp;
     public bool Zombie;
     public int Num;
-    public GridS(Vector2 point, Vector2 position, bool plant, bool zombie, int num)
+    public GridS(Vector2 point, Vector2 position, bool zombie, int num, HangType gridType)
     {
         Point = point;
         Position = position;
-        Plant = plant;
         Zombie = zombie;
         Num = num;
+        gtp = gridType;
     }
 }

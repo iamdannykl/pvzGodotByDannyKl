@@ -48,7 +48,6 @@ scale = Vector2(0.276966, 0.276966)
 item_count = 5
 popup/item_0/text = "grassDay"
 popup/item_0/icon = ExtResource("2_i8a1a")
-popup/item_0/id = 0
 popup/item_1/text = "grassNight"
 popup/item_1/icon = ExtResource("3_v808h")
 popup/item_1/id = 1

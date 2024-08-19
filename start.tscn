@@ -63,7 +63,6 @@ button_group = SubResource("ButtonGroup_vjdiu")
 item_count = 5
 popup/item_0/text = "grassDay"
 popup/item_0/icon = ExtResource("1_2gy6i")
-popup/item_0/id = 0
 popup/item_1/text = "grassNight"
 popup/item_1/icon = ExtResource("2_mu4ga")
 popup/item_1/id = 1
@@ -171,7 +170,7 @@ fileDialog = NodePath("FileDialog")
 [node name="FileDialog" type="FileDialog" parent="Panel/DaoRu"]
 title = "Open a File"
 initial_position = 2
-ok_button_text = "打开"
+ok_button_text = "Open"
 dialog_hide_on_ok = true
 file_mode = 0
 access = 2

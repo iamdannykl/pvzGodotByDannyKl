@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1x/e+4Xdw1s=",
+  "dgSpecHash": "9tyG1pAshn4=",
   "success": true,
   "projectFilePath": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl\\Godot Projects.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\p1503\\.nuget\\packages\\godot.sourcegenerators\\4.2.2\\godot.sourcegenerators.4.2.2.nupkg.sha512",
-    "C:\\Users\\p1503\\.nuget\\packages\\godotsharp\\4.2.2\\godotsharp.4.2.2.nupkg.sha512",
-    "C:\\Users\\p1503\\.nuget\\packages\\godotsharpeditor\\4.2.2\\godotsharpeditor.4.2.2.nupkg.sha512",
+    "C:\\Users\\p1503\\.nuget\\packages\\godot.sourcegenerators\\4.3.0\\godot.sourcegenerators.4.3.0.nupkg.sha512",
+    "C:\\Users\\p1503\\.nuget\\packages\\godotsharp\\4.3.0\\godotsharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\p1503\\.nuget\\packages\\godotsharpeditor\\4.3.0\\godotsharpeditor.4.3.0.nupkg.sha512",
     "C:\\Users\\p1503\\.nuget\\packages\\messagepack\\1.5.1\\messagepack.1.5.1.nupkg.sha512",
     "C:\\Users\\p1503\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\p1503\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

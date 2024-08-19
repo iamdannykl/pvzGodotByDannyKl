@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3xor7wria67x"]
+
+[ext_resource type="Script" path="res://code/HeYe.cs" id="1_2w1we"]
+[ext_resource type="Texture2D" uid="uid://dxyc7wthr7fn6" path="res://anim/plant/heYe/DS DSi - Plants vs Zombies - Lilypad and Squash_0.PNG" id="1_mkpwf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uepk2"]
+size = Vector2(20, 16)
+
+[sub_resource type="Animation" id="Animation_r7mv0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_15o6f"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 0.966667, 1.5, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.133333, -0.699519, -2.08547, -0.25, 0, 0.25, 0, 0, -0.104571, -0.758357, 0.166667, 1.20868, 2, -0.2, -0.0280467, 0.2, -0.00796044, 0, -0.133333, 1.00781, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 0.966667, 1.5, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6xkkq"]
+_data = {
+"RESET": SubResource("Animation_r7mv0"),
+"idle": SubResource("Animation_15o6f")
+}
+
+[node name="heYe" type="Area2D" node_paths=PackedStringArray("animPlayer")]
+z_index = 1
+collision_mask = 0
+script = ExtResource("1_2w1we")
+noAtkPlant = true
+animPlayer = NodePath("AnimationPlayer")
+isAnimationPlayer = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uepk2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6xkkq")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mkpwf")

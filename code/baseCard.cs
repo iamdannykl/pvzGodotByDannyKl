@@ -6,16 +6,26 @@ public partial class baseCard : Area2D
 {
     [Export] public AnimatedSprite2D anim;
     [Export] public int attackFrame;
+    [Export] public int hp;
     [Export] public BulletType bulletType;
     [Export] public RayCast2D rayCast2D;
     [Export] public bool noAtkPlant;
+    [Export] public AnimationPlayer animPlayer;
+    [Export] public bool isAnimationPlayer;
     public bool isplanted;
     public override void _Ready()
     {
         base._Ready();
-        anim.SpeedScale = 0;
-        //rayCast2D = GetNode<RayCast2D>("RayCast2D");
-        anim.Connect("frame_changed", new Callable(this, nameof(FrameChanged)));
+        if (!isAnimationPlayer)
+        {
+            anim.SpeedScale = 0;
+            //rayCast2D = GetNode<RayCast2D>("RayCast2D");
+            anim.Connect("frame_changed", new Callable(this, nameof(FrameChanged)));
+        }
+        else
+        {
+            animPlayer.SpeedScale = 0;
+        }
     }
     public override void _Process(double delta)
     {
@@ -33,7 +43,14 @@ public partial class baseCard : Area2D
     }
     public virtual void placed()
     {
-        anim.SpeedScale = 1;
+        if (!isAnimationPlayer)
+        {
+            anim.SpeedScale = 1;
+        }
+        else
+        {
+            animPlayer.SpeedScale = 1;
+        }
         isplanted = true;
     }
     public virtual void FrameChanged()

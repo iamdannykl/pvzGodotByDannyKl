@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=42 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bwekahjdpv1k4" path="res://anim/plant/sunFlower/sun_flower.tscn" id="6_p4lfu"]
 [ext_resource type="PackedScene" uid="uid://dn58pij1x2882" path="res://Prefabs/zombie1.tscn" id="7_5ec5c"]
 [ext_resource type="PackedScene" uid="uid://dnuargw8dhh3c" path="res://anim/plant/peaShooter/pea_bullet.tscn" id="7_ng5db"]
+[ext_resource type="PackedScene" uid="uid://b3xor7wria67x" path="res://anim/plant/heYe/he_ye.tscn" id="7_qjlgd"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
@@ -226,6 +227,7 @@ script = ExtResource("3_v1isw")
 peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 sunFlower = ExtResource("6_p4lfu")
+heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")
 pea = ExtResource("7_ng5db")
@@ -391,7 +393,6 @@ scale = Vector2(0.529304, 0.529304)
 theme_override_font_sizes/font_size = 20
 item_count = 3
 popup/item_0/text = "阵容1"
-popup/item_0/id = 0
 popup/item_1/text = "阵容2"
 popup/item_1/id = 1
 popup/item_2/text = "阵容3"

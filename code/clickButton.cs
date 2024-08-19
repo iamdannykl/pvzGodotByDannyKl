@@ -9,6 +9,9 @@ public partial class clickButton : TextureButton
     [Export] public PlantType plantType;
     [Export] public int sunCost;
     [Export] public float cd;
+    [Export] public bool isShuiSheng;
+    [Export] public bool isTaoLei;
+    [Export] public bool 是否为咖啡豆类;
     TextureProgressBar mask;
     bool sunEnough;
     bool coldEnough = true;
@@ -138,23 +141,24 @@ public partial class clickButton : TextureButton
     {
         if (Input.IsActionJustReleased("clickIt") && GridSys.Instance.isOut == false)//鼠标松开触发
         {
-            if (!grid.Plant)
+            coldEnough = false;
+            CDEnter();
+            plant.QueueFree();
+            plantInstan = null;
+            shadow.Monitorable = true;
+            shadow.Monitoring = true;
+            shadow.CollisionLayer = 1;
+            isplanted = true;
+            shadow.Modulate = new Color(1, 1, 1, 1);
+            shadow.GlobalPosition = grid.Position;
+            shadow.placed();
+            grid.plantsOnThisGrid.Add(shadow);
+            WantPlace = false;
+            if (plantType == PlantType.heYe)
             {
-                coldEnough = false;
-                CDEnter();
-                plant.QueueFree();
-                plantInstan = null;
-                shadow.Monitorable = true;
-                shadow.Monitoring = true;
-                shadow.CollisionLayer = 1;
-                grid.Plant = true;
-                isplanted = true;
-                shadow.Modulate = new Color(1, 1, 1, 1);
-                shadow.GlobalPosition = grid.Position;
-                shadow.placed();
-                WantPlace = false;
-                SunClct.Instance.SunNum -= sunCost;
+                grid.isHeYe = true;
             }
+            SunClct.Instance.SunNum -= sunCost;
         }
     }
     public override void _Process(double delta)
@@ -164,7 +168,11 @@ public partial class clickButton : TextureButton
         {
             plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置
             grid = GridSys.Instance.GetGridByMouse();
-            if (grid != null && !grid.Plant)
+            if ((grid != null) && (
+            (grid.gtp == HangType.water && isShuiSheng && !grid.isHeYe) ||
+            (grid.gtp == HangType.water && !isShuiSheng && grid.isHeYe && grid.plantsOnThisGrid.Count == 1) ||
+            (grid.gtp == HangType.grass && !isShuiSheng && grid.plantsOnThisGrid.Count == 0)
+            ))
             {
                 shadow.Visible = true;
                 shadow.GlobalPosition = grid.Position;
