@@ -15,8 +15,8 @@ public partial class clickButton : TextureButton
     [Export] public bool isTaoLei;
     [Export] public bool 是否为咖啡豆类;
     TextureProgressBar mask;
-    bool isOn;
-    bool isSelected;
+    public bool isOn;
+    public bool isAndroidMode;
     Vector2 bili;
     bool sunEnough;
     bool coldEnough = true;
@@ -110,32 +110,38 @@ public partial class clickButton : TextureButton
     void mouse_entered()
     {
         GD.Print("mouse has entered!");
+        isOn = true;
         if (sunEnough && coldEnough)
         {
             Scale = bili * 1.1f;
+        }
+        if (Input.IsActionPressed("clickIt") && danli.Instance.PlantCard != this)
+        {
+            if (!WantPlace)
+            {
+                if (sunEnough && coldEnough)
+                {
+                    danli.Instance.PlantCard = this;
+                    WantPlace = true;
+                }
+            }
+            else
+            {
+                WantPlace = false;
+            }
         }
     }
     void mouse_exited()
     {
         GD.Print("mouse has exited!");
+        if (plantInstan != null && Input.IsActionPressed("clickIt"))
+        {
+            isAndroidMode = true;
+        }
+        isOn = false;
         Scale = bili;
     }
     void _on_button_down()
-    {
-        /* if (!WantPlace)
-        {
-            if (sunEnough && coldEnough)
-            {
-                danli.Instance.PlantCard = this;
-                WantPlace = true;
-            }
-        }
-        else
-        {
-            WantPlace = false;
-        } */
-    }
-    void _on_button_up()
     {
         if (!WantPlace)
         {
@@ -148,6 +154,44 @@ public partial class clickButton : TextureButton
         else
         {
             WantPlace = false;
+        }
+    }
+    void _on_button_up()
+    {
+        GD.Print("upup!");
+        /* if (!WantPlace)
+        {
+            if (sunEnough && coldEnough)
+            {
+                danli.Instance.PlantCard = this;
+                WantPlace = true;
+            }
+        }
+        else
+        {
+            WantPlace = false;
+        } */
+        /* if (danli.Instance.PlantCard.plantType != this.plantType)
+        {
+            GD.Print("ffffff");
+            danli.Instance.PlantCard = this;
+            if (!WantPlace)
+            {
+                if (sunEnough && coldEnough)
+                {
+                    danli.Instance.PlantCard = this;
+                    WantPlace = true;
+                }
+            }
+            else
+            {
+                WantPlace = false;
+            }
+        } */
+        if (isAndroidMode && isOn)
+        {
+            WantPlace = false;
+            isAndroidMode = false;
         }
     }
     private void CDEnter()
@@ -173,6 +217,7 @@ public partial class clickButton : TextureButton
     {
         if (Input.IsActionJustReleased("clickIt") && GridSys.Instance.isOut == false)//鼠标松开触发
         {
+            isAndroidMode = false;
             coldEnough = false;
             CDEnter();
             plant.QueueFree();

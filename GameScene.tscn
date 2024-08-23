@@ -232,7 +232,7 @@ zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")
 pea = ExtResource("7_ng5db")
 
-[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee")]
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee", "label", "syg")]
 position = Vector2(0, -1)
 script = ExtResource("3_sstho")
 backToMenu = NodePath("../Camera2D/Panel/menu")
@@ -240,6 +240,8 @@ backToGame = NodePath("../Camera2D/Panel/back")
 ESC = NodePath("../Camera2D/esc")
 panel = NodePath("../Camera2D/Panel")
 leftSee = NodePath("../Camera2D/seeLeft")
+label = NodePath("../Camera2D/Label3")
+syg = NodePath("../Camera2D/Label4")
 
 [node name="zomZone" type="Panel" parent="."]
 z_index = 1
@@ -643,6 +645,17 @@ script = ExtResource("27_ennl7")
 libraries = {
 "": SubResource("AnimationLibrary_m8vw8")
 }
+
+[node name="Label3" type="Label" parent="Camera2D"]
+offset_left = -106.0
+offset_right = -66.0
+offset_bottom = 23.0
+
+[node name="Label4" type="Label" parent="Camera2D"]
+offset_left = 77.0
+offset_top = 1.0
+offset_right = 117.0
+offset_bottom = 24.0
 
 [connection signal="area_entered" from="Camera2D/CardUI/SunClct/Area2D" to="Camera2D/CardUI/SunClct" method="getSun"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]

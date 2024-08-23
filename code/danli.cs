@@ -13,6 +13,7 @@ public partial class danli : Node2D
 	private clickButton plantCard;
 	private zomCard zombieCard;
 	public Node2D titleMenu;
+	[Export] public Label label, syg;
 	public ConfigFile configFile = new ConfigFile();
 	public int abc = 8;
 	public bool isAnXia;
@@ -35,8 +36,10 @@ public partial class danli : Node2D
 		{
 			if (plantCard != null)
 			{
-				GD.Print("next");
+				label.Text = "value:" + value.plantType.ToString();
+				syg.Text = "syg:" + plantCard.plantType.ToString();
 				plantCard.WantPlace = false;
+				plantCard.isAndroidMode = false;
 			}
 			plantCard = value;
 		}

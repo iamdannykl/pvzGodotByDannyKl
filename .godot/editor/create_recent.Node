@@ -1,9 +1,9 @@
+Label
 CanvasLayer
 Sprite2D
 AnimationPlayer
 CollisionShape2D
 Area2D
-Label
 Timer
 CheckButton
 OptionButton

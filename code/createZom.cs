@@ -111,7 +111,7 @@ public partial class createZom : Sprite2D
         double crtBiLi = loadData.waves[crtWave].location;
         crtWave++;
         GD.Print("!isEnterNext:" + !isEnterNext);
-        while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext && greenBar.Value + calCD < 1)
+        while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext && greenBar.Value + calCD < 1 && pathFollow2D.ProgressRatio + calCD < 1)
         {
             //timer.Start();
             /* await ToSignal(timer, "timeout"); */
@@ -130,7 +130,7 @@ public partial class createZom : Sprite2D
             //timer.Start();
             /* await ToSignal(timer, "timeout"); */
             await Task.Delay(100);
-            if (greenBar.Value + newCCD < crtBiLi + inLocation && greenBar.Value + newCCD < 1)
+            if (greenBar.Value + newCCD < crtBiLi + inLocation && greenBar.Value + newCCD < 1 && pathFollow2D.ProgressRatio + newCCD < 1)
             {
                 greenBar.Value += newCCD;
                 pathFollow2D.ProgressRatio += newCCD;
