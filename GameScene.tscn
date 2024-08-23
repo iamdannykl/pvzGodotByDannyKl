@@ -249,6 +249,7 @@ offset_right = 191.0
 offset_bottom = 86.0
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("animationPlayer")]
+z_index = 6
 position = Vector2(-57, 0)
 zoom = Vector2(3.465, 3.465)
 script = ExtResource("5_uefq8")
@@ -256,7 +257,7 @@ animationPlayer = NodePath("AnimationPlayer")
 
 [node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]
 visible = false
-z_index = 1
+z_index = 0
 offset_left = -161.0
 offset_top = -98.0
 offset_right = -161.0
@@ -293,7 +294,6 @@ libraries = {
 
 [node name="seeLeft" type="Button" parent="Camera2D"]
 visible = false
-z_index = 1
 offset_left = 97.0
 offset_top = -93.0
 offset_right = 134.0
@@ -303,7 +303,6 @@ theme_override_font_sizes/font_size = 21
 text = "<="
 
 [node name="guanQiaName" type="Label" parent="Camera2D"]
-z_index = 1
 offset_left = -165.0
 offset_top = 73.0
 offset_right = -15.0
@@ -428,7 +427,6 @@ offset_bottom = 94.0
 text = "test"
 
 [node name="esc" type="Button" parent="Camera2D"]
-z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -511,10 +509,30 @@ offset_bottom = 94.0
 text = "返回"
 
 [node name="zomBar" type="Sprite2D" parent="Camera2D"]
-z_index = 3
-position = Vector2(97, -77)
+position = Vector2(113, 86)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("21_hk1ym")
+
+[node name="black" type="Sprite2D" parent="Camera2D/zomBar"]
+texture = ExtResource("25_21v8n")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Camera2D/zomBar"]
+anchors_preset = -1
+anchor_left = -0.000391593
+anchor_top = 0.0215609
+anchor_right = -0.000391593
+anchor_bottom = 0.0215609
+offset_left = -122.898
+offset_top = -6.53901
+offset_right = 123.102
+offset_bottom = 4.46099
+scale = Vector2(1.00407, 1.08407)
+max_value = 1.0
+step = 0.0
+fill_mode = 1
+texture_progress = ExtResource("22_wvxtl")
+script = ExtResource("24_rx7u7")
+metadata/_edit_use_anchors_ = true
 
 [node name="Path2D" type="Path2D" parent="Camera2D/zomBar"]
 curve = SubResource("Curve2D_w1jhn")
@@ -527,31 +545,6 @@ script = ExtResource("21_tfmci")
 [node name="headICON" type="Sprite2D" parent="Camera2D/zomBar/Path2D/PathFollow2D"]
 rotation = 3.14159
 texture = ExtResource("20_nbejk")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Camera2D/zomBar"]
-z_index = 2
-z_as_relative = false
-anchors_preset = -1
-anchor_left = -0.000391593
-anchor_top = 0.0215609
-anchor_right = -0.000391593
-anchor_bottom = 0.0215609
-offset_left = -122.898
-offset_top = -6.53902
-offset_right = 123.102
-offset_bottom = 4.46098
-scale = Vector2(1.00407, 1.08407)
-max_value = 1.0
-step = 0.0
-fill_mode = 1
-texture_progress = ExtResource("22_wvxtl")
-script = ExtResource("24_rx7u7")
-metadata/_edit_use_anchors_ = true
-
-[node name="black" type="Sprite2D" parent="Camera2D/zomBar"]
-z_index = 1
-z_as_relative = false
-texture = ExtResource("25_21v8n")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/zomBar"]
 offset_left = -117.0
@@ -617,14 +610,14 @@ texture = ExtResource("26_sl0mu")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Camera2D"]
-z_index = 1
+visible = false
 offset_left = -117.917
 offset_top = 18.6885
 offset_right = -77.9165
 offset_bottom = 41.6885
 
 [node name="Label2" type="Label" parent="Camera2D"]
-z_index = 1
+visible = false
 offset_left = 0.738541
 offset_top = 37.256
 offset_right = 40.7385
@@ -632,7 +625,6 @@ offset_bottom = 60.256
 
 [node name="BigWaveComing" type="Label" parent="Camera2D"]
 visible = false
-z_index = 3
 offset_left = -166.698
 offset_top = -18.7906
 offset_right = 177.302

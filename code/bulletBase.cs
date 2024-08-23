@@ -10,6 +10,7 @@ public partial class bulletBase : Area2D
         anim = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
         anim.Connect("animation_finished", new Callable(this, nameof(desSelf)));
         Connect("area_entered", new Callable(this, nameof(hitZom)));
+        ZIndex = 4;
     }
     public void hitZom(Area2D area2D)
     {

@@ -70,6 +70,13 @@ clickIt={
 
 [layer_names]
 
+2d_render/layer_1="背景"
+2d_render/layer_2="植物虚影"
+2d_render/layer_3="植物"
+2d_render/layer_4="僵尸"
+2d_render/layer_5="植物跟随鼠标"
+2d_render/layer_6="掉落物"
+2d_render/layer_7="UI"
 2d_physics/layer_1="plant"
 2d_physics/layer_2="zombie"
 2d_physics/layer_3="bullet"

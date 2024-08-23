@@ -33,11 +33,6 @@ public partial class danli : Node2D
 		get => plantCard;
 		set
 		{
-			/* GD.Print("self");
-			GD.Print(value == plantCard);
-			GD.Print(plantCard != null);
-			GD.Print(value != null); */
-
 			if (plantCard != null)
 			{
 				GD.Print("next");

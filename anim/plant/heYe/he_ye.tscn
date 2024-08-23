@@ -67,6 +67,7 @@ _data = {
 
 [node name="heYe" type="Area2D" node_paths=PackedStringArray("animPlayer")]
 z_index = 1
+z_as_relative = false
 collision_mask = 0
 script = ExtResource("1_2w1we")
 noAtkPlant = true

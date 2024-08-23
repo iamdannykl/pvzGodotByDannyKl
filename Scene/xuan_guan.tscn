@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="9_55cdr"]
 
 [node name="xuanGuan" type="Control" node_paths=PackedStringArray("gqList", "whichGtype")]
+z_index = 6
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

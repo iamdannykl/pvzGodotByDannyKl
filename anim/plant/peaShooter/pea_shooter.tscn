@@ -88,6 +88,7 @@ size = Vector2(20, 21)
 
 [node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D")]
 z_index = 1
+z_as_relative = false
 script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 2

@@ -15,6 +15,9 @@ public partial class clickButton : TextureButton
     [Export] public bool isTaoLei;
     [Export] public bool 是否为咖啡豆类;
     TextureProgressBar mask;
+    bool isOn;
+    bool isSelected;
+    Vector2 bili;
     bool sunEnough;
     bool coldEnough = true;
     bool isplanted = false;
@@ -54,8 +57,10 @@ public partial class clickButton : TextureButton
                 plantInstan = plantPrefab.Instantiate() as baseCard;
                 plantInstan.Monitorable = false;
                 plantInstan.Monitoring = false;
+                plantInstan.ZIndex = 7;
                 plantInstan.CollisionLayer = 0;
                 shadow = plantPrefab.Instantiate() as baseCard;
+                shadow.ZIndex = 2;
                 shadow.Modulate = new Color(1, 1, 1, 0.55f);
                 shadow.GlobalPosition = new Vector2(0, 0);
                 shadow.Visible = false;
@@ -80,6 +85,14 @@ public partial class clickButton : TextureButton
             }
         }
     }
+    public void deleteShadow()
+    {
+        if (shadow != null)
+        {
+            shadow.QueueFree();
+            shadow = null;
+        }
+    }
     public void initIt()
     {
         WantPlace = false;
@@ -89,10 +102,27 @@ public partial class clickButton : TextureButton
         mask = GetNode<TextureProgressBar>("TextureProgressBar");
         //Connect("button_down", new Callable(this, nameof(_on_button_down)));
         Connect("button_up", new Callable(this, nameof(_on_button_up)));
+        Connect("button_down", new Callable(this, nameof(_on_button_down)));
+        Connect("mouse_entered", new Callable(this, nameof(mouse_entered)));
+        Connect("mouse_exited", new Callable(this, nameof(mouse_exited)));
+        bili = Scale;
+    }
+    void mouse_entered()
+    {
+        GD.Print("mouse has entered!");
+        if (sunEnough && coldEnough)
+        {
+            Scale = bili * 1.1f;
+        }
+    }
+    void mouse_exited()
+    {
+        GD.Print("mouse has exited!");
+        Scale = bili;
     }
     void _on_button_down()
     {
-        if (!WantPlace)
+        /* if (!WantPlace)
         {
             if (sunEnough && coldEnough)
             {
@@ -103,7 +133,7 @@ public partial class clickButton : TextureButton
         else
         {
             WantPlace = false;
-        }
+        } */
     }
     void _on_button_up()
     {
@@ -149,6 +179,7 @@ public partial class clickButton : TextureButton
             plantInstan = null;
             shadow.Monitorable = true;
             shadow.Monitoring = true;
+            shadow.ZIndex = 1;
             shadow.CollisionLayer = 1;
             isplanted = true;
             shadow.Modulate = new Color(1, 1, 1, 1);

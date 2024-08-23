@@ -623,7 +623,7 @@ nodes/TimeScale/position = Vector2(160, 260)
 node_connections = [&"TimeScale", 0, &"StateMachine", &"output", 0, &"TimeScale"]
 
 [node name="zombieBase" type="CharacterBody2D"]
-z_index = 1
+z_index = 3
 position = Vector2(0, 1)
 script = ExtResource("1_jiihn")
 spd = 5.0
@@ -635,7 +635,6 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 1
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,

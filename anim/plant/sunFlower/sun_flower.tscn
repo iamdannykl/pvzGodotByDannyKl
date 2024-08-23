@@ -210,6 +210,7 @@ size = Vector2(19, 20)
 
 [node name="sunFlower" type="Area2D" node_paths=PackedStringArray("anim")]
 z_index = 1
+z_as_relative = false
 script = ExtResource("1_6cpri")
 anim = NodePath("AnimatedSprite2D")
 noAtkPlant = true

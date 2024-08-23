@@ -68,6 +68,7 @@ animations = [{
 
 [node name="repeater" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D")]
 z_index = 1
+z_as_relative = false
 script = ExtResource("1_hujjw")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 1

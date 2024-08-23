@@ -14,6 +14,7 @@ public partial class createZom : Sprite2D
     public bool isUPDT;
     public int allZomNum, allCrtZom;
     public int waveNow = -1;
+    int crtWave;
     public float timePerWave;
     private float nowTime;
     int bigWaveCount;
@@ -106,9 +107,11 @@ public partial class createZom : Sprite2D
         float calCD = inLocation / currentTimeInCD * 0.1f;
         GD.Print("calcd:" + calCD);
         double crtime = Time.GetUnixTimeFromSystem();
-        double crtBiLi = greenBar.Value;
+        //double crtBiLi = greenBar.Value;
+        double crtBiLi = loadData.waves[crtWave].location;
+        crtWave++;
         GD.Print("!isEnterNext:" + !isEnterNext);
-        while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext)
+        while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext && greenBar.Value + calCD < 1)
         {
             //timer.Start();
             /* await ToSignal(timer, "timeout"); */
@@ -119,14 +122,15 @@ public partial class createZom : Sprite2D
             currentTimeInCD -= 0.1f;
         }
         crtBo++;
-        double newChaZhi = greenBar.Value - crtBiLi;
+        //double newChaZhi = greenBar.Value - crtBiLi;
+        double newChaZhi = loadData.waves[crtWave].location - greenBar.Value;
         float newCCD = ((float)newChaZhi) / (eachBoJianGe * 0.6f) * 0.1f;
         while (/* currentTimeInCD >= 0 && */ greenBar.Value < crtBiLi + inLocation)
         {
             //timer.Start();
             /* await ToSignal(timer, "timeout"); */
             await Task.Delay(100);
-            if (greenBar.Value + newCCD < crtBiLi + inLocation)
+            if (greenBar.Value + newCCD < crtBiLi + inLocation && greenBar.Value + newCCD < 1)
             {
                 greenBar.Value += newCCD;
                 pathFollow2D.ProgressRatio += newCCD;
