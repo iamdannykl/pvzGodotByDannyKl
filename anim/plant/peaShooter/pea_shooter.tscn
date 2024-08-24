@@ -16,7 +16,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_fh5ig"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("1_hdeam")
 }, {
 "duration": 1.0,
@@ -99,8 +99,7 @@ position = Vector2(0.5, -5.5)
 sprite_frames = SubResource("SpriteFrames_fh5ig")
 animation = &"attack"
 autoplay = "idle"
-frame = 7
-frame_progress = 0.65987
+frame_progress = 0.43375
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -3)

@@ -114,43 +114,37 @@ public partial class createZom : Sprite2D
         GD.Print("!isEnterNext:" + !isEnterNext);
         while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext && greenBar.Value + calCD < 1 && pathFollow2D.ProgressRatio + calCD < 1)
         {
-            //timer.Start();
-            /* await ToSignal(timer, "timeout"); */
             await Task.Delay(100);
             lock (createZom.lockObject)
             {
                 if (!(IsInstanceValid(greenBar) && IsInstanceValid(pathFollow2D))) return;
                 greenBar.Value += calCD;
                 pathFollow2D.ProgressRatio += calCD;
-                //mask.Value -= calCD;
                 currentTimeInCD -= 0.1f;
             }
         }
         crtBo++;
-        //double newChaZhi = greenBar.Value - crtBiLi;
         double newChaZhi = loadData.waves[crtWave].location - greenBar.Value;
         float newCCD = ((float)newChaZhi) / (eachBoJianGe * 0.6f) * 0.1f;
-        while (/* currentTimeInCD >= 0 && */ greenBar.Value < crtBiLi + inLocation)
+        while (greenBar.Value < crtBiLi + inLocation)
         {
-            //timer.Start();
-            /* await ToSignal(timer, "timeout"); */
             await Task.Delay(100);
-            if (greenBar.Value + newCCD < crtBiLi + inLocation && greenBar.Value + newCCD < 1 && pathFollow2D.ProgressRatio + newCCD < 1)
+            lock (lockObject)
             {
-                greenBar.Value += newCCD;
-                pathFollow2D.ProgressRatio += newCCD;
+                if (!(IsInstanceValid(greenBar) && IsInstanceValid(pathFollow2D))) return;
+                if (greenBar.Value + newCCD < crtBiLi + inLocation && greenBar.Value + newCCD < 1 && pathFollow2D.ProgressRatio + newCCD < 1)
+                {
+                    greenBar.Value += newCCD;
+                    pathFollow2D.ProgressRatio += newCCD;
+                }
             }
-            //mask.Value -= calCD;
-            //currentTimeInCD -= 0.1f;
         }
-        /* greenBar.Value = crtBiLi + inLocation;
-        pathFollow2D.ProgressRatio = (float)crtBiLi + inLocation; */
         GD.Print("green:" + greenBar.Value);
         GD.Print("crt:" + crtBiLi);
         GD.Print("inLoc" + inLocation);
         GD.Print("crtBiLi + inLocation:" + (crtBiLi + inLocation));
         GD.Print("chixu:" + (Time.GetUnixTimeFromSystem() - crtime) + "s");
-        //coldEnough = true;
+        return;
     }
     public void _on_timer_timeout()
     {
@@ -194,14 +188,6 @@ public partial class createZom : Sprite2D
                         isEnterNext = true;
                         waveTimer.Stop();
                         nxtAsy();
-                        //CallDeferred("nextWaveAfterWait", 2f);
-                        /* var task_1 = Task.Run(async delegate
-                        {
-                            await Task.Delay(2000);
-                            nextWaveAfterWait();
-                            //Console.WriteLine("3秒后执行，方式一 输出语句...");
-                            //return "异步执行result"; //可以得到一个返回值(int,bool,string都试了)
-                        }); */
                     }
                     else
                     {
@@ -231,6 +217,10 @@ public partial class createZom : Sprite2D
         bigWaveAnim.Play("fangDa");
         waveTimer.Paused = true;
         await Task.Delay(3200);
+        lock (lockObject)
+        {
+            if (!IsInstanceValid(waveTimer)) return;
+        }
         waveTimer.Paused = false;
         realCRT(num, zrNum);
     }
@@ -247,7 +237,6 @@ public partial class createZom : Sprite2D
         isEnterNext = false;
         if (waveNow < loadData.waves.Count - 1)
         {
-            //await canIbegin();
             tst = true;
             zomBarRun(loadData.waves[waveNow + 1].location - loadData.waves[waveNow].location);
             GD.Print("wave:" + waveNow);
@@ -269,13 +258,12 @@ public partial class createZom : Sprite2D
     {
         int shangBoCrtLeft = allCrtZom - allZomNum;
         allZomNum = 0;
+        lock (lockObject)
+        {
+            if (!IsInstanceValid(waveTimer)) return;
+        }
         waveNow++;
         waveTimer.Start();
-        /* else
-        {
-            zomBarRun(loadData.waves[waveNow].location);
-            GD.Print("loc:" + loadData.waves[waveNow].location);
-        } */
         nextBo();
         allCrtZom += shangBoCrtLeft;
     }
