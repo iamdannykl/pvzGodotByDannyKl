@@ -647,11 +647,13 @@ libraries = {
 }
 
 [node name="Label3" type="Label" parent="Camera2D"]
+visible = false
 offset_left = -106.0
 offset_right = -66.0
 offset_bottom = 23.0
 
 [node name="Label4" type="Label" parent="Camera2D"]
+visible = false
 offset_left = 77.0
 offset_top = 1.0
 offset_right = 117.0

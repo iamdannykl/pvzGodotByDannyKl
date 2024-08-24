@@ -7,6 +7,7 @@ public partial class createZom : Sprite2D
 {
     public static createZom Instance;
     public saveContent loadData;
+    public static object lockObject = new object();
     [Export] public Timer waveTimer;
     [Export] public int eachBoJianGe;
     public List<BigWave> bigWaves = new List<BigWave>();
@@ -116,10 +117,14 @@ public partial class createZom : Sprite2D
             //timer.Start();
             /* await ToSignal(timer, "timeout"); */
             await Task.Delay(100);
-            greenBar.Value += calCD;
-            pathFollow2D.ProgressRatio += calCD;
-            //mask.Value -= calCD;
-            currentTimeInCD -= 0.1f;
+            lock (createZom.lockObject)
+            {
+                if (!(IsInstanceValid(greenBar) && IsInstanceValid(pathFollow2D))) return;
+                greenBar.Value += calCD;
+                pathFollow2D.ProgressRatio += calCD;
+                //mask.Value -= calCD;
+                currentTimeInCD -= 0.1f;
+            }
         }
         crtBo++;
         //double newChaZhi = greenBar.Value - crtBiLi;

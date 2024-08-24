@@ -238,7 +238,7 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x6
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\api-ms-win-crt-time-l1-1-0.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\api-ms-win-crt-utility-l1-1-0.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\dbgshim.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.3224.31407.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\ucrtbase.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\MessagePack.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\YamlDotNet.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.3324.36610.dll

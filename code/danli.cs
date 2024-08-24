@@ -99,10 +99,14 @@ public partial class danli : Node2D
 	{
 		startMenu = GD.Load<PackedScene>("res://Scene/title.tscn");
 		titleMenu = startMenu.Instantiate() as Node2D;
-		GetTree().CurrentScene.QueueFree();
-		GetTree().Root.AddChild(titleMenu);
-		//titleMenu.GetNode<Label>("Label").Text = "asd";
-		GetTree().CurrentScene = titleMenu;
+		lock (createZom.lockObject)
+		{
+			GetTree().CurrentScene.QueueFree();
+			//GetTree().CurrentScene.Free();
+			GetTree().Root.AddChild(titleMenu);
+			//titleMenu.GetNode<Label>("Label").Text = "asd";
+			GetTree().CurrentScene = titleMenu;
+		}
 	}
 	void backToGameScene()
 	{

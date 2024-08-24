@@ -220,7 +220,6 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\hostfxr.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\hostpolicy.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\mscordaccore.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\mscordaccore_amd64_amd64_6.0.2724.6912.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\mscordbi.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\mscorrc.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\msquic.dll
@@ -230,10 +229,16 @@ D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.AssemblyInfoInputs.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.AssemblyInfo.cs
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.csproj.CoreCompileInputs.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.csproj.CopyComplete
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\refint\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.pdb
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.genruntimeconfig.cache
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\ref\Godot Projects.dll
 D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\Newtonsoft.Json.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\MessagePack.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\Microsoft.Extensions.DependencyInjection.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\YamlDotNet.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\ExportRelease\win-x64\mscordaccore_amd64_amd64_6.0.3324.36610.dll
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Projects.sourcelink.json
+D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\ExportRelease\win-x64\Godot Pr.43AD30E5.Up2Date
