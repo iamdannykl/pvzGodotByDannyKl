@@ -1,0 +1,22 @@
+res://Prefabs/zombie1.tscn
+res://anim/plant/rePeater/rePeater.tres
+res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres
+res://font/num.tres
+res://shader/card.tres
+res://GameScene.tscn
+res://anim/backGround/grass.tscn
+res://Scene/pool_day.tscn
+res://UI.tscn
+res://player.tscn
+res://Prefabs/GDlogo.tscn
+res://Prefabs/zombie_base.tscn
+res://Prefabs/repeater.tscn
+res://anim/plant/peaShooter/pea_shooter.tscn
+res://start.tscn
+res://Scene/title.tscn
+res://Scene/xuan_guan.tscn
+res://anim/plant/peaShooter/pea_bullet.tscn
+res://anim/plant/sunFlower/sun_flower.tscn
+res://Scene/sun_creator.tscn
+res://Scene/sun.tscn
+res://anim/plant/heYe/he_ye.tscn

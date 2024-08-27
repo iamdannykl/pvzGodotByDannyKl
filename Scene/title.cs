@@ -9,7 +9,8 @@ public partial class title : Node2D
     public override void _Ready()
     {
         Instance = this;
-        string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        //string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        string userDir = ProjectSettings.GlobalizePath("user://");
         string folderPath = Path.Combine(userDir, "PVZgd");
         if (!Directory.Exists(folderPath))
         {
@@ -68,7 +69,7 @@ public partial class title : Node2D
         }
         configFile.Save("user://config.cfg");
     }
-    public int getGq(guanQiaType gtp)
+    /* public int getGq(guanQiaType gtp)
     {
         switch (gtp)
         {
@@ -85,5 +86,5 @@ public partial class title : Node2D
             default:
                 return -1;
         }
-    }
+    } */
 }

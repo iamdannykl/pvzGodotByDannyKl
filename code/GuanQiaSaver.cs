@@ -92,7 +92,8 @@ public partial class GuanQiaSaver : Control
         string msgPackBytes = serializer.Serialize(save);
         GD.Print(1 + danli.Instance.getGq(dataRec.thisGuanQiaType));
         string path;
-        string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        //string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        string userDir = ProjectSettings.GlobalizePath("user://");
         string folderPath = Path.Combine(userDir, "PVZgd");
         int gqs = 0;
         DirectoryInfo d;

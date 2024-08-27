@@ -16,7 +16,8 @@ public partial class xuan_guan : Control
     {
         //GD.Print("index:" + index);
         saveContent readFromFile;
-        string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        //string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        string userDir = ProjectSettings.GlobalizePath("user://");
         string folderPath = Path.Combine(userDir, "PVZgd");
         StreamReader sr;
         string jsonString;
@@ -90,7 +91,8 @@ public partial class xuan_guan : Control
     {
         GD.Print(index);
         currentSelectedType = index;
-        string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        //string userDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+        string userDir = ProjectSettings.GlobalizePath("user://");
         string folderPath = Path.Combine(userDir, "PVZgd");
         DirectoryInfo d;
         FileSystemInfo[] fsinfos;
@@ -110,7 +112,7 @@ public partial class xuan_guan : Control
                         gqs++;
                     }
                 }
-                title.Instance.addGq(guanQiaType.grassDay, gqs);
+                //title.Instance.addGq(guanQiaType.grassDay, gqs);
                 break;
             case 1:
                 gqList.Clear();
@@ -125,7 +127,7 @@ public partial class xuan_guan : Control
                         gqs++;
                     }
                 }
-                title.Instance.addGq(guanQiaType.grassNight, gqs);
+                //title.Instance.addGq(guanQiaType.grassNight, gqs);
                 break;
             case 2:
                 gqList.Clear();
@@ -141,7 +143,7 @@ public partial class xuan_guan : Control
                         gqs++;
                     }
                 }
-                title.Instance.addGq(guanQiaType.poolDay, gqs);
+                //title.Instance.addGq(guanQiaType.poolDay, gqs);
                 break;
             case 3:
                 gqList.Clear();
@@ -156,7 +158,7 @@ public partial class xuan_guan : Control
                         gqs++;
                     }
                 }
-                title.Instance.addGq(guanQiaType.poolNight, gqs);
+                //title.Instance.addGq(guanQiaType.poolNight, gqs);
                 break;
             case 4:
                 gqList.Clear();
@@ -171,7 +173,7 @@ public partial class xuan_guan : Control
                         gqs++;
                     }
                 }
-                title.Instance.addGq(guanQiaType.roof, gqs);
+                //title.Instance.addGq(guanQiaType.roof, gqs);
                 break;
         }
     }
