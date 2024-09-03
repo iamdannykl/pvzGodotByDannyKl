@@ -1,4 +1,4 @@
-res://Prefabs/zombie1.tscn
+res://anim/skeletonZom/allStarZom.tscn
 res://anim/plant/rePeater/rePeater.tres
 res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres
 res://font/num.tres
@@ -10,6 +10,7 @@ res://UI.tscn
 res://player.tscn
 res://Prefabs/GDlogo.tscn
 res://Prefabs/zombie_base.tscn
+res://Prefabs/zombie1.tscn
 res://Prefabs/repeater.tscn
 res://anim/plant/peaShooter/pea_shooter.tscn
 res://start.tscn

@@ -115,7 +115,7 @@ public partial class clickButton : TextureButton
         {
             Scale = bili * 1.1f;
         }
-        if (Input.IsActionPressed("clickIt") && danli.Instance.PlantCard != this)
+        if (OS.GetName() != "Android" && Input.IsActionPressed("clickIt") && danli.Instance.PlantCard != this)
         {
             if (!WantPlace)
             {
@@ -159,35 +159,6 @@ public partial class clickButton : TextureButton
     void _on_button_up()
     {
         GD.Print("upup!");
-        /* if (!WantPlace)
-        {
-            if (sunEnough && coldEnough)
-            {
-                danli.Instance.PlantCard = this;
-                WantPlace = true;
-            }
-        }
-        else
-        {
-            WantPlace = false;
-        } */
-        /* if (danli.Instance.PlantCard.plantType != this.plantType)
-        {
-            GD.Print("ffffff");
-            danli.Instance.PlantCard = this;
-            if (!WantPlace)
-            {
-                if (sunEnough && coldEnough)
-                {
-                    danli.Instance.PlantCard = this;
-                    WantPlace = true;
-                }
-            }
-            else
-            {
-                WantPlace = false;
-            }
-        } */
         if (isAndroidMode && isOn)
         {
             WantPlace = false;
@@ -239,7 +210,7 @@ public partial class clickButton : TextureButton
                 grid.plantsOnThisGrid[grid.plantsOnThisGrid.Count - 1].GetNode<Sprite2D>("Sprite2D").AddChild(shadow);
                 shadow.Position = heYeOffSet;
             }
-            shadow.placed();
+            shadow.placed(isShuiSheng);
             GD.Print("gd:" + grid);
             GD.Print("gdp:" + grid.plantsOnThisGrid);
             grid.plantsOnThisGrid.Add(shadow);

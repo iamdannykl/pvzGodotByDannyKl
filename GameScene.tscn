@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=44 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://ctbhkbqdj2yx8" path="res://anim/icon/zomBar/flag.png" id="26_sl0mu"]
 [ext_resource type="Script" path="res://code/BigWaveComing.cs" id="27_ennl7"]
 [ext_resource type="Script" path="res://code/Fps.cs" id="29_tprw0"]
+[ext_resource type="Script" path="res://code/OSname.cs" id="30_qyf86"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqb0x"]
 
@@ -665,6 +666,14 @@ offset_bottom = 91.0
 theme_override_font_sizes/font_size = 16
 text = "FPS:"
 script = ExtResource("29_tprw0")
+
+[node name="Label" type="Label" parent="Camera2D/fps"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -25.0
+offset_right = 36.0
+offset_bottom = -2.0
+script = ExtResource("30_qyf86")
 
 [connection signal="area_entered" from="Camera2D/CardUI/SunClct/Area2D" to="Camera2D/CardUI/SunClct" method="getSun"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]

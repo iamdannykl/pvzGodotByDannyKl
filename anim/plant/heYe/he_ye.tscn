@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3xor7wria67x"]
+[gd_scene load_steps=8 format=3 uid="uid://b3xor7wria67x"]
 
 [ext_resource type="Script" path="res://code/HeYe.cs" id="1_2w1we"]
 [ext_resource type="Texture2D" uid="uid://dxyc7wthr7fn6" path="res://anim/plant/heYe/DS DSi - Plants vs Zombies - Lilypad and Squash_0.PNG" id="1_mkpwf"]
+[ext_resource type="AudioStream" uid="uid://c7gh55lmgfj6v" path="res://audio/effects/种水里.ogg" id="3_n0s35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uepk2"]
 size = Vector2(20, 16)
@@ -65,7 +66,7 @@ _data = {
 "idle": SubResource("Animation_15o6f")
 }
 
-[node name="heYe" type="Area2D" node_paths=PackedStringArray("animPlayer")]
+[node name="heYe" type="Area2D" node_paths=PackedStringArray("animPlayer", "种水上声音")]
 z_index = 1
 z_as_relative = false
 collision_mask = 0
@@ -73,6 +74,7 @@ script = ExtResource("1_2w1we")
 noAtkPlant = true
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
+"种水上声音" = NodePath("种水上")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uepk2")
@@ -85,3 +87,6 @@ autoplay = "idle"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_mkpwf")
+
+[node name="种水上" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_n0s35")

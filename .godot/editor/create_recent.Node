@@ -1,3 +1,9 @@
+Polygon2D
+Bone2D
+Skeleton2D
+Button
+AudioStreamPlayer
+AudioStreamPlayer2D
 Label
 CanvasLayer
 Sprite2D
@@ -6,9 +12,3 @@ CollisionShape2D
 Area2D
 Timer
 CheckButton
-OptionButton
-TextureRect
-HBoxContainer
-HSlider
-TextureProgressBar
-PathFollow2D

@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://31q3j34r4go0"]
+[gd_scene load_steps=12 format=3 uid="uid://31q3j34r4go0"]
 
 [ext_resource type="Texture2D" uid="uid://bye78b2275w5y" path="res://anim/plant/rePeater/DS DSi - Plants vs Zombies - Repeater.png" id="1_fcx4e"]
 [ext_resource type="Script" path="res://anim/plant/rePeater/reperter.cs" id="1_hujjw"]
+[ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="3_5icad"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi78g"]
 atlas = ExtResource("1_fcx4e")
@@ -66,20 +67,20 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_11drb"]
 
-[node name="repeater" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D")]
+[node name="repeater" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D", "种土上声音")]
 z_index = 1
 z_as_relative = false
 script = ExtResource("1_hujjw")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 1
 rayCast2D = NodePath("RayCast2D")
+"种土上声音" = NodePath("种土上")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.5, 8.5)
 sprite_frames = SubResource("SpriteFrames_jrexk")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.0411623
 offset = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -94,3 +95,6 @@ collide_with_areas = true
 
 [node name="pos" type="Node2D" parent="."]
 position = Vector2(6.5, -12.5)
+
+[node name="种土上" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5icad")

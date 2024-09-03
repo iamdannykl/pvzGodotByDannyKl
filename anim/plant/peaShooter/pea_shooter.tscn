@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://v47t65bdl51o"]
+[gd_scene load_steps=16 format=3 uid="uid://v47t65bdl51o"]
 
 [ext_resource type="Texture2D" uid="uid://c5giiu0iu2p0k" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_8.tres" id="1_hdeam"]
 [ext_resource type="Script" path="res://code/pea_shooter.cs" id="1_mla4w"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4qec75bjfb47" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_5.tres" id="9_ox8d6"]
 [ext_resource type="Texture2D" uid="uid://06wd0yrbw8q5" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_6.tres" id="10_11xx6"]
 [ext_resource type="Texture2D" uid="uid://dygd562hfp353" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_7.tres" id="11_dor8j"]
+[ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="13_hao8s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fh5ig"]
 animations = [{
@@ -86,13 +87,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ntap"]
 size = Vector2(20, 21)
 
-[node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D")]
+[node name="peaShooter" type="Area2D" node_paths=PackedStringArray("anim", "rayCast2D", "种土上声音")]
 z_index = 1
 z_as_relative = false
 script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 2
 rayCast2D = NodePath("RayCast2D")
+"种土上声音" = NodePath("种土上")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.5, -5.5)
@@ -113,3 +115,6 @@ collide_with_areas = true
 
 [node name="pos" type="Node2D" parent="."]
 position = Vector2(10, -13)
+
+[node name="种土上" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_hao8s")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://bwekahjdpv1k4"]
+[gd_scene load_steps=30 format=3 uid="uid://bwekahjdpv1k4"]
 
 [ext_resource type="Script" path="res://code/sun_flower.cs" id="1_6cpri"]
 [ext_resource type="Texture2D" uid="uid://daxckf78uvehd" path="res://anim/plant/sunFlower/sunFlower.png" id="1_uv4h3"]
 [ext_resource type="PackedScene" uid="uid://epron77jpbfb" path="res://Scene/sun_creator.tscn" id="3_hxphu"]
+[ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="4_yx028"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iyvik"]
 atlas = ExtResource("1_uv4h3")
@@ -208,12 +209,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72yyo"]
 size = Vector2(19, 20)
 
-[node name="sunFlower" type="Area2D" node_paths=PackedStringArray("anim")]
+[node name="sunFlower" type="Area2D" node_paths=PackedStringArray("anim", "种土上声音")]
 z_index = 1
 z_as_relative = false
 script = ExtResource("1_6cpri")
 anim = NodePath("AnimatedSprite2D")
 noAtkPlant = true
+"种土上声音" = NodePath("种土上")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -237,3 +239,6 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_72yyo")
 
 [node name="sunCreator" parent="." instance=ExtResource("3_hxphu")]
+
+[node name="种土上" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yx028")

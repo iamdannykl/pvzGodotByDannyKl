@@ -12,6 +12,8 @@ public partial class baseCard : Area2D
     [Export] public bool noAtkPlant;
     [Export] public AnimationPlayer animPlayer;
     [Export] public bool isAnimationPlayer;
+    [Export] public AudioStreamPlayer 种土上声音;
+    [Export] public AudioStreamPlayer 种水上声音;
     public bool isplanted;
     public override void _Ready()
     {
@@ -29,7 +31,7 @@ public partial class baseCard : Area2D
     }
     public override void _Process(double delta)
     {
-        if (!noAtkPlant)
+        if (!noAtkPlant && isplanted)
         {
             if (rayCast2D.IsColliding())
             {
@@ -41,7 +43,7 @@ public partial class baseCard : Area2D
             }
         }
     }
-    public virtual void placed()
+    public virtual void placed(bool isWaterPlant)
     {
         if (!isAnimationPlayer)
         {
@@ -50,6 +52,14 @@ public partial class baseCard : Area2D
         else
         {
             animPlayer.SpeedScale = 1;
+        }
+        if (!isWaterPlant)
+        {
+            种土上声音.Play();
+        }
+        else
+        {
+            种水上声音.Play();
         }
         isplanted = true;
     }
