@@ -248,21 +248,21 @@
     "Godot.SourceGenerators/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fLDNOAo/kpL1JtGXP6b2M48dobzb5YmKSRLXKDt+td8qegu0Ao3H25avoySVmrb52d7zpe8yvgMwba7QMhqnqQ==",
+      "sha512": "sha512-T5iTZxeWraU4RxKOsVT9brTisYG9d/qRh7oHrYgbc2jMwvZ3bZ3O1OnvepmZXU4KO/eIVY8YgUEvsDQ9rnUvLA==",
       "path": "godot.sourcegenerators/4.3.0",
       "hashPath": "godot.sourcegenerators.4.3.0.nupkg.sha512"
     },
     "GodotSharp/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mEwRmNIG2k/yPfkFencEkNVXpHCa+uETHkIQcq0MxcsfwJQZ4HueFU5Q9CYDIdd5YrRPqjwuyxbsuD6Je8lfdQ==",
+      "sha512": "sha512-JdgvqMuj0MdUXwPpZCZ0hWp+2yN3oFAXSC125kIAxeDQ3kA9pscI/GYWjW5MoG9OhqNrWqfnjQ/2Lwy6v4Lunw==",
       "path": "godotsharp/4.3.0",
       "hashPath": "godotsharp.4.3.0.nupkg.sha512"
     },
     "GodotSharpEditor/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-r7A3lszHS9/gIWoOb7w+MNtEjrD/NRX+9ACHq01GD2+lctu6eHsmlSTA0Ah1bjJDKs9rDZeSq+42zwXvtBsPzQ==",
+      "sha512": "sha512-xlns+Gs6gQlnxKRFaRu/+oVCQkRstDqf5FRPotNaqO6xIjqSQFrdoTFto+mDNWZc5tpVjCkhLUnqKNUhP7vCEg==",
       "path": "godotsharpeditor/4.3.0",
       "hashPath": "godotsharpeditor.4.3.0.nupkg.sha512"
     },

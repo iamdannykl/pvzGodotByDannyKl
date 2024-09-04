@@ -15,6 +15,18 @@ public partial class baseCard : Area2D
     [Export] public AudioStreamPlayer 种土上声音;
     [Export] public AudioStreamPlayer 种水上声音;
     public bool isplanted;
+    public int Hp
+    {
+        get => hp;
+        set
+        {
+            hp = value;
+            if (value <= 0)
+            {
+                QueueFree();
+            }
+        }
+    }
     public override void _Ready()
     {
         base._Ready();

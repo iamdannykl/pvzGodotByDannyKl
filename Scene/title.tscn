@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c1dcqwowyv2qv"]
+[gd_scene load_steps=28 format=3 uid="uid://c1dcqwowyv2qv"]
 
 [ext_resource type="Texture2D" uid="uid://bva8h2eyvka15" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png" id="1_etkse"]
 [ext_resource type="Script" path="res://Scene/title.cs" id="1_j25ri"]
@@ -16,8 +16,6 @@
 [ext_resource type="Script" path="res://code/openPage.cs" id="14_1ywau"]
 [ext_resource type="Texture2D" uid="uid://cpvx2a3to8fdv" path="res://anLogo.png" id="14_d70qq"]
 [ext_resource type="AudioStream" uid="uid://duwxudfs4481o" path="res://audio/bgm/nor.mp3" id="15_10ww1"]
-[ext_resource type="Script" path="res://code/tongXin.cs" id="17_07fsx"]
-[ext_resource type="Script" path="res://code/httpTst.cs" id="18_1x3t4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tyaxa"]
 atlas = ExtResource("6_ohtlx")
@@ -197,31 +195,3 @@ text = "社 交
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_10ww1")
 autoplay = true
-
-[node name="tongXin" type="Button" parent="."]
-offset_left = -117.0
-offset_top = 9.0
-offset_right = -29.0
-offset_bottom = 40.0
-text = "创建主机端"
-script = ExtResource("17_07fsx")
-
-[node name="join" type="Button" parent="."]
-offset_left = -12.0
-offset_top = 9.0
-offset_right = 76.0
-offset_bottom = 40.0
-text = "加入主机端"
-script = ExtResource("17_07fsx")
-
-[node name="join2" type="Button" parent="."]
-offset_left = -12.0
-offset_top = 55.0
-offset_right = 76.0
-offset_bottom = 86.0
-text = "http"
-script = ExtResource("18_1x3t4")
-
-[connection signal="button_down" from="tongXin" to="tongXin" method="_on_button_down"]
-[connection signal="button_down" from="join" to="join" method="buttonDownJoin"]
-[connection signal="button_up" from="join2" to="join2" method="anxia"]

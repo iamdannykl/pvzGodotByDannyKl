@@ -93,6 +93,7 @@ z_as_relative = false
 script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 2
+hp = 10
 rayCast2D = NodePath("RayCast2D")
 "种土上声音" = NodePath("种土上")
 

@@ -868,12 +868,12 @@ states/walkHat2/position = Vector2(814, 45)
 states/walkZom/node = SubResource("AnimationNodeAnimation_3sgly")
 states/walkZom/position = Vector2(953, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uy53i"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_4bx58"), "dbWalk", "dbEat", SubResource("AnimationNodeStateMachineTransition_mi44y"), "dbEat", "dbWalk", SubResource("AnimationNodeStateMachineTransition_rvoe1"), "dbEat", "dtEat", SubResource("AnimationNodeStateMachineTransition_pvyav"), "dbWalk", "duanTou", SubResource("AnimationNodeStateMachineTransition_tylel"), "duanTou", "daoDi", SubResource("AnimationNodeStateMachineTransition_o78bg"), "dtEat", "daoDi", SubResource("AnimationNodeStateMachineTransition_ay6df"), "walk", "walkHat1", SubResource("AnimationNodeStateMachineTransition_i018s"), "walkHat1", "walkHat2", SubResource("AnimationNodeStateMachineTransition_0fp0q"), "walk", "eatLZ", SubResource("AnimationNodeStateMachineTransition_84cmt"), "eatLZ", "walk", SubResource("AnimationNodeStateMachineTransition_weahn"), "eatLZ", "eatHat1", SubResource("AnimationNodeStateMachineTransition_febqm"), "eatHat1", "eatHat2", SubResource("AnimationNodeStateMachineTransition_beaxe"), "walkHat1", "eatHat1", SubResource("AnimationNodeStateMachineTransition_6un8g"), "eatHat1", "walkHat1", SubResource("AnimationNodeStateMachineTransition_60vxg"), "walkHat2", "eatHat2", SubResource("AnimationNodeStateMachineTransition_m5tei"), "eatHat2", "walkHat2", SubResource("AnimationNodeStateMachineTransition_an043"), "walk", "walkHat2", SubResource("AnimationNodeStateMachineTransition_4shki"), "eatLZ", "eatHat2", SubResource("AnimationNodeStateMachineTransition_f3v53"), "eatHat2", "eatZom", SubResource("AnimationNodeStateMachineTransition_rj63i"), "walkHat2", "walkZom", SubResource("AnimationNodeStateMachineTransition_m8d8a"), "walkZom", "dbWalk", SubResource("AnimationNodeStateMachineTransition_27xld"), "eatZom", "dbEat", SubResource("AnimationNodeStateMachineTransition_b4scw"), "walkZom", "eatZom", SubResource("AnimationNodeStateMachineTransition_ljvxs"), "eatZom", "walkZom", SubResource("AnimationNodeStateMachineTransition_ayre8")]
-graph_offset = Vector2(367, -39)
+graph_offset = Vector2(89, -95)
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rn8wk"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nps31"]
-graph_offset = Vector2(-280.636, 132.273)
+graph_offset = Vector2(-288.636, 255.273)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_hq40k")
 nodes/StateMachine/position = Vector2(-20, 160)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rn8wk")
@@ -894,7 +894,7 @@ position = Vector2(-2, -19)
 texture = ExtResource("2_gb4iq")
 hframes = 12
 vframes = 12
-frame = 2
+frame = 1
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,

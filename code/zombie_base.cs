@@ -10,6 +10,7 @@ public partial class zombie_base : CharacterBody2D
     public bool isEat;
     public int hangNum;
     stateMC zhuangTaiJi;
+    public baseCard plant;
     [Export] public ZomType zomType;
     private AnimationTree _animationTree;
     [Export] public int hp;
@@ -38,6 +39,10 @@ public partial class zombie_base : CharacterBody2D
         QueueFree();
     }
     //AnimationPlayer animationPlayer;
+    void attakePlant()
+    {
+        plant.Hp -= 1;
+    }
     public bool IsEat
     {
         get => isEat;
@@ -63,7 +68,7 @@ public partial class zombie_base : CharacterBody2D
             }
             if (!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead) && rayCast.IsColliding())
             {
-                baseCard plant = rayCast.GetCollider() as baseCard;
+                plant = rayCast.GetCollider() as baseCard;
                 IsEat = true;
             }
             else

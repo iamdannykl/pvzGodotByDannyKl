@@ -115,7 +115,7 @@ public partial class createZom : Sprite2D
         while (currentTimeInCD >= 0 && greenBar.Value < crtBiLi + inLocation && !isEnterNext && greenBar.Value + calCD < 1 && pathFollow2D.ProgressRatio + calCD < 1)
         {
             await Task.Delay(100);
-            lock (createZom.lockObject)
+            lock (lockObject)//进程上锁
             {
                 if (!(IsInstanceValid(greenBar) && IsInstanceValid(pathFollow2D))) return;
                 greenBar.Value += calCD;

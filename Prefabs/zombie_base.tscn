@@ -79,6 +79,23 @@ tracks/1/keys = {
 "update": 1,
 "values": [32, 33, 34, 35, 36, 37, 35]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attakePlant"
+}, {
+"args": [],
+"method": &"attakePlant"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_uwms7"]
 length = 0.4
@@ -272,6 +289,23 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [26, 27, 28, 29, 30, 31, 29]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"attakePlant"
+}, {
+"args": [],
+"method": &"attakePlant"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_snc2e"]
@@ -615,7 +649,7 @@ graph_offset = Vector2(14, 23)
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rn8wk"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nps31"]
-graph_offset = Vector2(-178.096, 149.32)
+graph_offset = Vector2(-345.224, 49.1721)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_hq40k")
 nodes/StateMachine/position = Vector2(-20, 160)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rn8wk")
@@ -635,7 +669,7 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 72
+frame = 3
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
@@ -675,7 +709,7 @@ speed_scale = 0.35
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_nps31")
 anim_player = NodePath("../AnimationPlayer")
-parameters/TimeScale/scale = 0.35
+parameters/TimeScale/scale = 0.4
 script = ExtResource("3_m58w4")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
