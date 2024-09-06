@@ -199,6 +199,7 @@ public partial class clickButton : TextureButton
             shadow.CollisionLayer = 1;
             isplanted = true;
             shadow.Modulate = new Color(1, 1, 1, 1);
+            shadow.gridS = grid;
             if (grid.plantsOnThisGrid.Count == 0)
             {
                 shadow.GlobalPosition = grid.Position - offset;

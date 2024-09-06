@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=45 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://code/Camera2D.cs" id="5_uefq8"]
 [ext_resource type="PackedScene" uid="uid://bwekahjdpv1k4" path="res://anim/plant/sunFlower/sun_flower.tscn" id="6_p4lfu"]
 [ext_resource type="PackedScene" uid="uid://dn58pij1x2882" path="res://Prefabs/zombie1.tscn" id="7_5ec5c"]
+[ext_resource type="PackedScene" uid="uid://cj5n45w8yo0bb" path="res://anim/plant/potatoDL/potato_dl.tscn" id="7_8fcqn"]
 [ext_resource type="PackedScene" uid="uid://dnuargw8dhh3c" path="res://anim/plant/peaShooter/pea_bullet.tscn" id="7_ng5db"]
 [ext_resource type="PackedScene" uid="uid://b3xor7wria67x" path="res://anim/plant/heYe/he_ye.tscn" id="7_qjlgd"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
@@ -229,6 +230,7 @@ script = ExtResource("3_v1isw")
 peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 sunFlower = ExtResource("6_p4lfu")
+potatoDL = ExtResource("7_8fcqn")
 heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")

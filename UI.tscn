@@ -112,7 +112,7 @@ offset_bottom = 90.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("5_8cqmb")
 script = ExtResource("2_dyc3i")
-plantType = 3
+plantType = 4
 offset = Vector2(0, -8)
 cd = 7.5
 isShuiSheng = true
@@ -131,7 +131,7 @@ tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
 [node name="Timer" type="Timer" parent="zuoKaCao/heYe"]
 wait_time = 0.1
 
-[node name="rePeater5" type="TextureButton" parent="zuoKaCao"]
+[node name="potatoDL" type="TextureButton" parent="zuoKaCao"]
 layout_mode = 1
 offset_top = 87.0
 offset_right = 26.0
@@ -139,12 +139,13 @@ offset_bottom = 110.0
 scale = Vector2(0.900738, 0.900738)
 texture_normal = ExtResource("1_3iqv4")
 script = ExtResource("2_dyc3i")
-plantType = 1
-heYeOffSet = Vector2(0, -5)
+plantType = 3
+offset = Vector2(0, -5)
+heYeOffSet = Vector2(0, 1.75)
 cd = 7.5
 metadata/_edit_group_ = true
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/rePeater5"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/potatoDL"]
 layout_mode = 0
 offset_right = 25.0
 offset_bottom = 24.0
@@ -154,7 +155,7 @@ fill_mode = 4
 texture_progress = ExtResource("1_3iqv4")
 tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
 
-[node name="Timer" type="Timer" parent="zuoKaCao/rePeater5"]
+[node name="Timer" type="Timer" parent="zuoKaCao/potatoDL"]
 wait_time = 0.1
 
 [node name="rePeater6" type="TextureButton" parent="zuoKaCao"]

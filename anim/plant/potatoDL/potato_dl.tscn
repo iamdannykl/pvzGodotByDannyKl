@@ -1,0 +1,146 @@
+[gd_scene load_steps=15 format=3 uid="uid://cj5n45w8yo0bb"]
+
+[ext_resource type="Script" path="res://code/PotatoDl.cs" id="1_evp7y"]
+[ext_resource type="Texture2D" uid="uid://ckwnclpxc64hv" path="res://anim/plant/potatoDL/potatalDL.png" id="1_prcor"]
+[ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="3_mm00k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8agi"]
+atlas = ExtResource("1_prcor")
+region = Rect2(171, 0, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74uto"]
+atlas = ExtResource("1_prcor")
+region = Rect2(0, 58, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3xl1"]
+atlas = ExtResource("1_prcor")
+region = Rect2(57, 58, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaxbr"]
+atlas = ExtResource("1_prcor")
+region = Rect2(114, 58, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k48mp"]
+atlas = ExtResource("1_prcor")
+region = Rect2(171, 58, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gox7"]
+atlas = ExtResource("1_prcor")
+region = Rect2(57, 0, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imfkv"]
+atlas = ExtResource("1_prcor")
+region = Rect2(114, 0, 57, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jpsa"]
+atlas = ExtResource("1_prcor")
+region = Rect2(0, 0, 57, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08p4y"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_v8agi")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_74uto")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_p3xl1")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_oaxbr")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_k48mp")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_oaxbr")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_p3xl1")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_74uto")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_6gox7")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_imfkv")
+}],
+"loop": false,
+"name": &"mao",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jpsa")
+}],
+"loop": false,
+"name": &"suo",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxcav"]
+size = Vector2(23, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tct8o"]
+size = Vector2(49, 14)
+
+[node name="potatoDL" type="Area2D" node_paths=PackedStringArray("anim", "种土上声音")]
+collision_mask = 2
+script = ExtResource("1_evp7y")
+anim = NodePath("AnimatedSprite2D")
+hp = 10
+noAtkPlant = true
+"种土上声音" = NodePath("AudioStreamPlayer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_08p4y")
+animation = &"mao"
+autoplay = "suo"
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://anim/plant/potatoDL/potatalDL.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "20b950da7528ea49c2b2b435b00e0a73"
+
+[node name="yinBao" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -9)
+shape = SubResource("RectangleShape2D_kxcav")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mm00k")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 13.0
+one_shot = true
+
+[node name="addZom" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="addZom"]
+position = Vector2(2.5, -17)
+shape = SubResource("RectangleShape2D_tct8o")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="idleAnim"]
+[connection signal="timeout" from="Timer" to="." method="maoChu"]
+[connection signal="area_entered" from="addZom" to="." method="addZom"]

@@ -1,43 +1,69 @@
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\Godot Projects.deps.json
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\Godot Projects.runtimeconfig.json
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\Godot Projects.dll
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\Godot Projects.pdb
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\GodotSharp.dll
-D:\Datas\GodotProjects\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.csproj.AssemblyReference.cache
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfoInputs.cache
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfo.cs
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CoreCompileInputs.cache
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CopyComplete
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.dll
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\refint\Godot Projects.dll
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.pdb
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
-D:\Datas\GodotProjects\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Godot Projects.deps.json
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Godot Projects.runtimeconfig.json
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Godot Projects.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Godot Projects.pdb
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\GodotSharp.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.AssemblyReference.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfoInputs.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfo.cs
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CoreCompileInputs.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\refint\Godot Projects.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.pdb
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\Newtonsoft.Json.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Projects.sourcelink.json
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\obj\Debug\Godot Pr.43AD30E5.Up2Date
-D:\DATAS\GODOTPROJECTS\PVZGODOTBYDANNYKL\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-D:\DATAS\GODOTPROJECTS\PVZGODOTBYDANNYKL\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\System.Text.Encodings.Web.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\System.Text.Json.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\MessagePack.dll
-D:\Datas\GodotProjects\pvzGodotByDannyKl\.godot\mono\temp\bin\Debug\YamlDotNet.dll
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/Godot Projects.deps.json
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/Godot Projects.runtimeconfig.json
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/Godot Projects.dll
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/Godot Projects.pdb
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/GodotSharp.dll
+D:/Datas/GodotProjects/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.csproj.AssemblyReference.cache
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfoInputs.cache
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfo.cs
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.csproj.CoreCompileInputs.cache
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.csproj.CopyComplete
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.dll
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/refint/Godot Projects.dll
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.pdb
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/Godot Projects.genruntimeconfig.cache
+D:/Datas/GodotProjects/.godot/mono/temp/obj/Debug/ref/Godot Projects.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.deps.json
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.runtimeconfig.json
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.pdb
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/GodotSharp.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.csproj.AssemblyReference.cache
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfoInputs.cache
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfo.cs
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.csproj.CoreCompileInputs.cache
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/refint/Godot Projects.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.pdb
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.genruntimeconfig.cache
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/ref/Godot Projects.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Newtonsoft.Json.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.sourcelink.json
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Pr.43AD30E5.Up2Date
+D:/DATAS/GODOTPROJECTS/PVZGODOTBYDANNYKL/.godot/mono/temp/bin/Debug/Microsoft.Extensions.DependencyInjection.dll
+D:/DATAS/GODOTPROJECTS/PVZGODOTBYDANNYKL/.godot/mono/temp/bin/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/System.Text.Encodings.Web.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/System.Text.Json.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/MessagePack.dll
+D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/YamlDotNet.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.deps.json
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.runtimeconfig.json
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Godot Projects.pdb
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/MessagePack.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Microsoft.Extensions.DependencyInjection.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/Newtonsoft.Json.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/System.Text.Encodings.Web.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/System.Text.Json.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/YamlDotNet.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.csproj.AssemblyReference.cache
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfoInputs.cache
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.AssemblyInfo.cs
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.csproj.CoreCompileInputs.cache
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.sourcelink.json
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.csproj.CopyComplete
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/refint/Godot Projects.dll
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.pdb
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.genruntimeconfig.cache
+/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/ref/Godot Projects.dll

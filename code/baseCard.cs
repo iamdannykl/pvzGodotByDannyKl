@@ -14,6 +14,9 @@ public partial class baseCard : Area2D
     [Export] public bool isAnimationPlayer;
     [Export] public AudioStreamPlayer 种土上声音;
     [Export] public AudioStreamPlayer 种水上声音;
+    [Export] public bool isHeYe;
+    public GridS gridS;
+    [Export] public bool isZiBao;
     public bool isplanted;
     public int Hp
     {
@@ -23,6 +26,11 @@ public partial class baseCard : Area2D
             hp = value;
             if (value <= 0)
             {
+                gridS.plantsOnThisGrid.Remove(this);
+                if (isHeYe)
+                {
+                    gridS.isHeYe = true;
+                }
                 QueueFree();
             }
         }
@@ -54,6 +62,10 @@ public partial class baseCard : Area2D
                 anim.Play("idle");
             }
         }
+    }
+    public virtual void explodeIt()
+    {
+
     }
     public virtual void placed(bool isWaterPlant)
     {
@@ -88,10 +100,7 @@ public partial class baseCard : Area2D
         }
         if (anim.Animation == "idle")
         {
-            /* if (anim.Frame == 3)
-            {
-                GD.Print(anim.Frame);
-            } */
+
         }
     }
 }

@@ -4,6 +4,8 @@ using System;
 public partial class zombie_base : CharacterBody2D
 {
     [Export] public float spd;
+
+    [Export] public AudioStreamPlayer yao;
     public bool isUpdt;
     public Vector2 weiZhi;
     RayCast2D rayCast;
@@ -11,6 +13,8 @@ public partial class zombie_base : CharacterBody2D
     public int hangNum;
     stateMC zhuangTaiJi;
     public baseCard plant;
+    public baseCard plantAtked;
+    public GridS gridAtked;
     [Export] public ZomType zomType;
     private AnimationTree _animationTree;
     [Export] public int hp;
@@ -41,6 +45,7 @@ public partial class zombie_base : CharacterBody2D
     //AnimationPlayer animationPlayer;
     void attakePlant()
     {
+        yao.Play();
         plant.Hp -= 1;
     }
     public bool IsEat
@@ -69,6 +74,15 @@ public partial class zombie_base : CharacterBody2D
             if (!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead) && rayCast.IsColliding())
             {
                 plant = rayCast.GetCollider() as baseCard;
+                if (plant.isZiBao)
+                {
+                    plant.explodeIt();
+                }
+                else
+                {
+                    gridAtked = plant.gridS;
+                    plantAtked = gridAtked.plantsOnThisGrid[gridAtked.plantsOnThisGrid.Count - 1];
+                }
                 IsEat = true;
             }
             else
