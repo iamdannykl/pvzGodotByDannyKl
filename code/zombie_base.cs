@@ -7,6 +7,10 @@ public partial class zombie_base : CharacterBody2D
 
     [Export] public AudioStreamPlayer yao;
     public bool isUpdt;
+    Random random = new Random();
+    // 定义要选择的浮点数数组
+    float[] options = { 0.95f, 1.0f, 1.05f };
+
     public Vector2 weiZhi;
     RayCast2D rayCast;
     public bool isEat;
@@ -102,5 +106,8 @@ public partial class zombie_base : CharacterBody2D
         zhuangTaiJi = GetNode<stateMC>("AnimationTree");
         rayCast = GetNode<RayCast2D>("RayCast2D");
         zhuangTaiJi.isBegin = true;
+        _animationTree = GetNode<AnimationTree>("AnimationTree");
+        _animationTree.Set("parameters/TimeScale/scale",
+        (float)_animationTree.Get("parameters/TimeScale/scale") * options[random.Next(0, options.Length)]);
     }
 }

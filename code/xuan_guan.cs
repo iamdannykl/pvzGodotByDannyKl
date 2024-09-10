@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.IO;
+using System.Linq;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -97,13 +98,16 @@ public partial class xuan_guan : Control
         DirectoryInfo d;
         FileSystemInfo[] fsinfos;
         int gqs = 0;
+        FileSystemInfo[] sortedInfos;
         switch (index)
         {
             case 0:
                 gqList.Clear();
                 d = new DirectoryInfo(Path.Combine(folderPath, "grassDay"));
                 fsinfos = d.GetFileSystemInfos();
-                foreach (FileSystemInfo fsinfo in fsinfos)
+                // 使用 LINQ 按名称排序
+                sortedInfos = fsinfos.OrderBy(f => f.CreationTime).ToArray();
+                foreach (FileSystemInfo fsinfo in sortedInfos)
                 {
                     if (!(fsinfo is DirectoryInfo))     //判断是否为文件夹
                     {
@@ -118,7 +122,9 @@ public partial class xuan_guan : Control
                 gqList.Clear();
                 d = new DirectoryInfo(Path.Combine(folderPath, "grassNight"));
                 fsinfos = d.GetFileSystemInfos();
-                foreach (FileSystemInfo fsinfo in fsinfos)
+                // 使用 LINQ 按名称排序
+                sortedInfos = fsinfos.OrderBy(f => f.CreationTime).ToArray();
+                foreach (FileSystemInfo fsinfo in sortedInfos)
                 {
                     if (!(fsinfo is DirectoryInfo))     //判断是否为文件夹
                     {
@@ -134,7 +140,9 @@ public partial class xuan_guan : Control
                 d = new DirectoryInfo(Path.Combine(folderPath, "poolDay"));
                 //OS.ShellOpen(Path.Combine(folderPath, "poolDay"));
                 fsinfos = d.GetFileSystemInfos();
-                foreach (FileSystemInfo fsinfo in fsinfos)
+                // 使用 LINQ 按名称排序
+                sortedInfos = fsinfos.OrderBy(f => f.CreationTime).ToArray();
+                foreach (FileSystemInfo fsinfo in sortedInfos)
                 {
                     if (!(fsinfo is DirectoryInfo))     //判断是否为文件夹
                     {
@@ -149,7 +157,9 @@ public partial class xuan_guan : Control
                 gqList.Clear();
                 d = new DirectoryInfo(Path.Combine(folderPath, "poolNight"));
                 fsinfos = d.GetFileSystemInfos();
-                foreach (FileSystemInfo fsinfo in fsinfos)
+                // 使用 LINQ 按名称排序
+                sortedInfos = fsinfos.OrderBy(f => f.CreationTime).ToArray();
+                foreach (FileSystemInfo fsinfo in sortedInfos)
                 {
                     if (!(fsinfo is DirectoryInfo))     //判断是否为文件夹
                     {
@@ -164,7 +174,9 @@ public partial class xuan_guan : Control
                 gqList.Clear();
                 d = new DirectoryInfo(Path.Combine(folderPath, "roof"));
                 fsinfos = d.GetFileSystemInfos();
-                foreach (FileSystemInfo fsinfo in fsinfos)
+                // 使用 LINQ 按名称排序
+                sortedInfos = fsinfos.OrderBy(f => f.CreationTime).ToArray();
+                foreach (FileSystemInfo fsinfo in sortedInfos)
                 {
                     if (!(fsinfo is DirectoryInfo))     //判断是否为文件夹
                     {

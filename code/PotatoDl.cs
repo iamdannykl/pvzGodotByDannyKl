@@ -5,22 +5,37 @@ using System.Collections.Generic;
 public partial class PotatoDl : baseCard
 {
 	List<zombie_base> zomList = new List<zombie_base>();
+	bool isMaoChu, isBao;
+	[Export] public AudioStreamPlayer boom;
+	Timer timer;
+	int layerNum;
+	/*public override void _Ready(){
+		base._Ready();
+		layerNum=GetNode<Area2D>("addZom").Getco;
+	}*/
 	public override void placed(bool isWaterPlant)
 	{
 		base.placed(isWaterPlant);
-		GetNode<Timer>("Timer").Start();
+		timer = GetNode<Timer>("Timer");
+		timer.Start();
 	}
 	void maoChu()
 	{
-		anim.Play("mao");
+		isMaoChu = true;
+		animPlayer.Play("mao");
+	}
+	void desSelf()
+	{
+		QueueFree();
+	}
+	void playBoom()
+	{
+		boom.Play();
 	}
 	void idleAnim()
 	{
-		if (anim.Animation == "mao")
-		{
-			anim.Play("idle");
-			isZiBao = true;
-		}
+		animPlayer.Play("idle");
+		isZiBao = true;
 	}
 	void addZom(Area2D zom)
 	{
@@ -35,8 +50,10 @@ public partial class PotatoDl : baseCard
 			foreach (var zombie in zomList)
 			{
 				zombie.QueueFree();
+				createZom.Instance.AllZomNum++;
 			}
 		}
 		GD.Print("finishEXPLD!!!");
+		animPlayer.Play("ni");
 	}
 }
