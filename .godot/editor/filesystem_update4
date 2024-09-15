@@ -22,6 +22,7 @@ res://Scene/sun.tscn
 res://anim/plant/heYe/he_ye.tscn
 res://anim/skeletonZom/allStarZom.tscn
 res://anim/plant/potatoDL/potato_dl.tscn
+res://anim/plant/cherryBoom/cherryBaoDan.tscn
 res://MenuButton.cs
 res://code/GridSys.cs
 res://code/BigWaveComing.cs
@@ -70,3 +71,4 @@ res://code/resPlantAndZom.cs
 res://code/tongXin.cs
 res://code/valueChangeTexture.cs
 res://code/Player.cs
+res://code/CherryBaoDan.cs

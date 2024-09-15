@@ -195,7 +195,14 @@ public partial class clickButton : TextureButton
             plantInstan = null;
             shadow.Monitorable = true;
             shadow.Monitoring = true;
-            shadow.ZIndex = 1;
+            if (plantType == PlantType.cherryBaoDan)
+            {
+                shadow.ZIndex = 4;
+            }
+            else
+            {
+                shadow.ZIndex = 1;
+            }
             shadow.CollisionLayer = 1;
             isplanted = true;
             shadow.Modulate = new Color(1, 1, 1, 1);

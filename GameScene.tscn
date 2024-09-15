@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=46 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dnuargw8dhh3c" path="res://anim/plant/peaShooter/pea_bullet.tscn" id="7_ng5db"]
 [ext_resource type="PackedScene" uid="uid://b3xor7wria67x" path="res://anim/plant/heYe/he_ye.tscn" id="7_qjlgd"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
+[ext_resource type="PackedScene" uid="uid://ndsnqsbpyp8j" path="res://anim/plant/cherryBoom/cherryBaoDan.tscn" id="8_06nb4"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
 [ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
@@ -231,6 +232,7 @@ peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 sunFlower = ExtResource("6_p4lfu")
 potatoDL = ExtResource("7_8fcqn")
+cherryBaoDan = ExtResource("8_06nb4")
 heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")

@@ -6,6 +6,7 @@ public enum PlantType
     rePeater,
     sunFlower,
     potatoDL,
+    cherryBaoDan,
     heYe
 }
 public enum ZomType
@@ -24,6 +25,7 @@ public partial class resPlantAndZom : Node2D
     [Export] public PackedScene rePeater;
     [Export] public PackedScene sunFlower;
     [Export] public PackedScene potatoDL;
+    [Export] public PackedScene cherryBaoDan;
     [Export] public PackedScene heYe;
     //Zombies===============================================================
     [Export] public PackedScene zombie;
@@ -46,6 +48,8 @@ public partial class resPlantAndZom : Node2D
                 return sunFlower;
             case PlantType.potatoDL:
                 return potatoDL;
+            case PlantType.cherryBaoDan:
+                return cherryBaoDan;
             case PlantType.heYe:
                 return heYe;
             default:

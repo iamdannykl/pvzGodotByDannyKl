@@ -1,6 +1,6 @@
+AudioStreamPlayer
 Sprite2D
 AnimationPlayer
-AudioStreamPlayer
 CollisionShape2D
 Area2D
 Timer
