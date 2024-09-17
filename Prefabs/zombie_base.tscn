@@ -671,7 +671,7 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 26
+frame = 3
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
@@ -696,7 +696,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "3ffff153ad8ea5a5aced485a0f972316"
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -11.5)
 collision_layer = 2
-collision_mask = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2, 5)
@@ -726,3 +726,5 @@ hpJieDuan = PackedInt32Array(10, 5, 0)
 
 [node name="yao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xuq7f")
+
+[connection signal="area_entered" from="Area2D" to="." method="boomDie"]

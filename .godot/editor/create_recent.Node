@@ -1,8 +1,8 @@
+CollisionShape2D
+Area2D
 AudioStreamPlayer
 Sprite2D
 AnimationPlayer
-CollisionShape2D
-Area2D
 Timer
 AnimatedSprite2D
 Polygon2D

@@ -77,6 +77,7 @@ public partial class zombie_base : CharacterBody2D
             }
             if (!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead) && rayCast.IsColliding())
             {
+                GD.PrintT(!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead), rayCast.IsColliding());
                 plant = rayCast.GetCollider() as baseCard;
                 if (plant.isZiBao)
                 {
@@ -99,6 +100,11 @@ public partial class zombie_base : CharacterBody2D
     {
         isUpdt = false;
         hangNum = hang;
+    }
+    public virtual void boomDie(Area2D area2D)
+    {
+        QueueFree();
+        createZom.Instance.AllZomNum++;
     }
     public void crtIt()
     {

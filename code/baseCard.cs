@@ -35,6 +35,10 @@ public partial class baseCard : Area2D
             }
         }
     }
+    public void desSelfI()
+    {
+        QueueFree();
+    }
     public override void _Ready()
     {
         base._Ready();
