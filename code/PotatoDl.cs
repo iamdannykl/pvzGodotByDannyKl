@@ -42,6 +42,10 @@ public partial class PotatoDl : baseCard
 		zomList.Add(zom.GetParent<zombie_base>());
 		GD.Print("added!!!");
 	}
+	public void outQueue(zombie_base zom)
+	{
+		zomList.Remove(zom);
+	}
 	public override void explodeIt()
 	{
 		GD.Print("startEXPLD!!!");

@@ -8,7 +8,13 @@ public partial class clickButton : TextureButton
     public baseCard shadow;
     [Export] public PlantType plantType;
     [Export] public int sunCost;
+    /// <summary>
+    /// 左上正，右下负
+    /// </summary>
     [Export] public Vector2 offset;
+    /// <summary>
+    /// 右下正，左上负
+    /// </summary>
     [Export] public Vector2 heYeOffSet;
     [Export] public float cd;
     [Export] public bool isShuiSheng;

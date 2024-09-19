@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=51 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dnuargw8dhh3c" path="res://anim/plant/peaShooter/pea_bullet.tscn" id="7_ng5db"]
 [ext_resource type="PackedScene" uid="uid://b3xor7wria67x" path="res://anim/plant/heYe/he_ye.tscn" id="7_qjlgd"]
 [ext_resource type="Texture2D" uid="uid://e7wymqnsmj2q" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Zombie.png" id="7_x4ab5"]
+[ext_resource type="PackedScene" uid="uid://l126bxkg8cqi" path="res://anim/plant/nut/nut.tscn" id="8_2b4yu"]
 [ext_resource type="PackedScene" uid="uid://ndsnqsbpyp8j" path="res://anim/plant/cherryBoom/cherryBaoDan.tscn" id="8_06nb4"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
@@ -32,6 +33,10 @@
 [ext_resource type="Script" path="res://code/BigWaveComing.cs" id="27_ennl7"]
 [ext_resource type="Script" path="res://code/Fps.cs" id="29_tprw0"]
 [ext_resource type="Script" path="res://code/OSname.cs" id="30_qyf86"]
+[ext_resource type="Script" path="res://code/plantSelect.cs" id="33_t5kvp"]
+[ext_resource type="PackedScene" uid="uid://cwmacyfsm7vhc" path="res://Scene/plantCards/pea_shooter.tscn" id="34_1vs3o"]
+[ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="35_c1fae"]
+[ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="36_43ijr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqb0x"]
 
@@ -232,6 +237,7 @@ peaShooter = ExtResource("4_0xac8")
 rePeater = ExtResource("4_c3t61")
 sunFlower = ExtResource("6_p4lfu")
 potatoDL = ExtResource("7_8fcqn")
+nut = ExtResource("8_2b4yu")
 cherryBaoDan = ExtResource("8_06nb4")
 heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
@@ -678,6 +684,38 @@ offset_top = -25.0
 offset_right = 36.0
 offset_bottom = -2.0
 script = ExtResource("30_qyf86")
+
+[node name="UIplantSelect" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -158.0
+offset_top = -55.0
+offset_right = -118.0
+offset_bottom = -15.0
+
+[node name="Panel" type="Panel" parent="UIplantSelect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 252.0
+offset_bottom = 135.0
+
+[node name="GridContainer" type="GridContainer" parent="UIplantSelect/Panel"]
+layout_mode = 0
+offset_right = 233.0
+offset_bottom = 139.0
+columns = 8
+script = ExtResource("33_t5kvp")
+
+[node name="peaShooter" parent="UIplantSelect/Panel/GridContainer" instance=ExtResource("34_1vs3o")]
+layout_mode = 2
+
+[node name="sunFlower" parent="UIplantSelect/Panel/GridContainer" instance=ExtResource("35_c1fae")]
+layout_mode = 2
+
+[node name="potatoDL" parent="UIplantSelect/Panel/GridContainer" instance=ExtResource("36_43ijr")]
+layout_mode = 2
 
 [connection signal="area_entered" from="Camera2D/CardUI/SunClct/Area2D" to="Camera2D/CardUI/SunClct" method="getSun"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]

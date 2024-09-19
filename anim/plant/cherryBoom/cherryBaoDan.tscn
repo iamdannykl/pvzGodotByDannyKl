@@ -289,6 +289,7 @@ size = Vector2(76, 84)
 [node name="cherryBaoDan" type="Area2D" node_paths=PackedStringArray("animPlayer", "种土上声音")]
 script = ExtResource("1_lyeos")
 hp = 10
+isCherryBoom = true
 noAtkPlant = true
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true

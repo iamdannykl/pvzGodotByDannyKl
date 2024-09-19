@@ -19,6 +19,7 @@ public partial class zombie_base : CharacterBody2D
     public baseCard plant;
     public baseCard plantAtked;
     public GridS gridAtked;
+    bool isEnterTheBoomArea;
     [Export] public ZomType zomType;
     private AnimationTree _animationTree;
     [Export] public int hp;
@@ -79,14 +80,17 @@ public partial class zombie_base : CharacterBody2D
             {
                 GD.PrintT(!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead), rayCast.IsColliding());
                 plant = rayCast.GetCollider() as baseCard;
-                if (plant.isZiBao)
+                if (plant != null && plant.isZiBao)
                 {
                     plant.explodeIt();
                 }
                 else
                 {
-                    gridAtked = plant.gridS;
-                    plantAtked = gridAtked.plantsOnThisGrid[gridAtked.plantsOnThisGrid.Count - 1];
+                    if (!plant.isCherryBoom && plant.gridS != null)
+                    {
+                        gridAtked = plant.gridS;
+                        plantAtked = gridAtked.plantsOnThisGrid[gridAtked.plantsOnThisGrid.Count - 1];
+                    }
                 }
                 IsEat = true;
             }

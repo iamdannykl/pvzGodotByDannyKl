@@ -1681,19 +1681,19 @@
     ]
   },
   "packageFolders": {
-    "/home/danny/.nuget/packages/": {}
+    "/Users/danny/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
+      "projectUniqueName": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
       "projectName": "Godot Projects",
-      "projectPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
-      "packagesPath": "/home/danny/.nuget/packages/",
-      "outputPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/",
+      "projectPath": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
+      "packagesPath": "/Users/danny/.nuget/packages/",
+      "outputPath": "/Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/danny/.nuget/NuGet/NuGet.Config"
+        "/Users/danny/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1711,6 +1711,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1776,20 +1781,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
-      "code": "NU1902",
+      "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'MessagePack' 1.5.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-7q36-4xx7-xcxf",
-      "libraryId": "MessagePack",
-      "targetGraphs": [
-        "net6.0"
-      ]
+      "message": "获取包漏洞数据时出错: 无法加载源 https://api.nuget.org/v3/index.json 的服务索引。"
     }
   ]
 }

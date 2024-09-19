@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {}
+    "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj": {}
   },
   "projects": {
-    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {
+    "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
+        "projectUniqueName": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
         "projectName": "Godot Projects",
-        "projectPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
-        "packagesPath": "/home/danny/.nuget/packages/",
-        "outputPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/",
+        "projectPath": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
+        "packagesPath": "/Users/danny/.nuget/packages/",
+        "outputPath": "/Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/danny/.nuget/NuGet/NuGet.Config"
+          "/Users/danny/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -97,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

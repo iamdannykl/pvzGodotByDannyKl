@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cghyah1jte51o" path="res://audio/effects/咬.ogg" id="5_xuq7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j038u"]
-size = Vector2(18, 28)
+size = Vector2(18, 22.5)
 
 [sub_resource type="Animation" id="Animation_cbvnp"]
 length = 0.9
@@ -699,7 +699,7 @@ collision_layer = 2
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, 5)
+position = Vector2(-2, 2.25)
 shape = SubResource("RectangleShape2D_j038u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

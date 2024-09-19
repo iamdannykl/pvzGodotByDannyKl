@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Godot;
 public enum PlantType
 {
@@ -7,6 +8,7 @@ public enum PlantType
     sunFlower,
     potatoDL,
     cherryBaoDan,
+    nut,
     heYe
 }
 public enum ZomType
@@ -20,11 +22,13 @@ public enum BulletType
 }
 public partial class resPlantAndZom : Node2D
 {
+    public Dictionary<PlantType, PackedScene> plantTypeToPackedScene;
     public static resPlantAndZom Instance;
     [Export] public PackedScene peaShooter;
     [Export] public PackedScene rePeater;
     [Export] public PackedScene sunFlower;
     [Export] public PackedScene potatoDL;
+    [Export] public PackedScene nut;
     [Export] public PackedScene cherryBaoDan;
     [Export] public PackedScene heYe;
     //Zombies===============================================================
@@ -35,10 +39,24 @@ public partial class resPlantAndZom : Node2D
     public override void _Ready()
     {
         Instance = this;
+        plantTypeToPackedScene = new Dictionary<PlantType, PackedScene>{
+        {PlantType.peaShooter,peaShooter},
+        {PlantType.sunFlower,sunFlower},
+        {PlantType.potatoDL,potatoDL},
+        {PlantType.cherryBaoDan,cherryBaoDan},
+        {PlantType.nut,nut},
+        {PlantType.rePeater,rePeater},
+        {PlantType.heYe,heYe}
+    };
     }
     public PackedScene matchPlant(PlantType plantType)
     {
-        switch (plantType)
+        if (plantTypeToPackedScene.TryGetValue(plantType, out PackedScene scene))
+        {
+            return scene;
+        }
+        return null;
+        /* switch (plantType)
         {
             case PlantType.peaShooter:
                 return peaShooter;
@@ -54,7 +72,7 @@ public partial class resPlantAndZom : Node2D
                 return heYe;
             default:
                 return null;
-        }
+        } */
     }
 
     public PackedScene matchZom(ZomType zomType)

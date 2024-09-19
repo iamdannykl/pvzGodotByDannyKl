@@ -7,6 +7,7 @@ public partial class baseCard : Area2D
     [Export] public AnimatedSprite2D anim;
     [Export] public int attackFrame;
     [Export] public int hp;
+    [Export] public bool isCherryBoom;
     [Export] public BulletType bulletType;
     [Export] public RayCast2D rayCast2D;
     [Export] public bool noAtkPlant;

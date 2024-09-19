@@ -1,20 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://dh24crdlarfj"]
 
 [ext_resource type="Texture2D" uid="uid://s1g7dkqso0l7" path="res://anim/plant/rePeater/rePeater.tres" id="1_3iqv4"]
-[ext_resource type="Texture2D" uid="uid://dj4ljl5b6sm8j" path="res://anim/plant/peaShooter/texturePacker/texture.sprites/DS DSi - Plants vs Zombies - Peashooter_14.tres" id="1_wtxdx"]
-[ext_resource type="Script" path="res://code/clickButton.cs" id="2_dyc3i"]
-[ext_resource type="Texture2D" uid="uid://ywwxl64arufl" path="res://anim/plant/sunFlower/DS DSi - Plants vs Zombies - Sunflower_3.PNG" id="4_xbc76"]
-[ext_resource type="Texture2D" uid="uid://bq2qkiikbgxdy" path="res://anim/plant/heYe/DS DSi - Plants vs Zombies - Lilypad and Squash_9.PNG" id="5_8cqmb"]
-[ext_resource type="Texture2D" uid="uid://ckwnclpxc64hv" path="res://anim/plant/potatoDL/potatalDL.png" id="6_f1b22"]
-[ext_resource type="Texture2D" uid="uid://gtkag3e1k0vp" path="res://anim/plant/cherryBoom/CHERRYZD_44.PNG" id="7_derni"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eghud"]
-atlas = ExtResource("6_f1b22")
-region = Rect2(16, 137, 24, 23)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2nw6"]
-atlas = ExtResource("6_f1b22")
-region = Rect2(16, 137, 24, 23)
+[ext_resource type="PackedScene" uid="uid://cwmacyfsm7vhc" path="res://Scene/plantCards/pea_shooter.tscn" id="1_abvkg"]
+[ext_resource type="PackedScene" uid="uid://cby38ysstq1gr" path="res://Scene/plantCards/re_peater.tscn" id="2_e15uq"]
+[ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="3_fv8dd"]
+[ext_resource type="PackedScene" uid="uid://b7alfw8qqqxbg" path="res://Scene/plantCards/he_ye.tscn" id="4_gc7a1"]
+[ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="5_nd37s"]
+[ext_resource type="PackedScene" uid="uid://xbn74y3ui2e5" path="res://Scene/plantCards/cherry.tscn" id="6_pk1cj"]
+[ext_resource type="Texture2D" uid="uid://j1ggkmq0rqea" path="res://anim/plant/nut/DS DSi - Plants vs Zombies - Wall-Nut_5.PNG" id="7_3upch"]
+[ext_resource type="Script" path="res://code/clickButton.cs" id="8_jkufq"]
 
 [node name="Control" type="Control"]
 z_index = 6
@@ -25,234 +19,57 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="zuoKaCao" type="Panel" parent="."]
+[node name="zuoKaCao" type="GridContainer" parent="."]
 self_modulate = Color(0.886275, 0.309804, 0, 0)
 layout_mode = 0
 offset_left = -3.0
 offset_top = 1.0
-offset_right = 21.0
-offset_bottom = 180.0
+offset_right = 28.0
+offset_bottom = 187.0
 scale = Vector2(0.792877, 0.792877)
+theme_override_constants/v_separation = 1
 
-[node name="peaShooter" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_top = 1.0
-offset_right = 31.0
-offset_bottom = 32.0
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("1_wtxdx")
-script = ExtResource("2_dyc3i")
-sunCost = 100
-heYeOffSet = Vector2(0, -5)
-cd = 7.5
-metadata/_edit_group_ = true
+[node name="peaShooter" parent="zuoKaCao" instance=ExtResource("1_abvkg")]
+layout_mode = 2
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/peaShooter"]
-layout_mode = 0
-offset_right = 31.0
-offset_bottom = 31.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("1_wtxdx")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
+[node name="rePeater" parent="zuoKaCao" instance=ExtResource("2_e15uq")]
+layout_mode = 2
 
-[node name="Timer" type="Timer" parent="zuoKaCao/peaShooter"]
-wait_time = 0.1
+[node name="sunFlower" parent="zuoKaCao" instance=ExtResource("3_fv8dd")]
+layout_mode = 2
 
-[node name="rePeater" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 22.3224
-offset_right = 27.3131
-offset_bottom = 45.3224
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("1_3iqv4")
-script = ExtResource("2_dyc3i")
-plantType = 1
-sunCost = 200
-heYeOffSet = Vector2(0, -5)
-cd = 7.5
-metadata/_edit_group_ = true
+[node name="heYe" parent="zuoKaCao" instance=ExtResource("4_gc7a1")]
+layout_mode = 2
+plantType = 6
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/rePeater"]
-layout_mode = 0
-offset_right = 26.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("1_3iqv4")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
+[node name="potatoDL" parent="zuoKaCao" instance=ExtResource("5_nd37s")]
+layout_mode = 2
 
-[node name="Timer" type="Timer" parent="zuoKaCao/rePeater"]
-wait_time = 0.1
-
-[node name="sunFlower" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 43.3318
-offset_right = 27.3131
-offset_bottom = 67.3318
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("4_xbc76")
-script = ExtResource("2_dyc3i")
-plantType = 2
-sunCost = 50
-offset = Vector2(0, 5)
-heYeOffSet = Vector2(0, -10.5)
-cd = 7.5
-metadata/_edit_group_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/sunFlower"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("4_xbc76")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
-
-[node name="Timer" type="Timer" parent="zuoKaCao/sunFlower"]
-wait_time = 0.1
-
-[node name="heYe" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 65.6542
-offset_right = 27.3131
-offset_bottom = 88.6542
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("5_8cqmb")
-script = ExtResource("2_dyc3i")
+[node name="nut" type="TextureButton" parent="zuoKaCao"]
+layout_mode = 2
+texture_normal = ExtResource("7_3upch")
+script = ExtResource("8_jkufq")
 plantType = 5
-offset = Vector2(0, -5)
+sunCost = 50
+offset = Vector2(-3, 2)
+heYeOffSet = Vector2(3, -10)
 cd = 7.5
-isShuiSheng = true
-metadata/_edit_group_ = true
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/heYe"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/nut"]
 layout_mode = 0
 offset_right = 25.0
 offset_bottom = 24.0
 max_value = 1.0
 step = 0.0
 fill_mode = 4
-texture_progress = ExtResource("5_8cqmb")
+texture_progress = ExtResource("7_3upch")
 tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
 
-[node name="Timer" type="Timer" parent="zuoKaCao/heYe"]
+[node name="Timer" type="Timer" parent="zuoKaCao/nut"]
 wait_time = 0.1
 
-[node name="potatoDL" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 85.3504
-offset_right = 27.3131
-offset_bottom = 108.35
-scale = Vector2(0.900738, 0.900738)
-texture_normal = SubResource("AtlasTexture_eghud")
-script = ExtResource("2_dyc3i")
-plantType = 3
-offset = Vector2(0, -8.5)
-heYeOffSet = Vector2(0, 3)
-cd = 7.5
-metadata/_edit_group_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/potatoDL"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = SubResource("AtlasTexture_v2nw6")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
-
-[node name="Timer" type="Timer" parent="zuoKaCao/potatoDL"]
-wait_time = 0.1
-
-[node name="cherry" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 103.734
-offset_right = 27.3131
-offset_bottom = 128.734
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("7_derni")
-script = ExtResource("2_dyc3i")
-plantType = 4
-heYeOffSet = Vector2(0, -3)
-cd = 7.5
-metadata/_edit_group_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/cherry"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("7_derni")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
-
-[node name="Timer" type="Timer" parent="zuoKaCao/cherry"]
-wait_time = 0.1
-
-[node name="cherry2" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 126.056
-offset_right = 27.3131
-offset_bottom = 151.056
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("7_derni")
-script = ExtResource("2_dyc3i")
-plantType = 4
-heYeOffSet = Vector2(0, -3)
-cd = 7.5
-metadata/_edit_group_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/cherry2"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("7_derni")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
-
-[node name="Timer" type="Timer" parent="zuoKaCao/cherry2"]
-wait_time = 0.1
-
-[node name="cherry3" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 1
-offset_left = 1.31308
-offset_top = 148.378
-offset_right = 27.3131
-offset_bottom = 173.378
-scale = Vector2(0.900738, 0.900738)
-texture_normal = ExtResource("7_derni")
-script = ExtResource("2_dyc3i")
-plantType = 4
-heYeOffSet = Vector2(0, -3)
-cd = 7.5
-metadata/_edit_group_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/cherry3"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("7_derni")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
-
-[node name="Timer" type="Timer" parent="zuoKaCao/cherry3"]
-wait_time = 0.1
+[node name="cherry" parent="zuoKaCao" instance=ExtResource("6_pk1cj")]
+layout_mode = 2
 
 [node name="xuanKaCao" type="Panel" parent="."]
 visible = false
