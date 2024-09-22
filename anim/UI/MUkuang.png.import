@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnppcqxdfoew2"
-path="res://.godot/imported/ZombieModernAllStarGroup_1536_00.png-7565fc7cfc2e9bbd4785143853acf3d1.ctex"
+uid="uid://dify0vllsp8hw"
+path="res://.godot/imported/MUkuang.png-1e92ff933a1727bf10bbda830592e1c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://anim/skeletonZom/ZombieModernAllStarGroup_1536_00.png"
-dest_files=["res://.godot/imported/ZombieModernAllStarGroup_1536_00.png-7565fc7cfc2e9bbd4785143853acf3d1.ctex"]
+source_file="res://anim/UI/MUkuang.png"
+dest_files=["res://.godot/imported/MUkuang.png-1e92ff933a1727bf10bbda830592e1c6.ctex"]
 
 [params]
 

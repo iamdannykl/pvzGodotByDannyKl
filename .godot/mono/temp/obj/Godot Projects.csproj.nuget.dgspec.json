@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj": {}
+    "D:\\Download\\pvzGodotByDannyKl-gd4.3 (1)\\pvzGodotByDannyKl-gd4.3\\Godot Projects.csproj": {}
   },
   "projects": {
-    "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj": {
+    "D:\\Download\\pvzGodotByDannyKl-gd4.3 (1)\\pvzGodotByDannyKl-gd4.3\\Godot Projects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
+        "projectUniqueName": "D:\\Download\\pvzGodotByDannyKl-gd4.3 (1)\\pvzGodotByDannyKl-gd4.3\\Godot Projects.csproj",
         "projectName": "Godot Projects",
-        "projectPath": "/Users/danny/godotProject/pvzGodotByDannyKl/Godot Projects.csproj",
-        "packagesPath": "/Users/danny/.nuget/packages/",
-        "outputPath": "/Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/",
+        "projectPath": "D:\\Download\\pvzGodotByDannyKl-gd4.3 (1)\\pvzGodotByDannyKl-gd4.3\\Godot Projects.csproj",
+        "packagesPath": "C:\\Users\\p1503\\.nuget\\packages\\",
+        "outputPath": "D:\\Download\\pvzGodotByDannyKl-gd4.3 (1)\\pvzGodotByDannyKl-gd4.3\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/danny/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\p1503\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +50,10 @@
               "version": "[4.3.0, )"
             },
             "GodotSharp": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "GodotSharpEditor": {
               "target": "Package",
               "version": "[4.3.0, )"
             },
@@ -89,15 +95,11 @@
               "version": "[6.0.33, 6.0.33]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[6.0.33, 6.0.33]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.osx-arm64",
+              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[6.0.33, 6.0.33]"
             }
           ],
@@ -106,12 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "osx-arm64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

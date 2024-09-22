@@ -1,14 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dh24crdlarfj"]
+[gd_scene load_steps=2 format=3 uid="uid://dh24crdlarfj"]
 
-[ext_resource type="Texture2D" uid="uid://s1g7dkqso0l7" path="res://anim/plant/rePeater/rePeater.tres" id="1_3iqv4"]
-[ext_resource type="PackedScene" uid="uid://cwmacyfsm7vhc" path="res://Scene/plantCards/pea_shooter.tscn" id="1_abvkg"]
-[ext_resource type="PackedScene" uid="uid://cby38ysstq1gr" path="res://Scene/plantCards/re_peater.tscn" id="2_e15uq"]
-[ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="3_fv8dd"]
-[ext_resource type="PackedScene" uid="uid://b7alfw8qqqxbg" path="res://Scene/plantCards/he_ye.tscn" id="4_gc7a1"]
-[ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="5_nd37s"]
-[ext_resource type="PackedScene" uid="uid://xbn74y3ui2e5" path="res://Scene/plantCards/cherry.tscn" id="6_pk1cj"]
-[ext_resource type="Texture2D" uid="uid://j1ggkmq0rqea" path="res://anim/plant/nut/DS DSi - Plants vs Zombies - Wall-Nut_5.PNG" id="7_3upch"]
-[ext_resource type="Script" path="res://code/clickButton.cs" id="8_jkufq"]
+[ext_resource type="Script" path="res://code/plantSelect.cs" id="1_p37t8"]
 
 [node name="Control" type="Control"]
 z_index = 6
@@ -19,74 +11,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="zuoKaCao" type="GridContainer" parent="."]
+[node name="zuoKaCao" type="Node2D" parent="."]
 self_modulate = Color(0.886275, 0.309804, 0, 0)
-layout_mode = 0
-offset_left = -2.0
-offset_top = 3.0
-offset_right = 29.0
-offset_bottom = 189.0
 scale = Vector2(0.792877, 0.792877)
-theme_override_constants/v_separation = 1
+script = ExtResource("1_p37t8")
+MAXcardNUm = 8
 
-[node name="peaShooter" parent="zuoKaCao" instance=ExtResource("1_abvkg")]
-layout_mode = 2
+[node name="Node2D" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 16.8689)
 
-[node name="rePeater" parent="zuoKaCao" instance=ExtResource("2_e15uq")]
-layout_mode = 2
+[node name="Node2D2" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 33.7379)
 
-[node name="sunFlower" parent="zuoKaCao" instance=ExtResource("3_fv8dd")]
-layout_mode = 2
+[node name="Node2D3" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 50.6068)
 
-[node name="heYe" parent="zuoKaCao" instance=ExtResource("4_gc7a1")]
-layout_mode = 2
-plantType = 6
+[node name="Node2D4" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 67.4758)
 
-[node name="potatoDL" parent="zuoKaCao" instance=ExtResource("5_nd37s")]
-layout_mode = 2
+[node name="Node2D5" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 84.3447)
 
-[node name="nut" type="TextureButton" parent="zuoKaCao"]
-layout_mode = 2
-texture_normal = ExtResource("7_3upch")
-script = ExtResource("8_jkufq")
-plantType = 5
-sunCost = 50
-offset = Vector2(-3, 2)
-heYeOffSet = Vector2(3, -10)
-cd = 7.5
+[node name="Node2D6" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 101.214)
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="zuoKaCao/nut"]
-layout_mode = 0
-offset_right = 25.0
-offset_bottom = 24.0
-max_value = 1.0
-step = 0.0
-fill_mode = 4
-texture_progress = ExtResource("7_3upch")
-tint_progress = Color(0.314316, 0.314316, 0.314316, 1)
+[node name="Node2D7" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 118.083)
 
-[node name="Timer" type="Timer" parent="zuoKaCao/nut"]
-wait_time = 0.1
+[node name="Node2D8" type="Node2D" parent="zuoKaCao"]
+position = Vector2(0, 134.952)
 
-[node name="cherry" parent="zuoKaCao" instance=ExtResource("6_pk1cj")]
-layout_mode = 2
-
-[node name="xuanKaCao" type="Panel" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 31.0
-offset_top = 9.0
-offset_right = 165.0
-offset_bottom = 127.0
-
-[node name="ItemList" type="ItemList" parent="xuanKaCao"]
-layout_mode = 0
-offset_right = 130.0
-offset_bottom = 97.0
-item_count = 5
-max_columns = 4
-item_0/icon = ExtResource("1_3iqv4")
-item_1/icon = ExtResource("1_3iqv4")
-item_2/icon = ExtResource("1_3iqv4")
-item_3/icon = ExtResource("1_3iqv4")
-item_4/icon = ExtResource("1_3iqv4")
+[node name="yx" type="Node2D" parent="."]
+position = Vector2(16, 107)
+scale = Vector2(0.792877, 0.792877)

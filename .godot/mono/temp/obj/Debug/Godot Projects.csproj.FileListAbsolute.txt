@@ -93,3 +93,29 @@ D:/Datas/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/bin/Debug/YamlDotNet.d
 /Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.pdb
 /Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/Godot Projects.genruntimeconfig.cache
 /Users/danny/godotProject/pvzGodotByDannyKl/.godot/mono/temp/obj/Debug/ref/Godot Projects.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Godot Projects.deps.json
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Godot Projects.runtimeconfig.json
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Godot Projects.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Godot Projects.pdb
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\MessagePack.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\Newtonsoft.Json.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\System.Text.Encodings.Web.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\System.Text.Json.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\YamlDotNet.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\bin\Debug\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.csproj.AssemblyReference.cache
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfoInputs.cache
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.AssemblyInfo.cs
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.csproj.CoreCompileInputs.cache
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Pr.43AD30E5.Up2Date
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\refint\Godot Projects.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.pdb
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.genruntimeconfig.cache
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\ref\Godot Projects.dll
+D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\.godot\mono\temp\obj\Debug\Godot Projects.sourcelink.json

@@ -12,11 +12,9 @@ atlas = ExtResource("1_4g845")
 region = Rect2(16, 137, 24, 23)
 
 [node name="potatoDL" type="TextureButton"]
-offset_left = 1.31308
-offset_top = 85.3504
-offset_right = 27.3131
-offset_bottom = 108.35
-scale = Vector2(0.900738, 0.900738)
+offset_right = 26.0
+offset_bottom = 23.0
+pivot_offset = Vector2(0, 21)
 texture_normal = SubResource("AtlasTexture_eghud")
 script = ExtResource("2_a1y8q")
 plantType = 3

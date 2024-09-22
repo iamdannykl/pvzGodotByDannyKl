@@ -4,13 +4,12 @@
 [ext_resource type="Script" path="res://code/clickButton.cs" id="2_wja7y"]
 
 [node name="sunFlower" type="TextureButton"]
-offset_left = 1.31308
-offset_top = 43.3318
-offset_right = 27.3131
-offset_bottom = 67.3318
-scale = Vector2(0.900738, 0.900738)
+offset_right = 26.0
+offset_bottom = 24.0
+pivot_offset = Vector2(1, 22)
 texture_normal = ExtResource("1_ijivs")
 script = ExtResource("2_wja7y")
+UIpianYI = Vector2(1, 0)
 plantType = 2
 sunCost = 50
 offset = Vector2(0, 5)
