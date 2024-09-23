@@ -29,6 +29,7 @@ public partial class clickButton : TextureButton
     public bool isOn;
     public bool isInList;
     public bool isAndroidMode;
+    public bool isGrey;
     Vector2 bili;
     bool sunEnough;
     bool coldEnough = true;
@@ -36,10 +37,13 @@ public partial class clickButton : TextureButton
     int currentSun;
     private bool wantPlace;
     private bool canPlace;
+    bool isWhiteCard = true;
     int leftCaoCardNum;
+    Node2D selectBoard;
     public GridS grid;
     plantSelect lftCard;
     float currentTimeInCD;
+    clickButton greyCard;
     public int CurrentSun
     {
         get => currentSun;
@@ -113,20 +117,24 @@ public partial class clickButton : TextureButton
     }
     public override void _Ready()
     {
-        mask = GetNode<TextureProgressBar>("TextureProgressBar");
-        loadZT();
-        //Connect("button_down", new Callable(this, nameof(_on_button_down)));
-        Connect("button_up", new Callable(this, nameof(_on_button_up)));
-        Connect("button_down", new Callable(this, nameof(_on_button_down)));
-        Connect("mouse_entered", new Callable(this, nameof(mouse_entered)));
-        Connect("mouse_exited", new Callable(this, nameof(mouse_exited)));
-        bili = Scale;
+        if (!Engine.IsEditorHint())
+        {
+            mask = GetNode<TextureProgressBar>("TextureProgressBar");
+            loadZT();
+            //Connect("button_down", new Callable(this, nameof(_on_button_down)));
+            Connect("button_up", new Callable(this, nameof(_on_button_up)));
+            Connect("button_down", new Callable(this, nameof(_on_button_down)));
+            Connect("mouse_entered", new Callable(this, nameof(mouse_entered)));
+            Connect("mouse_exited", new Callable(this, nameof(mouse_exited)));
+            bili = Scale;
+        }
     }
     async void loadZT()
     {
         await Task.Delay(500);
         canIclick = true;
         lftCard = GetTree().CurrentScene.GetNode<plantSelect>("Camera2D/CardUI/zuoKaCao");
+        selectBoard = GetTree().CurrentScene.GetNode<sortTheCard>("Camera2D/UIplantSelect/Control/GridContainer");
     }
     void mouse_entered()
     {
@@ -195,17 +203,23 @@ public partial class clickButton : TextureButton
         {
             if (!isInList)
             {
-                if (lftCard != null && canIclick && lftCard.waitPlantCards.Count < lftCard.MAXcardNUm)
+                if (lftCard != null && canIclick && ((!isGrey) || IsInstanceValid(greyCard) && !greyCard.isGrey) && lftCard.waitPlantCards.Count < lftCard.MAXcardNUm)
                 {
-                    clickButton greyCard = Duplicate() as clickButton;
-                    GetParent<Node2D>().AddChild(greyCard);
-                    greyCard.Modulate = new Color(0.7f, 0.7f, 0.7f);
+                    if (isWhiteCard)
+                    {
+                        isWhiteCard = false;
+                        greyCard = Duplicate() as clickButton;
+                        GetParent<Node2D>().AddChild(greyCard);
+                        greyCard.isGrey = true;
+                        greyCard.isWhiteCard = false;
+                        greyCard.Modulate = new Color(0.7f, 0.7f, 0.7f);
+                    }
                     flyToLeftCardCao();
                 }
             }
             else
             {
-                //backToSelect();
+                backToSelect();
             }
         }
     }
@@ -240,8 +254,30 @@ public partial class clickButton : TextureButton
     }
     async void backToSelect()
     {
+        isInList = false;
+        Vector2 oriPos = GlobalPosition;
+        Visible = false;
+        GetParent<Node2D>().RemoveChild(this);
+        ZIndex += 1;
         lftCard.waitPlantCards.Remove(this);
-        //float unitDis = calculateUnitDistance();
+        Node2D itemC = selectBoard.GetChild<Node2D>(leftCaoCardNum);//待改<==============
+        itemC.AddChild(this);
+        GlobalPosition = oriPos;
+        Visible = true;
+        Vector2 tarPos = itemC.GlobalPosition/*  - new Vector2(UIpianYI.X, UIpianYI.Y) */;
+        Vector2 dicVec2 = (tarPos - oriPos).Normalized();
+        float dis = (tarPos - oriPos).Length();
+        float timeLft = 0.2f;
+        float unitDis = calculateUnitDistance(dis, timeLft, 0.0166f);
+        while (timeLft >= 0)
+        {
+            await Task.Delay(16);
+            GlobalPosition += unitDis * dicVec2;
+            timeLft -= 0.0166f;
+        }
+        GlobalPosition = tarPos;
+        ZIndex -= 1;
+        isInList = false;
     }
     private void CDEnter()
     {
@@ -314,28 +350,27 @@ public partial class clickButton : TextureButton
     }
     public override void _Process(double delta)
     {
-        if (Engine.IsEditorHint())
+        if (!Engine.IsEditorHint())
         {
-            return;
-        }
-        CurrentSun = SunClct.Instance.SunNum;
-        if (isReadyToPlace && WantPlace && plantInstan != null)
-        {
-            plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置
-            grid = GridSys.Instance.GetGridByMouse();
-            if ((grid != null) && (
-            (grid.gtp == HangType.water && isShuiSheng && !grid.isHeYe) ||
-            (grid.gtp == HangType.water && !isShuiSheng && grid.isHeYe && grid.plantsOnThisGrid.Count == 1) ||
-            (grid.gtp == HangType.grass && !isShuiSheng && grid.plantsOnThisGrid.Count == 0)
-            ))
+            CurrentSun = SunClct.Instance.SunNum;
+            if (isReadyToPlace && WantPlace && plantInstan != null)
             {
-                shadow.Visible = true;
-                shadow.GlobalPosition = grid.Position - offset;
-                PlantIt(plantInstan);
-            }
-            else
-            {
-                shadow.Visible = false;
+                plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置
+                grid = GridSys.Instance.GetGridByMouse();
+                if ((grid != null) && (
+                (grid.gtp == HangType.water && isShuiSheng && !grid.isHeYe) ||
+                (grid.gtp == HangType.water && !isShuiSheng && grid.isHeYe && grid.plantsOnThisGrid.Count == 1) ||
+                (grid.gtp == HangType.grass && !isShuiSheng && grid.plantsOnThisGrid.Count == 0)
+                ))
+                {
+                    shadow.Visible = true;
+                    shadow.GlobalPosition = grid.Position - offset;
+                    PlantIt(plantInstan);
+                }
+                else
+                {
+                    shadow.Visible = false;
+                }
             }
         }
     }
