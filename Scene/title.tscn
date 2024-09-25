@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://c1dcqwowyv2qv"]
+[gd_scene load_steps=33 format=3 uid="uid://c1dcqwowyv2qv"]
 
 [ext_resource type="Texture2D" uid="uid://bva8h2eyvka15" path="res://anim/backGround/bgRes/DS DSi - Plants vs Zombies - Title Screen.png" id="1_etkse"]
 [ext_resource type="Script" path="res://Scene/title.cs" id="1_j25ri"]
 [ext_resource type="Texture2D" uid="uid://bxxmma6syym7c" path="res://black.png" id="2_csxh8"]
 [ext_resource type="Script" path="res://Scene/Edit.cs" id="3_hocyy"]
 [ext_resource type="Script" path="res://code/quit.cs" id="4_c4o8n"]
+[ext_resource type="Theme" uid="uid://cg4fh81xxnvje" path="res://theme/touMing.tres" id="4_f0r0q"]
 [ext_resource type="PackedScene" uid="uid://bbtwfc6mkqx6x" path="res://Scene/xuan_guan.tscn" id="5_lit06"]
 [ext_resource type="AudioStream" uid="uid://dhwcstiviam38" path="res://audio/effects/tap.ogg" id="5_yjse8"]
 [ext_resource type="Texture2D" uid="uid://bdphnv2qw1h07" path="res://DS DSi - Plants vs Zombies - Title Screen.png" id="6_ohtlx"]
@@ -35,6 +36,59 @@ region = Rect2(555, 99, 81, 62)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pgbk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_e8w0j"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_krqy4"]
+resource_name = "down"
+length = 0.72
+step = 0.0167
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-97, -0.25, 0, 0.25, 0, 100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7181)
+}
+
+[sub_resource type="Animation" id="Animation_4dbk6"]
+resource_name = "up"
+length = 0.72
+step = 0.0167
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(100, -0.25, 0, 0.25, 0, 4.5, -0.118363, 43.3998, 0.15, -55, -97, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.35, 0.7167)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oyf66"]
+_data = {
+"RESET": SubResource("Animation_e8w0j"),
+"down": SubResource("Animation_krqy4"),
+"up": SubResource("Animation_4dbk6")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_708bx"]
 atlas = ExtResource("13_wpldm")
@@ -78,6 +132,7 @@ offset_left = -110.0
 offset_top = -35.0
 offset_right = -21.0
 offset_bottom = -4.0
+theme = ExtResource("4_f0r0q")
 theme_type_variation = &"FlatButton"
 text = "EDIT"
 script = ExtResource("3_hocyy")
@@ -95,6 +150,7 @@ offset_left = -86.0
 offset_top = 53.0
 offset_right = -38.0
 offset_bottom = 84.0
+theme = ExtResource("4_f0r0q")
 theme_type_variation = &"FlatButton"
 text = "QUIT"
 script = ExtResource("4_c4o8n")
@@ -137,11 +193,15 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_5pgbk")
 
 [node name="xuanGuan" parent="." instance=ExtResource("5_lit06")]
-visible = false
-offset_left = -129.0
-offset_top = -86.0
-offset_right = -129.0
-offset_bottom = -86.0
+offset_left = -133.0
+offset_top = 100.0
+offset_right = -133.0
+offset_bottom = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="xuanGuan"]
+libraries = {
+"": SubResource("AnimationLibrary_oyf66")
+}
 
 [node name="QQ" type="TextureButton" parent="."]
 z_index = 1

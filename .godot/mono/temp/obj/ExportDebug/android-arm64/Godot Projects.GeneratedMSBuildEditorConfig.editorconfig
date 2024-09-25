@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = D:\Datas\GodotProjects\pvzGodotByDannyKl\
+build_property.GodotProjectDir = D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,6 +13,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GodotProjects
-build_property.ProjectDir = D:\Datas\GodotProjects\pvzGodotByDannyKl\
+build_property.ProjectDir = D:\Download\pvzGodotByDannyKl-gd4.3 (1)\pvzGodotByDannyKl-gd4.3\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

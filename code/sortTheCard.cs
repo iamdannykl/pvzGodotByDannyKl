@@ -5,10 +5,10 @@ public partial class sortTheCard : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	Vector2 oriPos;
-	float xJianJu;
-	float yJianJu;
+	int xJianJu;
+	int yJianJu;
 	[Export] public Node2D yx;
-	Vector2I hangLieNum = new Vector2I(1, 1);
+	Vector2I hangLieNum = new Vector2I(8, 6);
 	[Export]
 	public Vector2I HangLieNum
 	{
@@ -20,8 +20,8 @@ public partial class sortTheCard : Node2D
 				return;
 			}
 			Vector2 Size = yx.GlobalPosition - GlobalPosition;
-			xJianJu = Size.X / value.X;
-			yJianJu = Size.Y / value.Y;
+			xJianJu = (int)(Size.X / value.X);
+			yJianJu = (int)(Size.Y / value.Y);
 			oriPos = GlobalPosition + /* new Vector2(xJianJu, yJianJu) / 2; */new Vector2(0, yJianJu);
 			int i = 0;
 			foreach (Node2D item in GetChildren())
@@ -39,12 +39,7 @@ public partial class sortTheCard : Node2D
 		get => hasSort;
 		set
 		{
-			sortCard();
 			hasSort = value;
 		}
-	}
-	void sortCard()
-	{
-		GD.Print("sort");
 	}
 }

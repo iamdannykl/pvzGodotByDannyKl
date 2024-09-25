@@ -5,13 +5,14 @@
 [ext_resource type="Script" path="res://code/GridSys.cs" id="2_ydaw8"]
 [ext_resource type="AudioStream" uid="uid://cqlrhgn0i5053" path="res://audio/bgm/植物大战僵尸-音乐全收录_P2_白天.mp3" id="4_0oftd"]
 
-[node name="bkgrd" type="Sprite2D" node_paths=PackedStringArray("waveTimer")]
+[node name="bkgrd" type="Sprite2D" node_paths=PackedStringArray("waveTimer", "startTimer")]
 texture = ExtResource("1_gp5p2")
 region_enabled = true
 region_rect = Rect2(1.67463, 1.97253, 447.183, 191.999)
 script = ExtResource("2_lklrp")
 waveTimer = NodePath("waveTimer")
 eachBoJianGe = 4
+startTimer = NodePath("Timer")
 
 [node name="zuoxia" type="Node2D" parent="."]
 position = Vector2(-129, 71)
@@ -28,7 +29,6 @@ region_rect = Rect2(248, 242, 246, 169)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-autostart = true
 
 [node name="waveTimer" type="Timer" parent="."]
 wait_time = 50.0

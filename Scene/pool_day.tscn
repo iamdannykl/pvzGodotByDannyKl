@@ -5,13 +5,14 @@
 [ext_resource type="Script" path="res://code/createZom.cs" id="2_w5sd1"]
 [ext_resource type="AudioStream" uid="uid://cot0ucu3fn0r6" path="res://audio/bgm/泳池.mp3" id="4_bb8k3"]
 
-[node name="poolDay" type="Sprite2D" node_paths=PackedStringArray("waveTimer")]
+[node name="poolDay" type="Sprite2D" node_paths=PackedStringArray("waveTimer", "startTimer")]
 texture = ExtResource("1_6bbtf")
 region_enabled = true
 region_rect = Rect2(11, 47, 447, 192)
 script = ExtResource("2_w5sd1")
 waveTimer = NodePath("waveTimer")
 eachBoJianGe = 4
+startTimer = NodePath("Timer")
 
 [node name="zuoxia" type="Node2D" parent="."]
 position = Vector2(-127, 82)
@@ -22,7 +23,6 @@ position = Vector2(77, -57)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 8.0
 one_shot = true
-autostart = true
 
 [node name="waveTimer" type="Timer" parent="."]
 wait_time = 40.0

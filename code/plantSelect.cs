@@ -8,7 +8,6 @@ public partial class plantSelect : Node2D
 	[Export] public int MAXcardNUm;
 	/* public GridContainer leftCardCao; */
 	public List<clickButton> waitPlantCards = new List<clickButton>();
-
 	Vector2 oriPos;
 	float xJianJu;
 	float yJianJu;
@@ -43,12 +42,31 @@ public partial class plantSelect : Node2D
 		get => hasSort;
 		set
 		{
-			sortCard();
 			hasSort = value;
 		}
 	}
-	void sortCard()
+	public void sortCardInList(int selfIdx, Vector2 pos, Node2D node2D)
 	{
-		GD.Print("sort");
+		Vector2 zanCun = new Vector2(0, 0);
+		for (int i = selfIdx + 1; i < waitPlantCards.Count; i++)
+		{
+			Node2D up = waitPlantCards[i].GetParent<Node2D>();
+			if (!waitPlantCards[i - 1].isInList)
+			{
+				GD.Print("if1");
+				zanCun = up.GlobalPosition;
+				up.RemoveChild(waitPlantCards[i]);
+				node2D.AddChild(waitPlantCards[i]);
+				waitPlantCards[i].GlobalPosition = pos - new Vector2(waitPlantCards[i].UIpianYI.X, waitPlantCards[i].UIpianYI.Y);
+			}
+			else
+			{
+				GD.Print("else1");
+				up.RemoveChild(waitPlantCards[i]);
+				GetChild<Node2D>(i - 1).AddChild(waitPlantCards[i]);
+				waitPlantCards[i].GlobalPosition = zanCun - new Vector2(waitPlantCards[i].UIpianYI.X, waitPlantCards[i].UIpianYI.Y);
+				zanCun = up.GlobalPosition;
+			}
+		}
 	}
 }

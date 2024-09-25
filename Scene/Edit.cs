@@ -13,6 +13,6 @@ public partial class Edit : Button
         GetNode<AudioStreamPlayer>("AudioStreamPlayer").Play();
         start.GetNode<Button>("Panel/ADD").Visible = true;
         start.GetNode<Label>("Panel/MODE").Text = "EditMode";
-        start.Visible = true;
+        start.GetNode<AnimationPlayer>("AnimationPlayer").Play("up");
     }
 }

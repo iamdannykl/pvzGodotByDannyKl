@@ -14,11 +14,14 @@ public partial class scene : Node2D
         {
             GetTree().Root.GetNode<Control>("GameScene/Camera2D/CardUI").Visible = true;
             GetTree().Root.GetNode<Control>("GameScene/Camera2D/zomCardUI").Visible = false;
+            GetTree().Root.GetNode<Control>("GameScene/Camera2D/UIplantSelect").Visible = true;
+            GetTree().Root.GetNode<AnimationPlayer>("GameScene/Camera2D/AnimationPlayer").Play("rightMove");
         }
         else if (InMode == playMode.edit)
         {
             GetTree().Root.GetNode<Control>("GameScene/Camera2D/CardUI").Visible = false;
             GetTree().Root.GetNode<Control>("GameScene/Camera2D/zomCardUI").Visible = true;
+            GetTree().Root.GetNode<Control>("GameScene/Camera2D/UIplantSelect").Visible = false;
         }
     }
 }

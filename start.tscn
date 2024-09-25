@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmlfjne8ramlg"]
+[gd_scene load_steps=11 format=3 uid="uid://cmlfjne8ramlg"]
 
 [ext_resource type="Texture2D" uid="uid://blujqye77knm" path="res://anim/backGround/116729.png" id="1_2gy6i"]
 [ext_resource type="Script" path="res://MyOptionButton.cs" id="1_kt81u"]
-[ext_resource type="StyleBox" uid="uid://bf2kv7y8mak8s" path="res://theme/start.tres" id="1_pqh5q"]
 [ext_resource type="Texture2D" uid="uid://cgkvaktpee1d2" path="res://anim/backGround/121700.png" id="2_mu4ga"]
 [ext_resource type="Texture2D" uid="uid://co38ss68yj1jv" path="res://anim/backGround/155613.png" id="3_dlwaa"]
 [ext_resource type="Texture2D" uid="uid://msvvoo5hngwe" path="res://anim/backGround/155614.png" id="4_0jfe4"]
@@ -27,9 +26,8 @@ size_flags_horizontal = 4
 layout_mode = 0
 offset_left = -138.0
 offset_top = -92.0
-offset_right = 117.0
-offset_bottom = 85.0
-theme_override_styles/panel = ExtResource("1_pqh5q")
+offset_right = 199.0
+offset_bottom = 106.0
 
 [node name="GuanQiaSetting" type="Label" parent="Panel"]
 layout_mode = 1
@@ -81,11 +79,12 @@ script = ExtResource("1_kt81u")
 [node name="sunOriginal" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 58.0
+offset_top = 66.0
 offset_right = 93.0
-offset_bottom = 82.0
+offset_bottom = 90.0
 theme_override_font_sizes/font_size = 17
-text = "初始阳光："
+text = "初始阳光：
+(随便输数字）"
 vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Panel/sunOriginal"]
@@ -96,6 +95,7 @@ offset_bottom = 31.0
 theme_override_font_sizes/font_size = 16
 
 [node name="playMode" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 8.0
 offset_top = 95.0
@@ -141,13 +141,14 @@ theme_override_font_sizes/font_size = 16
 text = "返回"
 script = ExtResource("8_pr1ak")
 start = NodePath("../..")
+isAddWindow = true
 
 [node name="GuanQiaName" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 124.0
+offset_top = 120.0
 offset_right = 88.0
-offset_bottom = 147.0
+offset_bottom = 143.0
 text = "关卡名称："
 
 [node name="LineEdit" type="LineEdit" parent="Panel/GuanQiaName"]
@@ -159,11 +160,13 @@ offset_bottom = 24.0
 theme_override_font_sizes/font_size = 14
 
 [node name="DaoRu" type="Button" parent="Panel" node_paths=PackedStringArray("fileDialog")]
+visible = false
 layout_mode = 0
-offset_left = 161.0
-offset_top = 58.0
-offset_right = 249.0
-offset_bottom = 89.0
+offset_left = 210.0
+offset_top = 59.0
+offset_right = 281.324
+offset_bottom = 97.251
+theme_override_font_sizes/font_size = 10
 text = "从外部导入"
 script = ExtResource("10_u7y2k")
 fileDialog = NodePath("FileDialog")

@@ -3,13 +3,13 @@ using System;
 
 public partial class ADD : Button
 {
-    [Export] public Control create;
+    [Export] public AnimationPlayer anim;
     public override void _Ready()
     {
         Connect("button_up", new Callable(this, "ADDitems"));
     }
     void ADDitems()
     {
-        create.Visible = true;
+        anim.Play("up");
     }
 }

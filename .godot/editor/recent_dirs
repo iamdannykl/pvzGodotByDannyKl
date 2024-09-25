@@ -1,6 +1,9 @@
 D:/Apps/Gapk
-D:/Apps/GDAPPS/PVZGD
 res://code
+res://theme
+res://theme/kenney
+res://Scene
+D:/Apps/GDAPPS/PVZGD
 res://
 res://Scene/plantCards
 res://anim/plant/nut
@@ -12,6 +15,5 @@ res://font
 res://anim
 res://shader
 res://anim/icon
-res://Scene
 res://anim/plant/sunFlower
 res://anim/plant/rePeater

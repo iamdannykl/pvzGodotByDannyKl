@@ -30,6 +30,7 @@ public partial class clickButton : TextureButton
     public bool isInList;
     public bool isAndroidMode;
     public bool isGrey;
+    int selfIndex;
     Vector2 bili;
     bool sunEnough;
     bool coldEnough = true;
@@ -135,6 +136,7 @@ public partial class clickButton : TextureButton
         canIclick = true;
         lftCard = GetTree().CurrentScene.GetNode<plantSelect>("Camera2D/CardUI/zuoKaCao");
         selectBoard = GetTree().CurrentScene.GetNode<sortTheCard>("Camera2D/UIplantSelect/Control/GridContainer");
+        selfIndex = GetParent<Node2D>().GetIndex();
     }
     void mouse_entered()
     {
@@ -238,6 +240,7 @@ public partial class clickButton : TextureButton
         GlobalPosition = oriPos;
         Visible = true;
         Vector2 tarPos = itemC.GlobalPosition - new Vector2(UIpianYI.X, UIpianYI.Y);
+        GD.Print("oriPos:" + oriPos);
         Vector2 dicVec2 = (tarPos - oriPos).Normalized();
         float dis = (tarPos - oriPos).Length();
         float timeLft = 0.2f;
@@ -255,16 +258,20 @@ public partial class clickButton : TextureButton
     async void backToSelect()
     {
         isInList = false;
+        isReadyToPlace = false;
         Vector2 oriPos = GlobalPosition;
+        Node2D node2D = GetParent<Node2D>();
+        Vector2 fatherPos = node2D.GlobalPosition;
         Visible = false;
-        GetParent<Node2D>().RemoveChild(this);
+        node2D.RemoveChild(this);
         ZIndex += 1;
-        lftCard.waitPlantCards.Remove(this);
-        Node2D itemC = selectBoard.GetChild<Node2D>(leftCaoCardNum);//待改<==============
+        Node2D itemC = selectBoard.GetChild<Node2D>(selfIndex);//待改<==============
         itemC.AddChild(this);
         GlobalPosition = oriPos;
         Visible = true;
-        Vector2 tarPos = itemC.GlobalPosition/*  - new Vector2(UIpianYI.X, UIpianYI.Y) */;
+        Vector2 tarPos = itemC.GlobalPosition + itemC.GetChild<clickButton>(0).Position/*  - new Vector2(UIpianYI.X, UIpianYI.Y) */;
+        GD.Print("index:" + selfIndex);
+        GD.Print("tarPos:" + tarPos);
         Vector2 dicVec2 = (tarPos - oriPos).Normalized();
         float dis = (tarPos - oriPos).Length();
         float timeLft = 0.2f;
@@ -276,6 +283,8 @@ public partial class clickButton : TextureButton
             timeLft -= 0.0166f;
         }
         GlobalPosition = tarPos;
+        lftCard.sortCardInList(lftCard.waitPlantCards.IndexOf(this), fatherPos, node2D);
+        lftCard.waitPlantCards.Remove(this);
         ZIndex -= 1;
         isInList = false;
     }
@@ -352,7 +361,10 @@ public partial class clickButton : TextureButton
     {
         if (!Engine.IsEditorHint())
         {
-            CurrentSun = SunClct.Instance.SunNum;
+            if (isReadyToPlace)
+            {
+                CurrentSun = SunClct.Instance.SunNum;
+            }
             if (isReadyToPlace && WantPlace && plantInstan != null)
             {
                 plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置

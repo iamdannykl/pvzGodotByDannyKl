@@ -23,6 +23,7 @@ public partial class createZom : Sprite2D
     GridSys gridSys;
     TextureProgressBar greenBar;
     PathFollow2D pathFollow2D;
+    [Export] public Timer startTimer;
     Timer timer;
     Timer check;
     bool isEnterNext;
@@ -139,12 +140,11 @@ public partial class createZom : Sprite2D
                 }
             }
         }
-        GD.Print("green:" + greenBar.Value);
-        GD.Print("crt:" + crtBiLi);
-        GD.Print("inLoc" + inLocation);
-        GD.Print("crtBiLi + inLocation:" + (crtBiLi + inLocation));
-        GD.Print("chixu:" + (Time.GetUnixTimeFromSystem() - crtime) + "s");
         return;
+    }
+    public void startTheTimer()
+    {
+        startTimer.Start();
     }
     public void _on_timer_timeout()
     {

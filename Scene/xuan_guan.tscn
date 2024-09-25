@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbtwfc6mkqx6x"]
+[gd_scene load_steps=14 format=3 uid="uid://bbtwfc6mkqx6x"]
 
 [ext_resource type="Script" path="res://code/xuan_guan.cs" id="1_tehl0"]
-[ext_resource type="StyleBox" uid="uid://bf2kv7y8mak8s" path="res://theme/start.tres" id="1_u5e4r"]
 [ext_resource type="Texture2D" uid="uid://blujqye77knm" path="res://anim/backGround/116729.png" id="2_i8a1a"]
 [ext_resource type="Texture2D" uid="uid://cgkvaktpee1d2" path="res://anim/backGround/121700.png" id="3_v808h"]
 [ext_resource type="Texture2D" uid="uid://co38ss68yj1jv" path="res://anim/backGround/155613.png" id="4_ea1ft"]
@@ -10,6 +9,57 @@
 [ext_resource type="Script" path="res://Back.cs" id="7_sux5e"]
 [ext_resource type="Script" path="res://code/ADD.cs" id="8_hobg6"]
 [ext_resource type="PackedScene" uid="uid://cmlfjne8ramlg" path="res://start.tscn" id="9_55cdr"]
+
+[sub_resource type="Animation" id="Animation_k0b14"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("start:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(299, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_aow0d"]
+resource_name = "down"
+step = 0.0167
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("start:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(92, -0.25, 0, 0.25, 0, 299, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_o5hnw"]
+resource_name = "up"
+step = 0.0167
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("start:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(299, -0.25, 0, 0.25, 0, 92, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s00t7"]
+_data = {
+"RESET": SubResource("Animation_k0b14"),
+"down": SubResource("Animation_aow0d"),
+"up": SubResource("Animation_o5hnw")
+}
 
 [node name="xuanGuan" type="Control" node_paths=PackedStringArray("gqList", "whichGtype")]
 z_index = 6
@@ -29,22 +79,24 @@ whichGtype = NodePath("Panel/Label/OptionButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 257.0
-offset_bottom = 181.0
-theme_override_styles/panel = ExtResource("1_u5e4r")
+offset_left = -37.0
+offset_right = 303.0
+offset_bottom = 195.0
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 120.0
+offset_bottom = 32.0
 text = "关卡地图类型："
 
 [node name="OptionButton" type="OptionButton" parent="Panel/Label"]
 layout_mode = 0
-offset_left = 111.0
+offset_left = 107.0
 offset_top = 3.0
-offset_right = 392.0
-offset_bottom = 136.0
+offset_right = 434.324
+offset_bottom = 152.251
 scale = Vector2(0.276966, 0.276966)
 item_count = 5
 popup/item_0/text = "grassDay"
@@ -67,19 +119,29 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 31.0
+offset_left = -41.0
+offset_top = 5.0
+offset_right = 12.3241
+offset_bottom = 51.251
 grow_horizontal = 0
+scale = Vector2(0.7, 0.7)
 text = "返回"
 script = ExtResource("7_sux5e")
 start = NodePath("../..")
 
 [node name="ItemList" type="ItemList" parent="Panel"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 77.0
-offset_right = 255.0
-offset_bottom = 179.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -167.0
+offset_top = -128.0
+offset_right = 167.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
 max_columns = 8
 
 [node name="MODE" type="Label" parent="Panel"]
@@ -89,23 +151,28 @@ offset_top = 32.0
 offset_right = 46.0
 offset_bottom = 55.0
 
-[node name="ADD" type="Button" parent="Panel" node_paths=PackedStringArray("create")]
+[node name="ADD" type="Button" parent="Panel" node_paths=PackedStringArray("anim")]
 layout_mode = 0
-offset_left = 213.0
-offset_top = 47.0
-offset_right = 256.0
-offset_bottom = 78.0
+offset_left = 245.0
+offset_top = 6.0
+offset_right = 306.324
+offset_bottom = 48.251
+scale = Vector2(0.7, 0.7)
 text = "ADD"
 script = ExtResource("8_hobg6")
-create = NodePath("../../start")
+anim = NodePath("../AnimationPlayer")
 
-[node name="start" parent="." instance=ExtResource("9_55cdr")]
-visible = false
+[node name="start" parent="Panel" instance=ExtResource("9_55cdr")]
 layout_mode = 1
-offset_left = 140.0
-offset_top = 92.0
-offset_right = 140.0
-offset_bottom = 92.0
+offset_left = 138.0
+offset_top = 299.0
+offset_right = 138.0
+offset_bottom = 299.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_s00t7")
+}
 
 [connection signal="item_selected" from="Panel/Label/OptionButton" to="." method="selectType"]
 [connection signal="item_selected" from="Panel/ItemList" to="." method="selectGuanQia"]

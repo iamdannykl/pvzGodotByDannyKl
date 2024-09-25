@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=63 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
 [ext_resource type="Texture2D" uid="uid://b25au6edd6a86" path="res://anim/icon/sunClct.png" id="13_p252q"]
 [ext_resource type="Script" path="res://code/SunClct.cs" id="14_wn85g"]
+[ext_resource type="Theme" uid="uid://cg4fh81xxnvje" path="res://theme/touMing.tres" id="15_0cm5o"]
 [ext_resource type="FontFile" uid="uid://3v2gdvefbosf" path="res://font/num.tres" id="15_ek4tf"]
 [ext_resource type="Texture2D" uid="uid://bs1fbqs02fmsd" path="res://anim/icon/zomBar/headICON.png" id="20_nbejk"]
 [ext_resource type="Texture2D" uid="uid://biej0nhha3lqx" path="res://anim/icon/zomBar/tiao.png" id="21_hk1ym"]
@@ -33,10 +34,13 @@
 [ext_resource type="Texture2D" uid="uid://dbywo5jycyc51" path="res://anim/icon/zomBar/black.png" id="25_21v8n"]
 [ext_resource type="Texture2D" uid="uid://ctbhkbqdj2yx8" path="res://anim/icon/zomBar/flag.png" id="26_sl0mu"]
 [ext_resource type="Script" path="res://code/BigWaveComing.cs" id="27_ennl7"]
-[ext_resource type="StyleBox" uid="uid://bojnm7t8v1714" path="res://new_style_box_flat.tres" id="29_ijiyi"]
 [ext_resource type="Script" path="res://code/Fps.cs" id="29_tprw0"]
-[ext_resource type="Theme" uid="uid://bppr7vmpy7h4" path="res://pvzTheme.tres" id="29_vqd3v"]
+[ext_resource type="PackedScene" uid="uid://d3pedfglyypvk" path="res://Scene/plantCards/nut.tscn" id="30_d4vmd"]
 [ext_resource type="Script" path="res://code/OSname.cs" id="30_qyf86"]
+[ext_resource type="Script" path="res://code/LetsRock.cs" id="30_twt8d"]
+[ext_resource type="PackedScene" uid="uid://xbn74y3ui2e5" path="res://Scene/plantCards/cherry.tscn" id="31_ti74s"]
+[ext_resource type="PackedScene" uid="uid://b7alfw8qqqxbg" path="res://Scene/plantCards/he_ye.tscn" id="32_gj1d7"]
+[ext_resource type="PackedScene" uid="uid://cby38ysstq1gr" path="res://Scene/plantCards/re_peater.tscn" id="33_vpa25"]
 [ext_resource type="PackedScene" uid="uid://cwmacyfsm7vhc" path="res://Scene/plantCards/pea_shooter.tscn" id="34_1vs3o"]
 [ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="35_c1fae"]
 [ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="36_43ijr"]
@@ -175,6 +179,20 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_ebvaj"]
+resource_name = "down"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-59, -0.25, 0, 0.25, 0, 105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
 [sub_resource type="Animation" id="Animation_5o05s"]
 resource_name = "up"
 step = 0.0166
@@ -204,6 +222,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8ikgk"]
 _data = {
 "RESET": SubResource("Animation_smoy6"),
+"down": SubResource("Animation_ebvaj"),
 "up": SubResource("Animation_5o05s")
 }
 
@@ -328,6 +347,7 @@ offset_left = 128.0
 offset_top = -68.0
 offset_right = 191.0
 offset_bottom = 86.0
+theme = ExtResource("15_0cm5o")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("animationPlayer")]
 z_index = 6
@@ -372,7 +392,6 @@ text = "100"
 libraries = {
 "": SubResource("AnimationLibrary_sl500")
 }
-autoplay = "rightMove"
 
 [node name="seeLeft" type="Button" parent="Camera2D"]
 visible = false
@@ -446,30 +465,29 @@ offset_bottom = -70.0
 [node name="waveNum" type="Label" parent="Camera2D/zomCardUI/Panel"]
 z_index = 1
 layout_mode = 0
-offset_left = 5.0
-offset_top = -1.0
-offset_right = 58.0
-offset_bottom = 22.0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 20.0
 text = "第     波"
 
 [node name="nextWave" type="Button" parent="Camera2D/zomCardUI/Panel"]
 z_index = 1
 layout_mode = 0
-offset_left = 61.3213
-offset_right = 168.321
-offset_bottom = 36.0
+offset_left = 53.0
+offset_top = 1.0
+offset_right = 160.324
+offset_bottom = 39.251
 scale = Vector2(0.526201, 0.526201)
-theme_override_font_sizes/font_size = 20
 text = "next wave"
 
 [node name="zhenRong" type="OptionButton" parent="Camera2D/zomCardUI/Panel"]
 z_index = 1
 layout_mode = 0
-offset_left = 121.321
-offset_right = 218.321
-offset_bottom = 36.0
+offset_left = 111.0
+offset_right = 196.324
+offset_bottom = 41.251
 scale = Vector2(0.529304, 0.529304)
-theme_override_font_sizes/font_size = 20
 item_count = 3
 popup/item_0/text = "阵容1"
 popup/item_1/text = "阵容2"
@@ -480,20 +498,20 @@ popup/item_2/id = 2
 [node name="finishEdit" type="Button" parent="Camera2D/zomCardUI/Panel"]
 z_index = 1
 layout_mode = 0
-offset_left = 174.321
-offset_right = 225.321
-offset_bottom = 31.0
+offset_left = 159.0
+offset_right = 228.324
+offset_bottom = 38.251
 scale = Vector2(0.65044, 0.65044)
 text = "finish"
 
 [node name="isBigWaveButton" type="CheckButton" parent="Camera2D/zomCardUI/Panel"]
 layout_mode = 0
-offset_left = 206.056
-offset_top = 0.148705
-offset_right = 334.056
-offset_bottom = 34.1487
-scale = Vector2(0.624067, 0.624067)
-theme_override_font_sizes/font_size = 18
+offset_left = 207.0
+offset_top = 2.0
+offset_right = 369.324
+offset_bottom = 62.251
+scale = Vector2(0.319359, 0.319359)
+theme_override_font_sizes/font_size = 17
 text = "BigWave:"
 
 [node name="Button" type="Button" parent="Camera2D/zomCardUI"]
@@ -541,10 +559,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
+position = Vector2(-4, 13)
 script = ExtResource("25_6i3iu")
 
 [node name="Node2D" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
-position = Vector2(0, 21.4)
+position = Vector2(0, 15)
 
 [node name="peaShooter" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D" instance=ExtResource("34_1vs3o")]
 anchors_preset = 2
@@ -555,7 +574,7 @@ offset_bottom = 0.0
 grow_vertical = 0
 
 [node name="Node2D2" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
-position = Vector2(25.4286, 21.4)
+position = Vector2(22, 15)
 
 [node name="sunFlower" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D2" instance=ExtResource("35_c1fae")]
 anchors_preset = 2
@@ -566,7 +585,7 @@ offset_bottom = 0.0
 grow_vertical = 0
 
 [node name="Node2D3" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
-position = Vector2(52.8571, 21.4)
+position = Vector2(46, 15)
 
 [node name="potatoDL" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D3" instance=ExtResource("36_43ijr")]
 anchors_preset = 2
@@ -576,16 +595,62 @@ offset_top = -23.0
 offset_bottom = 0.0
 grow_vertical = 0
 
+[node name="Node2D4" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(69, 15)
+
+[node name="nut" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D4" instance=ExtResource("30_d4vmd")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 24.0
+grow_vertical = 0
+
+[node name="Node2D5" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(92, 15)
+
+[node name="cherry" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D5" instance=ExtResource("31_ti74s")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="Node2D6" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(115, 15)
+
+[node name="heYe" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D6" instance=ExtResource("32_gj1d7")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="Node2D7" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(137, 15)
+
+[node name="rePeater" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D7" instance=ExtResource("33_vpa25")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_bottom = 0.0
+grow_vertical = 0
+
 [node name="Button" type="Button" parent="Camera2D/UIplantSelect/Control"]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 109.0
-offset_right = 189.0
-offset_bottom = 132.0
-theme = ExtResource("29_vqd3v")
+offset_left = 106.0
+offset_top = 108.0
+offset_right = 253.324
+offset_bottom = 150.251
+scale = Vector2(0.568449, 0.568449)
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = ExtResource("29_ijiyi")
 text = "Let's Rock!"
+script = ExtResource("30_twt8d")
 
 [node name="yx" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
 position = Vector2(185, 107)
@@ -764,10 +829,10 @@ offset_bottom = 24.0
 [node name="Panel" type="Panel" parent="Camera2D"]
 visible = false
 z_index = 2
-offset_left = -82.0
-offset_top = -55.0
+offset_left = -107.0
+offset_top = -67.0
 offset_right = 103.0
-offset_bottom = 58.0
+offset_bottom = 66.0
 
 [node name="shengYin" type="Label" parent="Camera2D/Panel"]
 layout_mode = 0
@@ -780,39 +845,39 @@ text = "声音："
 [node name="sound" type="HSlider" parent="Camera2D/Panel/shengYin"]
 layout_mode = 0
 offset_left = 44.0
-offset_top = 5.0
+offset_top = -6.0
 offset_right = 166.0
-offset_bottom = 21.0
+offset_bottom = 36.0
 
 [node name="yinXiao" type="Label" parent="Camera2D/Panel"]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 31.0
+offset_top = 46.0
 offset_right = 55.0
-offset_bottom = 54.0
+offset_bottom = 69.0
 text = "音效："
 
 [node name="soundEffect" type="HSlider" parent="Camera2D/Panel/yinXiao"]
 layout_mode = 0
 offset_left = 44.0
-offset_top = 4.0
+offset_top = -7.0
 offset_right = 166.0
-offset_bottom = 20.0
+offset_bottom = 35.0
 
 [node name="menu" type="Button" parent="Camera2D/Panel"]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 66.0
-offset_right = 60.0
-offset_bottom = 94.0
+offset_left = 33.0
+offset_top = 81.0
+offset_right = 86.3241
+offset_bottom = 127.251
 text = "菜单"
 
 [node name="back" type="Button" parent="Camera2D/Panel"]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 66.0
-offset_right = 165.0
-offset_bottom = 94.0
+offset_left = 122.0
+offset_top = 81.0
+offset_right = 175.324
+offset_bottom = 127.251
 text = "返回"
 
 [node name="fps" type="Label" parent="Camera2D"]
@@ -838,3 +903,4 @@ script = ExtResource("30_qyf86")
 [connection signal="item_selected" from="Camera2D/zomCardUI/Panel/zhenRong" to="Camera2D/zomCardUI" method="setZRnum"]
 [connection signal="toggled" from="Camera2D/zomCardUI/Panel/isBigWaveButton" to="Camera2D/zomCardUI" method="setIsBigWv"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Button" to="Camera2D/zomCardUI" method="deSerializeJsonToObject"]
+[connection signal="button_up" from="Camera2D/UIplantSelect/Control/Button" to="Camera2D/UIplantSelect/Control/Button" method="startCreateZom"]

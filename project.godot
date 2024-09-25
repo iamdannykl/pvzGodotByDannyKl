@@ -40,6 +40,10 @@ folder_colors={
 "res://code/": "green"
 }
 
+[gui]
+
+theme/custom="res://theme/kenney/kenneyUI-blue.tres"
+
 [input]
 
 move_right={
