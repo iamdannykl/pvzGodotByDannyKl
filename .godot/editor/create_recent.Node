@@ -1,5 +1,7 @@
-AnimationPlayer
+AnimationTree
 Node2D
+Label
+AnimationPlayer
 TouchScreenButton
 Control
 Button
@@ -11,4 +13,3 @@ CollisionShape2D
 Area2D
 Node
 GridContainer
-Container

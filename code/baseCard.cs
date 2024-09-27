@@ -16,6 +16,7 @@ public partial class baseCard : Area2D
     [Export] public AudioStreamPlayer 种土上声音;
     [Export] public AudioStreamPlayer 种水上声音;
     [Export] public bool isHeYe;
+    [Export] public bool isNut;
     public GridS gridS;
     [Export] public bool isZiBao;
     public bool isplanted;
@@ -25,19 +26,26 @@ public partial class baseCard : Area2D
         set
         {
             hp = value;
+            if (isNut)
+            {
+                int jieDuan = GetNode<HpJianCe>("HpJianCe").JieDuanJianCe(value);
+                GetNode<stateMachineNut>("AnimationTree").jieDuan = jieDuan;
+                GetNode<HpJianCe>("HpJianCe").NowJieDuan = jieDuan;
+            }
             if (value <= 0)
             {
                 gridS.plantsOnThisGrid.Remove(this);
                 if (isHeYe)
                 {
-                    gridS.isHeYe = true;
+                    gridS.isHeYe = false;
                 }
                 QueueFree();
             }
         }
     }
-    public void desSelfI()
+    public virtual void desSelfI()
     {
+        gridS.plantsOnThisGrid.Remove(this);
         QueueFree();
     }
     public override void _Ready()

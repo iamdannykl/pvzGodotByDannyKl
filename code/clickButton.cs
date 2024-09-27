@@ -369,6 +369,8 @@ public partial class clickButton : TextureButton
             {
                 plantInstan.GlobalPosition = GetGlobalMousePosition();//跟随鼠标位置
                 grid = GridSys.Instance.GetGridByMouse();
+                if (grid != null)
+                    GD.Print("Pcount:" + grid.plantsOnThisGrid.Count);
                 if ((grid != null) && (
                 (grid.gtp == HangType.water && isShuiSheng && !grid.isHeYe) ||
                 (grid.gtp == HangType.water && !isShuiSheng && grid.isHeYe && grid.plantsOnThisGrid.Count == 1) ||

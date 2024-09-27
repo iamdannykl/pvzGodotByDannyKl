@@ -26,6 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_aow0d"]
 resource_name = "down"
+length = 0.7
 step = 0.0167
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -36,11 +37,12 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(92, -0.25, 0, 0.25, 0, 299, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"times": PackedFloat32Array(0, 0.7)
 }
 
 [sub_resource type="Animation" id="Animation_o5hnw"]
 resource_name = "up"
+length = 0.7
 step = 0.0167
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -51,7 +53,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(299, -0.25, 0, 0.25, 0, 92, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"times": PackedFloat32Array(0, 0.7)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s00t7"]
@@ -165,9 +167,9 @@ anim = NodePath("../AnimationPlayer")
 [node name="start" parent="Panel" instance=ExtResource("9_55cdr")]
 layout_mode = 1
 offset_left = 138.0
-offset_top = 299.0
+offset_top = 297.0
 offset_right = 138.0
-offset_bottom = 299.0
+offset_bottom = 297.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 libraries = {

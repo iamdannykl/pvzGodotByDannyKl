@@ -51,7 +51,8 @@ public partial class zombie_base : CharacterBody2D
     void attakePlant()
     {
         yao.Play();
-        plant.Hp -= 1;
+        plantAtked.Hp -= 1;
+        //plant.Hp -= 1;
     }
     public bool IsEat
     {

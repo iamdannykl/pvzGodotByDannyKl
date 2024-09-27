@@ -19,6 +19,11 @@ public partial class PotatoDl : baseCard
 		timer = GetNode<Timer>("Timer");
 		timer.Start();
 	}
+	public override void desSelfI()
+	{
+		gridS.plantsOnThisGrid.Remove(this);
+		QueueFree();
+	}
 	void maoChu()
 	{
 		isMaoChu = true;

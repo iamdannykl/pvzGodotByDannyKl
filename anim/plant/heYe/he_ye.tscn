@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://c7gh55lmgfj6v" path="res://audio/effects/种水里.ogg" id="3_n0s35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uepk2"]
-size = Vector2(20, 16)
+size = Vector2(20, 25)
 
 [sub_resource type="Animation" id="Animation_r7mv0"]
 length = 0.001
@@ -71,12 +71,15 @@ z_index = 1
 z_as_relative = false
 collision_mask = 0
 script = ExtResource("1_2w1we")
+hp = 10
 noAtkPlant = true
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
 "种水上声音" = NodePath("种水上")
+isHeYe = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_uepk2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

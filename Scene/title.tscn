@@ -37,6 +37,30 @@ region = Rect2(555, 99, 81, 62)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pgbk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_708bx"]
+atlas = ExtResource("13_wpldm")
+region = Rect2(5, 59, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl4am"]
+atlas = ExtResource("14_d70qq")
+region = Rect2(5, 59, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lut6"]
+atlas = ExtResource("13_wpldm")
+region = Rect2(6, 102, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v2q6"]
+atlas = ExtResource("14_d70qq")
+region = Rect2(6, 102, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_seoan"]
+atlas = ExtResource("13_wpldm")
+region = Rect2(6, 146, 35, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_375rf"]
+atlas = ExtResource("14_d70qq")
+region = Rect2(6, 146, 35, 35)
+
 [sub_resource type="Animation" id="Animation_e8w0j"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -89,30 +113,6 @@ _data = {
 "down": SubResource("Animation_krqy4"),
 "up": SubResource("Animation_4dbk6")
 }
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_708bx"]
-atlas = ExtResource("13_wpldm")
-region = Rect2(5, 59, 36, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tl4am"]
-atlas = ExtResource("14_d70qq")
-region = Rect2(5, 59, 36, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5lut6"]
-atlas = ExtResource("13_wpldm")
-region = Rect2(6, 102, 36, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4v2q6"]
-atlas = ExtResource("14_d70qq")
-region = Rect2(6, 102, 36, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_seoan"]
-atlas = ExtResource("13_wpldm")
-region = Rect2(6, 146, 35, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_375rf"]
-atlas = ExtResource("14_d70qq")
-region = Rect2(6, 146, 35, 35)
 
 [node name="Title" type="Node2D"]
 script = ExtResource("1_j25ri")
@@ -192,17 +192,6 @@ offset_bottom = -54.0
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_5pgbk")
 
-[node name="xuanGuan" parent="." instance=ExtResource("5_lit06")]
-offset_left = -133.0
-offset_top = 100.0
-offset_right = -133.0
-offset_bottom = 100.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="xuanGuan"]
-libraries = {
-"": SubResource("AnimationLibrary_oyf66")
-}
-
 [node name="QQ" type="TextureButton" parent="."]
 z_index = 1
 offset_left = -169.0
@@ -237,6 +226,7 @@ script = ExtResource("14_1ywau")
 url = "https://space.bilibili.com/86443595?spm_id_from=333.1007.0.0"
 
 [node name="Free" type="Label" parent="."]
+visible = false
 offset_left = 130.0
 offset_top = -94.0
 offset_right = 170.0
@@ -255,3 +245,22 @@ text = "社 交
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_10ww1")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -109.0
+offset_top = 5.0
+offset_right = -16.0
+offset_bottom = 35.0
+text = "↑↑↑先创建关卡才能
+游玩关卡，点EDIT"
+
+[node name="xuanGuan" parent="." instance=ExtResource("5_lit06")]
+offset_left = -133.0
+offset_top = 100.0
+offset_right = -133.0
+offset_bottom = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="xuanGuan"]
+libraries = {
+"": SubResource("AnimationLibrary_oyf66")
+}

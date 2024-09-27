@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://l126bxkg8cqi"]
+[gd_scene load_steps=21 format=3 uid="uid://l126bxkg8cqi"]
 
 [ext_resource type="Script" path="res://code/Nut.cs" id="1_5cwvs"]
 [ext_resource type="Texture2D" uid="uid://bc0881l38xr64" path="res://anim/plant/nut/nut.png" id="1_g23x3"]
 [ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="3_qtd1t"]
+[ext_resource type="Script" path="res://code/HpJianCe.cs" id="4_dssiy"]
+[ext_resource type="Script" path="res://anim/plant/nut/stateMachineNut.cs" id="5_qegr0"]
 
 [sub_resource type="Animation" id="Animation_6ar7a"]
 length = 0.5
@@ -156,6 +158,41 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm7jq"]
 size = Vector2(24, 29)
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_br20h"]
+animation = &"hurt"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ypl32"]
+animation = &"hurt2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q2u3s"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3adqn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yutkw"]
+advance_mode = 2
+advance_expression = "jieDuan==1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qvv2r"]
+advance_mode = 2
+advance_expression = "jieDuan==2"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_rimxi"]
+states/hurt/node = SubResource("AnimationNodeAnimation_br20h")
+states/hurt/position = Vector2(488, 100)
+states/hurt2/node = SubResource("AnimationNodeAnimation_ypl32")
+states/hurt2/position = Vector2(625, 98)
+states/idle/node = SubResource("AnimationNodeAnimation_q2u3s")
+states/idle/position = Vector2(328, 102)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_3adqn"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_yutkw"), "hurt", "hurt2", SubResource("AnimationNodeStateMachineTransition_qvv2r")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_401h2"]
+graph_offset = Vector2(-451.6, 32.5)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_rimxi")
+nodes/StateMachine/position = Vector2(20, 220)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [node name="nut" type="Area2D" node_paths=PackedStringArray("animPlayer", "种土上声音")]
 script = ExtResource("1_5cwvs")
 hp = 30
@@ -163,6 +200,7 @@ noAtkPlant = true
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
 "种土上声音" = NodePath("AudioStreamPlayer")
+isNut = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -175,6 +213,7 @@ texture_filter = 1
 texture = ExtResource("1_g23x3")
 hframes = 6
 vframes = 5
+frame = 1
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
@@ -187,7 +226,7 @@ metadata/_aseprite_wizard_config_ = {
 "slice": "",
 "source": "res://anim/plant/nut/nut.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "07ad40cd2566c11ce232c5858ff01d5e"
+metadata/_aseprite_wizard_source_file_hash_ = "996c79fb6b12416b1b89b52586bed0ed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -0.5)
@@ -195,3 +234,12 @@ shape = SubResource("RectangleShape2D_jm7jq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qtd1t")
+
+[node name="HpJianCe" type="Node2D" parent="."]
+script = ExtResource("4_dssiy")
+hpJieDuan = PackedInt32Array(30, 20, 10, 0)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_401h2")
+anim_player = NodePath("../AnimationPlayer")
+script = ExtResource("5_qegr0")

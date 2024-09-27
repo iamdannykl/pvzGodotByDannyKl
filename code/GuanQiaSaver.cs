@@ -86,7 +86,7 @@ public partial class GuanQiaSaver : Control
         {
             return;
         }
-        saveContent save = new saveContent(waves, dataRec.thisGuanQiaType);
+        saveContent save = new saveContent(waves, dataRec.thisGuanQiaType, reciever.Instance.GQname);
         GD.Print(save.waves.Count);
         var serializer = new SerializerBuilder().Build();
         string msgPackBytes = serializer.Serialize(save);

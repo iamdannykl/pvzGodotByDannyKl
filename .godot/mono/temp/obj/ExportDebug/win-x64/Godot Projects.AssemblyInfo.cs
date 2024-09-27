@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Godot Projects")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("ExportDebug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23d3479eefb22e8e86bd1814bd3ddd7eafe41072")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b64a06c30199595a5d0698d01e5741069993a0b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Godot Projects")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Godot Projects")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
