@@ -25,34 +25,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_rsdvt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_swk4h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_swk4h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_swk4h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_i6d28")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_boofq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ox8d6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_11xx6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_dor8j")
 }],
 "loop": true,
 "name": &"attack",
-"speed": 6.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -102,7 +78,7 @@ position = Vector2(0.5, -5.5)
 sprite_frames = SubResource("SpriteFrames_fh5ig")
 animation = &"attack"
 autoplay = "idle"
-frame_progress = 0.43375
+frame_progress = 0.418636
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -3)

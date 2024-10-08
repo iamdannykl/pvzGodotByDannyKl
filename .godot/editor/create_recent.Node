@@ -1,5 +1,5 @@
-AnimationTree
 Node2D
+AnimationTree
 Label
 AnimationPlayer
 TouchScreenButton
@@ -12,4 +12,3 @@ Sprite2D
 CollisionShape2D
 Area2D
 Node
-GridContainer

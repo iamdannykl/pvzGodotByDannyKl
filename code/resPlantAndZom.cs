@@ -8,6 +8,7 @@ public enum PlantType
     sunFlower,
     potatoDL,
     cherryBaoDan,
+    snowPeaShooter,
     nut,
     heYe
 }
@@ -18,11 +19,13 @@ public enum ZomType
 }
 public enum BulletType
 {
-    pea
+    pea,
+    snowPea
 }
 public partial class resPlantAndZom : Node2D
 {
     public Dictionary<PlantType, PackedScene> plantTypeToPackedScene;
+    public Dictionary<BulletType, PackedScene> bulletTypeToPackedScene;
     public static resPlantAndZom Instance;
     [Export] public PackedScene peaShooter;
     [Export] public PackedScene rePeater;
@@ -30,12 +33,14 @@ public partial class resPlantAndZom : Node2D
     [Export] public PackedScene potatoDL;
     [Export] public PackedScene nut;
     [Export] public PackedScene cherryBaoDan;
+    [Export] public PackedScene snowPeaShooter;
     [Export] public PackedScene heYe;
     //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
     //Bullets===============================================================
     [Export] public PackedScene pea;
+    [Export] public PackedScene snowPea;
     public override void _Ready()
     {
         Instance = this;
@@ -44,9 +49,14 @@ public partial class resPlantAndZom : Node2D
         {PlantType.sunFlower,sunFlower},
         {PlantType.potatoDL,potatoDL},
         {PlantType.cherryBaoDan,cherryBaoDan},
+        {PlantType.snowPeaShooter,snowPeaShooter},
         {PlantType.nut,nut},
         {PlantType.rePeater,rePeater},
         {PlantType.heYe,heYe}
+    };
+        bulletTypeToPackedScene = new Dictionary<BulletType, PackedScene>{
+        {BulletType.pea,pea},
+        {BulletType.snowPea,snowPea}
     };
     }
     public PackedScene matchPlant(PlantType plantType)
@@ -56,23 +66,6 @@ public partial class resPlantAndZom : Node2D
             return scene;
         }
         return null;
-        /* switch (plantType)
-        {
-            case PlantType.peaShooter:
-                return peaShooter;
-            case PlantType.rePeater:
-                return rePeater;
-            case PlantType.sunFlower:
-                return sunFlower;
-            case PlantType.potatoDL:
-                return potatoDL;
-            case PlantType.cherryBaoDan:
-                return cherryBaoDan;
-            case PlantType.heYe:
-                return heYe;
-            default:
-                return null;
-        } */
     }
 
     public PackedScene matchZom(ZomType zomType)
@@ -89,12 +82,10 @@ public partial class resPlantAndZom : Node2D
     }
     public PackedScene matchBullet(BulletType bulletType)
     {
-        switch (bulletType)
+        if (bulletTypeToPackedScene.TryGetValue(bulletType, out PackedScene scene))
         {
-            case BulletType.pea:
-                return pea;
-            default:
-                return null;
+            return scene;
         }
+        return null;
     }
 }

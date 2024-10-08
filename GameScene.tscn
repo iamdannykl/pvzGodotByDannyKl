@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=65 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ndsnqsbpyp8j" path="res://anim/plant/cherryBoom/cherryBaoDan.tscn" id="8_06nb4"]
 [ext_resource type="Texture2D" uid="uid://cgywgkpyf5gt4" path="res://Prefabs/zom/DS DSi - Plants vs Zombies - Conehead Zombie.png" id="8_62omw"]
 [ext_resource type="Script" path="res://code/GuanQiaSaver.cs" id="10_edh3m"]
+[ext_resource type="PackedScene" uid="uid://b14ejrkmbgnww" path="res://anim/plant/snowPea/snow_pea_shooter.tscn" id="10_fuuy5"]
 [ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
 [ext_resource type="Texture2D" uid="uid://b25au6edd6a86" path="res://anim/icon/sunClct.png" id="13_p252q"]
 [ext_resource type="Script" path="res://code/SunClct.cs" id="14_wn85g"]
@@ -43,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://cby38ysstq1gr" path="res://Scene/plantCards/re_peater.tscn" id="33_vpa25"]
 [ext_resource type="PackedScene" uid="uid://cwmacyfsm7vhc" path="res://Scene/plantCards/pea_shooter.tscn" id="34_1vs3o"]
 [ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="35_c1fae"]
+[ext_resource type="PackedScene" uid="uid://5qmko0haxrwx" path="res://Scene/plantCards/snow_pea_shooter.tscn" id="35_qfh8y"]
 [ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="36_43ijr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqb0x"]
@@ -325,6 +327,7 @@ sunFlower = ExtResource("6_p4lfu")
 potatoDL = ExtResource("7_8fcqn")
 nut = ExtResource("8_2b4yu")
 cherryBaoDan = ExtResource("8_06nb4")
+snowPeaShooter = ExtResource("10_fuuy5")
 heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")
@@ -566,9 +569,10 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
+[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control" node_paths=PackedStringArray("yx")]
 position = Vector2(-4, 13)
 script = ExtResource("25_6i3iu")
+yx = NodePath("../yx")
 
 [node name="Node2D" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
 position = Vector2(0, 15)
@@ -648,6 +652,11 @@ anchor_bottom = 1.0
 offset_top = -23.0
 offset_bottom = 0.0
 grow_vertical = 0
+
+[node name="Node2D8" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(161, 15)
+
+[node name="snowPeaShooter" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D8" instance=ExtResource("35_qfh8y")]
 
 [node name="Button" type="Button" parent="Camera2D/UIplantSelect/Control"]
 layout_mode = 0

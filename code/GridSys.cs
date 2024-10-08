@@ -235,9 +235,6 @@ public partial class GridSys : Node2D
 		Vector2 clickPos = GetPosByMouse();
 		distance = clickPos - realZX;
 		gridPoint = new Vector2((int)(distance.X / XjianGe), (int)(-distance.Y / YjianGe));
-		/* GD.Print("-distance.Y:" + -distance.Y); GD.Print("YjianGe" + YjianGe);
-		GD.Print("gridPoint:" + gridPoint); */
-		//GD.Print(gridPoint, gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > 4 || gridPoint.Y < 0);
 		if (gridPoint.X > 8 || gridPoint.X < 0 || gridPoint.Y > (hangShu - 1) || gridPoint.Y < 0)
 		{
 			isOut = true;
@@ -247,12 +244,10 @@ public partial class GridSys : Node2D
 		else
 		{
 			isOut = false;
-			//GD.Print((int)(gridPoint.X + 1 + gridPoint.Y * 9) - 1);
 		}
 		if (gridPoint == new Vector2(-1, -1)) return null;
 		else
 		{
-			//GD.Print(nowGrd.Plant);
 			return gridList[(int)(gridPoint.X + 1 + gridPoint.Y * 9) - 1];
 		}
 	}

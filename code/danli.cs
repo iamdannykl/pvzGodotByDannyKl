@@ -29,7 +29,7 @@ public partial class danli : Node2D
 			zombieCard = value;
 		}
 	}
-	public clickButton PlantCard
+	public clickButton PlantCard//上一个卡
 	{
 		get => plantCard;
 		set

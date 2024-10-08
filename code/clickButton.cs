@@ -388,5 +388,4 @@ public partial class clickButton : TextureButton
             }
         }
     }
-
 }

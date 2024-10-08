@@ -18,29 +18,29 @@ script = ExtResource("1_p37t8")
 MAXcardNUm = 8
 
 [node name="Node2D" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 16.8689)
+position = Vector2(0, 20.3373)
 
 [node name="Node2D2" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 33.7379)
+position = Vector2(0, 40.6747)
 
 [node name="Node2D3" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 50.6068)
+position = Vector2(0, 61.012)
 
 [node name="Node2D4" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 67.4758)
+position = Vector2(0, 81.3493)
 
 [node name="Node2D5" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 84.3447)
+position = Vector2(0, 101.687)
 
 [node name="Node2D6" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 101.214)
+position = Vector2(0, 122.024)
 
 [node name="Node2D7" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 118.083)
+position = Vector2(0, 142.361)
 
 [node name="Node2D8" type="Node2D" parent="zuoKaCao"]
-position = Vector2(0, 134.952)
+position = Vector2(0, 162.699)
 
 [node name="yx" type="Node2D" parent="."]
-position = Vector2(16, 107)
+position = Vector2(16, 129)
 scale = Vector2(0.792877, 0.792877)
