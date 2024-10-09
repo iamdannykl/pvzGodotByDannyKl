@@ -671,7 +671,7 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 3
+frame = 1
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
@@ -727,4 +727,9 @@ hpJieDuan = PackedInt32Array(10, 5, 0)
 [node name="yao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xuq7f")
 
+[node name="freezeTime" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="area_entered" from="Area2D" to="." method="boomDie"]
+[connection signal="timeout" from="freezeTime" to="." method="backToNormalSpd"]

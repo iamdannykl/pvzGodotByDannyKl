@@ -1,14 +1,14 @@
+Timer
+AnimationPlayer
+Sprite2D
 Node2D
 AnimationTree
 Label
-AnimationPlayer
 TouchScreenButton
 Control
 Button
 TextureRect
-Timer
 TextureButton
-Sprite2D
 CollisionShape2D
 Area2D
 Node

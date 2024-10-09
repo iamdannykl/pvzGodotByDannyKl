@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=66 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b25au6edd6a86" path="res://anim/icon/sunClct.png" id="13_p252q"]
 [ext_resource type="Script" path="res://code/SunClct.cs" id="14_wn85g"]
 [ext_resource type="Theme" uid="uid://cg4fh81xxnvje" path="res://theme/touMing.tres" id="15_0cm5o"]
+[ext_resource type="PackedScene" uid="uid://dc6oa5n1lq6he" path="res://anim/plant/snowPea/snow_pea_bullet.tscn" id="15_d1s16"]
 [ext_resource type="FontFile" uid="uid://3v2gdvefbosf" path="res://font/num.tres" id="15_ek4tf"]
 [ext_resource type="Texture2D" uid="uid://bs1fbqs02fmsd" path="res://anim/icon/zomBar/headICON.png" id="20_nbejk"]
 [ext_resource type="Texture2D" uid="uid://biej0nhha3lqx" path="res://anim/icon/zomBar/tiao.png" id="21_hk1ym"]
@@ -332,6 +333,7 @@ heYe = ExtResource("7_qjlgd")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")
 pea = ExtResource("7_ng5db")
+snowPea = ExtResource("15_d1s16")
 
 [node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee", "label", "syg")]
 position = Vector2(0, -1)
@@ -569,10 +571,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control" node_paths=PackedStringArray("yx")]
+[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
 position = Vector2(-4, 13)
 script = ExtResource("25_6i3iu")
-yx = NodePath("../yx")
 
 [node name="Node2D" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
 position = Vector2(0, 15)

@@ -4,6 +4,7 @@ using System;
 public partial class zombie_base : CharacterBody2D
 {
     [Export] public float spd;
+    public float currrentSpd;
 
     [Export] public AudioStreamPlayer yao;
     public bool isUpdt;
@@ -66,6 +67,7 @@ public partial class zombie_base : CharacterBody2D
     public override void _Ready()
     {
         hpJianCe = GetNode<HpJianCe>("HpJianCe");
+        currrentSpd = spd;
     }
 
     public override void _Process(double delta)
@@ -74,7 +76,7 @@ public partial class zombie_base : CharacterBody2D
         {
             if (!IsEat)
             {
-                Velocity = new Vector2(-spd, 0);
+                Velocity = new Vector2(-currrentSpd, 0);
                 MoveAndSlide();
             }
             if (!(!zhuangTaiJi.isEat && zhuangTaiJi.isDead) && rayCast.IsColliding())
@@ -120,5 +122,10 @@ public partial class zombie_base : CharacterBody2D
         _animationTree = GetNode<AnimationTree>("AnimationTree");
         _animationTree.Set("parameters/TimeScale/scale",
         (float)_animationTree.Get("parameters/TimeScale/scale") * options[random.Next(0, options.Length)]);
+    }
+    public void backToNormalSpd()
+    {
+        GetNode<Sprite2D>("Sprite2D").Modulate = new Color(1, 1, 1);
+        currrentSpd = spd;
     }
 }

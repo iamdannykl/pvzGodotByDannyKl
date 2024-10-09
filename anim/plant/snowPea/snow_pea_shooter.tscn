@@ -132,6 +132,7 @@ script = ExtResource("1_2kukv")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 2
 hp = 10
+bulletType = 1
 rayCast2D = NodePath("RayCast2D")
 "种土上声音" = NodePath("种土上")
 

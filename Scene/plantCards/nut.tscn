@@ -6,7 +6,7 @@
 [node name="nut" type="TextureButton"]
 texture_normal = ExtResource("1_fqkht")
 script = ExtResource("2_4hkmn")
-plantType = 5
+plantType = 6
 sunCost = 50
 offset = Vector2(-3, 2)
 heYeOffSet = Vector2(3, -10)
