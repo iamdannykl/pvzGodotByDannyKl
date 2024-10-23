@@ -225,8 +225,9 @@ public partial class clickButton : TextureButton
             }
         }
     }
-    async void flyToLeftCardCao()
+    void flyToLeftCardCao()
     {
+        Tween tween = CreateTween();
         isInList = true;
         Vector2 oriPos = GlobalPosition;
         GD.Print("cardGlp1:" + GlobalPosition);
@@ -244,19 +245,15 @@ public partial class clickButton : TextureButton
         Vector2 dicVec2 = (tarPos - oriPos).Normalized();
         float dis = (tarPos - oriPos).Length();
         float timeLft = 0.2f;
-        float unitDis = calculateUnitDistance(dis, timeLft, 0.0166f);
-        while (timeLft >= 0)
-        {
-            await Task.Delay(16);
-            GlobalPosition += unitDis * dicVec2;
-            timeLft -= 0.0166f;
-        }
-        GlobalPosition = tarPos;
+        GD.Print("tar:" + tarPos);
+        GD.Print("pos:" + GlobalPosition);
+        tween.TweenProperty(this, "global_position", tarPos, timeLft);
         ZIndex -= 1;
         isInList = true;
     }
-    async void backToSelect()
+    void backToSelect()
     {
+        Tween tween = CreateTween();
         isInList = false;
         isReadyToPlace = false;
         Vector2 oriPos = GlobalPosition;
@@ -275,14 +272,7 @@ public partial class clickButton : TextureButton
         Vector2 dicVec2 = (tarPos - oriPos).Normalized();
         float dis = (tarPos - oriPos).Length();
         float timeLft = 0.2f;
-        float unitDis = calculateUnitDistance(dis, timeLft, 0.0166f);
-        while (timeLft >= 0)
-        {
-            await Task.Delay(16);
-            GlobalPosition += unitDis * dicVec2;
-            timeLft -= 0.0166f;
-        }
-        GlobalPosition = tarPos;
+        tween.TweenProperty(this, "global_position", tarPos, timeLft);
         lftCard.sortCardInList(lftCard.waitPlantCards.IndexOf(this), fatherPos, node2D);
         lftCard.waitPlantCards.Remove(this);
         ZIndex -= 1;
