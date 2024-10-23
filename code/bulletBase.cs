@@ -7,6 +7,7 @@ public partial class bulletBase : Area2D
     [Export] public AnimationPlayer animPlayer;
     [Export] public bool isAnimPlayer;
     [Export] public float bltSpd;
+    public baseCard baseCard;
     public bool canMove = true;
     public override void _Ready()
     {

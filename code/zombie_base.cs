@@ -25,6 +25,7 @@ public partial class zombie_base : CharacterBody2D
     private AnimationTree _animationTree;
     [Export] public int hp;
     HpJianCe hpJianCe;
+    public bool isFrozen;
     public int Hp
     {
         get => hp;
@@ -127,5 +128,6 @@ public partial class zombie_base : CharacterBody2D
     {
         GetNode<Sprite2D>("Sprite2D").Modulate = new Color(1, 1, 1);
         currrentSpd = spd;
+        isFrozen = false;
     }
 }

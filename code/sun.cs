@@ -11,6 +11,7 @@ public partial class sun : Area2D
     [Export] public int sunValue;
     Vector2 direction;
     AudioStreamPlayer audioStreamPlayer;
+    private Tween fallTween;
 
     bool canFly;
     public override void _Ready()
@@ -29,10 +30,19 @@ public partial class sun : Area2D
     {
         QueueFree();
     }
+    public void fallSun(int randomY)
+    {
+        fallTween = CreateTween();
+        fallTween.TweenProperty(this, "global_position", new Vector2(GlobalPosition.X, GridSys.Instance.zuoxia.GlobalPosition.Y - GridSys.Instance.YjianGe * randomY), 8 - (8 - 2) * (randomY / 5));
+    }
     void collectSun()
     {
         if (!isCollected)
         {
+            if (fallTween != null)
+            {
+                fallTween.Kill();
+            }
             isCollected = true;
             AnimationPlayer animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
             animationPlayer.Stop(true);

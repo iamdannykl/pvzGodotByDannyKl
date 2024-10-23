@@ -19,10 +19,15 @@ public partial class pea_bullet : bulletBase
         {
             if (btp == BulletType.snowPea)
             {
+                if (!zombieB.isFrozen)
+                {
+                    baseCard.playFreeze();
+                }
                 Timer timer = zombieB.GetNode<Timer>("freezeTime");
                 timer.WaitTime = freezeTime;
                 zombieB.GetNode<Sprite2D>("Sprite2D").Modulate = new Color("25a2e3");
                 zombieB.currrentSpd = zombieB.spd * 0.5f;
+                zombieB.isFrozen = true;
                 timer.Start();
             }
             zombieB.Hp -= 1;

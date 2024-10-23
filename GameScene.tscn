@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=68 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -47,6 +47,8 @@
 [ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="35_c1fae"]
 [ext_resource type="PackedScene" uid="uid://5qmko0haxrwx" path="res://Scene/plantCards/snow_pea_shooter.tscn" id="35_qfh8y"]
 [ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="36_43ijr"]
+[ext_resource type="Script" path="res://code/sunCreator.cs" id="48_srqrj"]
+[ext_resource type="PackedScene" uid="uid://c013cle4w52oe" path="res://Scene/sun.tscn" id="49_juoko"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqb0x"]
 
@@ -916,9 +918,26 @@ offset_right = 36.0
 offset_bottom = -2.0
 script = ExtResource("30_qyf86")
 
+[node name="sunCrtor" type="Node2D" parent="." node_paths=PackedStringArray("timer", "first")]
+position = Vector2(-65, -128)
+script = ExtResource("48_srqrj")
+sun = ExtResource("49_juoko")
+timer = NodePath("timer")
+first = NodePath("first")
+
+[node name="first" type="Timer" parent="sunCrtor"]
+wait_time = 8.0
+one_shot = true
+
+[node name="timer" type="Timer" parent="sunCrtor"]
+wait_time = 23.0
+one_shot = true
+
 [connection signal="area_entered" from="Camera2D/CardUI/SunClct/Area2D" to="Camera2D/CardUI/SunClct" method="getSun"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Panel/nextWave" to="Camera2D/zomCardUI" method="clickNextButton"]
 [connection signal="item_selected" from="Camera2D/zomCardUI/Panel/zhenRong" to="Camera2D/zomCardUI" method="setZRnum"]
 [connection signal="toggled" from="Camera2D/zomCardUI/Panel/isBigWaveButton" to="Camera2D/zomCardUI" method="setIsBigWv"]
 [connection signal="button_up" from="Camera2D/zomCardUI/Button" to="Camera2D/zomCardUI" method="deSerializeJsonToObject"]
 [connection signal="button_up" from="Camera2D/UIplantSelect/Control/Button" to="Camera2D/UIplantSelect/Control/Button" method="startCreateZom"]
+[connection signal="timeout" from="sunCrtor/first" to="sunCrtor" method="createsunFirstRandom"]
+[connection signal="timeout" from="sunCrtor/timer" to="sunCrtor" method="createsunRandom"]

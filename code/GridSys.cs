@@ -167,11 +167,7 @@ public partial class GridSys : Node2D
 		{
 			for (int i = 0; i < 9; i++)
 			{
-				//网格体的保存
-				//gridList.Add(new GridS(new Vector2(i,j),transform.position+new Vector3(1.48f*i,1.75f*j,0),false,false,num));
 				gridList.Add(new GridS(new Vector2(i, j), zuoxia.GlobalPosition + new Vector2(XjianGe * i, -YjianGe * j), false, num, hangList[j].hangType));
-				//if(num%2==0)
-				//Instantiate(shadow, zuoxia.position + new Vector3(XjianGe * i, YjianGe * j, 0), quaternion.identity);
 				num++;
 			}
 		}

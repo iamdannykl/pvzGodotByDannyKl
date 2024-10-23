@@ -7,6 +7,7 @@ public partial class LetsRock : Button
 	void startCreateZom()
 	{
 		createZom.Instance.startTheTimer();
+		GetTree().CurrentScene.GetNode<sunCreator>("sunCrtor").first.Start();
 		GetTree().CurrentScene.GetNode<AnimationPlayer>("Camera2D/AnimationPlayer").Play("leftMove");
 		GetTree().CurrentScene.GetNode<AnimationPlayer>("Camera2D/UIplantSelect/AnimationPlayer").Play("down");
 		lftCard = GetTree().CurrentScene.GetNode<plantSelect>("Camera2D/CardUI/zuoKaCao");

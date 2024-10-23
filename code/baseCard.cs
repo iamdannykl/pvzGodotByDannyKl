@@ -19,6 +19,8 @@ public partial class baseCard : Area2D
     [Export] public bool isNut;
     public GridS gridS;
     [Export] public bool isZiBao;
+    [Export] public AudioStreamPlayer ling;
+    [Export] public AudioStreamPlayer freeze;
     public bool isplanted;
     public int Hp
     {
@@ -42,6 +44,10 @@ public partial class baseCard : Area2D
                 QueueFree();
             }
         }
+    }
+    public void playFreeze()
+    {
+        freeze.Play();
     }
     public virtual void desSelfI()
     {
@@ -109,6 +115,11 @@ public partial class baseCard : Area2D
                 bulletBase blt = resPlantAndZom.Instance.matchBullet(bulletType).Instantiate<bulletBase>();
                 blt.GlobalPosition = GetNode<Node2D>("pos").GlobalPosition;
                 GetTree().CurrentScene.AddChild(blt);
+                if (bulletType == BulletType.snowPea)
+                {
+                    ling.Play();
+                    blt.baseCard = this;
+                }
             }
         }
         if (anim.Animation == "idle")
