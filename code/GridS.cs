@@ -8,7 +8,7 @@ using Godot;
     water,
     roof
 } */
-public partial class GridS
+public class GridS
 {
     public Vector2 Point;
     //世界坐标

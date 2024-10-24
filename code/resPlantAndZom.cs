@@ -10,7 +10,8 @@ public enum PlantType
     cherryBaoDan,
     snowPeaShooter,
     nut,
-    heYe
+    heYe,
+    daZuiHua
 }
 public enum ZomType
 {
@@ -35,6 +36,7 @@ public partial class resPlantAndZom : Node2D
     [Export] public PackedScene cherryBaoDan;
     [Export] public PackedScene snowPeaShooter;
     [Export] public PackedScene heYe;
+    [Export] public PackedScene daZuiHua;
     //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
@@ -52,7 +54,8 @@ public partial class resPlantAndZom : Node2D
         {PlantType.snowPeaShooter,snowPeaShooter},
         {PlantType.nut,nut},
         {PlantType.rePeater,rePeater},
-        {PlantType.heYe,heYe}
+        {PlantType.heYe,heYe},
+        {PlantType.daZuiHua,daZuiHua}
     };
         bulletTypeToPackedScene = new Dictionary<BulletType, PackedScene>{
         {BulletType.pea,pea},

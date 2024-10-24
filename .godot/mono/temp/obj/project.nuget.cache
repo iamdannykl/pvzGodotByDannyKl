@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8XXizHXiPxN+8hYDQ0MdaRnYOou2X85abUjWVapNyHtcKWcdy9gGvvGO7DpQvQkf5o+tDUzCdnH/WB6KA2EgKA==",
+  "dgSpecHash": "GL1X8KoTiUVeT2H2RJJdnfVh6pgjv/sEr20lrpNfouOFj93j/fBU0DkZdgooACApwnPlvmBJ5hyifNsY8zQk3g==",
   "success": true,
-  "projectFilePath": "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/Godot Projects.csproj",
+  "projectFilePath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
   "expectedPackageFiles": [
     "/home/danny/.nuget/packages/godot.sourcegenerators/4.3.0/godot.sourcegenerators.4.3.0.nupkg.sha512",
     "/home/danny/.nuget/packages/godotsharp/4.3.0/godotsharp.4.3.0.nupkg.sha512",

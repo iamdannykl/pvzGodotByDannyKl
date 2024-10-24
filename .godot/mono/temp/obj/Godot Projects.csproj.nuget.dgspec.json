@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/Godot Projects.csproj": {}
+    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {}
   },
   "projects": {
-    "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/Godot Projects.csproj": {
+    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/Godot Projects.csproj",
+        "projectUniqueName": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
         "projectName": "Godot Projects",
-        "projectPath": "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/Godot Projects.csproj",
+        "projectPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
         "packagesPath": "/home/danny/.nuget/packages/",
-        "outputPath": "/media/danny/09E816FA3DE25341/Download/pvzGodotByDannyKl-gd4.3 (1)/pvzGodotByDannyKl-gd4.3/.godot/mono/temp/obj/",
+        "outputPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/danny/.nuget/NuGet/NuGet.Config"
