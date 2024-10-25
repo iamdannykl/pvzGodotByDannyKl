@@ -70,8 +70,15 @@ script = ExtResource("1_mla4w")
 anim = NodePath("AnimatedSprite2D")
 attackFrame = 2
 hp = 10
+isCherryBoom = null
+bulletType = null
 rayCast2D = NodePath("RayCast2D")
+noAtkPlant = null
+isAnimationPlayer = null
 "种土上声音" = NodePath("种土上")
+isHeYe = null
+isNut = null
+isZiBao = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.5, -5.5)

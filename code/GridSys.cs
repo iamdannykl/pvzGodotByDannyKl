@@ -70,7 +70,7 @@ public partial class GridSys : Node2D
 		{
 			foreach (zomInfo zif in hangList[i].NewZomInfos)
 			{
-				zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<zombie_base>();
+				Zombie_base zom = resPlantAndZom.Instance.matchZom(zif.zomType).Instantiate<Zombie_base>();
 				zif.hangShu = i + 1;
 				zom.hangNum = zif.hangShu;
 				zom.GlobalPosition = posByHang(zif) + new Vector2(XjianGe * 10, 0);

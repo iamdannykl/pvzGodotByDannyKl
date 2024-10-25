@@ -422,6 +422,7 @@ layout_mode = 2
 texture_normal = SubResource("AtlasTexture_81lut")
 texture_pressed = SubResource("AtlasTexture_ubm6f")
 script = ExtResource("11_qnxan")
+zomType = null
 
 [node name="luZhang" type="TextureButton" parent="Camera2D/zomCardUI/zomCardLeft/VBoxContainer"]
 layout_mode = 2
@@ -544,10 +545,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control" node_paths=PackedStringArray("yx")]
+[node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
 position = Vector2(-4, -1)
 script = ExtResource("25_6i3iu")
-yx = NodePath("../yx")
 
 [node name="Node2D" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
 position = Vector2(0, 23)

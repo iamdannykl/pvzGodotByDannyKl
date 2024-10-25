@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bhcd8iig22uni"]
+[gd_scene load_steps=49 format=3 uid="uid://bhcd8iig22uni"]
 
 [ext_resource type="Script" path="res://code/normalZom.cs" id="1_x4il4"]
 [ext_resource type="Texture2D" uid="uid://db622m2x4h6jh" path="res://Prefabs/zombieASE.png" id="2_spfoj"]
@@ -626,6 +626,14 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nbhor"]
+advance_mode = 2
+advance_expression = "nowJieDuan==2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_88stt"]
+advance_mode = 2
+advance_expression = "nowJieDuan==2"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hq40k"]
 states/End/position = Vector2(1044, 178)
 states/daoDi/node = SubResource("AnimationNodeAnimation_wm81f")
@@ -635,21 +643,22 @@ states/dbEat/position = Vector2(656, 185)
 states/dbWalk/node = SubResource("AnimationNodeAnimation_xeyle")
 states/dbWalk/position = Vector2(657, 100)
 states/dtEat/node = SubResource("AnimationNodeAnimation_0y5v6")
-states/dtEat/position = Vector2(803, 184)
+states/dtEat/position = Vector2(809, 247)
 states/duanTou/node = SubResource("AnimationNodeAnimation_qu67h")
-states/duanTou/position = Vector2(791, 100)
+states/duanTou/position = Vector2(809, 46)
 states/eat/node = SubResource("AnimationNodeAnimation_4so4k")
-states/eat/position = Vector2(511, 201)
+states/eat/position = Vector2(506, 247)
 states/idle/node = SubResource("AnimationNodeAnimation_8lfmc")
 states/idle/position = Vector2(372, 100)
 states/walk/node = SubResource("AnimationNodeAnimation_86qql")
-states/walk/position = Vector2(523, 100)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uy53i"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_4bx58"), "walk", "dbWalk", SubResource("AnimationNodeStateMachineTransition_odvdj"), "walk", "eat", SubResource("AnimationNodeStateMachineTransition_82mgf"), "eat", "dbEat", SubResource("AnimationNodeStateMachineTransition_t1aij"), "dbWalk", "dbEat", SubResource("AnimationNodeStateMachineTransition_mi44y"), "dbEat", "dbWalk", SubResource("AnimationNodeStateMachineTransition_rvoe1"), "eat", "walk", SubResource("AnimationNodeStateMachineTransition_2381q"), "dbEat", "dtEat", SubResource("AnimationNodeStateMachineTransition_pvyav"), "dbWalk", "duanTou", SubResource("AnimationNodeStateMachineTransition_tylel"), "duanTou", "daoDi", SubResource("AnimationNodeStateMachineTransition_o78bg"), "dtEat", "daoDi", SubResource("AnimationNodeStateMachineTransition_ay6df")]
-graph_offset = Vector2(14, 23)
+states/walk/position = Vector2(522, 46)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uy53i"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_4bx58"), "walk", "dbWalk", SubResource("AnimationNodeStateMachineTransition_odvdj"), "walk", "eat", SubResource("AnimationNodeStateMachineTransition_82mgf"), "eat", "dbEat", SubResource("AnimationNodeStateMachineTransition_t1aij"), "dbWalk", "dbEat", SubResource("AnimationNodeStateMachineTransition_mi44y"), "dbEat", "dbWalk", SubResource("AnimationNodeStateMachineTransition_rvoe1"), "eat", "walk", SubResource("AnimationNodeStateMachineTransition_2381q"), "dbEat", "dtEat", SubResource("AnimationNodeStateMachineTransition_pvyav"), "dbWalk", "duanTou", SubResource("AnimationNodeStateMachineTransition_tylel"), "duanTou", "daoDi", SubResource("AnimationNodeStateMachineTransition_o78bg"), "dtEat", "daoDi", SubResource("AnimationNodeStateMachineTransition_ay6df"), "walk", "duanTou", SubResource("AnimationNodeStateMachineTransition_nbhor"), "eat", "dtEat", SubResource("AnimationNodeStateMachineTransition_88stt")]
+graph_offset = Vector2(41, 4)
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rn8wk"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nps31"]
+graph_offset = Vector2(-24.9091, -18.6364)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_hq40k")
 nodes/StateMachine/position = Vector2(-20, 160)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rn8wk")
@@ -663,6 +672,7 @@ position = Vector2(0, 1)
 script = ExtResource("1_x4il4")
 spd = 5.0
 yao = NodePath("yao")
+zomType = null
 hp = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -671,7 +681,7 @@ position = Vector2(0, -11.5)
 texture = ExtResource("2_spfoj")
 hframes = 9
 vframes = 9
-frame = 1
+frame = 78
 region_rect = Rect2(0, 0, 240, 47)
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
@@ -713,6 +723,10 @@ tree_root = SubResource("AnimationNodeBlendTree_nps31")
 anim_player = NodePath("../AnimationPlayer")
 parameters/TimeScale/scale = 0.4
 script = ExtResource("3_m58w4")
+isBegin = null
+isEat = null
+isDb = null
+isDead = null
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
@@ -723,6 +737,8 @@ collide_with_areas = true
 [node name="HpJianCe" type="Node2D" parent="."]
 script = ExtResource("4_eajfx")
 hpJieDuan = PackedInt32Array(10, 5, 0)
+jieDuanShu = null
+NowJieDuan = null
 
 [node name="yao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xuq7f")

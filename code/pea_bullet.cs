@@ -5,17 +5,17 @@ public partial class pea_bullet : bulletBase
 {
     [Export] public AudioStreamPlayer audioStreamPlayer;
     [Export] public float freezeTime;
-    zombie_base zombieB;
+    Zombie_base zombieB;
     void atkZom(Area2D zom)
     {
         audioStreamPlayer.Play();
-        zombie_base zombieB = zom.Owner as zombie_base;
+        Zombie_base zombieB = zom.Owner as Zombie_base;
         if (isAnimPlayer)
         {
             animPlayer.Play("explode");
             canMove = false;
         }
-        if ((zom.Owner as zombie_base).Hp > 0)
+        if ((zom.Owner as Zombie_base).Hp > 0)
         {
             if (btp == BulletType.snowPea)
             {

@@ -64,7 +64,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8ggg2"]
 length = 1.2
-loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -90,6 +89,23 @@ tracks/1/keys = {
 "update": 1,
 "values": [11, 0, 9, 8, 7, 6]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"yaoZom"
+}, {
+"args": [],
+"method": &"jue"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2krmy"]
 _data = {
@@ -101,13 +117,21 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm7jq"]
 size = Vector2(24, 29)
 
-[node name="daZuiHua" type="Area2D" node_paths=PackedStringArray("animPlayer", "种土上声音")]
+[node name="daZuiHua" type="Area2D" node_paths=PackedStringArray("timer", "rayCast2D", "animPlayer", "种土上声音")]
 script = ExtResource("1_isd35")
+timer = NodePath("Timer")
+attackFrame = null
 hp = 10
-noAtkPlant = true
+isCherryBoom = null
+bulletType = null
+rayCast2D = NodePath("RayCast2D")
+noAtkPlant = null
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
 "种土上声音" = NodePath("AudioStreamPlayer")
+isHeYe = null
+isNut = null
+isZiBao = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_4hboc")
@@ -118,7 +142,7 @@ position = Vector2(7, -11)
 texture = ExtResource("2_0l37p")
 hframes = 5
 vframes = 4
-frame = 8
+frame = 9
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
@@ -144,6 +168,12 @@ position = Vector2(-2, -0.5)
 shape = SubResource("RectangleShape2D_jm7jq")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(56, 0)
+target_position = Vector2(46, 0)
 collision_mask = 2
 collide_with_areas = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="huiFu"]

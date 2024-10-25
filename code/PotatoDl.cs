@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public partial class PotatoDl : baseCard
 {
-	List<zombie_base> zomList = new List<zombie_base>();
+	List<Zombie_base> zomList = new List<Zombie_base>();
 	bool isMaoChu, isBao;
 	[Export] public AudioStreamPlayer boom;
 	Timer timer;
@@ -44,10 +44,12 @@ public partial class PotatoDl : baseCard
 	}
 	void addZom(Area2D zom)
 	{
-		zomList.Add(zom.GetParent<zombie_base>());
+		Zombie_base zombie = zom.GetParent<Zombie_base>();
+		zombie.InListPotato(this);
+		zomList.Add(zombie);
 		GD.Print("added!!!");
 	}
-	public void outQueue(zombie_base zom)
+	public void outQueue(Zombie_base zom)
 	{
 		zomList.Remove(zom);
 	}
@@ -58,8 +60,11 @@ public partial class PotatoDl : baseCard
 		{
 			foreach (var zombie in zomList)
 			{
-				zombie.QueueFree();
-				createZom.Instance.AllZomNum++;
+				if (IsInstanceValid(zombie))
+				{
+					zombie.QueueFree();
+					createZom.Instance.AllZomNum++;
+				}
 			}
 		}
 		GD.Print("finishEXPLD!!!");

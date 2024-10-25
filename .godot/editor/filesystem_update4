@@ -1,14 +1,14 @@
-res://GameScene.tscn
+res://Scene/zenGarden/zen_garden.tscn
 res://font/num.tres
 res://anim/plant/rePeater/rePeater.tres
 res://theme/PVZ/buttonNormal.tres
 res://theme/PVZ/button.tres
 res://theme/PVZ/pvzTheme.tres
 res://shader/card.tres
+res://GameScene.tscn
 res://anim/backGround/grass.tscn
 res://Scene/pool_day.tscn
 res://UI.tscn
-res://Scene/zen_garden.tscn
 res://Scene/zenGarden/pot.tscn
 res://Scene/title.tscn
 res://Scene/xuan_guan.tscn
@@ -16,3 +16,4 @@ res://start.tscn
 res://anim/plant/daZuiHua/da_zui_hua.tscn
 res://anim/plant/peaShooter/pea_shooter.tscn
 res://Scene/plantCards/da_zui_hua.tscn
+res://Prefabs/zombie_base.tscn

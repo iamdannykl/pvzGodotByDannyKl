@@ -4,7 +4,7 @@ using System;
 public partial class zomCard : TextureButton
 {
     [Export] public ZomType zomType;
-    public zombie_base zomInsta, zomShadow;
+    public Zombie_base zomInsta, zomShadow;
     public hang hang;
     OptionButton naniZR;
     int ZRnum = -1;
@@ -17,8 +17,8 @@ public partial class zomCard : TextureButton
             wantPlace = value;
             if (wantPlace)
             {
-                zomInsta = resPlantAndZom.Instance.matchZom(zomType).Instantiate() as zombie_base;
-                zomShadow = resPlantAndZom.Instance.matchZom(zomType).Instantiate() as zombie_base;
+                zomInsta = resPlantAndZom.Instance.matchZom(zomType).Instantiate() as Zombie_base;
+                zomShadow = resPlantAndZom.Instance.matchZom(zomType).Instantiate() as Zombie_base;
                 zomShadow.Modulate = new Color(1, 1, 1, 0.55f);
                 zomShadow.GlobalPosition = new Vector2(0, 0);
                 zomShadow.Visible = false;

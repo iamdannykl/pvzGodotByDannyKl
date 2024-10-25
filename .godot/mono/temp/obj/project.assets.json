@@ -421,12 +421,11 @@
   },
   "libraries": {
     "Godot.SourceGenerators/4.3.0": {
-      "sha512": "fLDNOAo/kpL1JtGXP6b2M48dobzb5YmKSRLXKDt+td8qegu0Ao3H25avoySVmrb52d7zpe8yvgMwba7QMhqnqQ==",
+      "sha512": "T5iTZxeWraU4RxKOsVT9brTisYG9d/qRh7oHrYgbc2jMwvZ3bZ3O1OnvepmZXU4KO/eIVY8YgUEvsDQ9rnUvLA==",
       "type": "package",
       "path": "godot.sourcegenerators/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
         "build/Godot.SourceGenerators.props",
         "godot.sourcegenerators.4.3.0.nupkg.sha512",
@@ -434,12 +433,11 @@
       ]
     },
     "GodotSharp/4.3.0": {
-      "sha512": "mEwRmNIG2k/yPfkFencEkNVXpHCa+uETHkIQcq0MxcsfwJQZ4HueFU5Q9CYDIdd5YrRPqjwuyxbsuD6Je8lfdQ==",
+      "sha512": "JdgvqMuj0MdUXwPpZCZ0hWp+2yN3oFAXSC125kIAxeDQ3kA9pscI/GYWjW5MoG9OhqNrWqfnjQ/2Lwy6v4Lunw==",
       "type": "package",
       "path": "godotsharp/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "godotsharp.4.3.0.nupkg.sha512",
         "godotsharp.nuspec",
         "lib/net6.0/GodotSharp.dll",
@@ -447,12 +445,11 @@
       ]
     },
     "GodotSharpEditor/4.3.0": {
-      "sha512": "r7A3lszHS9/gIWoOb7w+MNtEjrD/NRX+9ACHq01GD2+lctu6eHsmlSTA0Ah1bjJDKs9rDZeSq+42zwXvtBsPzQ==",
+      "sha512": "xlns+Gs6gQlnxKRFaRu/+oVCQkRstDqf5FRPotNaqO6xIjqSQFrdoTFto+mDNWZc5tpVjCkhLUnqKNUhP7vCEg==",
       "type": "package",
       "path": "godotsharpeditor/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "godotsharpeditor.4.3.0.nupkg.sha512",
         "godotsharpeditor.nuspec",
         "lib/net6.0/GodotSharpEditor.dll",
@@ -1681,24 +1678,26 @@
     ]
   },
   "packageFolders": {
-    "/home/danny/.nuget/packages/": {}
+    "C:\\Users\\p1503\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
+      "projectUniqueName": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj",
       "projectName": "Godot Projects",
-      "projectPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
-      "packagesPath": "/home/danny/.nuget/packages/",
-      "outputPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/",
+      "projectPath": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj",
+      "packagesPath": "C:\\Users\\p1503\\.nuget\\packages\\",
+      "outputPath": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/danny/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\p1503\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1711,6 +1710,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1764,11 +1768,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.35, 6.0.35]"
+            "version": "[6.0.33, 6.0.33]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.35, 6.0.35]"
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
           }
         ],
         "frameworkReferences": {
@@ -1776,7 +1784,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1785,8 +1793,28 @@
       "code": "NU1902",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'MessagePack' 1.5.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-7q36-4xx7-xcxf",
+      "message": "包 \"MessagePack\" 1.5.1 具有已知的 中 严重性漏洞，https://github.com/advisories/GHSA-4qm4-8hg2-g2xm",
       "libraryId": "MessagePack",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "包 \"MessagePack\" 1.5.1 具有已知的 中 严重性漏洞，https://github.com/advisories/GHSA-7q36-4xx7-xcxf",
+      "libraryId": "MessagePack",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "包 \"System.Text.Json\" 8.0.4 具有已知的 高 严重性漏洞，https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net6.0"
       ]

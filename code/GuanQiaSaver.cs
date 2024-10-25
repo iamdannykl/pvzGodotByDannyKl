@@ -62,18 +62,18 @@ public partial class GuanQiaSaver : Control
         isSetCheckButtonByCode = true;
         checkButton.ButtonPressed = false;
         isSetCheckButtonByCode = false;
-        foreach (zombie_base node in zr1.GetChildren())
+        foreach (Zombie_base node in zr1.GetChildren())
         {
             waves[boShu - 1].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             //GD.Print(waves[boShu -1].zrs[0].zomInfos.Count());
             node.QueueFree();
         }
-        foreach (zombie_base node in zr2.GetChildren())
+        foreach (Zombie_base node in zr2.GetChildren())
         {
             waves[boShu - 1].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
-        foreach (zombie_base node in zr3.GetChildren())
+        foreach (Zombie_base node in zr3.GetChildren())
         {
             waves[boShu - 1].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
@@ -204,18 +204,18 @@ public partial class GuanQiaSaver : Control
         isSetCheckButtonByCode = true;
         checkButton.ButtonPressed = false;
         isSetCheckButtonByCode = false;
-        foreach (zombie_base node in zr1.GetChildren())
+        foreach (Zombie_base node in zr1.GetChildren())
         {
             waves[boShu - 2].zrs[0].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             //GD.Print(waves[boShu - 2].zrs[0].zomInfos.Count());
             node.QueueFree();
         }
-        foreach (zombie_base node in zr2.GetChildren())
+        foreach (Zombie_base node in zr2.GetChildren())
         {
             waves[boShu - 2].zrs[1].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();
         }
-        foreach (zombie_base node in zr3.GetChildren())
+        foreach (Zombie_base node in zr3.GetChildren())
         {
             waves[boShu - 2].zrs[2].zomInfos.Add(new zomInfo(node.weiZhi, node.zomType, node.hangNum));
             node.QueueFree();

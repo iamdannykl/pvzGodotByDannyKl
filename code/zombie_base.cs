@@ -1,13 +1,14 @@
 using Godot;
 using System;
 
-public partial class zombie_base : CharacterBody2D
+public partial class Zombie_base : CharacterBody2D, Islayed
 {
     [Export] public float spd;
     public float currrentSpd;
 
     [Export] public AudioStreamPlayer yao;
     public bool isUpdt;
+    public PotatoDl PotatoDl;
     Random random = new Random();
     // 定义要选择的浮点数数组
     float[] options = { 0.95f, 1.0f, 1.05f };
@@ -35,6 +36,10 @@ public partial class zombie_base : CharacterBody2D
             zhuangTaiJi.nowJieDuan = hpJianCe.JieDuanJianCe(value);
             hpJianCe.NowJieDuan = zhuangTaiJi.nowJieDuan;
         }
+    }
+    public void InListPotato(PotatoDl potatoDl)
+    {
+        PotatoDl = potatoDl;
     }
     void stopMove()
     {
@@ -130,4 +135,11 @@ public partial class zombie_base : CharacterBody2D
         currrentSpd = spd;
         isFrozen = false;
     }
+
+    public void IbeSlayed()
+    {
+        QueueFree();
+        createZom.Instance.AllZomNum++;
+    }
+
 }
