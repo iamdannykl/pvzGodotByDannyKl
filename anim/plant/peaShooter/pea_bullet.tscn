@@ -37,11 +37,7 @@ collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_m3b7j")
 audioStreamPlayer = NodePath("AudioStreamPlayer")
-freezeTime = null
-btp = null
-isAnimPlayer = null
 bltSpd = 1.7
-noExplode = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2k3v6")

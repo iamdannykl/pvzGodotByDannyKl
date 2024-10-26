@@ -174,18 +174,12 @@ size = Vector2(18.3614, 17.5946)
 
 [node name="xiaoPenGu" type="Area2D" node_paths=PackedStringArray("rayCast2D", "animPlayer", "种土上声音")]
 script = ExtResource("1_gmwbh")
-attackFrame = null
 hp = 10
-isCherryBoom = null
 bulletType = 2
 rayCast2D = NodePath("RayCast2D")
-noAtkPlant = null
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
 "种土上声音" = NodePath("AudioStreamPlayer")
-isHeYe = null
-isNut = null
-isZiBao = null
 
 [node name="pos" type="Node2D" parent="."]
 position = Vector2(4.96063, 2.77795)

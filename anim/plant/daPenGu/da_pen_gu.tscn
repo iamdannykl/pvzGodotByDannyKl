@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0hrukwent4qx"]
+[gd_scene load_steps=11 format=3 uid="uid://d0hrukwent4qx"]
 
 [ext_resource type="Script" path="res://code/DaPenGu.cs" id="1_cu0iw"]
 [ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="2_ustkr"]
 [ext_resource type="Texture2D" uid="uid://bdsar3o6hovil" path="res://anim/plant/daPenGu/daPenGu.png" id="3_qjedf"]
+[ext_resource type="AudioStream" uid="uid://tqmbk3ulgp77" path="res://audio/effects/大喷菇喷射.ogg" id="4_w7v1k"]
 
 [sub_resource type="Animation" id="Animation_mdg3x"]
 length = 1.5
@@ -31,6 +32,20 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [15, 14, 13, 0, 15]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shootBlt"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_tnmpf"]
@@ -129,23 +144,18 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktl1y"]
 size = Vector2(20.0452, 18.2634)
 
-[node name="daPenGu" type="Area2D" node_paths=PackedStringArray("rayCast2D", "animPlayer", "种土上声音")]
+[node name="daPenGu" type="Area2D" node_paths=PackedStringArray("pen", "rayCast2D", "animPlayer", "种土上声音")]
 script = ExtResource("1_cu0iw")
-attackFrame = null
+pen = NodePath("pen")
 hp = 10
-isCherryBoom = null
-bulletType = null
+bulletType = 3
 rayCast2D = NodePath("RayCast2D")
-noAtkPlant = null
 animPlayer = NodePath("AnimationPlayer")
 isAnimationPlayer = true
 "种土上声音" = NodePath("AudioStreamPlayer")
-isHeYe = null
-isNut = null
-isZiBao = null
 
 [node name="pos" type="Node2D" parent="."]
-position = Vector2(11.3461, -14.0933)
+position = Vector2(16.5433, -8.42365)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ustkr")
@@ -163,7 +173,7 @@ texture = ExtResource("3_qjedf")
 offset = Vector2(25.4538, -8.78975)
 hframes = 5
 vframes = 5
-frame = 20
+frame = 13
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
@@ -187,3 +197,6 @@ collide_with_areas = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.188598, -8.24781)
 shape = SubResource("RectangleShape2D_ktl1y")
+
+[node name="pen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_w7v1k")

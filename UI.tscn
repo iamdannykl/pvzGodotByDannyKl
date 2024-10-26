@@ -16,11 +16,6 @@ self_modulate = Color(0.886275, 0.309804, 0, 0)
 scale = Vector2(0.792877, 0.792877)
 script = ExtResource("1_p37t8")
 MAXcardNUm = 8
-oriPos = Vector2(0, 0)
-xJianJu = 0.0
-yJianJu = 0.0
-hangLieNum = Vector2i(1, 8)
-hasSort = false
 
 [node name="Node2D" type="Node2D" parent="zuoKaCao"]
 

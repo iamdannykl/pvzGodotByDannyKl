@@ -26,6 +26,7 @@ public partial class bulletBase : Area2D
             if (anim.Animation == "idle")
             {
                 canMove = false;
+                realDes();
             }
             return;
         }

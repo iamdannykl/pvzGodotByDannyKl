@@ -1,8 +1,8 @@
+AudioStreamPlayer
 AnimatedSprite2D
 Sprite2D
 AnimationPlayer
 Node2D
-AudioStreamPlayer
 RayCast2D
 CollisionShape2D
 Area2D
@@ -12,4 +12,3 @@ Panel
 ScrollContainer
 PhysicalBone2D
 Node
-Camera2D

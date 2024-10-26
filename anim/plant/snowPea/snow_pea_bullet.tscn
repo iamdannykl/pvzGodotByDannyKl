@@ -133,7 +133,6 @@ btp = 1
 animPlayer = NodePath("AnimationPlayer")
 isAnimPlayer = true
 bltSpd = 1.7
-noExplode = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 0.5)

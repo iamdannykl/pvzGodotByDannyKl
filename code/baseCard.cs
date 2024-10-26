@@ -96,7 +96,7 @@ public partial class baseCard : Area2D
             }
         }
     }
-    public void shootBlt()
+    public virtual void shootBlt()
     {
         bulletBase blt = resPlantAndZom.Instance.matchBullet(bulletType).Instantiate<bulletBase>();
         blt.GlobalPosition = GetNode<Node2D>("pos").GlobalPosition;

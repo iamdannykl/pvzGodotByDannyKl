@@ -134,7 +134,6 @@ theme = ExtResource("2_r3uel")
 text = "返回"
 script = ExtResource("7_sux5e")
 start = NodePath("../..")
-isAddWindow = null
 
 [node name="ItemList" type="ItemList" parent="Panel"]
 layout_mode = 1

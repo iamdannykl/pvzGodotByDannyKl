@@ -1023,10 +1023,6 @@ tree_root = SubResource("AnimationNodeBlendTree_nps31")
 anim_player = NodePath("../AnimationPlayer")
 parameters/TimeScale/scale = 0.35
 script = ExtResource("3_claqr")
-isBegin = null
-isEat = null
-isDb = null
-isDead = null
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
@@ -1036,8 +1032,6 @@ collide_with_areas = true
 [node name="HpJianCe" type="Node2D" parent="."]
 script = ExtResource("4_rokke")
 hpJieDuan = PackedInt32Array(30, 22, 15, 10, 5, 0)
-jieDuanShu = null
-NowJieDuan = null
 
 [node name="yao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_03uyf")
