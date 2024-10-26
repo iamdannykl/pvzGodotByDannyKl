@@ -8,7 +8,7 @@ public partial class ZenGardenManager : Node2D
 	{
 		/* Window window = new Window();
 		window.Size = new Vector2I(2300, 648); */
-		DisplayServer.WindowSetSize(new Vector2I(1300, 648));
+		//DisplayServer.WindowSetSize(new Vector2I(2800, 648));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://dix60aj2qp6g"]
+[gd_scene load_steps=78 format=3 uid="uid://dix60aj2qp6g"]
 
 [ext_resource type="Script" path="res://scene.cs" id="1_d6ikj"]
 [ext_resource type="Script" path="res://code/reciever.cs" id="2_8n5vd"]
@@ -22,11 +22,15 @@
 [ext_resource type="PackedScene" uid="uid://b14ejrkmbgnww" path="res://anim/plant/snowPea/snow_pea_shooter.tscn" id="10_fuuy5"]
 [ext_resource type="Script" path="res://code/zomCard.cs" id="11_qnxan"]
 [ext_resource type="PackedScene" uid="uid://kbywjlqbpxwk" path="res://anim/plant/daZuiHua/da_zui_hua.tscn" id="12_rg1q3"]
+[ext_resource type="PackedScene" uid="uid://hdmucj01sc60" path="res://anim/plant/xiaoPenGu/xiao_pen_gu.tscn" id="13_gm8ni"]
 [ext_resource type="Texture2D" uid="uid://b25au6edd6a86" path="res://anim/icon/sunClct.png" id="13_p252q"]
 [ext_resource type="Script" path="res://code/SunClct.cs" id="14_wn85g"]
 [ext_resource type="Theme" uid="uid://cg4fh81xxnvje" path="res://theme/touMing.tres" id="15_0cm5o"]
 [ext_resource type="PackedScene" uid="uid://dc6oa5n1lq6he" path="res://anim/plant/snowPea/snow_pea_bullet.tscn" id="15_d1s16"]
 [ext_resource type="FontFile" uid="uid://3v2gdvefbosf" path="res://font/num.tres" id="15_ek4tf"]
+[ext_resource type="PackedScene" uid="uid://65upi6a28ons" path="res://anim/plant/xiaoPenGu/xpg_blt.tscn" id="18_wt44i"]
+[ext_resource type="PackedScene" uid="uid://d0hrukwent4qx" path="res://anim/plant/daPenGu/da_pen_gu.tscn" id="19_t6y4v"]
+[ext_resource type="PackedScene" uid="uid://bnup8fouye3ay" path="res://anim/plant/daPenGu/dpg_blt.tscn" id="20_kvhme"]
 [ext_resource type="Texture2D" uid="uid://bs1fbqs02fmsd" path="res://anim/icon/zomBar/headICON.png" id="20_nbejk"]
 [ext_resource type="Texture2D" uid="uid://biej0nhha3lqx" path="res://anim/icon/zomBar/tiao.png" id="21_hk1ym"]
 [ext_resource type="Script" path="res://code/pathFollowControl.cs" id="21_tfmci"]
@@ -49,6 +53,8 @@
 [ext_resource type="PackedScene" uid="uid://b75jbq7p2tiqi" path="res://Scene/plantCards/sun_flower.tscn" id="35_c1fae"]
 [ext_resource type="PackedScene" uid="uid://5qmko0haxrwx" path="res://Scene/plantCards/snow_pea_shooter.tscn" id="35_qfh8y"]
 [ext_resource type="PackedScene" uid="uid://bfbb6wbwvmr7k" path="res://Scene/plantCards/potato_dl.tscn" id="36_43ijr"]
+[ext_resource type="PackedScene" uid="uid://d0ig43jgtpkmt" path="res://Scene/plantCards/xiao_pen_gu.tscn" id="37_1qrqm"]
+[ext_resource type="PackedScene" uid="uid://cqin1e5h3ndak" path="res://Scene/plantCards/da_pen_gu_card.tscn" id="39_ql44e"]
 [ext_resource type="Script" path="res://code/sunCreator.cs" id="48_srqrj"]
 [ext_resource type="Theme" uid="uid://c0yothtxikqp4" path="res://theme/PVZ/pvzTheme.tres" id="48_yf48k"]
 [ext_resource type="PackedScene" uid="uid://c013cle4w52oe" path="res://Scene/sun.tscn" id="49_juoko"]
@@ -338,10 +344,34 @@ cherryBaoDan = ExtResource("8_06nb4")
 snowPeaShooter = ExtResource("10_fuuy5")
 heYe = ExtResource("7_qjlgd")
 daZuiHua = ExtResource("12_rg1q3")
+xiaoPenGu = ExtResource("13_gm8ni")
 zombie = ExtResource("5_74kye")
 luZhang = ExtResource("7_5ec5c")
 pea = ExtResource("7_ng5db")
 snowPea = ExtResource("15_d1s16")
+xpgBlt = ExtResource("18_wt44i")
+
+[node name="matchCard2" type="Node2D" parent="."]
+position = Vector2(-216, -89)
+scale = Vector2(1.39279, 1.39279)
+script = ExtResource("3_v1isw")
+peaShooter = ExtResource("4_0xac8")
+rePeater = ExtResource("4_c3t61")
+sunFlower = ExtResource("6_p4lfu")
+potatoDL = ExtResource("7_8fcqn")
+nut = ExtResource("8_2b4yu")
+cherryBaoDan = ExtResource("8_06nb4")
+snowPeaShooter = ExtResource("10_fuuy5")
+heYe = ExtResource("7_qjlgd")
+daZuiHua = ExtResource("12_rg1q3")
+xiaoPenGu = ExtResource("13_gm8ni")
+daPenGu = ExtResource("19_t6y4v")
+zombie = ExtResource("5_74kye")
+luZhang = ExtResource("7_5ec5c")
+pea = ExtResource("7_ng5db")
+snowPea = ExtResource("15_d1s16")
+xpgBlt = ExtResource("18_wt44i")
+dpgBlt = ExtResource("20_kvhme")
 
 [node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("backToMenu", "backToGame", "ESC", "panel", "leftSee", "label", "syg")]
 position = Vector2(0, -1)
@@ -391,6 +421,7 @@ offset_right = -15.0
 offset_bottom = 96.0
 
 [node name="zomCardUI" type="Control" parent="Camera2D" node_paths=PackedStringArray("dataRec", "waveNum", "nextButton", "finishButton", "zr1", "zr2", "zr3")]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 57.0
@@ -548,6 +579,10 @@ offset_bottom = 40.0
 [node name="GridContainer" type="Node2D" parent="Camera2D/UIplantSelect/Control"]
 position = Vector2(-4, -1)
 script = ExtResource("25_6i3iu")
+xJianJu = 0
+yJianJu = 0
+hangLieNum = Vector2i(8, 6)
+hasSort = false
 
 [node name="Node2D" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
 position = Vector2(0, 23)
@@ -634,9 +669,19 @@ position = Vector2(161, 23)
 [node name="snowPeaShooter" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D8" instance=ExtResource("35_qfh8y")]
 
 [node name="Node2D9" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
-position = Vector2(0, 44)
+position = Vector2(0, 41)
 
 [node name="daZuiHua" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D9" instance=ExtResource("34_ftxfq")]
+
+[node name="Node2D10" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(23, 41)
+
+[node name="xiaoPenGu" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D10" instance=ExtResource("37_1qrqm")]
+
+[node name="Node2D11" type="Node2D" parent="Camera2D/UIplantSelect/Control/GridContainer"]
+position = Vector2(46, 41)
+
+[node name="DaPenGuCard" parent="Camera2D/UIplantSelect/Control/GridContainer/Node2D11" instance=ExtResource("39_ql44e")]
 
 [node name="Button" type="Button" parent="Camera2D/UIplantSelect/Control"]
 layout_mode = 0
@@ -761,16 +806,15 @@ texture = ExtResource("26_sl0mu")
 stretch_mode = 5
 
 [node name="CardUI" parent="Camera2D" instance=ExtResource("4_n6eau")]
-visible = false
 z_index = 0
 offset_left = -161.0
-offset_top = -98.0
+offset_top = -90.0
 offset_right = -161.0
-offset_bottom = -98.0
+offset_bottom = -90.0
 scale = Vector2(1.39279, 1.39279)
 
 [node name="SunClct" type="Sprite2D" parent="Camera2D/CardUI"]
-position = Vector2(30.1553, 11.4877)
+position = Vector2(25.1294, 7.89782)
 scale = Vector2(0.987224, 0.987224)
 texture = ExtResource("13_p252q")
 script = ExtResource("14_wn85g")

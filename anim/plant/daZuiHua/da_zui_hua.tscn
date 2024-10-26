@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://kbywjlqbpxwk"]
+[gd_scene load_steps=10 format=3 uid="uid://kbywjlqbpxwk"]
 
 [ext_resource type="AudioStream" uid="uid://ds08qwxckw4k7" path="res://audio/effects/种土里1.ogg" id="1_4hboc"]
 [ext_resource type="Script" path="res://code/DaZuiHua.cs" id="1_isd35"]
 [ext_resource type="Texture2D" uid="uid://bgtusylirasf5" path="res://anim/plant/daZuiHua/daZuiHua..png" id="2_0l37p"]
+[ext_resource type="AudioStream" uid="uid://di70n8srlt2bf" path="res://audio/effects/bigchomp.ogg" id="4_748tl"]
 
 [sub_resource type="Animation" id="Animation_0d0ty"]
 length = 1.8
@@ -96,9 +97,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.4, 1.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
+"args": [],
+"method": &"chompIt"
+}, {
 "args": [],
 "method": &"yaoZom"
 }, {
@@ -117,8 +121,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm7jq"]
 size = Vector2(24, 29)
 
-[node name="daZuiHua" type="Area2D" node_paths=PackedStringArray("timer", "rayCast2D", "animPlayer", "种土上声音")]
+[node name="daZuiHua" type="Area2D" node_paths=PackedStringArray("chomp", "timer", "rayCast2D", "animPlayer", "种土上声音")]
 script = ExtResource("1_isd35")
+chomp = NodePath("ao")
 timer = NodePath("Timer")
 attackFrame = null
 hp = 10
@@ -142,7 +147,6 @@ position = Vector2(7, -11)
 texture = ExtResource("2_0l37p")
 hframes = 5
 vframes = 4
-frame = 9
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
@@ -175,5 +179,8 @@ collide_with_areas = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 20.0
 one_shot = true
+
+[node name="ao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_748tl")
 
 [connection signal="timeout" from="Timer" to="." method="huiFu"]

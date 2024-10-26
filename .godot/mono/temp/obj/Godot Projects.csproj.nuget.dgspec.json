@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj": {}
+    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {}
   },
   "projects": {
-    "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj": {
+    "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj",
+        "projectUniqueName": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
         "projectName": "Godot Projects",
-        "projectPath": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\Godot Projects.csproj",
-        "packagesPath": "C:\\Users\\p1503\\.nuget\\packages\\",
-        "outputPath": "D:\\Datas\\GodotProjects\\pvzGodotByDannyKl-gd4.3\\pvzGodotByDannyKl\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/Godot Projects.csproj",
+        "packagesPath": "/home/danny/.nuget/packages/",
+        "outputPath": "/home/danny/GodotProjects/pvzGodotByDannyKl/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\p1503\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/danny/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -59,23 +52,15 @@
             },
             "MessagePack": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[3.0.238-rc.1, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "System.Text.Json": {
-              "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[9.0.0-rc.2.24473.5, )"
             },
             "YamlDotNet": {
               "target": "Package",
-              "version": "[16.0.0, )"
+              "version": "[16.1.3, )"
             }
           },
           "imports": [
@@ -92,15 +77,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
+              "version": "[6.0.35, 6.0.35]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
+              "version": "[6.0.35, 6.0.35]"
             }
           ],
           "frameworkReferences": {
@@ -108,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }

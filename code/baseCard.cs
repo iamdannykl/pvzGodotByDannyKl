@@ -74,13 +74,33 @@ public partial class baseCard : Area2D
         {
             if (rayCast2D.IsColliding())
             {
-                anim.Play("attack");
+                if (!isAnimationPlayer)
+                {
+                    anim.Play("attack");
+                }
+                else
+                {
+                    animPlayer.Play("attack");
+                }
             }
             else
             {
-                anim.Play("idle");
+                if (!isAnimationPlayer)
+                {
+                    anim.Play("idle");
+                }
+                else
+                {
+                    animPlayer.Play("idle");
+                }
             }
         }
+    }
+    public void shootBlt()
+    {
+        bulletBase blt = resPlantAndZom.Instance.matchBullet(bulletType).Instantiate<bulletBase>();
+        blt.GlobalPosition = GetNode<Node2D>("pos").GlobalPosition;
+        GetTree().CurrentScene.AddChild(blt);
     }
     public virtual void explodeIt()
     {

@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cghyah1jte51o" path="res://audio/effects/咬.ogg" id="5_03uyf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j038u"]
-size = Vector2(18, 23)
+size = Vector2(18, 21)
 
 [sub_resource type="Animation" id="Animation_7cyjf"]
 length = 0.9
@@ -1009,7 +1009,7 @@ collision_layer = 2
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, 1)
+position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_j038u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1023,6 +1023,10 @@ tree_root = SubResource("AnimationNodeBlendTree_nps31")
 anim_player = NodePath("../AnimationPlayer")
 parameters/TimeScale/scale = 0.35
 script = ExtResource("3_claqr")
+isBegin = null
+isEat = null
+isDb = null
+isDead = null
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
@@ -1032,6 +1036,8 @@ collide_with_areas = true
 [node name="HpJianCe" type="Node2D" parent="."]
 script = ExtResource("4_rokke")
 hpJieDuan = PackedInt32Array(30, 22, 15, 10, 5, 0)
+jieDuanShu = null
+NowJieDuan = null
 
 [node name="yao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_03uyf")

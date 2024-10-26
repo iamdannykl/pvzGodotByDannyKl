@@ -92,9 +92,9 @@ position = Vector2(-3, -2)
 zoom = Vector2(3.465, 3.465)
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 86.0
+offset_left = 84.0
 offset_top = -96.0
-offset_right = 126.0
+offset_right = 124.0
 offset_bottom = -56.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wudfs")
 
@@ -114,9 +114,9 @@ script = ExtResource("7_maibg")
 stream = ExtResource("8_b8xse")
 
 [node name="Panel2" type="Panel" parent="."]
-offset_left = 86.0
+offset_left = 84.0
 offset_top = -56.0
-offset_right = 126.0
+offset_right = 124.0
 offset_bottom = -16.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wudfs")
 
@@ -136,9 +136,9 @@ script = ExtResource("7_maibg")
 stream = ExtResource("8_b8xse")
 
 [node name="Panel3" type="Panel" parent="."]
-offset_left = 86.0
+offset_left = 84.0
 offset_top = -16.0
-offset_right = 126.0
+offset_right = 124.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wudfs")
 
@@ -158,9 +158,9 @@ script = ExtResource("7_maibg")
 stream = ExtResource("8_b8xse")
 
 [node name="Panel4" type="Panel" parent="."]
-offset_left = 86.0
+offset_left = 84.0
 offset_top = 24.0
-offset_right = 126.0
+offset_right = 124.0
 offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wudfs")
 
@@ -180,10 +180,10 @@ script = ExtResource("7_maibg")
 stream = ExtResource("8_b8xse")
 
 [node name="Panel5" type="Panel" parent="."]
-offset_left = 86.0
-offset_top = 64.0
-offset_right = 126.0
-offset_bottom = 104.0
+offset_left = 124.0
+offset_top = -96.0
+offset_right = 164.0
+offset_bottom = -56.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wudfs")
 
 [node name="waterPot" type="TextureButton" parent="Panel5"]

@@ -24,7 +24,7 @@ public partial class plantSelect : Node2D
 				Vector2 Size = yx.GlobalPosition - GlobalPosition;
 				xJianJu = Size.X / value.X;
 				yJianJu = Size.Y / value.Y;
-				oriPos = GlobalPosition + /* new Vector2(xJianJu, yJianJu) / 2; */new Vector2(0, yJianJu);
+				oriPos = GlobalPosition + /* new Vector2(xJianJu, yJianJu) / 2; */new Vector2(0, 0);
 				int i = 0;
 				foreach (Node2D item in GetChildren())
 				{

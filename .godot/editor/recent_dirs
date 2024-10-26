@@ -1,14 +1,16 @@
 res://code
+res://anim/plant/daPenGu
+res://anim/plant/xiaoPenGu
+res://Scene/plantCards
+res://anim/plant/basePlant
+res://anim/plant/peaShooter
+/home/danny/gd4.3out/GDPVZ1025
 res://theme/PVZ/
 res://Scene/zenGarden
 res://Scene
-res://Scene/plantCards
 res://anim/plant/daZuiHua
 res://anim/plant/nut
-D:/Apps/GDAPPS/PVZGD
 res://anim/plant/snowPea
-res://anim/plant/peaShooter
-D:/Apps/Gapk
 res://theme
 res://theme/kenney
 res://
@@ -18,5 +20,3 @@ res://anim/plant/heYe
 res://font
 res://anim
 res://shader
-res://anim/icon
-res://anim/plant/sunFlower

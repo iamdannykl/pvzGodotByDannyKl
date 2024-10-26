@@ -11,7 +11,9 @@ public enum PlantType
     snowPeaShooter,
     nut,
     heYe,
-    daZuiHua
+    daZuiHua,
+    xiaoPenGu,
+    daPenGu
 }
 public enum ZomType
 {
@@ -21,7 +23,9 @@ public enum ZomType
 public enum BulletType
 {
     pea,
-    snowPea
+    snowPea,
+    xpgBlt,
+    dpgBlt
 }
 public partial class resPlantAndZom : Node2D
 {
@@ -37,12 +41,16 @@ public partial class resPlantAndZom : Node2D
     [Export] public PackedScene snowPeaShooter;
     [Export] public PackedScene heYe;
     [Export] public PackedScene daZuiHua;
+    [Export] public PackedScene xiaoPenGu;
+    [Export] public PackedScene daPenGu;
     //Zombies===============================================================
     [Export] public PackedScene zombie;
     [Export] public PackedScene luZhang;
     //Bullets===============================================================
     [Export] public PackedScene pea;
     [Export] public PackedScene snowPea;
+    [Export] public PackedScene xpgBlt;
+    [Export] public PackedScene dpgBlt;
     public override void _Ready()
     {
         Instance = this;
@@ -55,11 +63,15 @@ public partial class resPlantAndZom : Node2D
         {PlantType.nut,nut},
         {PlantType.rePeater,rePeater},
         {PlantType.heYe,heYe},
-        {PlantType.daZuiHua,daZuiHua}
+        {PlantType.daZuiHua,daZuiHua},
+        {PlantType.xiaoPenGu,xiaoPenGu},
+        {PlantType.daPenGu,daPenGu}
     };
         bulletTypeToPackedScene = new Dictionary<BulletType, PackedScene>{
         {BulletType.pea,pea},
-        {BulletType.snowPea,snowPea}
+        {BulletType.snowPea,snowPea},
+        {BulletType.xpgBlt,xpgBlt},
+        {BulletType.dpgBlt,dpgBlt}
     };
     }
     public PackedScene matchPlant(PlantType plantType)

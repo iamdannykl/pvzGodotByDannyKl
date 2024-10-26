@@ -5,6 +5,7 @@ public partial class DaZuiHua : baseCard
 {
 	bool canSlayZom = true;
 	Islayed targetZom;
+	[Export] public AudioStreamPlayer chomp;
 	[Export] public Timer timer;
 	public override void _Process(double delta)
 	{
@@ -17,6 +18,10 @@ public partial class DaZuiHua : baseCard
 				animPlayer.Play("yao");
 			}
 		}
+	}
+	public void chompIt()
+	{
+		chomp.Play();
 	}
 	public void yaoZom()
 	{

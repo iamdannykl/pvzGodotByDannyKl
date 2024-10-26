@@ -92,7 +92,6 @@ cache/0/16/0/glyphs/32/offset = Vector2(0, 0)
 cache/0/16/0/glyphs/32/size = Vector2(0, 0)
 cache/0/16/0/glyphs/32/uv_rect = Rect2(0, 0, 0, 0)
 cache/0/16/0/glyphs/32/texture_idx = 0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 script = ExtResource("2_7cusl")
 texture_mappings = Array[ExtResource("3_bgaej")]([SubResource("Resource_vjq5i")])
 font_settings = SubResource("Resource_k3jvn")

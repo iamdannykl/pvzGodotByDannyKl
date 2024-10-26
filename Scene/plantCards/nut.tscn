@@ -6,11 +6,36 @@
 [node name="nut" type="TextureButton"]
 texture_normal = ExtResource("1_fqkht")
 script = ExtResource("2_4hkmn")
+CurrentSun = 0
+WantPlace = false
+plantPrefab = null
+plantInstan = null
+shadow = null
 plantType = 6
 sunCost = 50
 offset = Vector2(-3, 2)
 heYeOffSet = Vector2(3, -10)
-cd = 7.5
+cd = 20.0
+mask = null
+canIclick = false
+isOn = false
+isInList = false
+isAndroidMode = false
+isGrey = false
+selfIndex = 0
+bili = Vector2(0, 0)
+sunEnough = false
+coldEnough = true
+isplanted = false
+currentSun = 0
+wantPlace = false
+canPlace = false
+isWhiteCard = true
+leftCaoCardNum = 0
+selectBoard = null
+lftCard = null
+currentTimeInCD = 0.0
+greyCard = null
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
